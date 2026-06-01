@@ -29,5 +29,16 @@ models/
 *.safetensors
 
 
-# Doc md for claude 
-docclaude/ 
+# Doc md for claude
+docclaude/
+
+# Personal & reference documents (kept locally, not on GitHub)
+document/
+TodoList_*.docx
+TodoList_*.doc
+
+# Regulatory PDFs (copyright — track via manifest.json instead)
+data/regulatory_docs/*.pdf
+
+# Office lock files (~$Document.docx etc.)
+~$*

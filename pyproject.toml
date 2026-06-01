@@ -7,21 +7,34 @@ requires-python = ">=3.11"
 dependencies = [
     "gradio>=4.0",
     "requests>=2.31",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
+datagen = [
+    "anthropic>=0.40",
+    "tqdm>=4.66",
+    "jsonschema>=4.20",
+]
 train = [
-    "mlx>=0.16",
-    "mlx-lm>=0.18",
+    "torch>=2.2",
     "transformers>=4.40",
     "datasets>=2.18",
     "peft>=0.10",
+    "bitsandbytes>=0.43",
+    "accelerate>=0.30",
+    "trl>=0.9",
+]
+rag = [
+    "chromadb>=0.4",
+    "sentence-transformers>=2.7",
+    "pypdf>=4.0",
 ]
 eval = [
-    "ragas>=0.1",
     "pandas>=2.2",
     "matplotlib>=3.8",
     "seaborn>=0.13",
+    "scikit-learn>=1.4",
 ]
 web = [
     "fastapi>=0.110",

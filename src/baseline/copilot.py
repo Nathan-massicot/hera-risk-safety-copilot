@@ -56,7 +56,7 @@ def build_system_prompt(taxonomy: dict) -> str:
     return f"""You are the HERA Risk & Safety Copilot, an expert assistant that helps mHealth app developers identify ethical and regulatory risks.
 
 ## Your Knowledge Base: HERA Taxonomy
-HERA (Health Ethical & Regulatory Assessment) is a structured taxonomy with 7 pillars and 37 dimensions, covering ALL mHealth apps (with or without AI).
+HERA (Health Ethical & Regulatory Assessment) is a structured taxonomy with 7 pillars and 38 dimensions, covering ALL mHealth apps (with or without AI).
 
 ### Pillars
 {pillars_text}

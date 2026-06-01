@@ -1,0 +1,64 @@
+# QLoRA fine-tune hyperparameters for the HERA baseline SLM.
+# Run via: uv run python -m src.baseline.finetune --config configs/training.yaml
+
+# Reproducibility
+seed: 1337
+
+# Data
+dataset:
+  train_path: data/training/conversations.jsonl
+  val_split: 0.2
+  max_seq_length: 4096
+
+# Model — overridden by configs/model.yaml > selected
+base_model: mistralai/Mistral-7B-Instruct-v0.3
+
+# Quantization (QLoRA 4-bit via bitsandbytes)
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_compute_dtype: bfloat16
+  bnb_4bit_use_double_quant: true
+
+# LoRA adapter
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  bias: none
+  task_type: CAUSAL_LM
+
+# Training loop
+training:
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16  # effective batch = 16
+  learning_rate: 2.0e-4
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  optim: paged_adamw_8bit
+  bf16: true
+  gradient_checkpointing: true
+  logging_steps: 10
+  eval_strategy: steps
+  eval_steps: 50
+  save_strategy: steps
+  save_steps: 100
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: eval_loss
+
+# Output
+output:
+  dir: models/baseline-lora
+  push_to_hub: false

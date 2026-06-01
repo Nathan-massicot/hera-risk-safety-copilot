@@ -1,0 +1,255 @@
+{
+  "$schema_version": "1.0",
+  "description": "Versioned manifest of regulatory documents used by the HERA Copilot for RAG (Task #7) and decision-tree cartographie (Task #12). All entries are public documents. Paywalled standards (ISO) are referenced but not downloaded.",
+  "generated": "2026-06-01",
+  "documents": [
+    {
+      "id": "eu_ai_act",
+      "title": "Regulation (EU) 2024/1689 — Artificial Intelligence Act",
+      "publisher": "European Union",
+      "year": 2024,
+      "jurisdiction": "EU",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689",
+      "celex": "32024R1689",
+      "license": "Public domain (Official Journal of the EU)",
+      "filename": "EU_AI_Act_2024_1689.pdf",
+      "expected_pages": "~144",
+      "key_articles": [
+        "Art. 5 (prohibited practices)",
+        "Art. 6 + Annex III (high-risk)",
+        "Art. 9 (risk management)",
+        "Art. 13 (transparency)",
+        "Art. 14 (human oversight)",
+        "Art. 50 (transparency obligations)"
+      ],
+      "notes": "Cite Annex III §1(a) for healthcare AI high-risk classification."
+    },
+    {
+      "id": "mdr_2017_745",
+      "title": "Regulation (EU) 2017/745 — Medical Device Regulation (MDR)",
+      "publisher": "European Union",
+      "year": 2017,
+      "jurisdiction": "EU",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02017R0745-20230320",
+      "celex": "02017R0745-20230320",
+      "license": "Public domain (Official Journal of the EU)",
+      "filename": "MDR_2017_745_consolidated_2023.pdf",
+      "expected_pages": "~344",
+      "key_articles": [
+        "Art. 2 (definitions)",
+        "Annex VIII Rule 11 (software classification)",
+        "Annex II (technical documentation)",
+        "Art. 51 (classification)",
+        "Art. 83 (post-market surveillance)"
+      ],
+      "notes": "Rule 11 (Annex VIII) is the load-bearing rule for SaMD classification."
+    },
+    {
+      "id": "gdpr_2016_679",
+      "title": "Regulation (EU) 2016/679 — General Data Protection Regulation",
+      "publisher": "European Union",
+      "year": 2016,
+      "jurisdiction": "EU",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679",
+      "celex": "32016R0679",
+      "license": "Public domain (Official Journal of the EU)",
+      "filename": "GDPR_2016_679.pdf",
+      "expected_pages": "~88",
+      "key_articles": [
+        "Art. 4 (definitions)",
+        "Art. 6 (lawfulness)",
+        "Art. 7 (consent)",
+        "Art. 9 (special categories, incl. health data)",
+        "Art. 22 (automated decisions)",
+        "Art. 35 (DPIA)"
+      ],
+      "notes": "Art. 9 special-category data is the entry point for any health app."
+    },
+    {
+      "id": "mdcg_2019_11",
+      "title": "MDCG 2019-11 — Guidance on Qualification and Classification of Software in Regulation (EU) 2017/745 — MDR",
+      "publisher": "European Commission, Medical Device Coordination Group",
+      "year": 2019,
+      "jurisdiction": "EU",
+      "url": "https://health.ec.europa.eu/system/files/2020-09/md_mdcg_2019_11_guidance_qualification_classification_software_en_0.pdf",
+      "license": "European Commission documents — free use with attribution",
+      "filename": "MDCG_2019_11_software_classification.pdf",
+      "expected_pages": "~28",
+      "key_articles": [
+        "Section 3 (qualification as MDSW)",
+        "Section 4 (classification under Rule 11)",
+        "Annex (decision diagrams)"
+      ],
+      "notes": "The decision tree in this document is closely related to our cartographie deliverable."
+    },
+    {
+      "id": "iso_82304_2",
+      "title": "ISO/TS 82304-2:2021 — Health software — Part 2: Health and wellness apps — Quality and reliability",
+      "publisher": "ISO",
+      "year": 2021,
+      "jurisdiction": "International",
+      "url": "https://www.iso.org/standard/78182.html",
+      "license": "PAYWALLED (CHF 165) — cited but not downloaded",
+      "filename": null,
+      "expected_pages": "~70",
+      "key_articles": [
+        "Quality criteria checklist (5 categories)",
+        "Conformity assessment process"
+      ],
+      "notes": "Referenced via summaries in MDCG / NICE rather than primary text."
+    },
+    {
+      "id": "nice_esf",
+      "title": "Evidence Standards Framework for Digital Health Technologies",
+      "publisher": "NICE (UK)",
+      "year": 2022,
+      "jurisdiction": "UK",
+      "url": "https://www.nice.org.uk/about/what-we-do/our-programmes/evidence-standards-framework-for-digital-health-technologies",
+      "license": "© NICE 2022 — free for non-commercial use",
+      "filename": "NICE_ESF_digital_health_2022.pdf",
+      "expected_pages": "~50",
+      "key_articles": [
+        "3 tiers of risk",
+        "Per-tier evidence requirements",
+        "Economic impact criteria"
+      ],
+      "notes": "Manual download needed — visit the URL, click 'Download document'."
+    },
+    {
+      "id": "dtac",
+      "title": "Digital Technology Assessment Criteria (DTAC)",
+      "publisher": "NHS England",
+      "year": 2021,
+      "jurisdiction": "UK",
+      "url": "https://transform.england.nhs.uk/key-tools-and-info/digital-technology-assessment-criteria-dtac/",
+      "license": "Open Government Licence v3.0",
+      "filename": "NHS_DTAC.pdf",
+      "expected_pages": "~30",
+      "key_articles": [
+        "Clinical safety",
+        "Data protection",
+        "Technical assurance",
+        "Interoperability",
+        "Usability"
+      ],
+      "notes": "Manual download — there's a PDF + Excel checklist."
+    },
+    {
+      "id": "who_lmm_health",
+      "title": "Ethics and governance of artificial intelligence for health — Guidance on large multi-modal models",
+      "publisher": "World Health Organization",
+      "year": 2024,
+      "jurisdiction": "International",
+      "url": "https://iris.who.int/handle/10665/375579",
+      "license": "CC BY-NC-SA 3.0 IGO",
+      "filename": "WHO_LMM_health_2024.pdf",
+      "expected_pages": "~98",
+      "key_articles": [
+        "6 consensus principles",
+        "40+ recommendations for LMMs"
+      ],
+      "notes": "Direct download link on IRIS landing page."
+    },
+    {
+      "id": "swiss_meddo",
+      "title": "Verordnung über Medizinprodukte (MepV) / Ordonnance sur les dispositifs médicaux (ODim) — SR 812.213",
+      "publisher": "Swiss Federal Council",
+      "year": 2020,
+      "jurisdiction": "CH",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2020/552/en",
+      "license": "Public domain (Swiss federal law)",
+      "filename": "Swiss_MepV_812_213.pdf",
+      "expected_pages": "~80",
+      "key_articles": [
+        "Art. 4-7 (conformity assessment)",
+        "Art. 47 (post-market surveillance)"
+      ],
+      "notes": "Largely mirrors MDR EU; Swiss-specific differences in Annex 4."
+    },
+    {
+      "id": "swiss_nldp",
+      "title": "Bundesgesetz über den Datenschutz / Loi sur la protection des données (LPD/nLPD) — SR 235.1",
+      "publisher": "Swiss Federal Assembly",
+      "year": 2023,
+      "jurisdiction": "CH",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+      "license": "Public domain (Swiss federal law)",
+      "filename": "Swiss_nFADP_235_1.pdf",
+      "expected_pages": "~60",
+      "key_articles": [
+        "Art. 5 (definitions, incl. sensitive data)",
+        "Art. 19 (consent)",
+        "Art. 22 (DPIA)",
+        "Art. 30 (security)"
+      ],
+      "notes": "nLPD = nouvelle Loi sur la Protection des Données, in force since 2023-09."
+    },
+    {
+      "id": "swiss_epdg",
+      "title": "Bundesgesetz über das elektronische Patientendossier (EPDG) / Loi sur le dossier électronique du patient (LDEP) — SR 816.1",
+      "publisher": "Swiss Federal Assembly",
+      "year": 2017,
+      "jurisdiction": "CH",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2017/203/en",
+      "license": "Public domain (Swiss federal law)",
+      "filename": "Swiss_EPDG_816_1.pdf",
+      "expected_pages": "~40",
+      "key_articles": [
+        "Art. 3 (definitions)",
+        "Art. 8 (access rights)",
+        "Art. 10 (technical/organizational requirements)"
+      ],
+      "notes": "Required if your app integrates with DEP."
+    },
+    {
+      "id": "swiss_bag_vaccination",
+      "title": "Schweizerischer Impfplan / Plan suisse de vaccination",
+      "publisher": "BAG / OFSP",
+      "year": 2025,
+      "jurisdiction": "CH",
+      "url": "https://www.bag.admin.ch/bag/de/home/krankheiten/krankheiten-im-ueberblick/masern/schweizerischer-impfplan.html",
+      "license": "Public domain",
+      "filename": "Swiss_BAG_Impfplan_2025.pdf",
+      "expected_pages": "~32",
+      "key_articles": [
+        "Recommended schedule by age",
+        "Indications, contraindications",
+        "Special populations"
+      ],
+      "notes": "Updated annually — track version."
+    },
+    {
+      "id": "edpb_health_guidelines",
+      "title": "EDPB Guidelines 3/2019 on processing of personal data through video devices + Guidelines on processing health data",
+      "publisher": "European Data Protection Board",
+      "year": 2020,
+      "jurisdiction": "EU",
+      "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
+      "license": "EDPB — free use",
+      "filename": "EDPB_health_data_guidelines.pdf",
+      "expected_pages": "~30 (summary)",
+      "key_articles": [
+        "Special category data processing under Art. 9(2)",
+        "Consent in health contexts",
+        "DPIA triggers"
+      ],
+      "notes": "Landing page lists all relevant guidelines — pick the latest health-data set."
+    },
+    {
+      "id": "beauchamp_childress",
+      "title": "Principles of Biomedical Ethics, 8th ed.",
+      "publisher": "Oxford University Press",
+      "authors": "Tom L. Beauchamp & James F. Childress",
+      "year": 2019,
+      "jurisdiction": "International",
+      "url": "https://global.oup.com/academic/product/principles-of-biomedical-ethics-9780190640873",
+      "license": "Copyrighted book — cited only, not stored in RAG",
+      "filename": null,
+      "expected_pages": "~512",
+      "key_articles": [
+        "Four principles: Autonomy, Beneficence, Non-maleficence, Justice"
+      ],
+      "notes": "Used for foundational principles in Pillar 3 (Autonomy) and Pillar 6 (Justice)."
+    }
+  ]
+}

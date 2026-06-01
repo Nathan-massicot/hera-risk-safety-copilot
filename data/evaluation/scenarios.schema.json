@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HERA Eval Scenario",
+  "type": "object",
+  "required": ["id", "app_description", "app_metadata", "simulated_answers", "gold_standard"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^scenario_\\d{2}$"},
+    "app_description": {"type": "string", "minLength": 100},
+    "app_metadata": {
+      "type": "object",
+      "required": ["category", "uses_ai", "data_sensitivity", "vulnerable_pop", "target_markets"],
+      "properties": {
+        "category": {"type": "string"},
+        "uses_ai": {"type": "boolean"},
+        "data_sensitivity": {"enum": ["low", "medium", "high"]},
+        "vulnerable_pop": {"type": "boolean"},
+        "target_markets": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "samd_class_likely": {"type": ["string", "null"]}
+      }
+    },
+    "developer_persona": {"type": "string"},
+    "simulated_answers": {
+      "type": "object",
+      "minProperties": 6,
+      "additionalProperties": {"type": "string"}
+    },
+    "gold_standard": {
+      "type": "object",
+      "required": ["relevant_dimensions", "expected_risks"],
+      "properties": {
+        "relevant_dimensions": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^P\\d\\.D\\d+$"},
+          "minItems": 4
+        },
+        "expected_risks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "risk", "severity"],
+            "properties": {
+              "dimension": {"type": "string", "pattern": "^P\\d\\.D\\d+$"},
+              "risk": {"type": "string"},
+              "severity": {"enum": ["low", "medium", "high"]}
+            }
+          },
+          "minItems": 3
+        },
+        "expected_mitigations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "mitigation"],
+            "properties": {
+              "dimension": {"type": "string", "pattern": "^P\\d\\.D\\d+$"},
+              "mitigation": {"type": "string"}
+            }
+          }
+        },
+        "expected_regulations_cited": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}

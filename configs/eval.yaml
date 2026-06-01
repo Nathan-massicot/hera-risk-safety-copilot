@@ -1,0 +1,59 @@
+# Evaluation harness configuration.
+# Run via: uv run python -m src.evaluation.runner --approach <name> --config configs/eval.yaml
+
+seed: 1337
+
+# Scenario set
+scenarios:
+  path: data/evaluation/scenarios.jsonl
+  limit: null  # null = all scenarios
+
+# Approaches under comparison
+approaches:
+  - id: prompt-only
+    description: Mistral 7B Instruct via Ollama, HERA system prompt only.
+  - id: fine-tuned
+    description: Fine-tuned SLM (QLoRA) imported as hera-baseline:latest in Ollama.
+  - id: rag
+    description: Base SLM + ChromaDB retrieval over regulatory docs.
+  - id: rlm
+    description: Multi-agent (Generator / Critic / Selector) over base SLM.
+
+# Simulated developer answers — keep responses deterministic across approaches
+simulation:
+  developer_persona: |
+    You are simulating an mHealth app developer answering the copilot's questions.
+    Answer concisely (2-4 sentences), in character, based on the scenario description.
+    Do not hallucinate facts not in the scenario. If unsure, say "I don't know yet".
+  max_turns_per_scenario: 12
+
+# Auto metrics
+metrics:
+  coverage:
+    description: dimensions_found / dimensions_expected (recall on HERA dimensions)
+    weight: 0.25
+  relevance:
+    description: relevant_questions / total_questions (precision on questions asked)
+    weight: 0.20
+  accuracy_f1:
+    description: F1 on identified risks vs gold standard
+    weight: 0.30
+  latency:
+    description: average response time per turn (lower is better)
+    weight: 0.10
+
+# LLM-as-judge
+llm_judge:
+  enabled: true
+  model: claude-opus-4-7  # Anthropic API; key in .env
+  rubric_path: configs/eval_rubric.md  # written at J3
+  criteria:
+    - depth: 1-5 scale (1 = generic, 5 = drills into specifics)
+    - actionability: 1-5 scale (1 = vague, 5 = concrete and applicable)
+  weight: 0.15
+
+# Output
+output:
+  results_dir: runs
+  results_filename: results.jsonl
+  summary_filename: summary.json

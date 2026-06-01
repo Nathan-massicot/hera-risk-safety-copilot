@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HERA — Which regulations apply to your mHealth app?</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root { --brand: #FF6B1A; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         margin: 0; color: #111827; background: #f9fafb; }
+  header { background: #ffffff; border-bottom: 3px solid var(--brand); padding: 20px 32px; }
+  header h1 { margin: 0 0 4px; font-size: 22px; }
+  header p { margin: 0; color: #6b7280; font-size: 14px; }
+  .meta { margin-top: 10px; font-size: 13px; color: #374151; }
+  .meta b { color: var(--brand); }
+  .ok { color: #15803d; font-weight: 600; }
+  .bad { color: #b91c1c; font-weight: 600; }
+  main { padding: 24px 32px 64px; }
+  section { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+            padding: 20px 24px; margin-bottom: 24px; }
+  h2 { font-size: 16px; margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid #f3f4f6; }
+  .mermaid { text-align: center; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  th { color: #6b7280; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  .juris { background: #fff1e8; color: var(--brand); border-radius: 999px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+  .arts { color: #6b7280; font-size: 12px; }
+  a { color: var(--brand); }
+</style>
+</head>
+<body>
+<header>
+  <h1>HERA — Which regulations apply to your mHealth app?</h1>
+  <p>Yes/no decision tree — EU + Switzerland · cumulative model</p>
+  <div class="meta">
+    Version <b>0.3</b> · model <b>accumulator</b>
+    · 37 questions · 44 regulations · <span class='ok'>✓ consistent structure</span>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Decision tree</h2>
+    <div class="mermaid">
+flowchart TD
+    Q1{{"Q1 · Which market(s) does your app target?"}}
+    Q2{{"Q2 · Does your app process health data? (symptoms, conditions, medication, biometrics, mental state, health-related behaviours...)"}}
+    Q3{{"Q3 · Does your app have a MEDICAL PURPOSE? (diagnosis, prevention, monitoring, prediction, prognosis, treatment, or alleviation of a disease / disability)"}}
+    Q4{{"Q4 · Does your app provide information that drives clinical, diagnostic or therapeutic decisions, or that monitors physiological processes?"}}
+    Q5{{"Q5 · Does your app provide this information by ANALYSING data derived from a specimen taken from the human body? (lab results, biomarkers, genetic/DNA data, in-vitro examination of blood, urine, tissue...) — e.g. an app interpreting a blood-glucose value is in-vitro diagnostic; a meal-logging coaching app is not."}}
+    Q6{{"Q6 · If the app provides erroneous information, what is the most serious possible consequence for the patient?"}}
+    Q7{{"Q7 · Is your software developed under a controlled lifecycle, risk-management and usability process?"}}
+    Q8{{"Q8 · Do you have clinical evidence demonstrating the scientific validity, technical performance and clinical benefit of your software?"}}
+    Q8b{{"Q8b · Is your app linked to a medicinal product? (companion app for dosing/adherence, or device incorporating or administering a medicinal substance)"}}
+    Q8c{{"Q8c · Does your software already hold a certificate under the old directive (MDD/AIMD), or are you starting a fresh MDR certification?"}}
+    Q9{{"Q9 · Does your app use AI or machine-learning models in a decision loop?"}}
+    Q10{{"Q10 · Does your app use AI for medical decisions (triage, diagnosis, therapeutic recommendation, clinical monitoring)?"}}
+    Q11{{"Q11 · Does your app build on a general-purpose AI model (an LLM such as GPT, Claude, Gemini, or an open-weight model)?"}}
+    Q12{{"Q12 · Will your app be DEPLOYED by a public body or a healthcare provider (hospital, clinic, health insurer) for a high-risk use?"}}
+    Q13{{"Q13 · Does your app process biometric data (face, voice, fingerprint, DNA)?"}}
+    Q14{{"Q14 · Does your app target or include minors under 16?"}}
+    Q15{{"Q15 · Does your app make AUTOMATED decisions that produce legal effects or significantly affect the user?"}}
+    Q16{{"Q16 · Do you process health data at LARGE SCALE, or carry out systematic monitoring / large-scale profiling of users?"}}
+    Q17{{"Q17 · Does your app use cookies, third-party SDKs, pixels, or access device identifiers (analytics, crash reporting, attribution, advertising)?"}}
+    Q18{{"Q18 · Does your app monetise via advertising, sale of aggregated data, or sharing with third parties?"}}
+    Q19{{"Q19 · Is your health data hosted or processed (sub-processors, cloud) outside the EU/Switzerland?"}}
+    Q20{{"Q20 · Do you host (or have hosted) the health data of FRENCH patients (prevention, diagnosis, care, medico-social follow-up)?"}}
+    Q21{{"Q21 · Does your app include teleconsultation, e-prescription, or does it interact with healthcare professionals?"}}
+    Q22{{"Q22 · Does your app integrate with national electronic health records? (Swiss EPR, French DMP, Austrian ELGA...)"}}
+    Q22b{{"Q22b · Does your app perform strong identity verification of patients or healthcare professionals (electronic identification, ID wallet)?"}}
+    Q23{{"Q23 · Are you seeking public reimbursement or listing on a national market-access scheme? (being paid by statutory health insurance / appearing in a national directory)"}}
+    Q24{{"Q24 · Are you operating in Switzerland specifically?"}}
+    Q25{{"Q25 · Is your app (or could it be) a medical device placed on the Swiss market while your registered seat is outside Switzerland (EU/EEA included)?"}}
+    Q26{{"Q26 · On the Swiss side, do you make solely automated decisions with significant effect, OR process health data at large scale / carry out high-risk profiling?"}}
+    Q27{{"Q27 · Will your app be used over the long term (&gt; 1 year)?"}}
+    Q28{{"Q28 · Will your software be placed on the EU market as a CE-marked device?"}}
+    Q29{{"Q29 · Do you distribute your app / software as a commercial product in the EU (sale, app store, hardware integration), beyond a mere internal service?"}}
+    Q30{{"Q30 · Does your app pair with a connected object or wearable device (wearable, sensor, glucometer, watch, connected medical device...)?"}}
+    Q31{{"Q31 · Do you place on the EU market software, AI or a digital device that could cause harm (injury to health, data corruption) in case of a defect?"}}
+    Q32{{"Q32 · Does your app have cybersecurity / incident-reporting obligations, or are you an &#x27;essential or important entity&#x27; in the health sector?"}}
+    Q33{{"Q33 · Will your health data be shared for interoperability or secondary use (research, statistics, model training)?"}}
+    Q34{{"Q34 · Is your app a consumer-facing (B2C) service aimed at the general public?"}}
+    X_OUT_OF_SCOPE["X_OUT_OF_SCOPE<br/>Out of EU / Switzerland scope"]
+    X_RECAP(["X_RECAP<br/>Summary of applicable regulations"])
+    Q1 -->|"EU / EEA only +GDPR"| Q2
+    Q1 -->|"Switzerland only +nFADP"| Q2
+    Q1 -->|"EU and Switzerland +GDPR, nFADP"| Q2
+    Q1 -->|"Neither EU nor Switzerland"| X_OUT_OF_SCOPE
+    Q2 -->|"Yes +GDPR Art. 9"| Q3
+    Q2 -->|"No"| Q9
+    Q3 -->|"Yes"| Q4
+    Q3 -->|"No (wellness) +ISO 82304"| Q9
+    Q4 -->|"Yes (SaMD)"| Q5
+    Q4 -->|"No (observational tracking) +ISO 82304"| Q9
+    Q5 -->|"Yes (in-vitro diagnostic) +IVDR"| Q7
+    Q5 -->|"No (other clinical/physiological data)"| Q6
+    Q6 -->|"Death or irreversible deterioration +SaMD Class III"| Q7
+    Q6 -->|"Serious harm to health +SaMD Class IIb"| Q7
+    Q6 -->|"Moderate consequence (non-urgent intervention) +SaMD Class IIa"| Q7
+    Q6 -->|"No serious clinical impact +SaMD Class I"| Q7
+    Q7 -->|"Yes / in progress +SaMD lifecycle standards"| Q8
+    Q7 -->|"No / not yet +SaMD lifecycle standards"| Q8
+    Q8 -->|"Yes +Clinical evaluation of software"| Q8b
+    Q8 -->|"No / partially +Clinical evaluation of software"| Q8b
+    Q8b -->|"Yes +Combination products device + medicine"| Q8c
+    Q8b -->|"No"| Q8c
+    Q8c -->|"Existing legacy MDD certificate +MDR transition for legacy devices"| Q9
+    Q8c -->|"New MDR certification"| Q9
+    Q9 -->|"Yes +EU AI Act"| Q10
+    Q9 -->|"No"| Q13
+    Q10 -->|"Yes (medical decision) +EU AI Act"| Q11
+    Q10 -->|"No (general assistant) +EU AI Act"| Q11
+    Q11 -->|"Yes, third-party LLM without retraining +EU AI Act"| Q12
+    Q11 -->|"Yes, and I fine-tune it substantially +EU AI Act, EU AI Act"| Q12
+    Q11 -->|"No general-purpose model"| Q12
+    Q12 -->|"Yes (public body / healthcare provider) +EU AI Act"| Q13
+    Q12 -->|"No"| Q13
+    Q13 -->|"Yes +GDPR Art. 9"| Q14
+    Q13 -->|"No"| Q14
+    Q14 -->|"Yes +GDPR Art. 8"| Q15
+    Q14 -->|"No"| Q15
+    Q15 -->|"Yes +GDPR Art. 22"| Q16
+    Q15 -->|"No"| Q16
+    Q16 -->|"Yes +GDPR Art. 35"| Q17
+    Q16 -->|"No (small scale)"| Q17
+    Q17 -->|"Yes +ePrivacy Art. 5(3)"| Q18
+    Q17 -->|"No (strictly necessary trackers only)"| Q18
+    Q18 -->|"Yes +Data monetisation / third-party sharing"| Q19
+    Q18 -->|"No"| Q19
+    Q19 -->|"Yes +GDPR Chapter V"| Q20
+    Q19 -->|"No (EU/CH only)"| Q20
+    Q20 -->|"Yes +HDS"| Q21
+    Q20 -->|"No"| Q21
+    Q21 -->|"Yes +Telehealth"| Q22
+    Q21 -->|"No"| Q22
+    Q22 -->|"Yes +eHealth"| Q22b
+    Q22 -->|"No"| Q22b
+    Q22b -->|"Yes +eIDAS 2"| Q23
+    Q22b -->|"No"| Q23
+    Q23 -->|"Yes — Germany (DiGA) +DiGA"| Q24
+    Q23 -->|"Yes — France (PECAN) +PECAN"| Q24
+    Q23 -->|"Yes — Belgium / other +Other national reimbursement schemes"| Q24
+    Q23 -->|"No — no reimbursement sought"| Q24
+    Q24 -->|"Yes +Swiss stack"| Q25
+    Q24 -->|"No"| Q27
+    Q25 -->|"Yes (seat outside CH) +MedDO"| Q26
+    Q25 -->|"No (seat in Switzerland) +MedDO"| Q26
+    Q26 -->|"Yes +nFADP Art. 21 &amp; 22"| Q27
+    Q26 -->|"No"| Q27
+    Q27 -->|"Yes +Post-Market Surveillance &amp; lifecycle"| Q28
+    Q27 -->|"No"| Q28
+    Q28 -->|"Yes +UDI &amp; EUDAMED registration"| Q29
+    Q28 -->|"No (R&amp;D, outside EU market)"| Q29
+    Q29 -->|"Yes +CRA"| Q30
+    Q29 -->|"No (purely internal use)"| Q30
+    Q30 -->|"Yes +Data Act"| Q31
+    Q30 -->|"No (standalone app)"| Q31
+    Q31 -->|"Yes +PLD"| Q32
+    Q31 -->|"No"| Q32
+    Q32 -->|"Yes +NIS2"| Q33
+    Q32 -->|"No"| Q33
+    Q33 -->|"Yes +EHDS"| Q34
+    Q33 -->|"No"| Q34
+    Q34 -->|"Yes +European Accessibility Act"| X_RECAP
+    Q34 -->|"No (B2B / professional)"| X_RECAP
+    classDef qnode fill:#ffffff,stroke:#9ca3af,stroke-width:1px,color:#111827;
+    classDef recap fill:#FF6B1A,stroke:#FF6B1A,color:#ffffff,font-weight:bold;
+    classDef out fill:#e5e7eb,stroke:#9ca3af,color:#374151;
+    class Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q8b,Q8c,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21,Q22,Q22b,Q23,Q24,Q25,Q26,Q27,Q28,Q29,Q30,Q31,Q32,Q33,Q34 qnode;
+    class X_OUT_OF_SCOPE out;
+    class X_RECAP recap;
+    </div>
+  </section>
+  <section>
+    <h2>Regulation cards (44) — rich content to be written after validation</h2>
+    <table>
+      <thead><tr><th>id</th><th>Title</th><th>Jurisdiction</th><th>Summary</th><th>Key articles</th><th>Official</th></tr></thead>
+      <tbody>
+<tr><td><code>ai_act_fria</code></td><td><strong>EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27)</strong></td><td><span class='juris'>EU</span></td><td>Obligation of DEPLOYERS of high-risk AI systems that are public bodies or private entities providing public services (healthcare providers included). Before first use: describe the use, the affected persons, assess fundamental-rights risks, define mitigation and human-oversight measures, then notify the market surveillance authority.</td><td class='arts'>Art. 27, Art. 26</td><td><a href='https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng' target='_blank'>link</a></td></tr>
+<tr><td><code>ai_act_gpai_downstream</code></td><td><strong>EU AI Act — integrator of a GPAI model (downstream obligations)</strong></td><td><span class='juris'>EU</span></td><td>The integrator of a third-party LLM is not the model provider, but must rely on the downstream documentation (Annex XII) that the GPAI provider must supply, comply with transparency Art. 50, and — if the LLM feeds a high-risk system — meet the Art. 8-15 obligations. GPAI obligations applicable since 2 Aug 2025; GPAI Code of Practice published 10 Jul 2025.</td><td class='arts'>Art. 51-56, Annex XII, Art. 50, Art. 8-15</td><td><a href='https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai' target='_blank'>link</a></td></tr>
+<tr><td><code>ai_act_gpai_provider</code></td><td><strong>EU AI Act — GPAI model provider (Art. 53/55)</strong></td><td><span class='juris'>EU</span></td><td>Anyone who places a general-purpose model on the EU market becomes a GPAI provider — including a party that fine-tunes an existing model beyond an indicative ~1/3 of the original compute (Commission guidelines, Jul 2025). Art. 53 obligations: technical documentation, downstream documentation, copyright policy, public summary of training data. Art. 55 if systemic risk (indicative threshold 10^25 FLOP).</td><td class='arts'>Art. 53, Art. 55, Annex XI, Annex XII</td><td><a href='https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng' target='_blank'>link</a></td></tr>
+<tr><td><code>ai_act_high_risk</code></td><td><strong>EU AI Act — high-risk AI (Annex III §1(a))</strong></td><td><span class='juris'>EU</span></td><td>Full obligations: risk management (Art. 9), data governance (Art. 10), documentation (Art. 11), logs (Art. 12), transparency (Art. 13), human oversight (Art. 14), robustness (Art. 15). MDCG 2025-6 nuance: an AI device is high-risk only if subject to third-party conformity assessment (a self-certified Class I is excluded). The AI conformity assessment may be integrated into the MDR procedure (Art. 43(3)) if the Notified Body is also designated under the AI Act.</td><td class='arts'>Art. 6(1), Annex III §1(a), Art. 9-15, Art. 43(3), MDCG 2025-6</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689' target='_blank'>link</a></td></tr>
+<tr><td><code>ai_act_timeline</code></td><td><strong>EU AI Act — staggered application timeline (+ Digital Omnibus)</strong></td><td><span class='juris'>EU</span></td><td>Progressive application: prohibited practices (Art. 5) + AI literacy (Art. 4) since 2 Feb 2025; GPAI model obligations since 2 Aug 2025; transparency Art. 50 on 2 Aug 2026 (AI-content marking: grace period to 2 Dec 2026). The Digital Omnibus (provisional political agreement May 2026, NOT yet formally adopted / not in the OJ) WOULD defer the Annex III high-risk obligations from 2 Aug 2026 to 2 Dec 2027, and AI embedded in a regulated product (medical device) to 2 Aug 2028.</td><td class='arts'>Art. 113 (date of application), Art. 5, Art. 4, Art. 50, Digital Omnibus 2025/2026</td><td><a href='https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng' target='_blank'>link</a></td></tr>
+<tr><td><code>ai_act_transparency</code></td><td><strong>EU AI Act — transparency obligations (Art. 50)</strong></td><td><span class='juris'>EU</span></td><td>Users informed that they are interacting with an AI; AI-generated content marked in a machine-readable way. Deployers of emotion-recognition / biometric-categorisation systems must inform exposed persons (relevant for mental-health / mood apps).</td><td class='arts'>Art. 50</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689' target='_blank'>link</a></td></tr>
+<tr><td><code>ch_rep_meddo</code></td><td><strong>MedDO — MDR third country &amp; Swiss authorised representative (CH-REP)</strong></td><td><span class='juris'>CH</span></td><td>With the EU-CH MRA not updated, Switzerland is a third country for the MDR since 26 May 2021. Any manufacturer without a Swiss seat (EU/EEA included) must appoint a Swiss authorised representative (CH-REP, Art. 51(1) MedDO) before placing on the Swiss market; transition periods have lapsed. Registration in swissdamed. Symmetry: a Swiss manufacturer needs an EU-REP for the EU market. EUDAMED is inaccessible to Swissmedic.</td><td class='arts'>MedDO Art. 51(1), MedDO (SR 812.213)</td><td><a href='https://www.swissmedic.ch/swissmedic/en/home/medical-devices/market-access/ch-rep.html' target='_blank'>link</a></td></tr>
+<tr><td><code>clinical_eval_mdsw</code></td><td><strong>Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)</strong></td><td><span class='juris'>EU</span></td><td>A classified SaMD must demonstrate scientific validity, technical performance and clinical benefit via a clinical evaluation (MDR Art. 61, Annex XIV); a clinical investigation is required for Class III/implantable devices (Annex XV, EN ISO 14155).</td><td class='arts'>MDR Art. 61, MDR Annex XIV, MDR Annex XV, MDCG 2020-1</td><td><a href='https://health.ec.europa.eu/system/files/2020-09/md_mdcg_2020_1_guidance_clinic_eva_md_software_en_0.pdf' target='_blank'>link</a></td></tr>
+<tr><td><code>combination_product</code></td><td><strong>Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)</strong></td><td><span class='juris'>EU</span></td><td>The regime of a combination product depends on the principal mode of action: ancillary substance -&gt; MDR; principal action -&gt; medicinal product (Dir. 2001/83/EC). MDR Art. 117 requires a Notified Body opinion on the device part in the marketing-authorisation dossier. Borderline cases handled by MDCG 2022-5.</td><td class='arts'>MDR Art. 1(8), MDR Art. 1(9), MDR Art. 117, MDCG 2022-5 rev.1, Dir. 2001/83/EC</td><td><a href='https://health.ec.europa.eu/system/files/2023-06/mdcg_2022-5_en.pdf' target='_blank'>link</a></td></tr>
+<tr><td><code>cra</code></td><td><strong>CRA — Cyber Resilience Act (products with digital elements)</strong></td><td><span class='juris'>EU</span></td><td>Regulation (EU) 2024/2847: horizontal &#x27;by design &amp; by default&#x27; cybersecurity requirements for products with digital elements (most software/apps). The manufacturer must handle vulnerabilities across the lifecycle, provide an SBOM, supply security updates, and affix the CE marking. Reporting of exploited vulnerabilities to ENISA from 11 Sep 2026; full obligations on 11 Dec 2027. Distinct from NIS2 (organisation, not product).</td><td class='arts'>Art. 13, Art. 14, Annex I, Annex II (SBOM)</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847' target='_blank'>link</a></td></tr>
+<tr><td><code>data_act</code></td><td><strong>Data Act — access &amp; portability of connected-product data</strong></td><td><span class='juris'>EU</span></td><td>Regulation (EU) 2023/2854, applicable since 12 Sep 2025. Right for users to access data generated by their connected products (IoT, wearables) and related services, and to have it transferred to a third party. Pre-contractual information, fair sharing contracts (FRAND), trade-secret safeguards, cloud anti-lock-in / switching rules.</td><td class='arts'>Art. 3, Art. 4-5, Chapter III, Chapter VI</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854' target='_blank'>link</a></td></tr>
+<tr><td><code>data_monetization</code></td><td><strong>Data monetisation / third-party sharing</strong></td><td><span class='juris'>EU</span></td><td>GDPR Art. 9(2)(a): explicit consent per purpose. ePrivacy (cookies/trackers). Anonymisation: Recital 26 + WP29 Opinion 5/2014.</td><td class='arts'>GDPR Art. 9(2)(a), ePrivacy</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>diga_germany</code></td><td><strong>DiGA (Germany) — fast-track reimbursement for digital health apps</strong></td><td><span class='juris'>DE</span></td><td>BfArM fast-track (§139e SGB V) opening reimbursement by statutory health insurance (GKV). Conditions: CE-marked medical device class I/IIa (and some low-risk IIb since the DiGAV amendment of 2026-02-01), &#x27;positive care effect&#x27;, security (BSI TR-03161 certification mandatory since 2025-01-01) and interoperability (ePA, GesundheitsID, INA). Provisional listing 12 months (extendable to 24). From 2026: real-world success measurement (AbEM) + success-dependent pricing.</td><td class='arts'>§139e SGB V, DiGAV, DVG 2019, BSI TR-03161, AbEM (2026)</td><td><a href='https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html' target='_blank'>link</a></td></tr>
+<tr><td><code>eaa_accessibility</code></td><td><strong>European Accessibility Act (EAA)</strong></td><td><span class='juris'>EU</span></td><td>Directive (EU) 2019/882: accessibility requirements (WCAG 2.1 / EN 301 549) for consumer digital services, applicable since June 2025.</td><td class='arts'>Directive 2019/882, EN 301 549</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0882' target='_blank'>link</a></td></tr>
+<tr><td><code>ehds</code></td><td><strong>EHDS — European Health Data Space</strong></td><td><span class='juris'>EU</span></td><td>Regulation (EU) 2025: primary use (interoperability, portability in EEHRxF format) + secondary use of health data via Health Data Access Bodies. Articulates with the Data Governance Act (EU 2022/868, since Sep 2023): data altruism and intermediation for public-interest research.</td><td class='arts'>Primary use, Secondary use, EEHRxF, DGA (EU 2022/868)</td><td><a href='https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en' target='_blank'>link</a></td></tr>
+<tr><td><code>eidas2</code></td><td><strong>eIDAS 2 — EU Digital Identity Wallet</strong></td><td><span class='juris'>EU</span></td><td>Regulation (EU) 2024/1183: Member States must offer an EU Digital Identity Wallet by end 2026. Health attributes can be issued as Electronic Attestations of Attributes (EAA) into the wallet (link with EHDS). Relevant for strong identification of patients/healthcare professionals.</td><td class='arts'>Regulation (EU) 2024/1183, Electronic Attestations of Attributes (EAA)</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1183' target='_blank'>link</a></td></tr>
+<tr><td><code>eprivacy_terminal</code></td><td><strong>ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)</strong></td><td><span class='juris'>EU</span></td><td>Prior consent required for any storage/reading of information on the user&#x27;s device, except strict exemptions. The EDPB Guidelines 2/2023 (final version 2.0 of 16 Oct 2024) confirm a broad reading: cookies, mobile SDKs, pixels, device fingerprinting, unique identifiers, IoT — including for non-health data. Distinct from monetisation: applies to any third-party analytics/attribution/crash-reporting.</td><td class='arts'>Directive 2002/58/EC Art. 5(3), EDPB Guidelines 2/2023 v2.0</td><td><a href='https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-22023-technical-scope-art-53-eprivacy-directive_en' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_art9</code></td><td><strong>GDPR Art. 9 — health data (special category)</strong></td><td><span class='juris'>EU</span></td><td>Processing prohibited in principle unless an exception applies (explicit consent, vital interest, healthcare...). DPIA often mandatory (Art. 35).</td><td class='arts'>Art. 9(1), Art. 9(2), Art. 35</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_automated</code></td><td><strong>GDPR Art. 22 — automated decisions</strong></td><td><span class='juris'>EU</span></td><td>Right to human intervention, right to express one&#x27;s point of view, right to contest. Strict exceptions.</td><td class='arts'>Art. 22</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_base</code></td><td><strong>GDPR — baseline (legal basis &amp; rights)</strong></td><td><span class='juris'>EU</span></td><td>Legal basis (Art. 6), transparency (Art. 12-14), data-subject rights (Art. 15-22), record of processing (Art. 30), security (Art. 32). DPO mandatory for large-scale processing of health data (Art. 37(1)(c)). Breach notification to the authority within 72h (Art. 33-34). Written DPA mandatory with any cloud/third-party AI API processor (Art. 28).</td><td class='arts'>Art. 6, Art. 12-22, Art. 28, Art. 30, Art. 32, Art. 33-34, Art. 37</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_biometric</code></td><td><strong>GDPR Art. 9 — biometrics (+ AI Act Art. 5)</strong></td><td><span class='juris'>EU</span></td><td>Biometric data = special category. Explicit consent, mandatory DPIA. Cross-check with EU AI Act Art. 5 (biometric categorisation / emotion recognition prohibited or restricted).</td><td class='arts'>GDPR Art. 9(1), GDPR Art. 35, AI Act Art. 5</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_children</code></td><td><strong>GDPR Art. 8 — children</strong></td><td><span class='juris'>EU</span></td><td>Parental consent under 16 (varies by Member State: 13-16). ICO Age-Appropriate Design Code (UK reference).</td><td class='arts'>Art. 8</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_dpia</code></td><td><strong>GDPR Art. 35 — Data Protection Impact Assessment (DPIA)</strong></td><td><span class='juris'>EU</span></td><td>Mandatory before any high-risk processing. DPAs require it for large-scale processing of health data and large-scale systematic monitoring. WP248 rev.01 method (crossing 2 criteria = presumption of high risk). Prior consultation of the authority (Art. 36) if high residual risk. DPIA systematic for high-risk AI.</td><td class='arts'>Art. 35, Art. 36, WP248 rev.01</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>gdpr_transfer</code></td><td><strong>GDPR Chapter V — international transfers</strong></td><td><span class='juris'>EU</span></td><td>Adequacy decision (Art. 45), standard contractual clauses / SCC (Art. 46), transfer impact assessment (TIA). Caution for health data outside the EEA. Switzerland keeps its own adequacy list (Annex 1 DPO).</td><td class='arts'>Art. 44-49</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679' target='_blank'>link</a></td></tr>
+<tr><td><code>hds_certification</code></td><td><strong>HDS — Health Data Host certification (France)</strong></td><td><span class='juris'>FR</span></td><td>French obligation (Public Health Code Art. L1111-8): any personal health data hosted on behalf of a third party must be hosted by an HDS-certified host. As the controller you must ensure your host/cloud holds a valid HDS certificate covering the right activities. v2 framework (order of 26 April 2024, in force 16 May 2024): aligned with ISO/IEC 27001:2022, physical hosting exclusively within the EEA, compliance by 16 May 2026 at the latest. Certificate valid 3 years, annual audits, 6 certifiable activities.</td><td class='arts'>PHC Art. L1111-8, PHC Art. R1111-9 to R1111-11, Order of 26 Apr. 2024 (v2 framework)</td><td><a href='https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049577902' target='_blank'>link</a></td></tr>
+<tr><td><code>iso_82304</code></td><td><strong>ISO 82304 — health software quality &amp; safety (IEC 82304-1 / ISO/TS 82304-2)</strong></td><td><span class='juris'>International</span></td><td>Quality and safety requirements for health software products: IEC 82304-1:2016 (product safety) and ISO/TS 82304-2:2021 (health &amp; wellness app quality, with a scored quality label). The fallback standard for non-medical (wellness) apps.</td><td class='arts'>Health software product safety &amp; security</td><td><a href='https://www.iso.org/standard/78182.html' target='_blank'>link</a></td></tr>
+<tr><td><code>ivdr_class</code></td><td><strong>IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)</strong></td><td><span class='juris'>EU</span></td><td>An app providing diagnostic information by analysing human specimens (lab, biomarkers, genetics) is in-vitro diagnostic medical device software (IVD-MDSW), classified A to D under rules 1-7 of IVDR Annex VIII, and not under the MDR.</td><td class='arts'>IVDR Art. 2(2), IVDR Annex VIII (rules 1-7), MDCG 2019-11, MDCG 2020-16 rev.4</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746' target='_blank'>link</a></td></tr>
+<tr><td><code>mdr_class_i</code></td><td><strong>SaMD Class I (MDR)</strong></td><td><span class='juris'>EU</span></td><td>Self-declaration of conformity, technical file, CE marking, lighter post-market surveillance.</td><td class='arts'>Annex VIII Rule 11, Art. 52(7)</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320' target='_blank'>link</a></td></tr>
+<tr><td><code>mdr_class_iia</code></td><td><strong>SaMD Class IIa (MDR)</strong></td><td><span class='juris'>EU</span></td><td>Notified Body required, quality-system audit (ISO 13485), clinical evaluation, proactive vigilance.</td><td class='arts'>Annex VIII Rule 11, Art. 52</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320' target='_blank'>link</a></td></tr>
+<tr><td><code>mdr_class_iib</code></td><td><strong>SaMD Class IIb (MDR)</strong></td><td><span class='juris'>EU</span></td><td>In-depth clinical evaluation, Notified Body on design + documentation, reinforced post-market surveillance.</td><td class='arts'>Annex VIII Rule 11, Art. 52</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320' target='_blank'>link</a></td></tr>
+<tr><td><code>mdr_class_iii</code></td><td><strong>SaMD Class III (MDR)</strong></td><td><span class='juris'>EU</span></td><td>Strictest regime: clinical investigation, validated design dossier, annual Notified Body audit.</td><td class='arts'>Annex VIII Rule 11, Art. 52(3)</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320' target='_blank'>link</a></td></tr>
+<tr><td><code>mdr_transition</code></td><td><strong>MDR transition for legacy devices (Regulation (EU) 2023/607)</strong></td><td><span class='juris'>EU</span></td><td>Extended transition deadlines: 31/12/2027 (Class III and implantable IIb) and 31/12/2028 (other IIb, IIa, Class I), under conditions (MDR QMS by 26/05/2024, Notified Body agreement by 26/09/2024, no significant change). The sell-off period was removed.</td><td class='arts'>MDR Art. 120 (amended), Regulation (EU) 2023/607</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0607' target='_blank'>link</a></td></tr>
+<tr><td><code>national_ehealth</code></td><td><strong>eHealth — national profiles (EPRA, DMP, ELGA)</strong></td><td><span class='juris'>EU/CH</span></td><td>CH: EPRA/EPDG + Swiss eHealth certification (full revision under way, bill before Parliament since Nov 2025, opt-out targeted ~2028). FR: Segur certification, FHIR DMP profile. AT: ELGA G-TG.</td><td class='arts'>EPRA, IHE XDS, FHIR R4</td><td><a href='https://www.fedlex.admin.ch/eli/cc/2017/203/en' target='_blank'>link</a></td></tr>
+<tr><td><code>nis2_cyber</code></td><td><strong>NIS2 — cybersecurity &amp; incident notification</strong></td><td><span class='juris'>EU</span></td><td>Directive (EU) 2022/2555: cyber risk-management measures + incident notification for essential/important entities in the health sector. Complements MDR Art. 5 + Annex I §17.</td><td class='arts'>NIS2 Art. 21, NIS2 Art. 23, MDR Annex I §17</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555' target='_blank'>link</a></td></tr>
+<tr><td><code>nlpd_automated_dpia</code></td><td><strong>nFADP Art. 21 &amp; 22 — automated decision + DPIA (Switzerland)</strong></td><td><span class='juris'>CH</span></td><td>Art. 21: for an automated individual decision with significant effect, a duty to inform + the data subject&#x27;s right to human review. Art. 22: a data protection impact assessment (Swiss equivalent of the DPIA) is mandatory for high-risk processing (large-scale processing of sensitive data, high-risk profiling, systematic monitoring). High residual risk -&gt; consultation of the FDPIC (unless a data protection adviser is appointed). Own regime, distinct from GDPR Art. 22/35.</td><td class='arts'>nFADP Art. 21, nFADP Art. 22, DPO ordinance (SR 235.11)</td><td><a href='https://www.fedlex.admin.ch/eli/cc/2022/491/en' target='_blank'>link</a></td></tr>
+<tr><td><code>nlpd_base</code></td><td><strong>nFADP — baseline (Swiss Federal Act on Data Protection)</strong></td><td><span class='juris'>CH</span></td><td>Revised act (SR 235.1) in force since 1 September 2023. Regime DISTINCT from the GDPR. Principles (Art. 6), information at collection (Art. 19), right of access (Art. 25), record of processing activities (Art. 12), security (Art. 8 + DPO ordinance). Authority: the FDPIC. Own vocabulary: &#x27;data protection adviser&#x27;. Health data = sensitive personal data (Art. 5(c)).</td><td class='arts'>Art. 5(c), Art. 6, Art. 8, Art. 12, Art. 19, Art. 25</td><td><a href='https://www.fedlex.admin.ch/eli/cc/2022/491/en' target='_blank'>link</a></td></tr>
+<tr><td><code>pecan_france</code></td><td><strong>PECAN (France) — early access reimbursement for digital devices</strong></td><td><span class='juris'>FR</span></td><td>Early, derogatory market access (Decree no. 2023-232 of 30 March 2023): one-year non-renewable early reimbursement for digital medical devices, therapeutic (-&gt; LPP) and remote-monitoring (-&gt; LATM). Dual filing: ANS certificate of conformity (interoperability + security, CONVERGENCE platform) + HAS clinical dossier (CNEDiMTS, Sesame platform). Tariff (order of 22 April 2024): EUR 435 incl. tax for the first 3 months, then EUR 38.30/month, cap EUR 780/year/patient.</td><td class='arts'>Decree no. 2023-232, Order of 22 April 2024, ANS interop &amp; security frameworks, Art. L162-1-23 SSC</td><td><a href='https://www.has-sante.fr/jcms/p_3376633/fr/dispositifs-medicaux-numeriques-la-prise-en-charge-anticipee' target='_blank'>link</a></td></tr>
+<tr><td><code>pld</code></td><td><strong>PLD — Product Liability Directive (software &amp; AI)</strong></td><td><span class='juris'>EU</span></td><td>Directive (EU) 2024/2853 (replaces 85/374/EEC). Extends no-fault liability to software, AI and digital services explicitly qualified as &#x27;products&#x27;. A defect — defective AI output, vulnerability, missing required security updates — can trigger liability. Eases the burden of proof and requires disclosure of evidence. Transposition by 9 Dec 2026, applicable to products placed on the market after that date.</td><td class='arts'>Art. 4, Art. 7, Art. 9, Art. 10</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853' target='_blank'>link</a></td></tr>
+<tr><td><code>pms_lifecycle</code></td><td><strong>Post-Market Surveillance &amp; lifecycle</strong></td><td><span class='juris'>EU</span></td><td>MDR Art. 83-86 (PMS + PMCF). EU AI Act Art. 72 (PMS for high-risk AI, due with the high-risk regime). Plan + periodic report + vigilance. CH side: distinct Swissmedic vigilance (MIR, third country -&gt; not via EUDAMED).</td><td class='arts'>MDR Art. 83-86, AI Act Art. 72</td><td><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320' target='_blank'>link</a></td></tr>
+<tr><td><code>reimbursement_other_eu</code></td><td><strong>Other national reimbursement schemes (Belgium mHealthBelgium, etc.)</strong></td><td><span class='juris'>EU</span></td><td>National schemes close to DiGA/PECAN. BELGIUM — mHealthBelgium pyramid: M1 (CE + GDPR + AFMPS notification), M2 (eHealth platform interoperability), M3 (health-economic value -&gt; NIHDI/RIZIV reimbursement). Cross-cutting constant: clinical/health-economic evidence + national interoperability &amp; security certification, on top of CE marking.</td><td class='arts'>mHealthBelgium M1/M2/M3, NIHDI/RIZIV reimbursement, AFMPS notification</td><td><a href='https://mhealthbelgium.be/validation-pyramid' target='_blank'>link</a></td></tr>
+<tr><td><code>samd_standards</code></td><td><strong>SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)</strong></td><td><span class='juris'>EU/CH</span></td><td>Standards expected to demonstrate conformity of medical device software with the general requirements (MDR/IVDR Annex I). ISO 14971 (risk) and ISO 13485 (QMS) are harmonised under MDR; IEC 62304 (lifecycle) and IEC 62366-1 (usability) apply as state of the art / per the cited edition.</td><td class='arts'>MDR Annex I (GSPR), IEC 62304, ISO 14971, IEC 62366-1, ISO 13485</td><td><a href='https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/medical-devices_en' target='_blank'>link</a></td></tr>
+<tr><td><code>swiss_stack</code></td><td><strong>Swiss stack (MedDO + Swissmedic + EPRA)</strong></td><td><span class='juris'>CH</span></td><td>MedDO (MDR equivalent) + Swissmedic (authority, MIR vigilance — MIR 7.3.1 mandatory from 1 May 2026) + EPRA (electronic patient record, full revision under way). Combine with nlpd_base for data protection.</td><td class='arts'>MedDO (SR 812.213), Swissmedic vigilance (MIR), EPRA</td><td><a href='https://www.fedlex.admin.ch/eli/cc/2020/552/en' target='_blank'>link</a></td></tr>
+<tr><td><code>telehealth_national</code></td><td><strong>Telehealth — national health codes</strong></td><td><span class='juris'>EU/CH</span></td><td>FR: Public Health Code L1110-4 (medical confidentiality) + L4131-1. CH: MedPA (Medical Professions Act), HMA. Record retention 20 years FR / ~20 years CH (post-2020 reform; cantonal variation).</td><td class='arts'>PHC L1110-4, PHC L4131-1, MedPA</td><td><a href='https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072665/' target='_blank'>link</a></td></tr>
+<tr><td><code>udi_eudamed</code></td><td><strong>UDI &amp; EUDAMED registration</strong></td><td><span class='juris'>EU</span></td><td>Unique Device Identifier (UDI) + mandatory registration in EUDAMED. The first four modules become mandatory on 28 May 2026 (Decision (EU) 2025/2371, published 27/11/2025); register as an actor (SRN) then register the device before placing on the market.</td><td class='arts'>MDR Art. 27-31 (UDI), MDR Art. 33-34 (EUDAMED), Decision (EU) 2025/2371, Regulation (EU) 2024/1860</td><td><a href='https://health.ec.europa.eu/medical-devices-eudamed/overview_en' target='_blank'>link</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'base',
+    themeVariables: { primaryColor: '#ffffff', primaryBorderColor: '#9ca3af',
+                      lineColor: '#9ca3af', fontSize: '13px' },
+    flowchart: { useMaxWidth: false, htmlLabels: true, nodeSpacing: 40, rankSpacing: 55 } });
+</script>
+</body>
+</html>

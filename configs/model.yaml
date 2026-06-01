@@ -1,0 +1,46 @@
+# Base model selection for the fine-tuned SLM baseline.
+# Choice is finalized at J2 once the CUDA machine VRAM is confirmed.
+
+candidates:
+  - name: mistral-7b-instruct-v0.3
+    hf_id: mistralai/Mistral-7B-Instruct-v0.3
+    params_b: 7.25
+    context: 32768
+    notes: |
+      Default Ollama prototype model — switching keeps continuity for the demo.
+      QLoRA 4-bit fits in 24 GB VRAM with batch=1.
+
+  - name: qwen2.5-7b-instruct
+    hf_id: Qwen/Qwen2.5-7B-Instruct
+    params_b: 7.62
+    context: 32768
+    notes: |
+      Stronger multilingual (EN/FR), generally tops Mistral 7B on 2025 benchmarks.
+      Less-tested with mlx-lm but fine on PyTorch+PEFT.
+
+  - name: qwen2.5-14b-instruct
+    hf_id: Qwen/Qwen2.5-14B-Instruct
+    params_b: 14.7
+    context: 32768
+    notes: |
+      Only if CUDA VRAM >= 40 GB. Sweet spot if available.
+
+  - name: phi-3.5-mini-instruct
+    hf_id: microsoft/Phi-3.5-mini-instruct
+    params_b: 3.82
+    context: 131072
+    notes: |
+      Fallback if QLoRA on 7B too slow. ~4h training. Weaker dialogue quality.
+
+selected: mistral-7b-instruct-v0.3  # overridden at J2 based on actual VRAM
+
+# Quantization for local Ollama inference after fine-tune merge
+ollama:
+  target_format: gguf
+  quantization: q4_K_M
+  modelfile_template: |
+    FROM ./{model_file}
+    PARAMETER temperature 0.7
+    PARAMETER num_ctx 8192
+    PARAMETER stop "<|im_end|>"
+  tag: hera-baseline:latest

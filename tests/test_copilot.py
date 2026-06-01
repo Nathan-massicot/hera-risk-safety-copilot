@@ -39,7 +39,9 @@ def test_taxonomy_dimensions_have_reflection_questions():
             assert len(dim["reflection_questions"]) > 0
 
 
-def test_taxonomy_has_37_dimensions():
+def test_taxonomy_has_38_dimensions():
+    # Canonical count: 6+6+5+5+4+5+7 = 38. CLAUDE.md/README intro text
+    # historically said "37" but the per-pillar breakdown sums to 38.
     taxonomy = load_taxonomy()
     total = sum(len(p["dimensions"]) for p in taxonomy["pillars"])
     assert total == 38
