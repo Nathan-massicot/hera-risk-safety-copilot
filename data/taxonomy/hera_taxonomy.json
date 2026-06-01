@@ -1,0 +1,760 @@
+{
+  "name": "HERA",
+  "full_name": "Health Ethical & Regulatory Assessment",
+  "version": "1.0",
+  "description": "A unified taxonomy for identifying ethical and regulatory risks in mHealth applications (AI and non-AI).",
+  "sources": [
+    "DTX Risk Assessment Canvas (Denecke et al., 2023)",
+    "WHO Ethics & Governance of AI for Health (2024)",
+    "ODI Data Ethics Canvas (2021)",
+    "EU AI Act (2024)",
+    "MDR 2017/745",
+    "ISO/TS 82304-2 (2021)",
+    "NICE Evidence Standards Framework",
+    "DTAC (NHS)",
+    "GDPR",
+    "Beauchamp & Childress — Four Principles of Biomedical Ethics"
+  ],
+  "pillars": [
+    {
+      "id": "P1",
+      "name": "Patient Safety & Clinical Risk",
+      "focus": "patient-centered",
+      "description": "Risks related to clinical harm, misdiagnosis, unsafe recommendations, and over-reliance on the app.",
+      "dimensions": [
+        {
+          "id": "P1.D1",
+          "name": "Clinical Evidence & Validation",
+          "description": "Has the app's clinical effectiveness been validated through appropriate studies?",
+          "reflection_questions": [
+            "What clinical evidence supports the effectiveness of your app?",
+            "Has your app been tested in a controlled clinical trial or pilot study?",
+            "Are the clinical guidelines your app relies on up-to-date and peer-reviewed?"
+          ],
+          "example_risks": [
+            "App provides health recommendations without clinical validation",
+            "Underlying clinical model is based on outdated guidelines"
+          ],
+          "example_mitigations": [
+            "Conduct a pilot study with target patient population",
+            "Establish a clinical advisory board to review content regularly"
+          ]
+        },
+        {
+          "id": "P1.D2",
+          "name": "Contraindications & Adverse Effects",
+          "description": "Could the app cause harm to specific patient groups or in certain conditions?",
+          "reflection_questions": [
+            "Are there patient groups for whom your app could be harmful?",
+            "Have you identified situations where the app's recommendations could lead to adverse outcomes?",
+            "Does the app clearly warn users about conditions where it should not be used?"
+          ],
+          "example_risks": [
+            "App used by patients with comorbidities not accounted for in the algorithm",
+            "No warning for pregnant users when app recommendations may be unsafe"
+          ],
+          "example_mitigations": [
+            "Implement contraindication screening at onboarding",
+            "Display clear warnings for known risk groups"
+          ]
+        },
+        {
+          "id": "P1.D3",
+          "name": "False Sense of Security",
+          "description": "Could the app give users unwarranted confidence in their health status?",
+          "reflection_questions": [
+            "Could a user interpret the app's output as a definitive diagnosis?",
+            "Does the app clearly state it does not replace professional medical advice?",
+            "What happens if the app fails to detect a serious condition?"
+          ],
+          "example_risks": [
+            "User assumes normal readings mean they are healthy and skips checkups",
+            "App provides reassuring messages that mask deteriorating conditions"
+          ],
+          "example_mitigations": [
+            "Add prominent disclaimers that the app is not a diagnostic tool",
+            "Recommend periodic professional checkups regardless of app results"
+          ]
+        },
+        {
+          "id": "P1.D4",
+          "name": "Delayed Medical Consultation",
+          "description": "Could the app cause users to postpone seeking professional medical care?",
+          "reflection_questions": [
+            "Could your app lead users to self-manage conditions that require medical attention?",
+            "Does the app include triggers that recommend users consult a doctor?",
+            "What is the escalation path when the app detects concerning patterns?"
+          ],
+          "example_risks": [
+            "User relies on symptom tracker instead of visiting emergency care",
+            "App chat feature gives users the impression they are receiving medical care"
+          ],
+          "example_mitigations": [
+            "Implement red-flag alerts that urge immediate medical consultation",
+            "Set time-based reminders for professional follow-up"
+          ]
+        },
+        {
+          "id": "P1.D5",
+          "name": "Measurement Reliability",
+          "description": "Are the measurements and data captured by the app accurate and reliable?",
+          "reflection_questions": [
+            "How accurate are the sensors or self-reported data your app relies on?",
+            "Have you validated measurement accuracy against clinical-grade instruments?",
+            "How does the app handle noisy, incomplete, or erroneous data?"
+          ],
+          "example_risks": [
+            "Smartphone sensor provides inaccurate heart rate readings",
+            "Self-reported symptom data is inconsistent or unreliable"
+          ],
+          "example_mitigations": [
+            "Cross-validate sensor data with certified medical devices",
+            "Implement plausibility checks on user-entered data"
+          ]
+        },
+        {
+          "id": "P1.D6",
+          "name": "System Dependency & Over-reliance",
+          "description": "Could users become overly dependent on the app for health management?",
+          "reflection_questions": [
+            "Could long-term use of your app reduce the user's ability to manage their health independently?",
+            "Does the app encourage self-efficacy or create dependency?",
+            "What happens if the app becomes unavailable — can the user still manage?"
+          ],
+          "example_risks": [
+            "Patient stops monitoring symptoms without the app",
+            "Disruption in app service leads to missed medication doses"
+          ],
+          "example_mitigations": [
+            "Design the app to build user knowledge and autonomy over time",
+            "Provide offline backup instructions for essential functions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Data Ethics & Privacy",
+      "focus": "patient-centered",
+      "description": "Risks related to the collection, storage, sharing, and governance of personal health data.",
+      "dimensions": [
+        {
+          "id": "P2.D1",
+          "name": "Informed Consent",
+          "description": "Do users fully understand what data is collected and how it is used?",
+          "reflection_questions": [
+            "Is your consent process written in plain language that patients can understand?",
+            "Do users know exactly what data is collected, why, and who has access?",
+            "Can users give granular consent (choosing which data types to share)?"
+          ],
+          "example_risks": [
+            "Consent form is too technical or legalistic for average users",
+            "Users agree to data collection without understanding the implications"
+          ],
+          "example_mitigations": [
+            "Use layered consent with a plain-language summary and detailed version",
+            "Implement visual consent flows with concrete examples"
+          ]
+        },
+        {
+          "id": "P2.D2",
+          "name": "Data Minimization",
+          "description": "Does the app collect only the data strictly necessary for its function?",
+          "reflection_questions": [
+            "What data do you collect, and is every data point necessary for the app's core function?",
+            "Are there data fields you collect 'just in case' that could be removed?",
+            "Do you collect location, contacts, or device data beyond what's needed?"
+          ],
+          "example_risks": [
+            "App collects GPS data when only city-level location is needed",
+            "Health data is collected for analytics that don't benefit the user"
+          ],
+          "example_mitigations": [
+            "Audit every data field and justify its necessity",
+            "Implement data collection review as part of each release cycle"
+          ]
+        },
+        {
+          "id": "P2.D3",
+          "name": "Storage, Encryption & Security",
+          "description": "Is personal health data properly secured at rest and in transit?",
+          "reflection_questions": [
+            "Where is user health data stored — on-device, cloud, or both?",
+            "Is data encrypted at rest and in transit (TLS 1.2+, AES-256)?",
+            "Who has access to the encryption keys and the stored data?"
+          ],
+          "example_risks": [
+            "Health data stored in plaintext on shared cloud infrastructure",
+            "API endpoints transmit sensitive data without encryption"
+          ],
+          "example_mitigations": [
+            "Implement end-to-end encryption for all health data",
+            "Conduct regular penetration testing and security audits"
+          ]
+        },
+        {
+          "id": "P2.D4",
+          "name": "Third-Party Data Sharing",
+          "description": "Is health data shared with third parties, and are users aware of this?",
+          "reflection_questions": [
+            "Does the app share any user data with third parties (analytics, advertisers, researchers)?",
+            "Are users explicitly informed about every third-party data recipient?",
+            "What safeguards exist to prevent re-identification of shared data?"
+          ],
+          "example_risks": [
+            "Analytics SDK sends health data to third-party servers",
+            "Data shared with insurers could affect user's coverage or premiums"
+          ],
+          "example_mitigations": [
+            "Eliminate all non-essential third-party SDKs",
+            "Implement data processing agreements with all third parties"
+          ]
+        },
+        {
+          "id": "P2.D5",
+          "name": "Anonymization & Right to Erasure",
+          "description": "Can users have their data deleted, and is shared data properly anonymized?",
+          "reflection_questions": [
+            "Can users request complete deletion of their data (GDPR Art. 17)?",
+            "Is data anonymized before being used for research or analytics?",
+            "Could anonymized datasets be re-identified through linkage attacks?"
+          ],
+          "example_risks": [
+            "User account deleted but data persists in backups and analytics",
+            "Small patient populations make anonymization ineffective"
+          ],
+          "example_mitigations": [
+            "Implement automated data deletion pipelines across all storage layers",
+            "Apply k-anonymity or differential privacy for small populations"
+          ]
+        },
+        {
+          "id": "P2.D6",
+          "name": "Vulnerable Population Data",
+          "description": "Are there special protections for data from children, elderly, or mental health patients?",
+          "reflection_questions": [
+            "Does your app serve minors, elderly, or people with cognitive impairments?",
+            "Are there additional consent requirements for vulnerable populations?",
+            "How do you ensure that vulnerable users understand data implications?"
+          ],
+          "example_risks": [
+            "Children's health data collected without parental consent",
+            "Mental health data used without heightened protection"
+          ],
+          "example_mitigations": [
+            "Implement age-gating and parental consent flows",
+            "Apply stricter data handling policies for sensitive health categories"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Patient Autonomy & Therapeutic Relationship",
+      "focus": "patient-centered",
+      "description": "Risks related to patient decision-making, manipulation, and the impact on the doctor-patient relationship.",
+      "dimensions": [
+        {
+          "id": "P3.D1",
+          "name": "Right to Make Decisions",
+          "description": "Does the app respect the patient's right to make their own health decisions?",
+          "reflection_questions": [
+            "Does the app present options or does it prescribe a single course of action?",
+            "Can users override or ignore the app's recommendations?",
+            "Does the app support shared decision-making with healthcare providers?"
+          ],
+          "example_risks": [
+            "App pushes users toward specific treatments without presenting alternatives",
+            "Users feel pressured to follow app recommendations without question"
+          ],
+          "example_mitigations": [
+            "Present recommendations as options with pros/cons",
+            "Include 'discuss with your doctor' prompts for medical decisions"
+          ]
+        },
+        {
+          "id": "P3.D2",
+          "name": "Emotional Manipulation & Excessive Nudging",
+          "description": "Does the app use persuasive techniques that could undermine autonomous decision-making?",
+          "reflection_questions": [
+            "Does your app use gamification, streaks, or rewards that could become compulsive?",
+            "Are push notifications designed to help the user or to drive engagement metrics?",
+            "Could the app's tone or messaging create anxiety or guilt?"
+          ],
+          "example_risks": [
+            "Streak-based design makes users feel guilty for missing health tasks",
+            "Fear-based notifications cause unnecessary anxiety"
+          ],
+          "example_mitigations": [
+            "Audit all nudging mechanisms for patient benefit vs. engagement metrics",
+            "Allow users to customize or disable notifications entirely"
+          ]
+        },
+        {
+          "id": "P3.D3",
+          "name": "Impact on Doctor-Patient Relationship",
+          "description": "Could the app weaken the relationship between patient and healthcare provider?",
+          "reflection_questions": [
+            "Does the app position itself as a replacement for professional medical advice?",
+            "Can the app share data with the patient's healthcare provider?",
+            "Does the app encourage or discourage professional consultations?"
+          ],
+          "example_risks": [
+            "Users treat chatbot interactions as equivalent to doctor visits",
+            "Data from the app is not accessible to treating physicians"
+          ],
+          "example_mitigations": [
+            "Include explicit messaging that the app complements, not replaces, medical care",
+            "Provide data export features for sharing with healthcare providers"
+          ]
+        },
+        {
+          "id": "P3.D4",
+          "name": "Dynamic Consent & Withdrawal Rights",
+          "description": "Can users change their mind about participation and data sharing at any time?",
+          "reflection_questions": [
+            "Can users withdraw consent for specific data uses without losing app functionality?",
+            "Is the withdrawal process as easy as the consent process?",
+            "Are users informed about what happens to their data after withdrawal?"
+          ],
+          "example_risks": [
+            "Withdrawing consent requires contacting support rather than a simple toggle",
+            "Core features are locked behind all-or-nothing data consent"
+          ],
+          "example_mitigations": [
+            "Implement in-app consent management dashboard",
+            "Design graceful feature degradation when specific consents are withdrawn"
+          ]
+        },
+        {
+          "id": "P3.D5",
+          "name": "Automation Bias (AI and Non-AI)",
+          "description": "Do users or clinicians over-trust the app's outputs, even when they are wrong?",
+          "reflection_questions": [
+            "Could users accept the app's output without critical evaluation?",
+            "Does the app communicate uncertainty and confidence levels?",
+            "Have you tested what happens when the app gives incorrect recommendations?"
+          ],
+          "example_risks": [
+            "Clinician follows app's risk score without clinical judgment",
+            "Patient trusts app's 'all clear' and ignores worsening symptoms"
+          ],
+          "example_mitigations": [
+            "Display confidence intervals or uncertainty indicators",
+            "Require active user acknowledgment for critical recommendations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Quality, Usability & Technical Reliability",
+      "focus": "product-centered",
+      "description": "Risks related to app stability, usability, accessibility, and technical quality.",
+      "dimensions": [
+        {
+          "id": "P4.D1",
+          "name": "App Stability & Error Handling",
+          "description": "Does the app handle failures gracefully without risking patient safety?",
+          "reflection_questions": [
+            "What happens if the app crashes during a critical health measurement?",
+            "Are errors communicated clearly to the user with recovery instructions?",
+            "Is there a fallback mechanism for essential functions?"
+          ],
+          "example_risks": [
+            "App crash during medication reminder causes missed dose",
+            "Error messages are too technical for patients to understand"
+          ],
+          "example_mitigations": [
+            "Implement graceful degradation for critical features",
+            "Use patient-friendly error messages with clear next steps"
+          ]
+        },
+        {
+          "id": "P4.D2",
+          "name": "Interoperability & Data Exchange",
+          "description": "Can the app exchange data with other health systems (EHR, FHIR)?",
+          "reflection_questions": [
+            "Does your app support standard health data formats (HL7 FHIR, SNOMED CT)?",
+            "Can data be exported to or imported from electronic health records?",
+            "Does the app work with other health devices the patient might use?"
+          ],
+          "example_risks": [
+            "Health data locked in proprietary format, inaccessible to other providers",
+            "Incompatible data formats lead to transcription errors"
+          ],
+          "example_mitigations": [
+            "Implement FHIR-compliant data export",
+            "Test integration with major EHR systems in target markets"
+          ]
+        },
+        {
+          "id": "P4.D3",
+          "name": "Accessibility (WCAG, Literacy, Language)",
+          "description": "Is the app usable by people with disabilities, low literacy, or different languages?",
+          "reflection_questions": [
+            "Does your app meet WCAG 2.1 AA accessibility standards?",
+            "Is the health information written at an appropriate literacy level?",
+            "Is the app available in the languages spoken by your target population?"
+          ],
+          "example_risks": [
+            "Visually impaired users cannot use the app with screen readers",
+            "Health instructions written at a reading level above target users"
+          ],
+          "example_mitigations": [
+            "Conduct accessibility audit against WCAG 2.1 AA",
+            "Test content readability at 6th-grade reading level"
+          ]
+        },
+        {
+          "id": "P4.D4",
+          "name": "User-Centered Design & Usability Testing",
+          "description": "Has the app been designed and tested with real end users?",
+          "reflection_questions": [
+            "Have you conducted usability testing with representative users?",
+            "Were patients, caregivers, and clinicians involved in the design process?",
+            "How do you collect and act on user feedback after launch?"
+          ],
+          "example_risks": [
+            "App designed by engineers without patient input",
+            "Critical features are hard to find or confusing to use"
+          ],
+          "example_mitigations": [
+            "Conduct iterative usability testing with 5+ representative users per round",
+            "Establish a patient advisory panel for ongoing feedback"
+          ]
+        },
+        {
+          "id": "P4.D5",
+          "name": "Offline Functionality & Updates",
+          "description": "Does the app work without internet, and are updates managed safely?",
+          "reflection_questions": [
+            "Can users access essential features without internet connectivity?",
+            "How are app updates deployed — do they interrupt critical functions?",
+            "What happens to user data during an update?"
+          ],
+          "example_risks": [
+            "Patient in rural area loses access to medication schedule without wifi",
+            "Forced update during health emergency disrupts app access"
+          ],
+          "example_mitigations": [
+            "Cache essential data locally for offline access",
+            "Allow users to defer non-critical updates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Transparency & Explainability",
+      "focus": "society-centered",
+      "description": "Risks related to opaque decision-making, unclear limitations, and lack of traceability.",
+      "dimensions": [
+        {
+          "id": "P5.D1",
+          "name": "Understandable Output",
+          "description": "Can users understand how the app produces its results or recommendations?",
+          "reflection_questions": [
+            "Can a typical user understand why the app gave a specific recommendation?",
+            "Is the logic behind scores, alerts, or risk levels explained?",
+            "If the app uses AI, is the user informed and can they understand the reasoning?"
+          ],
+          "example_risks": [
+            "App shows a risk score without explaining contributing factors",
+            "AI-generated recommendations appear as black-box outputs"
+          ],
+          "example_mitigations": [
+            "Provide plain-language explanations for every recommendation",
+            "Show contributing factors for scores and risk assessments"
+          ]
+        },
+        {
+          "id": "P5.D2",
+          "name": "Clear Communication of Limitations",
+          "description": "Does the app clearly communicate what it cannot do?",
+          "reflection_questions": [
+            "Does the app clearly state its intended use and boundaries?",
+            "Are users warned about conditions or scenarios where the app is unreliable?",
+            "Is it clear that the app is not a medical device (if applicable)?"
+          ],
+          "example_risks": [
+            "Users assume the app covers conditions it was not designed for",
+            "Marketing overpromises relative to validated capabilities"
+          ],
+          "example_mitigations": [
+            "Display limitations prominently in onboarding and settings",
+            "Include scope statements in every health-related output"
+          ]
+        },
+        {
+          "id": "P5.D3",
+          "name": "Decision Traceability & Logging",
+          "description": "Can decisions and recommendations be traced back and audited?",
+          "reflection_questions": [
+            "Are the app's recommendations logged for later review?",
+            "Can a clinician trace why the app gave a specific recommendation at a specific time?",
+            "Is there an audit trail for regulatory compliance?"
+          ],
+          "example_risks": [
+            "No record of what the app recommended when an adverse event occurred",
+            "Cannot demonstrate regulatory compliance during an audit"
+          ],
+          "example_mitigations": [
+            "Implement immutable logging of all health-related recommendations",
+            "Store versioned model/algorithm state alongside outputs"
+          ]
+        },
+        {
+          "id": "P5.D4",
+          "name": "Clinically Validated vs. Estimated Content",
+          "description": "Is it clear to users which content is evidence-based and which is generated or estimated?",
+          "reflection_questions": [
+            "Does the app distinguish between clinically validated information and AI-generated content?",
+            "Are sources cited for health information?",
+            "Can users tell the difference between evidence-based and estimated outputs?"
+          ],
+          "example_risks": [
+            "AI-generated health text presented as if it were clinically validated",
+            "No source attribution for medical information"
+          ],
+          "example_mitigations": [
+            "Label all content with its evidence level",
+            "Cite clinical guidelines or studies where applicable"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "name": "Equity, Bias & Social Justice",
+      "focus": "society-centered",
+      "description": "Risks related to unfair treatment, exclusion, and reinforcement of health inequalities.",
+      "dimensions": [
+        {
+          "id": "P6.D1",
+          "name": "Data & Clinical Rule Bias",
+          "description": "Are the data or clinical rules underlying the app biased toward certain populations?",
+          "reflection_questions": [
+            "Were the datasets used to build your app representative of your target population?",
+            "Are clinical thresholds or scoring rules validated across different demographics?",
+            "Have you tested for disparate outcomes across gender, age, and ethnicity?"
+          ],
+          "example_risks": [
+            "Dermatology app trained mostly on light skin tones misses conditions in darker skin",
+            "BMI-based recommendations do not account for ethnic variation in body composition"
+          ],
+          "example_mitigations": [
+            "Audit training data and clinical rules for demographic representation",
+            "Conduct subgroup analysis in validation studies"
+          ]
+        },
+        {
+          "id": "P6.D2",
+          "name": "Digital Divide & Socioeconomic Access",
+          "description": "Is the app accessible to users regardless of their socioeconomic status or digital literacy?",
+          "reflection_questions": [
+            "Does the app require expensive hardware, high-speed internet, or advanced digital skills?",
+            "Is the app free or affordable for low-income users?",
+            "Have you considered users who share devices or have limited data plans?"
+          ],
+          "example_risks": [
+            "App requires latest smartphone, excluding lower-income users",
+            "Subscription model creates barrier for those who need it most"
+          ],
+          "example_mitigations": [
+            "Support older devices and low-bandwidth connections",
+            "Offer free tier for essential health features"
+          ]
+        },
+        {
+          "id": "P6.D3",
+          "name": "Cross-Cultural & Multilingual Validation",
+          "description": "Has the app been validated across cultures and languages?",
+          "reflection_questions": [
+            "Has the app been tested with users from different cultural backgrounds?",
+            "Are health concepts and metaphors culturally appropriate?",
+            "Have translations been validated by native-speaking health professionals?"
+          ],
+          "example_risks": [
+            "Direct translation loses medical nuance",
+            "Cultural taboos around certain health topics not accounted for"
+          ],
+          "example_mitigations": [
+            "Use professional medical translators, not machine translation alone",
+            "Conduct cultural sensitivity review with local health experts"
+          ]
+        },
+        {
+          "id": "P6.D4",
+          "name": "Impact on Existing Health Inequalities",
+          "description": "Could the app widen the gap between those who have good health access and those who do not?",
+          "reflection_questions": [
+            "Could your app disproportionately benefit already-advantaged populations?",
+            "Have you assessed whether the app could worsen existing health disparities?",
+            "Is the app designed to reach underserved communities?"
+          ],
+          "example_risks": [
+            "App adoption concentrated in urban, educated, tech-savvy populations",
+            "Digital health tool replaces in-person services in underserved areas without adequate support"
+          ],
+          "example_mitigations": [
+            "Partner with community health organizations for distribution",
+            "Monitor adoption metrics by demographic group"
+          ]
+        },
+        {
+          "id": "P6.D5",
+          "name": "Representativeness in Validation Studies",
+          "description": "Were the studies validating the app conducted with representative populations?",
+          "reflection_questions": [
+            "Did your validation studies include participants from your actual target demographics?",
+            "Were minority groups, elderly, and low-literacy users included in testing?",
+            "Are your study results generalizable to the populations who will use the app?"
+          ],
+          "example_risks": [
+            "App validated only with university students, deployed to elderly patients",
+            "Clinical trial excludes non-English speakers who are part of target market"
+          ],
+          "example_mitigations": [
+            "Define inclusion criteria that match real-world target population",
+            "Report demographic breakdown in validation study results"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P7",
+      "name": "Regulatory Compliance & Governance",
+      "focus": "compliance-centered",
+      "description": "Risks related to legal classification, regulatory conformity, and organizational governance.",
+      "dimensions": [
+        {
+          "id": "P7.D1",
+          "name": "Medical Device Classification (SaMD)",
+          "description": "Is the app a Software as a Medical Device, and is it classified correctly?",
+          "reflection_questions": [
+            "Does your app provide diagnosis, treatment recommendations, or clinical decision support?",
+            "Have you assessed whether your app qualifies as a medical device under MDR 2017/745?",
+            "What risk class would your app fall under (I, IIa, IIb, III)?"
+          ],
+          "example_risks": [
+            "App providing diagnostic guidance marketed as 'wellness' to avoid regulation",
+            "Incorrect classification leads to insufficient safety testing"
+          ],
+          "example_mitigations": [
+            "Conduct formal SaMD classification assessment with regulatory consultant",
+            "Document intended purpose clearly to support classification decision"
+          ]
+        },
+        {
+          "id": "P7.D2",
+          "name": "CE Marking & MDR Conformity",
+          "description": "If the app is a medical device, does it have the required CE marking?",
+          "reflection_questions": [
+            "Have you initiated the CE marking process for your app?",
+            "Do you have a notified body engaged for conformity assessment (if Class IIa+)?",
+            "Is your technical documentation complete and up to date?"
+          ],
+          "example_risks": [
+            "App marketed in the EU without required CE marking",
+            "Technical documentation does not meet MDR Annex II requirements"
+          ],
+          "example_mitigations": [
+            "Engage a notified body early in the development process",
+            "Use MDR Annex II checklist to structure technical documentation"
+          ]
+        },
+        {
+          "id": "P7.D3",
+          "name": "EU AI Act Risk Classification",
+          "description": "If the app uses AI, is it classified correctly under the EU AI Act?",
+          "reflection_questions": [
+            "Does your app contain an AI system as defined by the EU AI Act?",
+            "If your app is a medical device with AI, it is likely high-risk — have you planned for compliance?",
+            "Are you tracking the EU AI Act implementation timeline (full application by Aug 2027)?"
+          ],
+          "example_risks": [
+            "AI component not identified, leading to non-compliance when obligations apply",
+            "High-risk AI system deployed without required conformity assessment"
+          ],
+          "example_mitigations": [
+            "Map all AI components and assess their risk classification",
+            "Begin compliance preparation now to meet 2027 deadline"
+          ]
+        },
+        {
+          "id": "P7.D4",
+          "name": "GDPR Compliance (DPO, DPIA)",
+          "description": "Is the app fully compliant with GDPR requirements for health data?",
+          "reflection_questions": [
+            "Have you appointed a Data Protection Officer (DPO)?",
+            "Have you conducted a Data Protection Impact Assessment (DPIA)?",
+            "Do you have a lawful basis for processing health data under GDPR Art. 9?"
+          ],
+          "example_risks": [
+            "Processing health data without DPIA",
+            "No DPO appointed despite large-scale health data processing"
+          ],
+          "example_mitigations": [
+            "Conduct DPIA before app launch",
+            "Appoint DPO and establish data protection governance structure"
+          ]
+        },
+        {
+          "id": "P7.D5",
+          "name": "Post-Market Surveillance & Vigilance",
+          "description": "Is there a system to monitor the app's safety and performance after launch?",
+          "reflection_questions": [
+            "Do you have a post-market surveillance plan?",
+            "How do you collect and analyze adverse event reports from users?",
+            "Is there a process for reporting serious incidents to competent authorities?"
+          ],
+          "example_risks": [
+            "No mechanism to detect safety issues after deployment",
+            "Adverse events reported by users but not escalated to regulators"
+          ],
+          "example_mitigations": [
+            "Implement in-app adverse event reporting",
+            "Establish vigilance procedures aligned with MDR Article 87"
+          ]
+        },
+        {
+          "id": "P7.D6",
+          "name": "Third-Party Audit & Certification",
+          "description": "Has the app been independently audited or certified?",
+          "reflection_questions": [
+            "Has your app undergone independent security auditing?",
+            "Have you pursued any voluntary certifications (ISO 27001, ISO 82304-2)?",
+            "Is your app listed on any national health app assessment programs?"
+          ],
+          "example_risks": [
+            "No independent verification of safety and security claims",
+            "Self-certification without external validation"
+          ],
+          "example_mitigations": [
+            "Commission independent security and clinical safety audits",
+            "Apply for national health app library listing (e.g., NHS Apps Library, DiGA)"
+          ]
+        },
+        {
+          "id": "P7.D7",
+          "name": "Lifecycle & Documentation Management",
+          "description": "Is the app's entire lifecycle documented and governed?",
+          "reflection_questions": [
+            "Do you maintain version-controlled documentation of all design decisions?",
+            "Is there a change management process for updates that affect clinical functionality?",
+            "How long will you maintain and support the app?"
+          ],
+          "example_risks": [
+            "No documentation of why clinical thresholds were chosen",
+            "App abandoned by developer while patients still depend on it"
+          ],
+          "example_mitigations": [
+            "Implement quality management system (e.g., ISO 13485)",
+            "Define and communicate end-of-life policy to users"
+          ]
+        }
+      ]
+    }
+  ]
+}

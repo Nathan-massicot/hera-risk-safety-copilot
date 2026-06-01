@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/api/client.ts","./src/auth/authcontext.tsx","./src/auth/login.tsx","./src/auth/register.tsx","./src/components/layout.tsx","./src/components/protectedroute.tsx","./src/components/sidebar.tsx","./src/pages/chatbot.tsx","./src/pages/onboarding.tsx","./src/pages/regulationdiagram.tsx"],"version":"5.9.3"}

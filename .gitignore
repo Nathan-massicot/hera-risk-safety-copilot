@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# OS
+.DS_Store
+
+# Env / secrets
+.env
+.env.local
+
+# Web app
+web/backend/data/
+web/frontend/node_modules/
+web/frontend/dist/
+web/frontend/.vite/
+runs/
+
+# Models / weights
+models/
+*.pt
+*.safetensors
+
+
+# Doc md for claude 
+docclaude/ 
