@@ -4,7 +4,7 @@ title: "MDR transition for legacy devices (Regulation (EU) 2023/607)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0607
 key_articles: ["MDR Art. 120 (amended)", "Regulation (EU) 2023/607"]
-status: rich-draft
+status: final
 ---
 
 # MDR transition for legacy devices (Regulation (EU) 2023/607)

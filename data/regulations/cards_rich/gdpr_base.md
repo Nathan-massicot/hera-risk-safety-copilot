@@ -4,7 +4,7 @@ title: "GDPR — baseline (legal basis & rights)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 6", "Art. 12-22", "Art. 28", "Art. 30", "Art. 32", "Art. 33-34", "Art. 37"]
-status: rich-draft
+status: final
 ---
 
 # GDPR — baseline (legal basis & rights)

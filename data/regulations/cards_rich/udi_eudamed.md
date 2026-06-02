@@ -4,7 +4,7 @@ title: "UDI & EUDAMED registration"
 jurisdiction: EU
 official_url: https://health.ec.europa.eu/medical-devices-eudamed/overview_en
 key_articles: ["MDR Art. 27-31 (UDI)", "MDR Art. 33-34 (EUDAMED)", "Decision (EU) 2025/2371", "Regulation (EU) 2024/1860"]
-status: rich-draft
+status: final
 ---
 
 # UDI & EUDAMED registration
@@ -15,8 +15,9 @@ manufacturer**, must be traceable in the EU's central database. The MDR requires
 a **Unique Device Identifier (UDI)** so any device can be tracked from production
 to use, and registration in **EUDAMED** (the European Database on Medical Devices)
 so authorities, notified bodies and the public can see who placed what on the
-market. Until now EUDAMED use was largely **voluntary** — that ends in 2026: skip
-registration after the deadline and your device is no longer lawfully on the market.
+market. Until 28 May 2026 EUDAMED use was largely **voluntary**; since that date the
+first four modules are **mandatory** — without registration your device is no longer
+lawfully on the market.
 
 ## When it is triggered (scope)
 Triggered as soon as **both** hold:
@@ -38,7 +39,7 @@ inaccessible to Swissmedic ([[swiss_stack]]).
 - Register as an **economic operator** first: obtain a Single Registration Number
   (**SRN**) via the Actor registration module.
 - Register the **device** in the UDI/Device module **before** placing it on the
-  market. The **first four modules become mandatory on 28 May 2026** (Decision (EU)
+  market. The **first four modules became mandatory on 28 May 2026** (Decision (EU)
   2025/2371, published 27 Nov 2025, triggering the 6-month period under Reg. (EU)
   2024/1860): Actor registration, UDI/Device, Notified Bodies & Certificates, and
   Market Surveillance.
@@ -49,7 +50,7 @@ inaccessible to Swissmedic ([[swiss_stack]]).
 
 ## Checklist
 - [ ] Obtain your Basic UDI-DI and per-version UDI-DI/UDI-PI from an issuing entity (e.g. GS1, HIBCC).
-- [ ] Register as an actor and secure your SRN well before 28 May 2026.
+- [ ] Register as an actor and secure your SRN now — the four modules are mandatory since 28 May 2026.
 - [ ] Register every device in the UDI/Device module before placing it on the EU market.
 - [ ] Diarise the 28 Nov 2026 backlog deadline for devices already on the market.
 - [ ] Wire UDI assignment into your release/versioning process (new version -> new UDI-PI).

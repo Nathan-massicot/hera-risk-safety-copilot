@@ -4,7 +4,7 @@ title: "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746
 key_articles: ["IVDR Art. 2(2)", "IVDR Annex VIII (rules 1-7)", "MDCG 2019-11", "MDCG 2020-16 rev.4"]
-status: rich-draft
+status: final
 ---
 
 # IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)

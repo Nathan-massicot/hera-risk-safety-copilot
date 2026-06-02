@@ -4,7 +4,7 @@ title: "GDPR Art. 9 — biometrics (+ AI Act Art. 5)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["GDPR Art. 9(1)", "GDPR Art. 35", "AI Act Art. 5"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Art. 9 — biometrics (+ AI Act Art. 5)

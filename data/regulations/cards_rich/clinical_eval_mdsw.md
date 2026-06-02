@@ -4,7 +4,7 @@ title: "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)"
 jurisdiction: EU
 official_url: https://health.ec.europa.eu/system/files/2020-09/md_mdcg_2020_1_guidance_clinic_eva_md_software_en_0.pdf
 key_articles: ["MDR Art. 61", "MDR Annex XIV", "MDR Annex XV", "MDCG 2020-1"]
-status: rich-draft
+status: final
 ---
 
 # Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)

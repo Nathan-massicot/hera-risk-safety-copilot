@@ -4,7 +4,7 @@ title: "Swiss stack (MedDO + Swissmedic + EPRA)"
 jurisdiction: CH
 official_url: https://www.fedlex.admin.ch/eli/cc/2020/552/en
 key_articles: ["MedDO (SR 812.213)", "Swissmedic vigilance (MIR)", "EPRA"]
-status: rich-draft
+status: final
 ---
 
 # Swiss stack (MedDO + Swissmedic + EPRA)

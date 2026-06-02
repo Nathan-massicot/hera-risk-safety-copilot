@@ -4,7 +4,7 @@ title: "eIDAS 2 — EU Digital Identity Wallet"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1183
 key_articles: ["Regulation (EU) 2024/1183", "Electronic Attestations of Attributes (EAA)"]
-status: rich-draft
+status: final
 ---
 
 # eIDAS 2 — EU Digital Identity Wallet

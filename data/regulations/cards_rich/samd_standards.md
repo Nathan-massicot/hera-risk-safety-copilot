@@ -4,7 +4,7 @@ title: "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)"
 jurisdiction: EU/CH
 official_url: https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/medical-devices_en
 key_articles: ["MDR Annex I (GSPR)", "IEC 62304", "ISO 14971", "IEC 62366-1", "ISO 13485"]
-status: rich-draft
+status: final
 ---
 
 # SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)

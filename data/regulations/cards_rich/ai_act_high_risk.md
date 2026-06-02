@@ -4,7 +4,7 @@ title: "EU AI Act — high-risk AI (Annex III §1(a))"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689
 key_articles: ["Art. 6(1)", "Annex III §1(a)", "Art. 9-15", "Art. 43(3)", "MDCG 2025-6"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — high-risk AI (Annex III §1(a))

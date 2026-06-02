@@ -2,9 +2,9 @@
 id: ch_rep_meddo
 title: "MedDO — MDR third country & Swiss authorised representative (CH-REP)"
 jurisdiction: CH
-official_url: https://www.swissmedic.ch/swissmedic/en/home/medical-devices/market-access/economic-operators.html
+official_url: https://www.swissmedic.ch/swissmedic/en/home/medical-devices/market-access/ch-rep.html
 key_articles: ["MedDO Art. 51(1)", "MedDO (SR 812.213)"]
-status: rich-draft
+status: final
 ---
 
 # MedDO — MDR third country & Swiss authorised representative (CH-REP)

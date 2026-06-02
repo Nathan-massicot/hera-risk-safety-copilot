@@ -4,7 +4,7 @@ title: "NIS2 — cybersecurity & incident notification"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 key_articles: ["NIS2 Art. 21", "NIS2 Art. 23", "MDR Annex I §17"]
-status: rich-draft
+status: final
 ---
 
 # NIS2 — cybersecurity & incident notification

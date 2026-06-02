@@ -4,7 +4,7 @@ title: "DiGA (Germany) — fast-track reimbursement for digital health apps"
 jurisdiction: DE
 official_url: https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html
 key_articles: ["§139e SGB V", "DiGAV", "DVG 2019", "BSI TR-03161", "AbEM (2026)"]
-status: rich-draft
+status: final
 ---
 
 # DiGA (Germany) — fast-track reimbursement for digital health apps
@@ -20,8 +20,8 @@ specific: a medical-device class, a demonstrated **positive care effect**, and c
 
 ## When it is triggered (scope)
 Relevant when you seek **GKV reimbursement in Germany** for a digital app that is:
-- a **CE-marked medical device, class I or IIa** — and, since the **DiGAV amendment in
-  force 2026-02-01**, **certain low-risk class IIb** devices too;
+- a **CE-marked medical device, class I or IIa** — and, since the **DigiG / DiGAV
+  reform (phasing in from 2026)**, **certain low-risk class IIb** devices too;
 - with a **primary digital function** supporting the detection, monitoring, treatment or
   alleviation of disease (a "low-risk" digital health application under **§139e SGB V**).
 
@@ -30,8 +30,8 @@ class IIb/III above the low-risk cut-off. A drug-companion or high-risk diagnost
 typically falls outside DiGA and follows the ordinary MDR + reimbursement route.
 
 ## Concrete obligations
-- **Device class**: hold a CE certificate as class I/IIa (or low-risk IIb from
-  2026-02-01). See [[mdr_class_iia]].
+- **Device class**: hold a CE certificate as class I/IIa (or low-risk IIb, phasing in
+  from 2026 under the DigiG/DiGAV reform). See [[mdr_class_iia]].
 - **Positive care effect (positiver Versorgungseffekt)**: either a **medical benefit** or
   a **patient-relevant improvement of structure/processes**, evidenced by a comparative
   study (RCT preferred) — required for permanent listing.
@@ -48,7 +48,7 @@ typically falls outside DiGA and follows the ordinary MDR + reimbursement route.
   shift toward **success-dependent / outcome-based pricing**.
 
 ## Checklist
-- [ ] Confirm your device class qualifies (I/IIa, or low-risk IIb from 2026-02-01).
+- [ ] Confirm your device class qualifies (I/IIa, or low-risk IIb from 2026 under the DigiG/DiGAV reform).
 - [ ] Obtain BSI TR-03161 certification (mandatory since 2025-01-01) for app + backend.
 - [ ] Plan the comparative study proving the positive care effect (medical or structural/process).
 - [ ] Implement ePA + GesundheitsID + INA interoperability requirements.
@@ -68,4 +68,4 @@ typically falls outside DiGA and follows the ordinary MDR + reimbursement route.
 
 ## Official sources
 - BfArM — Digital Health Applications (DiGA): https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html
-- BSI — Technical Guideline TR-03161 (security requirements for digital health apps): https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03161/TR-03161_node.html
+- BSI — Technical Guideline TR-03161 (security requirements for digital health apps): https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03161/tr03161_node.html

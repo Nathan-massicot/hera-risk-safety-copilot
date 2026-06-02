@@ -4,7 +4,7 @@ title: "Data Act — access & portability of connected-product data"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854
 key_articles: ["Art. 3", "Art. 4-5", "Chapter III", "Chapter VI"]
-status: rich-draft
+status: final
 ---
 
 # Data Act — access & portability of connected-product data

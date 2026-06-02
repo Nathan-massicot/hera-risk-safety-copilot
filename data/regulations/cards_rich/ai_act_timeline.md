@@ -4,7 +4,7 @@ title: "EU AI Act — staggered application timeline (+ Digital Omnibus)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
 key_articles: ["Art. 113 (date of application)", "Art. 5", "Art. 4", "Art. 50", "Digital Omnibus 2025/2026"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — staggered application timeline (+ Digital Omnibus)

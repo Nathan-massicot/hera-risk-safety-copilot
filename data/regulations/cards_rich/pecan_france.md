@@ -4,7 +4,7 @@ title: "PECAN (France) — early access reimbursement for digital devices"
 jurisdiction: FR
 official_url: https://www.has-sante.fr/jcms/p_3376633/fr/dispositifs-medicaux-numeriques-la-prise-en-charge-anticipee
 key_articles: ["Decree no. 2023-232", "Order of 22 April 2024", "ANS interop & security frameworks", "Art. L162-1-23 SSC"]
-status: rich-draft
+status: final
 ---
 
 # PECAN (France) — early access reimbursement for digital devices

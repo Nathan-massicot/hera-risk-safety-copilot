@@ -4,7 +4,7 @@ title: "nFADP — baseline (Swiss Federal Act on Data Protection)"
 jurisdiction: CH
 official_url: https://www.fedlex.admin.ch/eli/cc/2022/491/en
 key_articles: ["Art. 5(c)", "Art. 6", "Art. 8", "Art. 12", "Art. 19", "Art. 25"]
-status: rich-draft
+status: final
 ---
 
 # nFADP — baseline (Swiss Federal Act on Data Protection)

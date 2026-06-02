@@ -665,7 +665,7 @@
       "id": "diga_germany",
       "title": "DiGA (Germany) — fast-track reimbursement for digital health apps",
       "jurisdiction": "DE",
-      "summary": "BfArM fast-track (§139e SGB V) opening reimbursement by statutory health insurance (GKV). Conditions: CE-marked medical device class I/IIa (and some low-risk IIb since the DiGAV amendment of 2026-02-01), 'positive care effect', security (BSI TR-03161 certification mandatory since 2025-01-01) and interoperability (ePA, GesundheitsID, INA). Provisional listing 12 months (extendable to 24). From 2026: real-world success measurement (AbEM) + success-dependent pricing.",
+      "summary": "BfArM fast-track (§139e SGB V) opening reimbursement by statutory health insurance (GKV). Conditions: CE-marked medical device class I/IIa (and some low-risk IIb, phasing in from 2026 under the DigiG/DiGAV reform), 'positive care effect', security (BSI TR-03161 certification mandatory since 2025-01-01) and interoperability (ePA, GesundheitsID, INA). Provisional listing 12 months (extendable to 24). From 2026: real-world success measurement (AbEM) + success-dependent pricing.",
       "key_articles": ["§139e SGB V", "DiGAV", "DVG 2019", "BSI TR-03161", "AbEM (2026)"],
       "source_doc": null,
       "official_url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html"
@@ -728,7 +728,7 @@
       "id": "udi_eudamed",
       "title": "UDI & EUDAMED registration",
       "jurisdiction": "EU",
-      "summary": "Unique Device Identifier (UDI) + mandatory registration in EUDAMED. The first four modules become mandatory on 28 May 2026 (Decision (EU) 2025/2371, published 27/11/2025); register as an actor (SRN) then register the device before placing on the market.",
+      "summary": "Unique Device Identifier (UDI) + mandatory registration in EUDAMED. The first four modules became mandatory on 28 May 2026 (Decision (EU) 2025/2371, published 27/11/2025); register as an actor (SRN) then register the device before placing on the market.",
       "key_articles": ["MDR Art. 27-31 (UDI)", "MDR Art. 33-34 (EUDAMED)", "Decision (EU) 2025/2371", "Regulation (EU) 2024/1860"],
       "source_doc": "mdr_2017_745",
       "official_url": "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"

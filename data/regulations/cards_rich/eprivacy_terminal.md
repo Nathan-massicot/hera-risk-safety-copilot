@@ -4,7 +4,7 @@ title: "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trac
 jurisdiction: EU
 official_url: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-22023-technical-scope-art-53-eprivacy-directive_en
 key_articles: ["Directive 2002/58/EC Art. 5(3)", "EDPB Guidelines 2/2023 v2.0"]
-status: rich-draft
+status: final
 ---
 
 # ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)

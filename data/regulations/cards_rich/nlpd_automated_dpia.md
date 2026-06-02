@@ -4,7 +4,7 @@ title: "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)"
 jurisdiction: CH
 official_url: https://www.fedlex.admin.ch/eli/cc/2022/491/en
 key_articles: ["nFADP Art. 21", "nFADP Art. 22", "DPO ordinance (SR 235.11)"]
-status: rich-draft
+status: final
 ---
 
 # nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)

@@ -4,7 +4,7 @@ title: "EU AI Act — GPAI model provider (Art. 53/55)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
 key_articles: ["Art. 53", "Art. 55", "Annex XI", "Annex XII"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — GPAI model provider (Art. 53/55)

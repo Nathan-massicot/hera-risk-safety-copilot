@@ -4,7 +4,7 @@ title: "eHealth — national profiles (EPRA, DMP, ELGA)"
 jurisdiction: EU/CH
 official_url: https://www.fedlex.admin.ch/eli/cc/2017/203/en
 key_articles: ["EPRA", "IHE XDS", "FHIR R4"]
-status: rich-draft
+status: final
 ---
 
 # eHealth — national profiles (EPRA, DMP, ELGA)

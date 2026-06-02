@@ -4,7 +4,7 @@ title: "GDPR Art. 9 — health data (special category)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 9(1)", "Art. 9(2)", "Art. 35"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Art. 9 — health data (special category)

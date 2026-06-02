@@ -4,7 +4,7 @@ title: "HDS — Health Data Host certification (France)"
 jurisdiction: FR
 official_url: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049577902
 key_articles: ["PHC Art. L1111-8", "PHC Art. R1111-9 to R1111-11", "Order of 26 Apr. 2024 (v2 framework)"]
-status: rich-draft
+status: final
 ---
 
 # HDS — Health Data Host certification (France)

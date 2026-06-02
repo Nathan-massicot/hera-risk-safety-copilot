@@ -4,7 +4,7 @@ title: "Post-Market Surveillance & lifecycle"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320
 key_articles: ["MDR Art. 83-86", "AI Act Art. 72"]
-status: rich-draft
+status: final
 ---
 
 # Post-Market Surveillance & lifecycle

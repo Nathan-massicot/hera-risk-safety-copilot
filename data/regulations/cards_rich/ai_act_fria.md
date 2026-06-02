@@ -4,7 +4,7 @@ title: "EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
 key_articles: ["Art. 27", "Art. 26"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27)

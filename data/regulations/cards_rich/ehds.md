@@ -4,7 +4,7 @@ title: "EHDS — European Health Data Space"
 jurisdiction: EU
 official_url: https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en
 key_articles: ["Primary use", "Secondary use", "EEHRxF", "DGA (EU 2022/868)"]
-status: rich-draft
+status: final
 ---
 
 # EHDS — European Health Data Space

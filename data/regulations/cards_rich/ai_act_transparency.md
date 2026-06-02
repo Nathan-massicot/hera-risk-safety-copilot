@@ -4,7 +4,7 @@ title: "EU AI Act — transparency obligations (Art. 50)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689
 key_articles: ["Art. 50"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — transparency obligations (Art. 50)

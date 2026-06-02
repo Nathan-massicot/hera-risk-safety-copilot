@@ -4,7 +4,7 @@ title: "EU AI Act — integrator of a GPAI model (downstream obligations)"
 jurisdiction: EU
 official_url: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
 key_articles: ["Art. 51-56", "Annex XII", "Art. 50", "Art. 8-15"]
-status: rich-draft
+status: final
 ---
 
 # EU AI Act — integrator of a GPAI model (downstream obligations)

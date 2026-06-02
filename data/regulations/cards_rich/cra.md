@@ -4,7 +4,7 @@ title: "CRA — Cyber Resilience Act (products with digital elements)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847
 key_articles: ["Art. 13", "Art. 14", "Annex I", "Annex II (SBOM)"]
-status: rich-draft
+status: final
 ---
 
 # CRA — Cyber Resilience Act (products with digital elements)

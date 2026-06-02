@@ -4,7 +4,7 @@ title: "Telehealth — national health codes"
 jurisdiction: EU/CH
 official_url: https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072665/
 key_articles: ["PHC L1110-4", "PHC L4131-1", "MedPA"]
-status: rich-draft
+status: final
 ---
 
 # Telehealth — national health codes

@@ -4,7 +4,7 @@ title: "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)"
 jurisdiction: EU
 official_url: https://mhealthbelgium.be/validation-pyramid
 key_articles: ["mHealthBelgium M1/M2/M3", "NIHDI/RIZIV reimbursement", "AFMPS notification"]
-status: rich-draft
+status: final
 ---
 
 # Other national reimbursement schemes (Belgium mHealthBelgium, etc.)

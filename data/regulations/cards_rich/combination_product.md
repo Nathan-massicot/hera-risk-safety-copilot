@@ -4,7 +4,7 @@ title: "Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)"
 jurisdiction: EU
 official_url: https://health.ec.europa.eu/system/files/2023-06/mdcg_2022-5_en.pdf
 key_articles: ["MDR Art. 1(8)", "MDR Art. 1(9)", "MDR Art. 117", "MDCG 2022-5 rev.1", "Dir. 2001/83/EC"]
-status: rich-draft
+status: final
 ---
 
 # Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)

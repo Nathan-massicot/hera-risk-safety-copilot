@@ -4,7 +4,7 @@ title: "PLD — Product Liability Directive (software & AI)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853
 key_articles: ["Art. 4", "Art. 7", "Art. 9", "Art. 10"]
-status: rich-draft
+status: final
 ---
 
 # PLD — Product Liability Directive (software & AI)

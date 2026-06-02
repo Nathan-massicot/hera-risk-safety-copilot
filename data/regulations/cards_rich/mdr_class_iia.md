@@ -4,7 +4,7 @@ title: "SaMD Class IIa (MDR)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0745-20230320
 key_articles: ["Annex VIII Rule 11", "Art. 52"]
-status: rich-draft
+status: final
 ---
 
 # SaMD Class IIa (MDR)

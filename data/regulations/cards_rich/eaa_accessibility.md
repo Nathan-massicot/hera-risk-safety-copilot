@@ -4,7 +4,7 @@ title: "European Accessibility Act (EAA)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0882
 key_articles: ["Directive 2019/882", "EN 301 549"]
-status: rich-draft
+status: final
 ---
 
 # European Accessibility Act (EAA)

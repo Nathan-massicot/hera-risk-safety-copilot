@@ -4,7 +4,7 @@ title: "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 35", "Art. 36", "WP248 rev.01"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Art. 35 — Data Protection Impact Assessment (DPIA)

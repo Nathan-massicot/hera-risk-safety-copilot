@@ -4,7 +4,7 @@ title: "GDPR Chapter V — international transfers"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 44-49"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Chapter V — international transfers

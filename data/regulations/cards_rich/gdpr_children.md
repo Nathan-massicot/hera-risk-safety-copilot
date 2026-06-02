@@ -4,7 +4,7 @@ title: "GDPR Art. 8 — children"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 8"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Art. 8 — children
@@ -24,8 +24,8 @@ Triggered when **all** of the following hold:
 - the user is **below the applicable age threshold**.
 
 The threshold is **16 by default**, but Member States may lower it to **no less than 13**:
-France, Germany, the Netherlands = 16; Ireland, Spain = 13. You must apply the threshold of
-the user's country. If your basis is *not* consent (e.g. a care contract), Art. 8 itself
+Germany, the Netherlands, Ireland = 16; **France = 15**; Spain = 14; Belgium = 13. You must
+apply the threshold of the user's country. If your basis is *not* consent (e.g. a care contract), Art. 8 itself
 does not bite — but the child-protection principles still apply.
 
 ## Concrete obligations
@@ -46,8 +46,8 @@ does not bite — but the child-protection principles still apply.
 - [ ] Document whether the preventive/counselling exception applies to your service.
 
 ## Examples (mHealth)
-- A teen **mental-wellness app** in France (threshold 16) relying on consent → needs
-  verified parental consent for users under 16.
+- A teen **mental-wellness app** in France (threshold 15) relying on consent → needs
+  verified parental consent for users under 15.
 - A youth **sleep/step tracker** processing heart-rate data → Art. 8 *and* Art. 9 stack:
   parental consent plus a DPIA-grade assessment of the sensitive data — see [[gdpr_dpia]].
 - (Edge/negative) A **confidential self-harm counselling chat** aimed directly at minors →

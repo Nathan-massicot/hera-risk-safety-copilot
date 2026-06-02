@@ -4,7 +4,7 @@ title: "GDPR Art. 22 — automated decisions"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["Art. 22"]
-status: rich-draft
+status: final
 ---
 
 # GDPR Art. 22 — automated decisions

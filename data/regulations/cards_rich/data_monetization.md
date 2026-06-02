@@ -4,7 +4,7 @@ title: "Data monetisation / third-party sharing"
 jurisdiction: EU
 official_url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 key_articles: ["GDPR Art. 9(2)(a)", "ePrivacy"]
-status: rich-draft
+status: final
 ---
 
 # Data monetisation / third-party sharing
