@@ -2,6 +2,15 @@
 # Choice is finalized at J2 once the CUDA machine VRAM is confirmed.
 
 candidates:
+  - name: qwen3-8b
+    hf_id: Qwen/Qwen3-8B
+    params_b: 8.2
+    context: 40960
+    notes: |
+      Most recent ~8B (Apr 2025), Apache-2.0, dense decoder, GQA 32/8, vocab 151k.
+      Trained NON-thinking — finetune.py forces enable_thinking=False to match the data.
+      QLoRA 4-bit fits in 16 GB VRAM (RTX 4080). Requires transformers >= 4.51.
+
   - name: mistral-7b-instruct-v0.3
     hf_id: mistralai/Mistral-7B-Instruct-v0.3
     params_b: 7.25
@@ -32,7 +41,7 @@ candidates:
     notes: |
       Fallback if QLoRA on 7B too slow. ~4h training. Weaker dialogue quality.
 
-selected: qwen2.5-7b-instruct  # RTX 4080 16 GB: open weights, best EN/FR, paged optim spills to 64 GB RAM
+selected: qwen3-8b  # most recent ~8B, Apache-2.0, fits 16 GB; non-thinking SFT
 
 # Quantization for local Ollama inference after fine-tune merge
 ollama:

@@ -139,6 +139,20 @@ def load_model_and_tokenizer(model_spec: dict, quant_cfg: dict, dry_run: bool):
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
+    # Hybrid-reasoning models (Qwen3) inject <think> blocks via their chat template by
+    # default. Our HERA dialogues are direct (no chain-of-thought), so we force
+    # non-thinking rendering. Wrapping apply_chat_template is version-agnostic: whatever
+    # path TRL takes (messages -> template), thinking stays off. The kwarg is silently
+    # ignored by templates that don't define it (Mistral / Qwen2.5 / Phi), so this is a
+    # no-op there.
+    _orig_apply = tokenizer.apply_chat_template
+
+    def _apply_no_think(*a, **k):
+        k.setdefault("enable_thinking", False)
+        return _orig_apply(*a, **k)
+
+    tokenizer.apply_chat_template = _apply_no_think
+
     if dry_run:
         log.info("[dry-run] skipping model load")
         return None, tokenizer

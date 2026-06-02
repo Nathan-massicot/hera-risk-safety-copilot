@@ -11,7 +11,7 @@ dataset:
   max_seq_length: 3072  # covers the longest dialogue (~2.8k tok) with 0 truncation; lighter than 4096 for 16 GB VRAM
 
 # Model — overridden by configs/model.yaml > selected
-base_model: Qwen/Qwen2.5-7B-Instruct
+base_model: Qwen/Qwen3-8B
 
 # Quantization (QLoRA 4-bit via bitsandbytes)
 quantization:
