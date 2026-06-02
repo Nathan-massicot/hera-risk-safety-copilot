@@ -8,10 +8,10 @@ seed: 1337
 dataset:
   train_path: data/training/conversations.jsonl
   val_split: 0.2
-  max_seq_length: 4096
+  max_seq_length: 3072  # covers the longest dialogue (~2.8k tok) with 0 truncation; lighter than 4096 for 16 GB VRAM
 
 # Model — overridden by configs/model.yaml > selected
-base_model: mistralai/Mistral-7B-Instruct-v0.3
+base_model: Qwen/Qwen2.5-7B-Instruct
 
 # Quantization (QLoRA 4-bit via bitsandbytes)
 quantization:

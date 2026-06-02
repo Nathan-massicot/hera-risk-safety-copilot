@@ -32,7 +32,7 @@ candidates:
     notes: |
       Fallback if QLoRA on 7B too slow. ~4h training. Weaker dialogue quality.
 
-selected: mistral-7b-instruct-v0.3  # overridden at J2 based on actual VRAM
+selected: qwen2.5-7b-instruct  # RTX 4080 16 GB: open weights, best EN/FR, paged optim spills to 64 GB RAM
 
 # Quantization for local Ollama inference after fine-tune merge
 ollama:
