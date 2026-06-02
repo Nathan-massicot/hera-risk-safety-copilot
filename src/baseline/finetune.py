@@ -226,11 +226,12 @@ def snapshot_configs(run_dir: Path, model_cfg: dict, training_cfg: dict, args: a
 
 def build_trainer(model, tokenizer, train_ds, val_ds, training_cfg: dict,
                   output_dir: Path, max_seq_length: int):
-    from transformers import TrainingArguments
+    import inspect
+
     from trl import SFTConfig, SFTTrainer
 
     tcfg = training_cfg["training"]
-    sft_args = SFTConfig(
+    cfg_kwargs = dict(
         output_dir=str(output_dir),
         num_train_epochs=tcfg["num_train_epochs"],
         per_device_train_batch_size=tcfg["per_device_train_batch_size"],
@@ -251,18 +252,31 @@ def build_trainer(model, tokenizer, train_ds, val_ds, training_cfg: dict,
         save_total_limit=tcfg["save_total_limit"],
         load_best_model_at_end=tcfg["load_best_model_at_end"],
         metric_for_best_model=tcfg["metric_for_best_model"],
-        max_seq_length=max_seq_length,
-        report_to=["tensorboard"],
+        report_to="none",
         seed=training_cfg.get("seed", 1337),
-        dataset_kwargs={"skip_prepare_dataset": False},
     )
 
+    # TRL renamed several args across versions — introspect and pass only what THIS
+    # installed version accepts (e.g. max_seq_length -> max_length in recent TRL).
+    sft_params = inspect.signature(SFTConfig.__init__).parameters
+    if "max_length" in sft_params:
+        cfg_kwargs["max_length"] = max_seq_length
+    elif "max_seq_length" in sft_params:
+        cfg_kwargs["max_seq_length"] = max_seq_length
+    if "dataset_kwargs" in sft_params:
+        cfg_kwargs["dataset_kwargs"] = {"skip_prepare_dataset": False}
+    cfg_kwargs = {k: v for k, v in cfg_kwargs.items() if k in sft_params}
+    sft_args = SFTConfig(**cfg_kwargs)
+
+    # SFTTrainer renamed `tokenizer` -> `processing_class` in recent TRL/transformers.
+    trainer_params = inspect.signature(SFTTrainer.__init__).parameters
+    tok_kw = "processing_class" if "processing_class" in trainer_params else "tokenizer"
     trainer = SFTTrainer(
         model=model,
-        tokenizer=tokenizer,
         args=sft_args,
         train_dataset=train_ds,
         eval_dataset=val_ds,
+        **{tok_kw: tokenizer},
     )
     return trainer
 
