@@ -70,10 +70,13 @@ def main(argv: list[str] | None = None) -> int:
     tokenizer = AutoTokenizer.from_pretrained(base_id, trust_remote_code=True)
 
     log.info("Loading base model in bfloat16 (full precision merge)…")
+    # Load on CPU (no device_map="auto"): the merge is a one-shot op, doesn't need GPU
+    # placement, and device_map="auto" hits an accelerate/transformers 5.x bug
+    # (get_balanced_memory: "unhashable type: 'set'"). bf16 on CPU is fine for merging.
     base = AutoModelForCausalLM.from_pretrained(
         base_id,
         torch_dtype=torch.bfloat16,
-        device_map="auto",
+        low_cpu_mem_usage=True,
         trust_remote_code=True,
     )
 

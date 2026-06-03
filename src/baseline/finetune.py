@@ -265,20 +265,39 @@ def build_trainer(model, tokenizer, train_ds, val_ds, training_cfg: dict,
         cfg_kwargs["max_seq_length"] = max_seq_length
     if "dataset_kwargs" in sft_params:
         cfg_kwargs["dataset_kwargs"] = {"skip_prepare_dataset": False}
-    cfg_kwargs = {k: v for k, v in cfg_kwargs.items() if k in sft_params}
-    sft_args = SFTConfig(**cfg_kwargs)
 
     # SFTTrainer renamed `tokenizer` -> `processing_class` in recent TRL/transformers.
     trainer_params = inspect.signature(SFTTrainer.__init__).parameters
     tok_kw = "processing_class" if "processing_class" in trainer_params else "tokenizer"
-    trainer = SFTTrainer(
-        model=model,
-        args=sft_args,
-        train_dataset=train_ds,
-        eval_dataset=val_ds,
-        **{tok_kw: tokenizer},
-    )
-    return trainer
+
+    def _make(assistant_only: bool):
+        kw = dict(cfg_kwargs)
+        if assistant_only and "assistant_only_loss" in sft_params:
+            kw["assistant_only_loss"] = True
+        kw = {k: v for k, v in kw.items() if k in sft_params}
+        return SFTTrainer(
+            model=model,
+            args=SFTConfig(**kw),
+            train_dataset=train_ds,
+            eval_dataset=val_ds,
+            **{tok_kw: tokenizer},
+        )
+
+    # assistant_only_loss computes the loss ONLY on assistant turns (system/user tokens
+    # masked) — focuses learning on the HERA answers. It needs both TRL support and a
+    # chat template with {% generation %} markers; if either is missing, fall back to
+    # full-sequence loss rather than crash the run.
+    want_assistant_only = bool(tcfg.get("assistant_only_loss", False))
+    if want_assistant_only and "assistant_only_loss" in sft_params:
+        try:
+            trainer = _make(True)
+            log.info("assistant_only_loss: ENABLED (loss computed on assistant turns only)")
+            return trainer
+        except Exception as exc:  # noqa: BLE001
+            log.warning("assistant_only_loss unsupported here (%s) — falling back to full-sequence loss", exc)
+    elif want_assistant_only:
+        log.warning("assistant_only_loss requested but absent from this TRL version — full-sequence loss")
+    return _make(False)
 
 
 def save_adapter(model, tokenizer, output_dir: Path, run_dir: Path, training_cfg: dict, model_spec: dict) -> None:

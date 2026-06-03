@@ -22,8 +22,8 @@ quantization:
 
 # LoRA adapter
 lora:
-  r: 16
-  alpha: 32
+  r: 32
+  alpha: 64
   dropout: 0.05
   target_modules:
     - q_proj
@@ -38,9 +38,9 @@ lora:
 
 # Training loop
 training:
-  num_train_epochs: 3
+  num_train_epochs: 10
   per_device_train_batch_size: 1
-  gradient_accumulation_steps: 16  # effective batch = 16
+  gradient_accumulation_steps: 8  # effective batch = 8 → ~2x more optimizer steps on the small set
   learning_rate: 2.0e-4
   lr_scheduler_type: cosine
   warmup_ratio: 0.03
@@ -57,6 +57,7 @@ training:
   save_total_limit: 3
   load_best_model_at_end: true
   metric_for_best_model: eval_loss
+  assistant_only_loss: true  # mask system/user tokens → train the loss only on assistant turns (focus on HERA answers)
 
 # Output
 output:
