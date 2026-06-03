@@ -32,6 +32,7 @@ DOCS_DIR = REPO_ROOT / "data/regulatory_docs"
 MANIFEST_PATH = DOCS_DIR / "manifest.json"
 CHROMA_DIR = REPO_ROOT / "models/chroma_hera"
 COLLECTION_NAME = "hera_regulations"
+CARDS_DIR = REPO_ROOT / "data/regulations/cards_rich"
 
 # Embedding model — local, no API call. Multilingual would be MiniLM-L12-v2;
 # bge-small-en-v1.5 is faster and very strong on English regulatory text.
@@ -171,10 +172,55 @@ def ingest_doc(coll, doc: dict, pdf_path: Path) -> int:
     return len(ids)
 
 
+def parse_frontmatter(md: str) -> tuple[dict, str]:
+    """Split a card's YAML-ish frontmatter from its markdown body."""
+    import re
+
+    m = re.match(r"^---\n(.*?)\n---\n(.*)$", md, re.S)
+    if not m:
+        return {}, md
+    fm: dict = {}
+    for line in m.group(1).splitlines():
+        if ":" in line and not line.lstrip().startswith("-"):
+            k, v = line.split(":", 1)
+            fm[k.strip()] = v.strip().strip('"')
+    return fm, m.group(2)
+
+
+def ingest_cards(coll) -> int:
+    """Ingest the curated regulatory cards (data/regulations/cards_rich/*.md)."""
+    files = sorted(CARDS_DIR.glob("*.md"))
+    total = 0
+    for path in files:
+        fm, body = parse_frontmatter(path.read_text(encoding="utf-8"))
+        cid = fm.get("id", path.stem)
+        meta = {
+            "doc_id": f"card_{cid}",
+            "title": fm.get("title", cid),
+            "publisher": "HERA regulatory cards",
+            "jurisdiction": fm.get("jurisdiction"),
+            "url": fm.get("official_url"),
+            "page": 0,
+        }
+        meta = {k: v for k, v in meta.items() if v is not None}  # Chroma rejects None
+        ids, docs, metas = [], [], []
+        for i, chunk in enumerate(chunk_text(body)):
+            ids.append(f"card_{cid}::c{i:02d}")
+            docs.append(chunk)
+            metas.append(dict(meta))
+        if ids:
+            coll.add(ids=ids, documents=docs, metadatas=metas)
+            total += len(ids)
+    log.info("Ingested %d chunks from %d cards", total, len(files))
+    return total
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--reset", action="store_true", help="Drop the collection first.")
     ap.add_argument("--only", action="append", help="Only ingest these doc ids.")
+    ap.add_argument("--cards", action="store_true",
+                    help="Ingest the curated cards_rich/*.md corpus instead of the PDFs.")
     ap.add_argument("--embedding-model", default=DEFAULT_EMBEDDING_MODEL)
     args = ap.parse_args(argv)
 
@@ -190,6 +236,12 @@ def main(argv: list[str] | None = None) -> int:
     log.info("Chroma persistent dir: %s", CHROMA_DIR.relative_to(REPO_ROOT))
 
     _, coll = get_collection(args.reset, args.embedding_model)
+
+    if args.cards:
+        ingest_cards(coll)
+        log.info("Collection size now: %d chunks", coll.count())
+        return 0
+
     indexed = already_indexed_docs(coll)
     log.info("Already indexed: %d docs (%s)", len(indexed),
              ", ".join(sorted(indexed)) if indexed else "none")
