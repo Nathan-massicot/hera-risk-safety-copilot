@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Early questions touch SleepWell's real features (ML bias in CBT-I personalization, continuous-mic + accelerometer with on-device storage and a cloud digest), but the 'on-device processing ... security framework' question is looped three times across mic/accelerometer/diary and it never engages the SaMD-vs-wellness question the founder raises.",
+  "actionability": 1,
+  "actionability_justification": "The copilot is purely interrogative with zero mitigations; it even ignores the developer's explicit invitation to 'sketch what good would look like', and when asked outright for a structured risk report it responds with yet another question.",
+  "salient_examples": [
+    "we haven't pinned that down yet. Happy to think through it ... if you can sketch what 'good' would look like (answered with another question)",
+    "How does SleepWell ensure the on-device processing of microphone/accelerometer/sleep-diary data ... security framework? (same question x3)",
+    "Could you produce a brief structured risk report now? ... (answered) What measures are in place to ensure the rule-based CBT-I prescription engine does not produce harmful ... recommendations",
+    "No mitigation or recommendation appears anywhere in the transcript"
+  ]
+}

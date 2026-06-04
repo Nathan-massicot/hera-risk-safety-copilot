@@ -42,7 +42,13 @@ class OllamaCopilot:
         self.system_prompt = system_prompt or default_system_prompt()
         self.name = name or f"ollama:{model}"
         self.temperature = temperature
-        self.num_predict = num_predict
+        # Decoding knobs — env-overridable so we can tune anti-repetition without
+        # editing code. Defaults match the hera-baseline Modelfile.
+        self.num_predict = int(os.environ.get("HERA_NUM_PREDICT", num_predict))
+        self.top_p = float(os.environ.get("HERA_TOP_P", "0.8"))
+        self.top_k = int(os.environ.get("HERA_TOP_K", "20"))
+        self.repeat_penalty = float(os.environ.get("HERA_REPEAT_PENALTY", "1.3"))
+        self.repeat_last_n = int(os.environ.get("HERA_REPEAT_LAST_N", "64"))
         self.timeout_s = timeout_s
 
     def chat(self, messages: list[dict]) -> ChatTurn:
@@ -62,9 +68,10 @@ class OllamaCopilot:
             "options": {
                 "temperature": self.temperature,
                 "num_predict": self.num_predict,
-                "top_p": 0.8,
-                "top_k": 20,
-                "repeat_penalty": 1.3,
+                "top_p": self.top_p,
+                "top_k": self.top_k,
+                "repeat_penalty": self.repeat_penalty,
+                "repeat_last_n": self.repeat_last_n,
             },
         }
 

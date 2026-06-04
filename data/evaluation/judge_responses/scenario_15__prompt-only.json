@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Has an app-specific veneer (gamification, social feed, research donation, 8 languages, WCAG 2.1 AA) but is dominated by the same Accessibility/Security/Ethical-Use block repeated almost verbatim five times, and uses fabricated dimension IDs plus wrong citations (GDPR Art. 22 cited under an accessibility risk; AI Act 'Art. 35' for transparency).",
+  "actionability": 3,
+  "actionability_justification": "Mitigations name real standards (WCAG 2.1 AA, end-to-end encryption, OAuth 2.0/2FA, ISO 27001, opt-in research donation, breach notice per Art. 33) and a severity-grouped report is delivered, but the advice is largely generic security/accessibility boilerplate reusable for any app rather than concrete recipes tailored to QuitNow.",
+  "salient_examples": [
+    "Dimension D12: Accessibility for Users with Disabilities ... (identical block repeated 5x across turns)",
+    "violating the EU Accessibility Act and GDPR (Article 22 on automated decision-making) (wrong mapping)",
+    "Implement end-to-end encryption ... Use secure authentication methods (e.g., OAuth 2.0, two-factor authentication)",
+    "Dimensions Not Covered: [P1.D7] Data localization, [P4.D14] Right to explanation (invented IDs)"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "The regulatory mapping is correct and precise for a Class IIa SaMD (Notified Body, clinical evaluation under MDR Art. 61, IEC 62304, ISO 14971, ISO 13485, MDCG 2019-11/2020-1, Annex VIII, PMS/PSUR/PMCF, Art. 83-86), but it is severely undermined by the identical questions 6-10 block being repeated verbatim five times with zero new information, which caps depth.",
+  "actionability": 4,
+  "actionability_justification": "Gives concrete, implementable steps with named standards and exact artifacts (engage a Notified Body, build the technical file per Annex VIII, clinical evaluation report + CIP, IEC 62304 SDLC with test plans/reports, ISO 14971 risk file, ISO 13485 QMS, PMS plan with PSUR + PMCF, incident logs per Art. 83-86) and closes with the requested severity-grouped report plus a next-steps checklist.",
+  "salient_examples": [
+    "Class IIa SaMD must undergo clinical evaluation ... under MDR Article 61 ... include CIP if necessary",
+    "Ensure your software development lifecycle (SDLC) includes software validation ... in line with IEC 62304",
+    "6. Is a Notified Body required ... (questions 6-10 block repeated verbatim 5 times)",
+    "High Severity Risks | [P1.D1] ... Rule 11 ... MDCG 2019-11 | [P2.D1] Clinical evidence ... Article 61 | [P4.D5] PMS ... Article 83-86"
+  ]
+}

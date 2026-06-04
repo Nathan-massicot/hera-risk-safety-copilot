@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Questions are tied to PainTrack's actual features (FHIR-EHR integration accuracy, tamper-proof PDF transmission, free-text trigger and body-map misinterpretation, mood-entry bias), but it cites no regulation, mildly loops while the user re-pastes the same data list, and ignores the developer's explicit invitation to 'sketch what good would look like' instead of engaging.",
+  "actionability": 1,
+  "actionability_justification": "Entirely interrogative with zero recommendations, it skips the developer's direct request for a sketch, and the requested report is just seven one-line risk restatements with no mitigations and no real severity grouping, so nothing is implementable.",
+  "salient_examples": [
+    "USER: Good question — we haven't pinned that down yet. Happy to think through it ... if you can sketch what 'good' would look like.",
+    "ASSISTANT (next turn): What steps are in place to ensure that mood entries are captured ... [P2.D1]",
+    "[P4.D4] Body map annotations may be ambiguous, risking misinterpretation by clinicians.",
+    "Uncovered dimensions: P2.D2, P5.D1, P6.D3."
+  ]
+}

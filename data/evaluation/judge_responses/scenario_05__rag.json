@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Some real engagement (reacts to precision 0.62/recall 0.41, the GBM, the 'informational/wellness' positioning) but it loops the same 'Non-device fallback / quality assurance [P3.D1]' block verbatim three-plus times, half-accepts the wellness dodge instead of pressing that a 48h migraine forecast likely has a medical purpose, and the final report uses invented/mismatched dimension IDs (P1.D2, P2.D4, P3.D3) plus non-HERA 'environmental/social impact' dimensions.",
+  "actionability": 3,
+  "actionability_justification": "Offers a few implementable steps (reinforce the informational disclaimer in UI/ToS, run a GDPR PIA, data minimization, encryption/access controls) and produces the requested severity-grouped report, but most advice is directional ('conduct a clinical evaluation', 'consider third-party certification') without concrete how-to.",
+  "salient_examples": [
+    "HERA Dimension: [P3.D1] Non-device fallback / quality assurance (identical block repeated 3+ times)",
+    "validated on a held-out 20% split with precision 0.62 and recall 0.41 for the 48-hour prediction window",
+    "Dimensions Not Covered ... [P4.D2] Environmental impact (energy use, sustainability) [P4.D3] Social impact",
+    "Reinforce the 'informational' disclaimer in the app's UI and terms of service"
+  ]
+}

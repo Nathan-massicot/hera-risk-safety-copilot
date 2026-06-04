@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Reacts to CareAir's real disclosures (CE Class IIa second-reader, N=4500 study, AUROC 0.96/0.94, +4% radiologist accuracy, PACS/DICOM) but the same [P5.D2]/[P5.D1]/[P3.D2]/[P3.D3] block is repeated near-verbatim three times and dimension IDs diverge from the gold standard.",
+  "actionability": 3,
+  "actionability_justification": "Produces a severity-grouped report and cites concrete artifacts (Clinical Evaluation Report, Technical File, ISO 14971 risk file), but most advice stays directional (do disparity analysis, add explanation mechanisms) without specific how-to.",
+  "salient_examples": [
+    "AUROC of 0.96 for nodules and 0.94 for pneumothorax... 4% improvement in accuracy when using Radiologist + AI",
+    "identical Clinical Validation / Post-Market Monitoring / Human Oversight block repeated across three turns",
+    "Use the multi-centre study to support the clinical evaluation report (per MDR Article 10)",
+    "[P1.D3] ...could disproportionately harm certain populations. Mitigation: Conduct disparity analysis and fairness testing"
+  ]
+}

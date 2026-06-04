@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Questions name VoiceMind's features (60-second voice sample, front-desk notification, opt-out, the 7-day audio / 1-year embedding split) and one follow-up reacts to the retention disclosure, but most are generic 'ensuring compliance/security is critical' boilerplate with the [P7.D1] tag reused, the user's answer looped four times, and it never engages the central substance (voice-based depression screening as SaMD/high-risk AI, voiceprint biometrics, kiosk consent validity).",
+  "actionability": 1,
+  "actionability_justification": "The copilot offers zero mitigations or recommendations anywhere, and when explicitly asked to produce the structured severity-grouped risk report it deflected with 'I think we've covered the main dimensions for now. Want me to produce a brief risk report?' — handing over nothing implementable.",
+  "salient_examples": [
+    "What measures are in place to ensure patient privacy and data security for the voice samples ... [P7.D1] (tag reused with boilerplate)",
+    "Audio kept 7 days for incident review; embeddings retained 1 year (only this disclosure draws a specific follow-up)",
+    "Could you produce a brief structured risk report now? ... (answered) I think we've covered the main dimensions for now. Want me to produce a brief risk report?",
+    "No mitigation, recommendation, or report is ever produced"
+  ]
+}

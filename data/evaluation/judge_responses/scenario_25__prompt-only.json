@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Engages the actual app (child birth date / optional name / parent email, Swiss BAG calendar, DE/FR/IT/EN) and correctly reasons it is likely not an MDR device or high-risk AI after the wellness clarification, but is undermined by Reflection Q5-8 repeating as Q9-12 nearly verbatim, an imprecise GDPR Art. 9 'sensitive data' framing of a birth date, and a fabricated 'uncovered dimensions' list (e.g., environmental/carbon-footprint).",
+  "actionability": 4,
+  "actionability_justification": "Provides concrete, implementable recipes (minimize fields with name optional, retention tied to the vaccination schedule, HTTPS/TLS + encrypted DB + access controls + 2FA, breach response plan, account-deletion functionality, multilingual privacy policy in DE/FR/IT/EN, DPIA + records of processing) and delivers the requested severity-grouped report with a next-steps checklist.",
+  "salient_examples": [
+    "ImpfPlan is not a medical device (under MDR) or a high-risk AI system ... since it does not provide medical advice ... only supports vaccination scheduling based on the BAG calendar",
+    "Use end-to-end encryption for data in transit (e.g., HTTPS, TLS) ... Implement user authentication (e.g., password, biometric, or 2FA)",
+    "Reflection Question 9 ... (identical to Question 5, repeated)",
+    "Dimensions Not Covered: [P7.D2] Environmental impact (carbon footprint) (irrelevant fabricated dimension)"
+  ]
+}

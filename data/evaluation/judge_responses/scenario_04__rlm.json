@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Questions do target BumpGuide's actual risk surface (symptom logs and kick counts feeding the ad network, IDFA/Android ad ID, LMP/birth dates), but the developer's answer is looped 4+ times, the encryption question is repeated verbatim, and the dimension IDs are scattered and arbitrary with no progression.",
+  "actionability": 1,
+  "actionability_justification": "The copilot is purely interrogative end-to-end — it offers zero mitigations or recommendations — and when the developer explicitly asked for a structured severity-grouped risk report it ignored the request and simply posed yet another question.",
+  "salient_examples": [
+    "How does BumpGuide ensure the secure storage and encryption of users' LMP dates and birth dates ... [P2.D3] (asked verbatim twice)",
+    "Could you produce a brief structured risk report now? ... (answered only with) What measures does BumpGuide implement to prevent the ad network from using these behavioral signals...",
+    "USER answer 'Email, LMP date, birth date ... IDFA / Android ad ID' repeated 4 times",
+    "No mitigation, regulation citation, or recommendation appears anywhere in the transcript"
+  ]
+}

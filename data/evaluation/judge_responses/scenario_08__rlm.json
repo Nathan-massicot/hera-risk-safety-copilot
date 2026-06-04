@@ -1,0 +1,11 @@
+{
+  "depth": 2,
+  "depth_justification": "Questions are topically tied to RecoverNow (CBT toolbox, French clinic, ED population) but the transcript loops the same three questions (cultural appropriateness [P3.D2], evidence-base [P7.D2], reinforcing harmful behaviors [P7.D1]) with no progression, ignores the developer's repeated offer to co-think, and never engages the central crisis/self-harm escalation risk.",
+  "actionability": 1,
+  "actionability_justification": "Purely interrogative with zero recommendations, it never 'sketches what good looks like' despite being asked, and when explicitly asked for a structured risk report it produces none, instead re-asking the cultural-appropriateness question.",
+  "salient_examples": [
+    "What measures are in place to ensure this? [P3.D2] (asked verbatim multiple times)",
+    "USER: Happy to think through it with you if you can sketch what 'good' would look like. -> ASSISTANT re-asks rather than sketching",
+    "USER: Could you produce a brief structured risk report now? -> ASSISTANT: '...Could you sketch what good cultural appropriateness would look like ... [P3.D2]' (no report produced)"
+  ]
+}

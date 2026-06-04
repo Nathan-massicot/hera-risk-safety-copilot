@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Engages MindCare's real specifics (AI journal summaries visible to the therapist, crisis-misread risk, therapeutic alliance) with mostly apt GDPR/AI-Act references, but is undermined by heavy looping (the RQ6-8 block is reprinted verbatim and it keeps asking about third-party sharing after the user denied it four times) and a few loose citations.",
+  "actionability": 4,
+  "actionability_justification": "Produces the requested severity-grouped report with several concrete, buildable steps (red-flag/crisis alerts in AI summaries, human-in-the-loop override of AI insights, data export in CSV/PDF, plain-language explanation of the summarisation logic, defined retention then auto-delete) plus a not-covered list, though some items remain directional.",
+  "salient_examples": [
+    "'Implement safety mechanisms such as red flags or risk alerts in AI summaries that indicate potential crisis or distress'",
+    "'Enable data export in a standard format (e.g., CSV or PDF) for users to transfer their data'",
+    "Reflection Questions 6-8 are reprinted verbatim across two assistant turns",
+    "Keeps asking about third-party data sharing after the user states 'Therapist sees what user shares; no third parties' four times"
+  ]
+}

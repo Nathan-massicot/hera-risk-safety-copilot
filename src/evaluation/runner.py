@@ -87,6 +87,9 @@ def run_scenario(
         {"role": "user", "content": scenario["app_description"]},
     ]
     turn_records: list[dict] = []
+    # Track which probe categories the simulated developer has already answered so we
+    # never replay the same canned answer (otherwise the harness manufactures looping).
+    used_keys: set[str] = set()
 
     for turn in range(max_turns):
         chat = copilot.chat(messages)
@@ -101,12 +104,15 @@ def run_scenario(
 
         # If the copilot doesn't end with a question, we still continue but
         # the simulator may give a generic answer.
-        dev_answer = simulate_answer(scenario, chat.content)
+        dev_answer = simulate_answer(scenario, chat.content, used_keys)
         messages.append({"role": "user", "content": dev_answer})
 
     if request_report:
         messages.append({"role": "user", "content": REPORT_REQUEST})
-        report_turn = copilot.chat(messages)
+        # Prefer a dedicated synthesis path (RLM bypasses its question loop here to
+        # actually write the report); fall back to a normal turn otherwise.
+        final_report = getattr(copilot, "final_report", None)
+        report_turn = final_report(messages) if callable(final_report) else copilot.chat(messages)
         messages.append({"role": "assistant", "content": report_turn.content})
         turn_records.append({
             "turn": max_turns,

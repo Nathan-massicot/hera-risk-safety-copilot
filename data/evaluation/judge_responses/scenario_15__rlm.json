@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Every question fixates on one theme (WCAG accessibility) applied mechanically to each feature, ignoring this app's real risk profile (vulnerable addicted users, gamification dark patterns, peer-feed content safety, efficacy claims), and the final 3-line report just restates those accessibility questions with mismatched IDs ([P3.D2] 'language support', [P7.D1] 'gamification').",
+  "actionability": 1,
+  "actionability_justification": "The transcript is purely interrogative with no mitigations, the requested report contains zero recommendations (only 'no clear accessibility measures' restatements), and it ignored the developer's explicit invitation to 'sketch what good would look like'.",
+  "salient_examples": [
+    "USER: Happy to think through it with you if you can sketch what 'good' would look like. ASSISTANT: How does the app ensure that the behavioural milestones are accessible ... for users with cognitive disabilities [P7.D1]?",
+    "Six straight accessibility-only questions (social feed, craving log, gamification, milestones, subscription tier)",
+    "Final report: '[P7.D1] Gamification and behavioural milestones: No clear accessibility measures for cognitive disabilities.' (no mitigation)",
+    "Uncovered dimensions: [P1.D1], [P2.D1], [P3.D1] (report is 3 lines total)"
+  ]
+}

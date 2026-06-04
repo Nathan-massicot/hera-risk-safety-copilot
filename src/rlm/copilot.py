@@ -18,7 +18,7 @@ from collections.abc import Iterable
 
 from src.baseline.inference import OllamaCopilot
 from src.copilot_base import ChatTurn, default_system_prompt
-from src.rlm.agents import critic_step, generator_step, selector_step
+from src.rlm.agents import critic_step, generator_step, selector_step, synthesizer_step
 
 log = logging.getLogger("copilot.rlm")
 
@@ -95,6 +95,27 @@ class RLMCopilot:
                 "rlm_chosen_dimension": chosen_dim,
                 "n_candidates": len(candidates),
                 "candidate_dimensions": [c.get("dimension") for c in candidates],
+                "covered_dims_count": len(self._covered_dims),
+            },
+        )
+
+    def final_report(self, messages: list[dict]) -> ChatTurn:
+        """Closing synthesis turn — bypass Generator→Critic→Selector and write the report.
+
+        The runner routes the final 'produce a risk report' turn here. Going through a
+        dedicated Synthesizer (instead of chat()'s question machinery) is what lets RLM
+        hand over an actual deliverable with concrete mitigations, rather than asking
+        yet another question — the structural reason its Actionability was ~1 before.
+        """
+        t0 = time.time()
+        self._update_covered(messages)
+        convo = [m for m in messages if m["role"] != "system"]
+        report = synthesizer_step(self._base, convo, sorted(self._covered_dims))
+        return ChatTurn(
+            content=report,
+            latency_s=time.time() - t0,
+            extra={
+                "rlm_decision": "final_report",
                 "covered_dims_count": len(self._covered_dims),
             },
         )

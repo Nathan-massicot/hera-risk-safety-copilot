@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "The identical MDR Rule 11 / Class IIa analysis block is repeated verbatim four times with no new information, a serious looping defect, and the final report's dimension IDs are internally inconsistent and mismatched (e.g. [P2.D3] labeled 'Post-market surveillance', [P3.D1] for data protection). Some genuine app-specific engagement (Rule 11 reclassification, the actual data list) keeps it above 1.",
+  "actionability": 2,
+  "actionability_justification": "Most output is directional ('conduct a borderline analysis', 'engage a Notified Body', 'implement encryption') without concrete how-to, and the requested structured report is generic boilerplate with no implementable recipes. It did produce the requested deliverable, so it clears a 1.",
+  "salient_examples": [
+    "Identical response to 'Class I MDD legacy ... might bump to IIa' repeated 4 times verbatim",
+    "[P2.D3] Post-market surveillance and vigilance ... [P3.D1] Data protection and privacy (IDs inconsistent with earlier turns and gold standard)",
+    "Conduct a formal classification analysis under MDCG 2019-11 to determine whether your app falls under Rule 11",
+    "Mitigation: ... encryption, access controls, and user consent mechanisms (generic, no specifics)"
+  ]
+}

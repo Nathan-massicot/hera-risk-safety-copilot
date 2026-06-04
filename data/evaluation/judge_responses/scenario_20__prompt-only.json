@@ -1,0 +1,12 @@
+{
+  "depth": 4,
+  "depth_justification": "Consistently engages BabyCheck's specifics (EPDS validated cutoff >=10, screening-vs-diagnostic risk, false-positive stigma/unnecessary referrals, maternity-clinic integration, low-literacy mode, DE/FR/IT/EN) and progresses across disclosures, though the accessibility block repeats a few times, some citations are loose (e.g. GDPR Art. 29, wrong EAA number) and it never tackles MDR device classification.",
+  "actionability": 4,
+  "actionability_justification": "Offers many concrete, implementable steps (WCAG 2.1 AA audit with screen-reader/keyboard/color-contrast checks, low-literacy mode with icons/color-coding/minimal text, layered EPDS-score explanations with tooltips, secure-deletion confirmation) and closes with a severity-grouped report plus regulatory checklist.",
+  "salient_examples": [
+    "Clearly label the EPDS as a screening tool, not a diagnostic tool. Include disclaimer statements",
+    "False positives (scores >=10 that are not clinically significant) could lead to unnecessary referrals and stigma",
+    "Ensure the app is WCAG 2.1 AA compliant... screen reader support, keyboard navigation, and color contrast",
+    "Offer a low-literacy mode with simple language, visual cues, and minimal text"
+  ]
+}

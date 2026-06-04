@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Questions are on-topic to the app (EPDS false positives/negatives, the published cutoff of 10, cultural/linguistic adaptation of the EPDS, maternity-clinic integration) but it loops the same cultural-sensitivity [P7.D2] question twice, ignores the developer's repeated answers, and never engages the core safeguarding risk of flagging a depression score with only a 'contact your midwife' prompt.",
+  "actionability": 1,
+  "actionability_justification": "Purely interrogative throughout, and the final 'report' is three one-line 'is not yet addressed' bullets plus an uncovered-dimensions list with no severity grouping, no risk analysis, and zero mitigations the developer could implement.",
+  "salient_examples": [
+    "Every assistant turn is a lone question, e.g. 'What measures does BabyCheck have in place to prevent false positives or false negatives in the EPDS scoring system...? [P7.D1]'",
+    "[P7.D2] cultural-sensitivity question asked twice in near-identical form",
+    "Report body in full: '[P7.D1] ... is not yet addressed. [P2.D3] ... is not yet addressed. [P7.D2] ... is not yet addressed.'",
+    "No mitigations and no severity tiers despite the explicit request to 'group risks by severity'"
+  ]
+}

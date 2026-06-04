@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Names the app's facts (Class IIa watch vs Class I app, DEP/Sécurité Sociale sharing) but loops the same MDR/PMS/GDPR/reimbursement blocks across six identical user turns, leans heavily into off-target Belgium/Germany reimbursement (DiGA, NIHDI) irrelevant to the CH+FR deployment, miscites card_reimbursement_other_eu for data-lawfulness and interoperability, and fabricates 'ISO 14571'.",
+  "actionability": 2,
+  "actionability_justification": "The delivered report is mostly directional ('implement a comprehensive risk management plan per ISO 14971', 'conduct health-economic analyses') with no concrete configs or artifacts, and it omits the real software-side risks (BP/PPG accuracy disclaimers, consent for GP auto-sharing) while inventing dimensions like '[P5.D1] User Experience' and a non-existent P8 pillar.",
+  "salient_examples": [
+    "Six identical user turns 'Watch is CE Class IIa. App alone is Class I as data display...' each met with the same MDR/PMS/reimbursement blocks",
+    "ISO 14571 typo cited as a standard alongside correct ISO 14971 elsewhere",
+    "card_reimbursement_other_eu cited for 'Data Lawfulness', 'National Health System Integration', and 'Notification to National Authorities'",
+    "Report invents '[P5.D1] User Experience & Accessibility' and 'P8.D1 Market Access & Commercial Strategy' not in the HERA framework"
+  ]
+}

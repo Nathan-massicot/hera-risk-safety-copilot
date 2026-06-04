@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "The opening turn is strong and app-specific (engages the 80% vs PSG metric, MDR Class IIa/IIb, SaMD, PMCF, with RAG card citations), but the assistant then emits the identical four-section block verbatim five consecutive times with zero new information -- a severe looping defect that destroys progression.",
+  "actionability": 3,
+  "actionability_justification": "Names the right artifacts (PMS Plan/PSUR, PMCF plan, comparative study for positive care effect, analytical performance such as repeatability/reproducibility) and produces the requested severity-grouped report, but most guidance stays directional ('conduct a clinical evaluation', 'implement a PMCF plan', 'expand the study') without concrete how.",
+  "salient_examples": [
+    "Five consecutive assistant turns to '~80% accuracy... N=50' are byte-identical (Clinical Validity / Risk Class / PMCF / Clinical Evaluation blocks repeated)",
+    "Document the potential harm... determine whether it meets the criteria for Class IIb (serious harm) or Class IIa [mdr_class_iib]",
+    "Implement a PMCF plan to monitor the long-term accuracy of the sleep staging algorithm [card_pms_lifecycle]",
+    "Report mitigation: 'Ensure compliance with data protection regulations (e.g., GDPR, HIPAA)' -- HIPAA irrelevant for an EU app"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Despite a knowledgeable developer disclosing concrete evidence (N=4500, AUROC 0.96/0.94, +4% reader uplift), the assistant merely restates those numbers and repeats the identical five-question MDR/AI-Act block four times verbatim, and it misses the case's salient risks (automation/deskilling bias, equity across 30 hospitals, PMS/PMCF specifics).",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are generic compliance boilerplate ('document data sources and bias mitigation in the technical documentation', 'implement a continuous monitoring plan'); the final report groups by severity but offers no concrete recipe and leans on vague labels rather than implementable steps.",
+  "salient_examples": [
+    "The same 'Reflection Question 1-5' block (MDR Art. 61 / AI Act Art. 10,12,13) is reprinted four times identically",
+    "Citations are repetitive and page-zero, e.g. '[ai_act_high_risk · p.0]' and '[clinical_eval_mdsw · p.0]'",
+    "'Document data sources, training methodology, and bias mitigation strategies in the technical documentation' (generic)",
+    "Report invents loose labels like '[P3.D3] User training & support' and '[P3.D4] Continuous monitoring & updates'"
+  ]
+}

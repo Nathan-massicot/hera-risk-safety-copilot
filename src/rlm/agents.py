@@ -248,3 +248,34 @@ def _argmax_combined(scores: list[dict]) -> int:
         if total > best_score:
             best, best_score = i, total
     return best
+
+
+# ---------------------------------------------------------------------------
+# Synthesizer
+# ---------------------------------------------------------------------------
+
+
+SYNTHESIZER_SYSTEM = """You are the SYNTHESIZER agent in a multi-agent HERA Risk & Safety Copilot.
+
+The conversation is over and the developer has asked for a structured risk report.
+Using ONLY what the conversation established about THIS app, write a concise HERA risk report:
+- Group findings by severity: **High**, **Medium**, **Low**.
+- For each finding: cite the HERA dimension ID in square brackets (e.g. `[P2.D3]`), state the risk in one line tied to the developer's specifics, and give ONE concrete, implementable mitigation (a recipe — NOT "ensure compliance") that references the precise regulation/article where relevant (GDPR, MDR, EU AI Act, ISO 82304-2).
+- End with a line `Not yet covered:` listing HERA dimension IDs worth a future session.
+
+Plain markdown. No preamble, no follow-up questions — this is the deliverable itself."""
+
+
+def synthesizer_step(model: OllamaCopilot, conversation: list[dict], covered_dims: list[str]) -> str:
+    """Produce the final, free-text HERA risk report (the closing deliverable)."""
+    convo_text = "\n".join(
+        f"### {m['role'].upper()}\n{m['content']}" for m in conversation
+    )
+    user = (
+        f"COVERED DIMENSIONS SO FAR: {', '.join(covered_dims) if covered_dims else '(none)'}\n\n"
+        f"CONVERSATION:\n{convo_text}\n\n"
+        "Now write the structured HERA risk report."
+    )
+    model.system_prompt = SYNTHESIZER_SYSTEM
+    turn = model.chat([{"role": "user", "content": user}])
+    return turn.content

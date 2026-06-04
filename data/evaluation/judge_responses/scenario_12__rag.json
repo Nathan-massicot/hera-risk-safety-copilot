@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "The opening turn is genuinely app-specific (safe/unsafe-day medical claims, monetisation re-identification, Class IIa vs wellness split, MDR Art. 61 three-pillar clinical eval), but it then loops the identical 'Thank you for confirming ... Class IIa ... wellness software' preamble five times and pads with mechanically generated sections, and it fabricates pillars P8/P9/P10 that do not exist in the 7-pillar HERA taxonomy with IDs reshuffled every turn.",
+  "actionability": 3,
+  "actionability_justification": "A few concrete moves appear (separate granular consent per monetisation purpose, 72h breach playbook + DPO, Art. 30/32 records, WCAG/ISO 13485/ISO 14971/MDR Art. 61), but the produced report and most sections are directional ('conduct a clinical evaluation', 'implement a QMS', 'do a risk assessment') without implementation detail.",
+  "salient_examples": [
+    "'Thank you for confirming that the natural contraception mode is CE Class IIa ... tracker mode is wellness software' repeated near-verbatim across 5 ASSISTANT turns",
+    "Fabricated pillars: '### 21. Clinical Evaluation (P10.D1, P10.D2)', '### 14. Regulatory Alignment (P9.D1...)', '### 10. Post-Market Surveillance (P8.D1...)'",
+    "Obtain explicit, granular, purpose-specific consent for each monetisation purpose, separate from consent to use the app",
+    "breach playbook that can notify the authority within 72 hours and appoint a DPO if processing health data at scale"
+  ]
+}

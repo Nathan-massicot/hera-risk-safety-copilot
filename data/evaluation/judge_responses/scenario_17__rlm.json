@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Every turn is a single question wrapped in the same boilerplate ('MindCare handles sensitive mental health data, so X is critical for trust/compliance'); it touches real features (AI summaries visible to therapist, EU+CH cross-border) but never follows up the developer's substantive answers (clinical audit, monthly fidelity sampling, therapeutic-alliance survey) and shows no progression.",
+  "actionability": 1,
+  "actionability_justification": "Zero mitigations anywhere, and the requested report is just a flat restatement of its own six questions as 'risks' -- not grouped by severity as asked and with no implementable guidance, plus an invented [P8.D1] dimension.",
+  "salient_examples": [
+    "What safeguards are in place to protect user data when MindCare shares AI-generated journal summaries with therapists... [P3.D2]",
+    "User answers 'Clinical audit of therapists; AI summary fidelity measured monthly' -> next turn just asks another unrelated breach question",
+    "Report body is bare list: '[P7.D1] Data privacy... [P3.D2] Safeguards for cross-border...' with no severity grouping or mitigations",
+    "Uncovered dimensions: ... [P8.D1] (nonexistent in the 7-pillar taxonomy)"
+  ]
+}

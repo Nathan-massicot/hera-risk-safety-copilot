@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Strong app-specific engagement with the AI-summarised journal previews shown to therapists and correct citations (GDPR Art. 9 for mental-health special-category data, Art. 17, EU AI Act high-risk, Swiss medical secrecy, French teleconsultation L1110-4), but the same P4.D2/P3.D2/P3.D3/P3.D4/P2.D4/P4.D3 block is repeated near-verbatim across four turns, a serious looping defect.",
+  "actionability": 3,
+  "actionability_justification": "Delivers the requested severity-grouped report with a few concrete steps (let users opt out of sharing summaries with the therapist, add a right-to-explanation feature with human-in-the-loop review), but most mitigations stay directional ('implement data minimization', 'obtain explicit consent', 'conduct bias audits') without configs or exact artifacts.",
+  "salient_examples": [
+    "'GDPR Art. 9 requires explicit consent for the processing of health data, including journal entries and mood ratings'",
+    "Identical 'P4.D2 Transparency of AI Decision-Making' block repeated verbatim four times",
+    "'allow them to opt out of sharing these summaries with therapists'",
+    "Final report groups High/Medium/Low severity with a 'Dimensions Not Covered' list"
+  ]
+}

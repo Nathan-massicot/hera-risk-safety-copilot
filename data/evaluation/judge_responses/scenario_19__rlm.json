@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Every turn is a sharp, Anchor-specific question targeting the real privacy threat model (pseudonym linkage across sessions, relapse-risk inference of substance history, substance/urge-log exposure during clinic referral), which counts toward depth, but questions partially loop and nearly every one is mis-tagged the same [P7.D1] with no precise regulation cited.",
+  "actionability": 1,
+  "actionability_justification": "The transcript is purely interrogative with no recommendations, and the explicitly requested risk report is three bullets that merely restate the open questions ('Ensuring referral data does not expose user identity') with zero mitigations or implementable steps.",
+  "salient_examples": [
+    "What measures are in place to ensure the pseudonym used in anonymous chat cannot be linked back to a user's identity across different sessions? [P2.D3]",
+    "ensure the relapse-risk inputs are not used to infer sensitive information about a user's substance use history? [P7.D1]",
+    "Report: '[P3.D2] Clinic referral choice process: Ensuring referral data does not expose user identity' (restates a question, no fix)",
+    "the [P7.D1] tag is reused for unrelated questions across most turns"
+  ]
+}

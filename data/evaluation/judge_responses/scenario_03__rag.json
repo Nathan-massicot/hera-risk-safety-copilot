@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Engages TriageAI's actual fact pattern (LLM triage, NHS 111 rebuttal, SaMD vs informational labelling) but the identical 3-dimension block [P2.D3]/[P2.D4]/[P2.D5] is repeated verbatim across six turns with no progression, and the dimension IDs do not match the gold-standard substance.",
+  "actionability": 3,
+  "actionability_justification": "Did honour the explicit request for a severity-grouped report with a dimensions-not-covered list, but most guidance is directional (classify the SaMD, conduct a DPIA, implement AI governance) rather than concrete implementable recipes.",
+  "salient_examples": [
+    "The MDR defines a medical purpose as 'the interpretation or processing of health data to support or replace a medical decision' [mdr_2017_745 · p.12]",
+    "labeling is not sufficient to exclude it from MDR... classify the SaMD (likely Class IIa)",
+    "identical [P2.D3]/[P2.D4]/[P2.D5] analysis repeated verbatim across 6 assistant turns",
+    "Conduct a DPIA... Document the assessment and consult with the Data Protection Authority (Art. 36)"
+  ]
+}

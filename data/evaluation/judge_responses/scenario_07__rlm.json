@@ -1,0 +1,11 @@
+{
+  "depth": 2,
+  "depth_justification": "Every assistant turn is a single generic security question that loops on the same 'contextual metadata like activity and motion' framing with rotating dimension tags, ignoring the user's repeated answers and never engaging PulseTrack's real risk surface (Class IIa/MDR software obligations, DEP / Sécurité Sociale sharing, PPG accuracy claims).",
+  "actionability": 1,
+  "actionability_justification": "Purely interrogative with zero recommendations, and it outright ignored the developer's explicit request for a structured risk report -- responding with yet another question -- so nothing implementable was handed over.",
+  "salient_examples": [
+    "PulseTrack collects contextual metadata like activity and motion. What steps are taken to secure this data...[P2.D3]",
+    "What measures are in place to protect this data from unauthorized access or tampering [P2.D5]",
+    "User: 'Could you produce a brief structured risk report now?' -> Assistant: 'How does the app ensure the accuracy of BP estimates when users are engaged in physical activity... [P3.D2]'"
+  ]
+}

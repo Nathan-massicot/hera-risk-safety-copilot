@@ -49,8 +49,14 @@ def _score_key(question: str, key: str, hints: set[str]) -> int:
     qn = _normalize(question)
     score = 0
     for h in hints:
-        # Word-boundary match (dots in keywords act as "any of [space/-/_/punct]")
-        pattern = r"\b" + h.replace(".", r"[ _\-]?") + r"\b"
+        # Build a word-boundary pattern from the hint. We escape the whole hint
+        # first so stray regex metachars can't blow up re.compile, then reinstate
+        # the two tokens the hint vocabulary actually uses:
+        #   "."  → optional separator [space/-/_]   (e.g. "opt.in" → "opt in")
+        #   "*"  → wildcard gap                       (e.g. "what.*type")
+        esc = re.escape(h)
+        esc = esc.replace(r"\.", r"[ _\-]?").replace(r"\*", r".*")
+        pattern = r"\b" + esc + r"\b"
         if re.search(pattern, qn):
             score += 1
     # Direct mention of the key as a word counts double
@@ -69,15 +75,38 @@ def best_probe_key(question: str, available_keys: set[str]) -> str | None:
     return scored[0][1]
 
 
-def simulate_answer(scenario: dict, copilot_last_message: str) -> str:
-    """Map the copilot's last message to a canned answer; fallback if no match."""
+def simulate_answer(
+    scenario: dict,
+    copilot_last_message: str,
+    used_keys: set[str] | None = None,
+) -> str:
+    """Map the copilot's last message to a canned answer; fallback if no match.
+
+    `used_keys` (mutated in place when provided) records which probe categories the
+    developer has already answered this conversation. We never serve the same canned
+    answer twice — if the copilot re-asks an answered topic we steer it forward
+    instead of replaying the block, which is what stops the harness from manufacturing
+    the verbatim looping that dragged down Depth across all approaches.
+    """
     answers: dict[str, str] = scenario.get("simulated_answers", {})
     if not answers:
         return "I'm not sure yet; let's discuss what would help."
-    key = best_probe_key(copilot_last_message, set(answers))
+    served = used_keys if used_keys is not None else set()
+    candidates = set(answers) - served
+    key = best_probe_key(copilot_last_message, candidates) if candidates else None
     if key is None:
+        if not candidates:
+            # Everything we can volunteer has been said — steer toward a summary
+            # rather than repeating a prior answer.
+            return (
+                "I think we've covered the main points I can share. "
+                "Want to pull this together into a summary of the key risks?"
+            )
+        # The question doesn't map to anything scripted for this scenario.
         return (
             "Good question — we haven't pinned that down yet. "
             "Happy to think through it with you if you can sketch what 'good' would look like."
         )
+    if used_keys is not None:
+        used_keys.add(key)
     return answers[key]

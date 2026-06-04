@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Correctly targets this app's core risks (substance-use data and employer/insurer fear, opt-in clinic consent, relapse-risk score as possible high-risk AI, peer-chat stigmatization), but the large 'Final Risk Assessment Summary + Recommendations' block is repeated near-verbatim across three turns and several cites are wrong/invented (EU AI Act Art. 5(2)/4(1) for transparency, 'ISO 8,000-1 for ethical AI').",
+  "actionability": 3,
+  "actionability_justification": "Produces the requested severity-grouped report with a 'not covered' list and a few concrete items (encrypt at rest/in transit, ISO 27001, GDPR Art. 30 records, penetration testing, data portability/deletion), but most mitigations stay directional ('conduct bias audits', 'validate the relapse-risk algorithm', 'classify under the EU AI Act').",
+  "salient_examples": [
+    "Identical 'Final Risk Assessment Summary' table + 'Final Recommendations' block repeated near-verbatim across 3 ASSISTANT turns",
+    "[P7.D4] Relapse-risk score may be high-risk AI | Risk assessment, human oversight, documentation | EU AI Act Article 6, 14 (apt app-specific risk)",
+    "EU AI Act Article 5(2) (transparency for high-risk AI systems) ... Consider ISO 8,000-1 for ethical AI design (wrong/fabricated cites)",
+    "Final report grouped High/Medium/Low severity with 'Dimensions Not Covered' list ([P1.D4], [P2.D2], [P7.D3], ...)"
+  ]
+}

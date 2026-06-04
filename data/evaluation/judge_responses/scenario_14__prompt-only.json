@@ -1,0 +1,12 @@
+{
+  "depth": 4,
+  "depth_justification": "Reacts to the developer's exact disclosures (continuous on-device mic + cloud digest, accelerometer, sleep diary, ~80% accuracy vs polysomnography N=50, beta N=200, ML personalization) and correctly raises the borderline MDR/medical-device question for CBT-I insomnia with ISO 82304-2 and ISO 14971; progresses to new sub-dimensions rather than looping, though some citations (GDPR Art. 82, EU AI Act 'Art. 17') are loose and dimension IDs are invented.",
+  "actionability": 4,
+  "actionability_justification": "Delivers the requested severity-grouped report plus several concrete steps (send only the digest not raw audio, let users disable the mic without losing core function, run an ISO 14971 risk file, label as wellness tool with an estimates disclaimer rather than diagnostic claims), with a handful of merely directional items ('conduct a risk assessment', 'expand beta testing').",
+  "salient_examples": [
+    "'Only send aggregated or anonymized data (e.g., a \"digest\" of sleep patterns) to the cloud, not raw audio'",
+    "'80% sleep staging accuracy is insufficient for health claims unless the app is explicitly labeled as a medical device' with ISO 82304-2",
+    "'allow users to disable it without losing core functionality'",
+    "Final report groups High/Medium/Low severity and lists 'Dimensions Not Covered'"
+  ]
+}

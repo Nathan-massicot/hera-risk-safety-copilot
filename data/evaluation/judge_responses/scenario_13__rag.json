@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "Strongly app-specific (mood scores 1-5, journal entries, corporate-wellness data sale to Google/BNP Paribas, re-identification of aggregates, Art. 9 health-data inference) but the identical four-section data analysis is repeated verbatim five times with no progression.",
+  "actionability": 3,
+  "actionability_justification": "Delivered the requested severity-grouped report citing GDPR Art. 9(2)(a) and naming concrete controls (encryption, access controls, Art. 30 record, DPIA, DPA for third-party sharing), though several items remain directional and citations are page-zero placeholders.",
+  "salient_examples": [
+    "if aggregated mood trends are shared with corporate wellness programs, this could be seen as processing of health data under Article 9 of GDPR",
+    "explicit consent (Art. 9(2)(a)) or a legitimate basis... [card_gdpr_art9 · p.0]",
+    "identical mood-scores/session/journal/email block repeated five times verbatim",
+    "[P2.D6] Data retention & deletion - no indication of data retention policies or deletion mechanisms"
+  ]
+}

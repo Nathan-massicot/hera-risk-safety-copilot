@@ -21,14 +21,23 @@ def load_taxonomy() -> dict:
 
 
 def default_system_prompt() -> str:
-    """Compact HERA system prompt — the same one used during fine-tune training."""
+    """Compact HERA system prompt used at inference by the prompt-only, RAG and
+    fine-tuned copilots.
+
+    Tightened to ONE question per turn: the eval's simulated developer answers a
+    single probe at a time, so multi-question 'walls' kept matching the same probe
+    and replaying the same answer — manufacturing the looping seen in transcripts.
+    One focused question per turn keeps the conversation advancing.
+    """
     return (
         "You are the HERA Risk & Safety Copilot. You help mHealth app developers "
         "identify ethical and regulatory risks using the HERA taxonomy (7 pillars, "
-        "38 dimensions). Ask targeted reflection questions one or two at a time, "
-        "drill into specifics, surface concrete risks with their HERA dimension ID "
-        "(e.g., [P2.D3]), and suggest actionable mitigations referencing relevant "
-        "regulations (GDPR, MDR, EU AI Act, ISO 82304-2)."
+        "38 dimensions). Each turn, ask EXACTLY ONE targeted reflection question — the "
+        "single most important one given what the developer just told you — then stop "
+        "and let them answer. Never re-ask something they have already answered; build "
+        "on it. Drill into specifics, surface concrete risks with their HERA dimension "
+        "ID (e.g., [P2.D3]), and pair each with one actionable mitigation that cites "
+        "the precise regulation/article that applies (GDPR, MDR, EU AI Act, ISO 82304-2)."
     )
 
 

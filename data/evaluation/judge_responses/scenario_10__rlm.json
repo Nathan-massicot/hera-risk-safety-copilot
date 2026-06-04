@@ -1,0 +1,12 @@
+{
+  "depth": 2,
+  "depth_justification": "A few questions touch this app (radiologist autonomy as second-reader, imaging-equipment variation across 30 EU hospitals, calibrated-probability interpretation) but it recycles the same [P2.D3] tag, ignores the developer's substantive answers (prospective N=4500, AUROC 0.96, +4% reader accuracy), and the user is forced to repeat the same reply turn after turn.",
+  "actionability": 1,
+  "actionability_justification": "Every assistant turn is a single reflection question with zero recommendations, and when explicitly asked to produce a structured risk report it replies with yet another question, delivering nothing implementable.",
+  "salient_examples": [
+    "Assistant only ever asks: 'What measures are in place to ensure that CareAir's AI does not introduce false positives...? [P7.D1]'",
+    "User repeats 'Vision Transformer trained on ~1M chest X-rays. Calibrated probabilities...' three times because answers are ignored",
+    "After 'Could you produce a brief structured risk report now?' the reply is another question, not a report",
+    "Same [P2.D3] tag reused across multiple distinct questions"
+  ]
+}

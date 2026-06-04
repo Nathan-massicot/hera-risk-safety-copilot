@@ -1,0 +1,12 @@
+{
+  "depth": 3,
+  "depth_justification": "Questions are app-specific and hit real Lunara risks (natural-contraception harm, irregular cycles, IDFA exposing fertility data), but the copilot loops while the user re-pastes the same answer four times, never cites a single regulation, and misses the central issue that a contraception-prediction app is likely a regulated medical device with false-negative/efficacy risk.",
+  "actionability": 1,
+  "actionability_justification": "The transcript is purely interrogative with no mitigations, and the requested report is just seven one-line restatements of the questions as risks with no 'how' and no actual severity grouping, leaving nothing a developer could build.",
+  "salient_examples": [
+    "What steps has Lunara taken to ensure that the fertility prediction mode does not lead to misinterpretation of data, especially for users with irregular cycles? [P2.D2]",
+    "USER (x4): Cycle dates, BBT readings, symptoms, optional partner activity log, mood tracking. We use IDFA for marketing attribution.",
+    "[P2.D3] Natural contraception mode may lead to unintended health risks.",
+    "Uncovered dimensions: [P1.D1], [P3.D1], [P4.D1], [P5.D1], [P6.D1]"
+  ]
+}
