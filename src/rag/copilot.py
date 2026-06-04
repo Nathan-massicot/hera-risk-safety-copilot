@@ -19,7 +19,7 @@ log = logging.getLogger("copilot.rag")
 
 DEFAULT_TOP_K = int(os.environ.get("HERA_RAG_TOP_K", "5"))
 DEFAULT_RAG_MODEL = os.environ.get(
-    "HERA_RAG_MODEL", "mistral:7b-instruct-v0.3-q4_K_M"
+    "HERA_RAG_MODEL", "qwen3:8b"  # generic Qwen3-8B = same base as the fine-tuned SLM (fair comparison)
 )
 
 

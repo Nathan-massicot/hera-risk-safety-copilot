@@ -54,9 +54,17 @@ class OllamaCopilot:
             "model": self.model,
             "messages": messages,
             "stream": False,
+            # Disable Qwen3's <think> block so transcripts are clean & comparable
+            # (no-op for non-thinking models). Sampling matches the fine-tuned
+            # hera-baseline so the ONLY difference across approaches is the
+            # model/architecture, not the decoding params.
+            "think": False,
             "options": {
                 "temperature": self.temperature,
                 "num_predict": self.num_predict,
+                "top_p": 0.8,
+                "top_k": 20,
+                "repeat_penalty": 1.3,
             },
         }
 
@@ -89,7 +97,7 @@ class OllamaCopilot:
 # Convenience factories used by the eval runner
 def prompt_only_copilot() -> OllamaCopilot:
     return OllamaCopilot(
-        model=os.environ.get("HERA_PROMPT_ONLY_MODEL", "mistral:7b-instruct-v0.3-q4_K_M"),
+        model=os.environ.get("HERA_PROMPT_ONLY_MODEL", "qwen3:8b"),
         name="prompt-only",
     )
 

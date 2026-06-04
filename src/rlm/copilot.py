@@ -23,7 +23,7 @@ from src.rlm.agents import critic_step, generator_step, selector_step
 log = logging.getLogger("copilot.rlm")
 
 DEFAULT_RLM_MODEL = os.environ.get(
-    "HERA_RLM_MODEL", "mistral:7b-instruct-v0.3-q4_K_M"
+    "HERA_RLM_MODEL", "qwen3:8b"  # generic Qwen3-8B = same base as the fine-tuned SLM (fair comparison)
 )
 DIM_RE = re.compile(r"\bP(\d)\.D(\d+)\b")
 

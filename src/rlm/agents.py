@@ -72,10 +72,25 @@ def generator_step(model: OllamaCopilot, conversation: list[dict], covered_dims:
     turn = model.chat([{"role": "user", "content": user}])
     try:
         payload = extract_json(turn.content)
-        return payload.get("candidates", [])[:3]
+        raw = payload.get("candidates", []) if isinstance(payload, dict) else []
     except (json.JSONDecodeError, AttributeError) as exc:
         log.warning("Generator JSON parse failed: %s", exc)
         return []
+    # Normalise: the small base model often omits/renames keys. Guarantee every
+    # candidate has question/dimension/rationale so downstream agents never KeyError.
+    norm: list[dict] = []
+    for c in raw:
+        if not isinstance(c, dict):
+            continue
+        q = str(c.get("question") or c.get("q") or "").strip()
+        if not q:
+            continue
+        norm.append({
+            "question": q,
+            "dimension": str(c.get("dimension") or c.get("dim") or "").strip(),
+            "rationale": str(c.get("rationale") or "").strip(),
+        })
+    return norm[:3]
 
 
 # ---------------------------------------------------------------------------
@@ -115,7 +130,7 @@ def critic_step(model: OllamaCopilot, conversation: list[dict], candidates: list
         f"### {m['role'].upper()}\n{m['content']}" for m in conversation
     )
     cand_text = "\n".join(
-        f"  [{i}] dim={c['dimension']} — {c['question']}"
+        f"  [{i}] dim={c.get('dimension', '?')} — {c.get('question', '')}"
         for i, c in enumerate(candidates)
     )
     user = (
@@ -185,7 +200,7 @@ def selector_step(model: OllamaCopilot, conversation: list[dict], candidates: li
         f"### {m['role'].upper()}\n{m['content']}" for m in conversation
     )
     cand_text = "\n".join(
-        f"  [{i}] dim={c['dimension']} — {c['question']}  "
+        f"  [{i}] dim={c.get('dimension', '?')} — {c.get('question', '')}  "
         f"(rel={_get_score(scores, i, 'relevance')}, "
         f"depth={_get_score(scores, i, 'depth')}, "
         f"nov={_get_score(scores, i, 'novelty')})"
@@ -208,12 +223,13 @@ def selector_step(model: OllamaCopilot, conversation: list[dict], candidates: li
         log.warning("Selector JSON parse failed: %s", exc)
         # Fallback: pick the highest-relevance candidate, ask it verbatim
         idx = _argmax_combined(scores)
+        idx = idx if 0 <= idx < len(candidates) else 0
         chosen = candidates[idx]
         return {
             "decision": "ask",
             "chosen_index": idx,
-            "chosen_dimension": chosen["dimension"],
-            "user_facing_message": chosen["question"],
+            "chosen_dimension": chosen.get("dimension") or None,
+            "user_facing_message": chosen.get("question", ""),
         }
 
 
