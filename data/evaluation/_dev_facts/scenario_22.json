@@ -1,0 +1,45 @@
+{
+  "scenario_id": "scenario_22",
+  "dev_facts": [
+    {
+      "dimension": "P4.D2",
+      "fact": "We integrate with FHIR-enabled EHRs where the clinic supports it, but the maturity varies a lot by vendor, so plenty of our clinics still just receive the exported PDF summary. When a clinic only has a partial FHIR endpoint, our handling for that case isn't really worked out yet."
+    },
+    {
+      "dimension": "P1.D6",
+      "fact": "PainTrack is a daily diary, so by design it nudges patients to log every day, and in our beta of 60 patients we already saw logging drop off over time. Right now an inconsistent week just shows up as gaps in the trend; the diary doesn't adapt its reminders to that."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "Pain is subjective, so we're clear that this is a diary and the clinician makes the call, and the patient controls whether to share via the integration toggle. But the PDF generates from whatever they logged, including free-text things like recreational drug use, and once they've opted in the clinic sees that as-is."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Data sits both on-device and in our EU cloud, encrypted in transit and at rest. The free-text trigger field can capture sensitive stuff like substance use or abuse mentions, and I'll admit it's encrypted with our keys rather than a user-only on-device key, so technically we hold the plaintext capability."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "The PDF summary shows pain trends over time, but I'll be honest, we don't spell out the aggregation method on the page, so a clinician can't immediately tell whether a number is a mean, median, or peak intensity."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is a standard onboarding screen plus a separate toggle for clinician integration. We don't offer granular per-data-type consent yet — within the diary it's all-or-nothing, though the clinician sharing is at least a distinct opt-in."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "The app ships in English, German, and French and we've covered WCAG basics like contrast and labels, but we haven't run a full WCAG 2.1 AA audit, and we haven't specifically tested the free-text and body-map flows with screen-reader users or for lower-literacy patients."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "It's a standard smartphone app and the diary itself works offline; FHIR sync needs connectivity but the PDF route doesn't. We haven't thought through shared-device or low-data-plan situations, and we don't have a defined affordability or low-income access policy."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We've classified PainTrack as a Class I medical device under MDR 2017/745 and we're self-certifying on that basis, since Class I doesn't require a notified body. Our technical documentation exists but I wouldn't call it fully complete or audit-ready yet."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "We process health data, so we rely on GDPR Art. 9 as our lawful basis, and patients can export and delete their data. We haven't formally appointed a DPO or completed a documented DPIA yet — that's still on our list."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "scenario_id": "scenario_20",
+  "dev_facts": [
+    {
+      "dimension": "P1.D1",
+      "fact": "As a midwife I anchored BabyCheck on the published EPDS evidence base and we co-developed it with 4 maternity clinics and tested it with 250 mothers, but I'll be honest that this was usability and acceptability testing rather than a powered outcome trial, so we don't yet have our own clinical-effectiveness study showing BabyCheck improves detection or referral over usual care."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "EPDS item 10 asks directly about thoughts of self-harm, and right now even when that answer is concerning the app gives the same overall response as any other: it flags a total score of 10 or more with a recommendation to contact the midwife or GP. I'll admit we haven't built anything that fires specifically on Q10, so a self-harm answer just sits inside that same weekly recommendation rather than forcing immediate contact."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "Our flag is keyed to the validated cutoff of 10, so a mother who scores under that gets no flag, and I worry a sub-threshold score could read as reassurance even though postnatal depression can present with a low EPDS. We don't currently track a worsening trend across the weekly scores or escalate a rising-but-sub-threshold pattern; each week's score is evaluated on its own against the cutoff."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "We have a detailed consent flow with a capacity note and partner involvement is strictly opt-in, and our copy is in DE/FR/IT/EN with a low-literacy mode. I'm fairly confident mothers understand we collect EPDS responses, optional name, birth date and contact preferences, and that scores stay on-device unless they opt in to share with their midwife or GP."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Postpartum mothers are a vulnerable population and that's central to how I built this, so consent includes a capacity note and we treat the EPDS responses as high-sensitivity health data shared only on opt-in. That said, our consent is captured once at onboarding and we haven't built a way to re-confirm it later when a sleep-deprived mother may not remember what she agreed to."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "BabyCheck only recommends contacting the midwife or GP; it never books, refers or contacts anyone on the mother's behalf unless she has opted in, so the decision to act stays entirely with her. She can also pause assessments whenever she wants, and deleting her account wipes everything, which I see as respecting her right to decide her own care."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We deliver the EPDS on a fixed weekly cadence and I'll admit we lean on reminders to keep mothers engaged, which can land hard on someone who is already struggling. We don't yet offer flexible scheduling or a clear 'I'm too overwhelmed this week' option short of pausing the whole thing."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "I know clinically that EPDS is a screening tool and not a diagnosis, but I'm not sure our in-app wording makes that limitation explicit to mothers; the framing leans on the score and the recommendation, and we don't have a plain-language explainer telling her this is a screen, not a diagnosis, and to talk to her midwife if anything feels off."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "Scores and flags flow to the midwife or GP through our maternity-clinic platform integration when the mother has opted in, but I haven't thought through what she sees if that integration is offline; we don't currently surface explicit fallback steps like a direct phone number for her clinic if the hand-off silently fails."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "I've classified BabyCheck as Class IIa Software as a Medical Device under MDR Rule 11 because it processes the EPDS responses to flag a clinically meaningful score, and I'm comfortable that calling it a screening medical device rather than a wellness app is the correct and honest classification."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We are treating BabyCheck as a Class IIa device and our CE marking under MDR is in progress, with vigilance reporting and a clinical advisory board that meets quarterly already set up. We are not fully CE-marked yet, so the conformity work is ongoing rather than complete."
+    }
+  ]
+}

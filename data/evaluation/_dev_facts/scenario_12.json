@@ -1,0 +1,61 @@
+{
+  "scenario_id": "scenario_12",
+  "dev_facts": [
+    {
+      "dimension": "P1.D2",
+      "fact": "Look, the honest number is a 6.5 Pearl Index in typical use — so yes, with 4 million users some unintended pregnancies are statistically baked in, and that's the headline harm with our contraception mode. We do warn that it's not 100%, but I'll concede we lean on the 'perfect use' framing more than we should."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We quote the 1.8 perfect-use figure heavily in marketing because it sounds great, but I know most of our users aren't logging BBT at the same time every morning, so the 6.5 typical-use number is the one that actually applies to them. We haven't built a clear in-app explanation that real-world reliability is much lower than perfect use."
+    },
+    {
+      "dimension": "P1.D3",
+      "fact": "Our natural-contraception mode predicts safe vs unsafe days, and in practice that surfaces as a green 'safe day' tile. I'll admit a binary green light can read as 'guaranteed safe' when it really means 'lower probability.' We do show Bayesian uncertainty intervals, but the big green tile is what users actually act on."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "We're EU and CH only and I treat that as solid, but I'll be straight that I haven't pinned down exactly where the cycle and partner-activity data physically lives, and we don't offer a zero-knowledge encryption option. Given the abortion-politics climate in parts of Europe I know cycle data is sensitive, but we haven't formalized a data-residency or law-enforcement-access stance."
+    },
+    {
+      "dimension": "P2.D4",
+      "fact": "We share aggregated, anonymized cycle data with research partners and we don't run ads on health data — but we do pull IDFA for marketing attribution. I'll concede we haven't formally tested whether 'anonymized' cycle patterns could be re-identified; cycle signatures are pretty unique and that's not something we've audited."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "The tracker mode is just wellness and the contraception mode is the regulated Class IIa one, but in the UI the line between them is softer than it should be. Switching into contraception mode doesn't currently force a confirmation that explains 'you are now relying on this to prevent pregnancy,' and I can see how a user might not realize which mode they're in."
+    },
+    {
+      "dimension": "P6.D1",
+      "fact": "Our model assumes a reasonably regular cycle, so I'll admit it's weakest exactly where it matters most — PCOS, very irregular cycles, post-partum and perimenopause. Right now we still try to predict for those users instead of refusing or flagging them, and we haven't built PCOS/irregular-cycle detection that pauses the contraception prediction."
+    },
+    {
+      "dimension": "P1.D1",
+      "fact": "The clinical side is actually our strong point — the contraception mode has a real Pearl Index study, N=1500, which is what got us CE Class IIa. The tracker and fertility modes themselves don't have that same clinical trial backing; they're positioned as wellness."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is account creation accepting the privacy policy plus a 'sensitive data' onboarding flow for health processing. I'd be honest that it's a fairly standard click-through — I can't claim a typical user deeply understands that their cycle and partner-activity logs are GDPR Article 9 special-category data."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "We collect cycle dates, BBT, symptoms, mood, and an optional partner-activity log, which I'd argue we genuinely need for the algorithm. The one thing that isn't strictly necessary for the health function is the IDFA we pull for marketing attribution — that's a growth decision, not a clinical one, and we haven't pressure-tested it against data minimization."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We're a fast-moving scale-up and we do nudge hard on engagement and on upgrading into fertility and contraception modes. I haven't really audited whether our growth and notification tactics could push someone to over-trust the app for contraception — that's not a review we've run."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We're localized into 12 languages and we do massive ongoing user testing, so the translation and usability side is well covered. What we haven't done is separately validate that the prediction algorithm performs equally well across the different populations behind those 12 languages — localization isn't the same as clinical validation per market."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We're clear on classification: the natural-contraception mode is registered as CE Class IIa under MDR and the plain tracker is treated as wellness, not a device. That split was deliberate and the IIa work is done."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We describe the model as a Bayesian ovulation predictor and we surface uncertainty intervals, but honestly we did our regulatory work through the MDR lens, not the EU AI Act. I haven't formally classified this system under the AI Act or checked whether a contraception-prediction AI lands in a higher-risk category there."
+    }
+  ]
+}

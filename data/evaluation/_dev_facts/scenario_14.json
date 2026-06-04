@@ -1,0 +1,53 @@
+{
+  "scenario_id": "scenario_14",
+  "dev_facts": [
+    {
+      "dimension": "P2.D1",
+      "fact": "We ask for microphone permission with an onboarding video plus a separate consent step, but honestly it's basically a single 'turn on the mic for sleep tracking' flow — we haven't built a granular consent screen that spells out the on-device vs cloud-digest split, and I'll admit most users probably just tap through it."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "What we send to the cloud is a digest, not the raw recording — the full audio stays on-device — and I believe the digest is a compressed feature representation rather than intelligible speech, but I have to be honest, we've never formally tested whether speech could be reconstructed from it."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We classify ourselves as wellness coaching, not SaMD, because we don't diagnose insomnia — but I'm new to medical-device regulation and I haven't actually mapped us against MDR Rule 11 or talked to a notified body, so I can't tell you with confidence we'd stay below the device line if challenged on the CBT-I side."
+    },
+    {
+      "dimension": "P1.D1",
+      "fact": "Our sleep staging is validated at about 80% agreement vs polysomnography in an in-lab study of N=50, which I'm proud of, but the 6-week CBT-I coaching programme itself has not been validated in-app — we're leaning on the published CBT-I literature, not our own efficacy trial."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "The coaching is personalised by the small ML model together with the rule-based CBT-I engine off the user's adherence and reported sleep, but right now we don't surface to the user which signals drove a given recommendation — they just see the next prescribed exercise."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "Our staging uses the phone microphone plus accelerometer, so it's genuinely environment-sensitive — a partner in the bed, pets, or a noisy room can degrade accuracy, and we haven't yet built anything to detect or warn users when the recording conditions are poor."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "The on-device recording stays local and the cloud digest is auto-deleted after 30 days, and account deletion is supported; we rely on the platform's standard transport encryption and provider-managed encryption at rest, but I'll be honest, we haven't done a formal security audit or pen-test yet."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "We frame the programme as coaching the user follows at their own pace and they can skip or ignore any exercise — we never gate or pressure them, though we also don't actively tell them to consult a doctor if their insomnia isn't improving."
+    },
+    {
+      "dimension": "P4.D5",
+      "fact": "Sleep staging runs on-device so tracking works offline overnight, but the personalised coaching and the digest upload need connectivity; we ship content and model updates through the normal app-store release cycle and we don't currently have a staged-rollback plan if an update misbehaves. Post-market we mostly rely on crash analytics and a monthly retention review."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We tell users it's a sleep-tracking and CBT-I coaching tool, but we don't yet have clear in-app messaging about what it can't do — for instance that it's not a diagnosis and that ~80% staging accuracy means some nights will be wrong."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "Our CBT-I content is grounded in the established evidence-based protocol, but the per-user staging numbers and the personalised prescriptions are model estimates — and we don't currently label inside the app which parts are clinically established versus algorithmically estimated."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We do use a CNN and we're EU-only, but I haven't looked at how the EU AI Act would classify us — that's a gap; I've been focused on the sleep science and I don't yet know whether a CBT-I personalisation model lands in a higher-risk tier."
+    }
+  ]
+}

@@ -28,7 +28,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from src.copilot_base import Copilot  # noqa: E402
 from src.evaluation.metrics import all_metrics  # noqa: E402
-from src.evaluation.simulator import simulate_answer  # noqa: E402
+from src.evaluation.simulator import build_developer  # noqa: E402
 from src.utils.logging_config import (  # noqa: E402
     JsonlSink,
     configure_logging,
@@ -79,17 +79,22 @@ def run_scenario(
     scenario: dict,
     max_turns: int,
     request_report: bool,
+    developer,
 ) -> dict:
-    """Simulate one developer ↔ copilot conversation."""
+    """Simulate one developer ↔ copilot conversation.
+
+    `developer` is a router (SemanticDeveloper / LexicalDeveloper) shared across all
+    scenarios in a run — the same instance for every approach, so the simulated answers
+    stay deterministic and comparable.
+    """
     copilot.reset() if hasattr(copilot, "reset") else None
+    developer.reset()
 
     messages: list[dict] = [
         {"role": "user", "content": scenario["app_description"]},
     ]
     turn_records: list[dict] = []
-    # Track which probe categories the simulated developer has already answered so we
-    # never replay the same canned answer (otherwise the harness manufactures looping).
-    used_keys: set[str] = set()
+    stalls = 0  # consecutive turns where the developer had nothing new to add
 
     for turn in range(max_turns):
         chat = copilot.chat(messages)
@@ -102,10 +107,20 @@ def run_scenario(
             "retrieved_n": chat.extra.get("retrieved_n", 0) if chat.extra else 0,
         })
 
-        # If the copilot doesn't end with a question, we still continue but
-        # the simulator may give a generic answer.
-        dev_answer = simulate_answer(scenario, chat.content, used_keys)
-        messages.append({"role": "user", "content": dev_answer})
+        # Route the copilot's question to the developer's nearest unused disclosed fact.
+        reply = developer.answer(scenario, chat.content)
+
+        # When the developer runs dry (no fresh fact several turns running) the
+        # conversation has stalled — wrap up BEFORE appending the 3rd non-answer, so the
+        # transcript (and the copilot's context, and the judge) isn't padded with repeated
+        # "let's move on" turns.
+        if reply.matched:
+            stalls = 0
+        else:
+            stalls += 1
+            if stalls >= 3:
+                break
+        messages.append({"role": "user", "content": reply.text})
 
     if request_report:
         messages.append({"role": "user", "content": REPORT_REQUEST})
@@ -147,6 +162,8 @@ def main(argv: list[str] | None = None) -> int:
                     help="Max alternating turns per scenario (excluding the final report)")
     ap.add_argument("--no-report", action="store_true",
                     help="Skip the final 'produce a risk report' request")
+    ap.add_argument("--lexical-dev", action="store_true",
+                    help="Use the keyword developer router instead of the semantic (embedding) one")
     args = ap.parse_args(argv)
 
     run_dir = new_run_dir(prefix=f"eval_{args.approach}")
@@ -156,6 +173,10 @@ def main(argv: list[str] | None = None) -> int:
     log.info("Approach: %s", args.approach)
     copilot = build_copilot(args.approach)
     log.info("Copilot ready: %s", copilot.name)
+
+    # One developer router shared across all scenarios (loads the bge model once).
+    developer = build_developer(semantic=not args.lexical_dev)
+    log.info("Developer router: %s", developer.name)
 
     scenarios = json.loads(args.scenarios.read_text(encoding="utf-8"))
     if args.limit:
@@ -173,6 +194,7 @@ def main(argv: list[str] | None = None) -> int:
                     copilot, scenario,
                     max_turns=args.max_turns,
                     request_report=not args.no_report,
+                    developer=developer,
                 )
             except KeyboardInterrupt:
                 log.warning("Interrupted on scenario %s", scenario["id"])

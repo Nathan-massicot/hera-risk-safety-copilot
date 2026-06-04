@@ -1,0 +1,49 @@
+{
+  "scenario_id": "scenario_17",
+  "dev_facts": [
+    {
+      "dimension": "P3.D3",
+      "fact": "I built the AI summary as a preview that helps the therapist prep before a session, not as a replacement for reading the actual journal, but honestly I worry it nudges them to skim; the therapist sees the AI-summarised preview and I haven't enforced that they also open the user's original entries."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "The AI summary and the user's own writing are separate objects in our data model and the summary is labelled as AI-generated in the therapist view, but I'll admit we haven't built a distinct visual style for it everywhere, so it's on me that my user's own words and Mistral-Large's summary aren't always visually distinguished."
+    },
+    {
+      "dimension": "P3.D4",
+      "fact": "Users can delete journal entries before the therapist views them and revoke the AI summary for any session, and I added a per-session toggle to skip summarising; revoking a past summary is possible but it's a support request today, not a one-tap action, which I know I should fix."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We measure AI summary fidelity monthly on a sample, and crucially the user reviews and can edit every summary before the therapist ever sees it, but I'll be honest that I don't have a continuous, per-summary fidelity guarantee and the app doesn't explicitly tell users the summary can omit or overstate things."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Our population is mental-health patients so I treat the data as deeply sensitive, but I haven't formalised conservative account-access policies yet; password reset is standard email-based and we have no family or caregiver override, which I think is the right default but it isn't written down as policy."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "I classify the journaling as Class I and I'm still awaiting a determination on the AI summary feature; I recognise that delivering AI-generated content about a patient to their therapist could be read as clinical decision support and push it toward IIa, and I haven't closed that out with a notified body."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Journal entries, summaries and the optional session video are encrypted in transit and at rest with EU and CH data residency, but I haven't completed a formal pen-test or third-party security audit, and we don't yet offer end-to-end encryption on the journal itself."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "Everything is opt-in across our three consent layers and the patient decides what to share with their therapist; the AI summary, the recording and even individual entries are all the user's choice, and as a clinician I deliberately kept the therapist out of deciding what gets shared so the patient stays in control."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "I'm sensitive to the therapeutic alliance so I avoided streaks, guilt prompts or aggressive re-engagement nudges; we do send a reminder to journal between sessions, but I haven't audited our notifications against any formal dark-pattern or persuasive-design checklist."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "We log when a summary was generated, edited by the user and viewed by the therapist, and revocations are recorded, but I don't have a full audit trail tying a given summary version to the exact model and prompt that produced it, so traceability is partial."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "I know an AI system informing a therapist about a patient could fall under the EU AI Act, but I haven't formally classified the summary feature under it yet; my assumption is it's not high-risk because the user reviews every output and a licensed human stays in the loop, though that's my read, not a documented assessment."
+    }
+  ]
+}

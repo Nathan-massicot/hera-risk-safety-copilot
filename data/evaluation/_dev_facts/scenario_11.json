@@ -1,0 +1,49 @@
+{
+  "scenario_id": "scenario_11",
+  "dev_facts": [
+    {
+      "dimension": "P7.D1",
+      "fact": "Honestly I treat SkinTrack as a wellness photo-diary, not a medical device, so I haven't registered it or gone near a Notified Body. I know it nudges people to 'see a dermatologist' when a mole's size or color changes past my threshold, but to me that's just a reminder, not a diagnosis."
+    },
+    {
+      "dimension": "P1.D1",
+      "fact": "There's no clinical study or validation behind it at all. The 20% area-change threshold that triggers the 'see a doctor' suggestion is a number I picked myself, with no dermatology evidence base or expert review, so I can't tell you how many real melanomas it'd catch or how many false alarms it throws."
+    },
+    {
+      "dimension": "P1.D3",
+      "fact": "I'll admit if the app stays quiet a user could read that as 'my moles are fine' and skip their normal dermatology check-ups. We don't have any wording that warns people not to treat a no-alert state as an all-clear."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "I haven't really thought through edge cases like a brand-new mole appearing, a mole the user stops photographing, or unusual skin tones and bad photos. The app just compares what it has and stays silent if it doesn't have a good baseline."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "Photo consistency is totally on the user — lighting, angle and distance all vary shot to shot, it's whatever their phone and bathroom lighting give me. There's no overlay grid, gyro check or calibration, so the side-by-side pixel comparison can be thrown off just by how the photo was taken, and it can't tell that apart from a real change."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "These are mole photos with location and date, which is GDPR special-category health data, but I'm a one-person shop so I haven't done a formal data protection assessment or mapped this against the Article 9 special-category rules. My consent screen mentions photos, locations and notes are stored, but it doesn't spell that out."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Photos sit locally on the phone plus a cloud backup, and no third party gets them. I haven't documented an encryption-at-rest standard, retention periods or a breach-response plan — I rely on whatever the platform and backup provider give me by default."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "It's English-only and the UI is pretty basic, which I know is a problem for an EU launch. I haven't done anything specific for WCAG accessibility, low-vision users or other languages — it's just been me building what I could."
+    },
+    {
+      "dimension": "P4.D4",
+      "fact": "There's been no real usability testing or onboarding beyond the consent screen and a data-export demo — the only user research is me using it myself. I haven't written guidance on which moles to track or how often, so usage is totally up to the user."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We don't have a prominent disclaimer explaining that this is just photo storage and pixel comparison, not a medical assessment. I can see how a user might assume it's medical-grade and more clinical than it really is."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "Post-market I only have crash analytics and no clinical incident workflow, so there's no process for checking whether my threshold actually works once it's live — no clinical audit, no outcome tracking. I'd have no way of knowing if the app missed something it shouldn't have."
+    }
+  ]
+}

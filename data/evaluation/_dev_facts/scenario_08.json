@@ -1,0 +1,61 @@
+{
+  "scenario_id": "scenario_08",
+  "dev_facts": [
+    {
+      "dimension": "P1.D1",
+      "fact": "We co-designed RecoverNow with a French eating-disorder clinic, and we validated the risk-flagging algorithm on a labeled 500-case set from that clinic (88% sensitivity, 80% specificity), but we haven't run a formal prospective clinical trial or pilot yet."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "We know weight logging can be triggering for this population, so it's optional and hidden by default, but honestly we don't have ongoing monitoring of who turns it on or how it affects them, and we don't do any contraindication screening at onboarding beyond the consent step."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "When the AI flags a risky pattern it suggests a coping skill from our CBT toolbox, and a clinician reviews every flagged case afterward, but we don't currently have an automatic hard escalation that pushes the user to contact their clinician in real time during an acute episode."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is a detailed onboarding video plus a digitally signed form, re-confirmed every six months; it's thorough but it's essentially all-or-nothing and we don't yet offer granular per-data-type consent."
+    },
+    {
+      "dimension": "P2.D5",
+      "fact": "Users can request full deletion of their data at any time, and we also offer a 'pause' mode; we haven't formally audited whether deleted data is fully purged from backups and analytics."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Our users are in recovery from anorexia and bulimia so I'm very aware they're a vulnerable group, but the consent assessment is self-administered in the app and we don't currently require or formally loop in the treating clinician at the consent stage."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "The app presents coping skills as suggestions the user can ignore, and we offer optional sharing of logs with a treating clinician to support shared decision-making, though the 'discuss with your doctor' framing isn't built into every output yet."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We track meal-logging streaks and urge intensity to surface patterns, and I'll admit we haven't really audited whether the streak tracking or urge-logging could become compulsive for this particular population."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We describe the app as a recovery companion and informational risk-flagging tool, but we don't yet have a prominent scope statement on outputs spelling out what the app can't do or that it isn't a substitute for treatment."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "Coping-skill suggestions all come from a hand-curated, clinically-reviewed CBT library, and the streak/risk detection is rule-based plus a small LSTM; we don't currently show users a badge distinguishing AI-generated flags from clinician-validated content."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We support French and English only, both reviewed with our French clinical team; we haven't validated for other French-speaking regions like Switzerland or other cultural contexts around food and body image."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We classified RecoverNow as wellness because we consider the risk-flagging informational, though after a recent legal review we're reconsidering — I'll concede the metadata pegs us as likely Class IIa SaMD."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We don't have CE marking and haven't engaged a notified body, because until now we operated under the wellness framing; that's something we'd have to start if the SaMD reclassification holds."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We use a small LSTM and rule-based logic for the risk-flagging, but we haven't done an EU AI Act risk classification or mapped our AI components against it — regulation isn't really my background."
+    }
+  ]
+}

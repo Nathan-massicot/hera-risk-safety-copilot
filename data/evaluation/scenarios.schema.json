@@ -24,6 +24,17 @@
       "minProperties": 6,
       "additionalProperties": {"type": "string"}
     },
+    "dev_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dimension", "fact"],
+        "properties": {
+          "dimension": {"type": "string", "pattern": "^P\\d\\.D\\d+$"},
+          "fact": {"type": "string"}
+        }
+      }
+    },
     "gold_standard": {
       "type": "object",
       "required": ["relevant_dimensions", "expected_risks"],

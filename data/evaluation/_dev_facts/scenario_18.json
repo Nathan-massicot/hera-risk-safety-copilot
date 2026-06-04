@@ -1,0 +1,45 @@
+{
+  "scenario_id": "scenario_18",
+  "dev_facts": [
+    {
+      "dimension": "P2.D1",
+      "fact": "Coming from neurorehab, I lean on the clinician and caregiver to do the actual informed-consent conversation at onboarding; we hand them an information sheet but I'll admit we don't yet have a standardized, patient-facing consent screen baked into the app itself."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Our whole population is elderly post-stroke or early-dementia, so many patients genuinely lack full decision capacity, and right now the capacity call is left to the clinician's judgment at sign-up; we haven't formalized a documented capacity-assessment workflow or anything like a re-check when someone declines further."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "In practice the caregiver or physiotherapist sets up the patient and schedules the exercises, so the patient isn't always the one driving the decision; we do honour a patient or guardian withdrawing, but there's no built-in 'I don't want to play today' button that the patient can hit themselves and have respected."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "We designed for cognitive accessibility with large fonts, voice instructions and a simple UI, and tested it with mild-to-moderate cognitive impairment, but I'll be honest that we haven't specifically handled hearing-impaired users (no captions on the voice prompts) or significant motor impairment, and we haven't run a formal WCAG audit."
+    },
+    {
+      "dimension": "P4.D4",
+      "fact": "We co-designed with two memory clinics and tested with real patients, which I'm proud of, but it was light-touch usability work rather than structured iterative UCD rounds, and we haven't deliberately checked whether older users find the game framing condescending or confusing."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "Our evidence is one pilot RCT of N=80 against paper exercises with a small but significant improvement; the clinician review currently just shows progress and 'improvement', and I'll concede we don't surface effect sizes, confidence intervals or the caveat that an N=80 result may not generalize."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "We target Swiss and German nursing homes and home-care, so device, connectivity and the cost of who pays for the tablet are real barriers for poorer home-care patients; we haven't really thought through socioeconomic access beyond assuming the care facility provides the hardware."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "The app is in German for the DACH/CH market, but I have to admit we built one German variant and haven't validated CH-German versus AT/DE idioms or task wording with local clinicians in each region."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We've assessed ourselves as a Class IIa software medical device under MDR Rule 11 because we drive therapy decisions for a clinical condition, and since there's no AI in the product we've taken the view that the AI Act classification doesn't apply to us."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "CE marking under MDR is in progress but not finished yet, so we're not fully MDR-conformant at this moment; our post-market plan so far is an annual safety review with our clinical advisory board rather than a formalized continuous vigilance system."
+    }
+  ]
+}

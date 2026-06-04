@@ -1,0 +1,41 @@
+{
+  "scenario_id": "scenario_25",
+  "dev_facts": [
+    {
+      "dimension": "P1.D5",
+      "fact": "Honestly, our update process is manual — once a year I copy the latest BAG calendar into the app, so if BAG changes a vaccine or timing mid-year a family could be working off a stale schedule until my next refresh."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "I know I'm handling children's data, so entry is gated behind a parental-responsibility checkbox, but I'll admit I haven't built anything for the child to opt out or take over the account once they reach the Swiss age of consent."
+    },
+    {
+      "dimension": "P4.D5",
+      "fact": "I haven't actually verified the offline behaviour for rural users — I believe the reminders compute locally after setup, but I never formally tested that the app works with no connection, so I can't promise it."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We just mirror the official BAG calendar and never make recommendations specific to a child, but I have to confess we don't yet have an explicit screen telling parents to talk to their paediatrician — it's something I keep meaning to add."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "I consider us wellness, not a medical device, precisely because we copy the BAG calendar verbatim and don't give patient-specific advice — I haven't sought any formal Swissmedic or regulatory classification."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "We collect the parent's email mainly so I can send reminder notifications, plus the child's birth date and an optional name — I haven't really weighed whether local-only notifications would let me drop the email entirely."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "I keep it deliberately minimal — child birth date, optional name, and parent email — because the app is free with no monetization, so there's no business reason for me to gather anything more."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "Accessibility-wise I offer all four languages, DE, FR, IT and EN, and larger fonts, but beyond that I haven't done any formal accessibility audit like screen-reader or contrast testing."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "My post-market plan is basically the annual BAG calendar refresh and I ran a small pilot with 50 families; I don't have a structured incident-reporting or adverse-event channel set up yet."
+    }
+  ]
+}

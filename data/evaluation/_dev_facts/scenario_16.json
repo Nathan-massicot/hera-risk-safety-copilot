@@ -1,0 +1,65 @@
+{
+  "scenario_id": "scenario_16",
+  "dev_facts": [
+    {
+      "dimension": "P1.D2",
+      "fact": "Since we run 24/7 GP video consultations and a teleconsultation call can't replace a physical exam, our doctors rely on their clinical judgment during the call to decide when a case should go to in-person or emergency care; I'll be honest that we haven't formalized a written list of conditions the channel is contraindicated for — it currently rests on the GP's judgment rather than a documented protocol."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "We use staged consent — app usage, then video recording, then eHealth integration — as separate decisions, and recording only happens if the patient explicitly opts in; the screens are in DE, FR, IT and EN, though I'd concede we haven't independently tested whether patients fully grasp that a recording becomes part of their medical file."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Consultation video recordings and transcripts are exceptionally sensitive, so we encrypt them at rest and in transit; I'll admit our data-residency story isn't fully locked down — I can't yet confirm every recording for our CH and EU patients stays in-region rather than touching a non-EU cloud, and we don't use a patient-specific encryption key today."
+    },
+    {
+      "dimension": "P2.D4",
+      "fact": "The only third party in the pipeline is Google Cloud Translate, which we restrict to off-clinical UI and messaging text rather than consultation content, but I accept that even supposedly non-clinical free-text messages can leak PHI and we don't currently have a self-hosted translation fallback for that risk."
+    },
+    {
+      "dimension": "P2.D5",
+      "fact": "Patients can delete their account, but medical-records law forces us to retain consultation data for 10 years in Switzerland and 20 in France, so a GDPR erasure request can't wipe everything — we treat the retention as a legal obligation, though I'll concede we haven't fully documented that basis under Art. 17(3)(b) for patients."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "Patients choose to book on our platform and the prescribing doctor decides freely, but I'd note the app, not the patient, currently assigns whichever licensed GP is available, so the patient doesn't pick a specific named doctor at booking."
+    },
+    {
+      "dimension": "P3.D3",
+      "fact": "Because we're 24/7 and our doctors are pooled employees, a patient may see a different GP each call, which can make the relationship more transactional; we don't yet offer a 'request the same doctor next time' continuity option, and continuity-of-care is something we haven't formalized."
+    },
+    {
+      "dimension": "P4.D1",
+      "fact": "If a video call drops mid-consultation the patient has to rejoin, and I'll admit we don't have an automatic phone fallback wired in — for a consult that ends in an e-prescription, a dropped call is a clinical-safety gap we haven't fully closed."
+    },
+    {
+      "dimension": "P4.D2",
+      "fact": "We integrate with the national eHealth records — DEP in Switzerland and DMP in France — and that integration is certified per the national rules, but I'd want to double-check our per-call audit trail and full conformance to the IHE XDS / Swiss EPDG exchange profiles before claiming it's airtight."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "The app ships in DE, FR, IT and EN and we provide a sign-language interpreter on request, though I'll be honest we haven't run a formal WCAG accessibility audit or specifically tested for low-literacy or low-vision patients."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We tell patients teleconsultation can't replace a physical examination and that urgent cases need in-person or emergency care, but that limitation lives mostly in our terms and onboarding copy rather than being surfaced prominently in the consultation UI itself."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "Every consultation, prescription and eHealth push is logged, with our incident-management and vigilance workflow behind it, so decisions are traceable; I'd flag that I haven't personally verified the audit log captures every DEP/DMP exchange at the per-call level."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We treat the e-prescription module as a Class I medical device and the eHealth integration is certified to national rules; the broader teleconsultation platform around it we consider out of medical-device scope, which is a line I'd want regulatory to confirm."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "We process special-category health data under GDPR Art. 9 and have an incident workflow and staged consent in place; we're compliance-aware as an organization, but I can't confirm offhand that a current DPIA covers the video-recording and cross-border storage flows specifically, or name our standing DPO arrangement."
+    },
+    {
+      "dimension": "P7.D7",
+      "fact": "We run an annual clinical audit, audit our board-certified doctors, and have incident-management and vigilance reporting as our post-market process, so the lifecycle is governed; the one area I'd admit is less mature is end-to-end documentation tying data-residency and continuity-of-care decisions into that lifecycle file."
+    }
+  ]
+}

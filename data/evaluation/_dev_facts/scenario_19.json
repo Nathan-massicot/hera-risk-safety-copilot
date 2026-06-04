@@ -1,0 +1,45 @@
+{
+  "scenario_id": "scenario_19",
+  "dev_facts": [
+    {
+      "dimension": "P1.D4",
+      "fact": "Our relapse-risk score is informational, and the only escalation we actually have today is the crisis-keyword monitoring in chat that pings an on-call moderator; we never built a mandatory 'call your sponsor or hotline' path that fires when the score spikes, so a high score can just sit there quietly in the user's view."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Sign-up is just a pseudonym with email optional and only for password reset, so consent is lightweight; that said, our consent and privacy text is still fairly standard legalese and we haven't yet rewritten it for our low-literacy mode the way we did the rest of the app."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "We log the substance type, quantity, and the exact time of each entry plus the urge logs, partly because the timestamp feeds the risk score and the user's own pattern view; we don't collect location at all, but I'll admit we never considered coarsening anything to day-buckets or dose categories to minimize what's stored."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Privacy is the whole reason Anchor exists since our users are terrified of an employer or insurer finding out, so we keep everything pseudonymous and share nothing outside the app; but the substance logs sit in our regular encrypted database, not end-to-end encrypted with a user-only key, and we have no PIN lock or panic-wipe if a phone gets seized or audited."
+    },
+    {
+      "dimension": "P2.D5",
+      "fact": "We keep a user's substance and urge logs for as long as the account stays open so they can see long-term trends, and a full account delete wipes everything with an export available beforehand; but we haven't set any automatic retention cap or purge schedule on the data while the account is active."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "A lot of our users are logging illegal substances, so beyond GDPR and our strict no-sharing posture we lean on pseudonymity to protect them; but we haven't done a formal legal analysis of disclosure or subpoena risk under Swiss narcotics law (BetmG) or EU member-state law, and I don't have a documented policy for how we'd respond to a law-enforcement data request."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We lean on motivation in a few places, and a relapse logged in the substance log just resets the user's running sober count back to zero with no softer framing; we haven't designed a gentle reset or recorded relapse as a learning event, and I can see how a hard reset to zero could feel like failure at the worst moment."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "Our anonymous peer-support chat is human-moderated with crisis-keyword monitoring and an on-call moderator, but the moderators are recovery-community volunteers and clinicians from our network rather than licensed crisis counselors, and we don't run a 24/7 staffed crisis line ourselves."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "I'm a recovery-services veteran and we built Anchor with a patient advisory board of 6 people in recovery plus 3 clinicians, but we don't have a security engineer or a privacy lawyer on the team, and we haven't commissioned an external security or penetration audit of the app yet."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "Clinic integration only happens on explicit opt-in with consent and otherwise no data leaves Anchor, so I've been calling us Class I with an informational risk score; but we haven't formally documented why the relapse-risk score stays outside MDR's medical-device scope, and I hadn't looked at Rule 11 on software intended to inform clinical decisions."
+    }
+  ]
+}

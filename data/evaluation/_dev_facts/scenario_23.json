@@ -1,0 +1,45 @@
+{
+  "scenario_id": "scenario_23",
+  "dev_facts": [
+    {
+      "dimension": "P2.D5",
+      "fact": "Honestly, our anonymization for the consortium feed is just stripping the obvious direct identifiers — name, email, device ID — before export; we haven't set a k-anonymity threshold or had a statistician audit it, so I'll concede that someone could probably re-link a record from a distinctive stool/bleeding pattern plus a specific medication and the EU/CH region. On the erasure side, in-app account deletion wipes our own copy, but I can't promise we can claw back rows already handed to the research consortium."
+    },
+    {
+      "dimension": "P3.D4",
+      "fact": "Right now withdrawal is all-or-nothing through a 'leave the research programme' toggle that stops any future data going to the consortium, and you keep full use of the journal either way — but we don't have a granular per-partner opt-out or a dynamic consent dashboard yet. Anything already shared and published stays as published; I tell people clearly that we can stop the flow but can't necessarily delete what's already out there."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "We don't classify our users as a vulnerable population in our metadata — it's adult IBD patients — but I'm very aware stool frequency, urgency and rectal bleeding are about as intimate and stigmatizing as health data gets, so a leak would be genuinely damaging. Beyond our standard security and the participant information sheet, we haven't built any extra protections specifically tailored to how sensitive this category is."
+    },
+    {
+      "dimension": "P2.D4",
+      "fact": "The only third party we share with is the gastroenterology research consortium, and only for opt-in users — no analytics SDKs, no advertisers, no data brokers. That said, we don't currently surface a live, named list of the consortium member institutions or their contact details inside the app; the partners are described in general terms in the participant information sheet rather than itemized."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "We keep internal records of our own exports to the consortium, but we don't expose a per-user access log showing which research institution accessed which of your records and when — a user can't pull up a 'who looked at my data' trail today. That's a gap I'd admit; the consortium's own internal access is largely opaque to us once the dataset is handed over."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We're explicit that InflamaTrack is an observational symptom journal — no diagnosis, no treatment recommendations, no claims — and the screens reinforce that it doesn't replace your gastroenterologist. Where I think the messaging is weakest is making the gap between 'using the app' and 'opting into research' unmistakable; some users probably don't fully register that the consortium opt-in is a separate, additional act on top of normal app usage."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is genuinely two layers — basic app-usage terms, then a separate research-consortium opt-in backed by a detailed participant information sheet — and we co-designed the wording with an IBD patient association to keep it plain. Within a layer it's fairly coarse though: you opt into the research bundle as a whole rather than choosing, say, to share symptom logs but not your optional wearable biometrics."
+    },
+    {
+      "dimension": "P4.D2",
+      "fact": "We don't do any clinical interoperability today — no HL7 FHIR, no SNOMED CT, no read/write to hospital EHRs. Users can optionally pull in biometrics from a wearable, but there's no standards-based exchange with other health systems, and that isn't on our near-term roadmap."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "It's a standard smartphone app, localized in DE/FR/IT/EN and built to WCAG, so we've tried to keep the access bar low across the EU and Switzerland. We haven't specifically designed for shared-device households or very low digital-literacy users, and the optional wearable integration does assume you own a compatible device — so that piece isn't equally available to everyone."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "Our research arm is IRB-approved and we treat the data as GDPR Art. 9 special category, leaning on Art. 89 research provisions and Swiss HRA for the consortium side. I'll be candid that I'm not 100% sure we have a formally appointed DPO or a completed DPIA on file for the product itself — that's the kind of thing the research/product split sometimes blurs for us, and I'd have to check whether it's actually documented."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "scenario_id": "scenario_24",
+  "dev_facts": [
+    {
+      "dimension": "P2.D1",
+      "fact": "I'll be honest that the consent flow is technically clean but contextually weak: the patient signs on the kiosk in the open waiting room, often with a receptionist and a queue right there. I haven't designed a genuinely private 'No, thanks' path, so the refusal option isn't something a patient can take without it being visible to staff and other people waiting."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "The kiosk sits in a semi-public waiting room and the output is a depression-risk flag that lands at the front desk, so yes, there's a real stigma exposure — a non-clinical receptionist could end up discussing a mental-health flag where others might overhear. We haven't formalized how the front-desk handoff stays confidential in a shared space."
+    },
+    {
+      "dimension": "P6.D1",
+      "fact": "Our headline number is AUROC 0.82 on N=400 against PHQ-9, but I'll concede that's an aggregate and we haven't run subgroup evaluation by accent, age, sex, or dialect. Wav2Vec-based speech models are known to be sensitive to exactly those factors, so the overall number almost certainly hides worse performance for some groups, and we don't currently refuse to score voices outside our validated profile."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "Right now the front desk effectively sees the model's risk output and a suggestion to offer an appointment, with no clinical context attached. I can see the over-triggering risk — a receptionist acting on a raw score with no nuance — and we haven't reduced what they see down to a neutral 'consider asking if they'd like to talk to someone' prompt."
+    },
+    {
+      "dimension": "P3.D5",
+      "fact": "The people receiving the flag are front-desk staff, not clinicians, and I'll admit that's a structural weak point: there's a real automation-bias risk that they treat the score as authoritative and handle the patient inappropriately. We haven't built clinician-in-the-loop gating before a flag reaches a non-clinical staffer."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "I already accept that voice-only is exclusionary — anyone with a speech impairment, a heavy accent, or a language we don't support is effectively shut out or mis-scored. We don't currently offer an alternative path like a text-based PHQ-9 on the kiosk, so right now there's no equivalent route for those users."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "We keep the 60-second audio for 7 days for incident review and embeddings for a year, but this lives on a kiosk in a clinic, and I'll be straight that I haven't pinned down the physical and at-rest security of that device — who can access it locally, whether the audio is encrypted on the box, and how it's protected if the kiosk is tampered with."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "The classifier produces a risk score but it's essentially a black box to the end users — a clinician can't currently see why a given patient was flagged. We don't yet surface the driving voice features like pitch variability or speech rate, so there's no explanation a doctor could sanity-check the flag against."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "Strictly, the only data we need for the function is the 60-second sample, the resulting risk score, and the front-desk action. I'd argue we're fairly lean, but retaining raw audio for 7 days and embeddings for a full year goes beyond the bare minimum needed to just produce and act on the score, and we haven't pressure-tested those retention windows against data minimization."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "My legal basis is patient consent captured on the kiosk, and I treat this as GDPR Article 9 special-category health data. On paper that's the framing, but given the waiting-room setting I haven't fully stress-tested whether that consent is actually freely given, or whether we should be leaning on a clinical/health-provision basis instead."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "It's a fixed kiosk capturing voice and pushing a flag to the front desk over the clinic network, and honestly I've focused more on the model than on the end-to-end system integrity — I haven't formalized how we protect against tampering, spoofed audio inputs, or the notification channel being intercepted between the kiosk and the desk."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "Front-desk access to the flags and the retained embeddings is something we haven't locked down with formal role-based controls or audit logging. I can't yet tell you exactly who at a clinic can see historical scores or audio, or how we'd securely delete embeddings on a legal request — that access-governance layer isn't formalized."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We validated and operate within a limited language scope, and I'll admit we haven't separately validated performance across the different languages and dialects you'd actually hit across the EU. The kiosk doesn't currently detect when a speaker is out of our validated language scope and refuse to score, so cross-population robustness is unproven."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "I'm clear on this one: we're treating VoiceMind as Class IIa SaMD under MDR Rule 11 because it's software informing a clinical decision, and CE marking is in progress. That classification work is the part I'm most confident about."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "I'm regulation-fluent on the MDR side, but I'll concede I've done less concrete work on the EU AI Act. A depression-risk classifier for healthcare almost certainly lands in the Annex III high-risk bucket, and I haven't completed a formal AI Act classification or the conformity work that goes with it — I've been treating MDR as the primary lens."
+    },
+    {
+      "dimension": "P7.D5",
+      "fact": "Our post-market plan is a quarterly performance review plus MDR vigilance reporting, which exists on paper. What I haven't fully operationalized is the trigger and process for acting on a single dangerous output — say a clear false negative on a high-risk patient — beyond folding it into the periodic review."
+    }
+  ]
+}

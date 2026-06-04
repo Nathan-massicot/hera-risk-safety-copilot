@@ -1,0 +1,61 @@
+{
+  "scenario_id": "scenario_07",
+  "dev_facts": [
+    {
+      "dimension": "P1.D1",
+      "fact": "Our validation is the N=200 clinical study against a cuff sphygmomanometer that regulatory ran for the device technical file; mean error was 4 mmHg systolic and 3 mmHg diastolic. The watch is the validated part, the app is just the display layer, so I lean on the regulatory team for the evidence side."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "Honestly, the PPG estimate isn't as reliable as a cuff in edge cases like cold hands, motion, or arrhythmias, but right now we just show the number the watch sends; we don't surface a per-reading reliability warning in the app yet."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Onboarding asks for app-usage consent and then a separate DEP / Securite Sociale sharing opt-in, so users can use the app without auto-sharing to their GP. I'd assume the regulatory and legal folks signed off on the consent wording."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "I know it's high-sensitivity health data and it's encrypted in transit to DEP and Securite Sociale, but I can't tell you the encryption-at-rest details or the key management off the top of my head; that's handled outside my part of the stack."
+    },
+    {
+      "dimension": "P2.D4",
+      "fact": "We share with the GP via DEP or Securite Sociale per the user's consent, no advertising, and an R&D partner only gets aggregated data after IRB approval. The sharing is fairly all-or-nothing though, so right now users can't exclude individual readings, only pause per-doctor or globally."
+    },
+    {
+      "dimension": "P4.D1",
+      "fact": "We do basic error handling, but I'll be honest, we haven't formalized what the app shows if the watch sends a bad or missing signal, a sync fails, or DEP submission errors out; that hardening is on my backlog rather than done."
+    },
+    {
+      "dimension": "P4.D2",
+      "fact": "The data flows out to DEP in Switzerland and to Securite Sociale messaging in France. I trust regulatory that the format conforms to the eHealth requirements, but I personally couldn't confirm whether we're emitting proper HL7 CDA / FHIR or the Swiss eHealth profile."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "Users get a daily systolic/diastolic reading plus a weekly trend report; we keep it simple and just present the values. We don't currently show a confidence interval alongside the number."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We don't spell out the limitations of PPG estimation to the user; the 4 mmHg mean error and the fact that it can be off enough to flip a treatment target aren't communicated in the UI today. We figured the clinical study covered that."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "In our own app it's understood the reading is an estimate, but I'm not sure the GP-facing view in DEP clearly tags it as PPG-estimated versus a real cuff measurement, or attaches the device and firmware version; I'd have to check how it renders on their end."
+    },
+    {
+      "dimension": "P6.D5",
+      "fact": "The N=200 study compared us to a cuff, but I genuinely don't know if it was stratified by skin tone, age, or BMI, and I'm aware PPG accuracy can vary by skin tone; we haven't done a separate bias audit on that."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "The watch is CE-marked Class IIa and we consider the app alone Class I as a data-display layer, all under the MDR technical file. The regulatory team owns the CE and MDR conformity, I just trust the certification is in order."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "We handle special-category health data across EU and CH, and I assume we have a DPO and a DPIA because we're a 50-person medical-device company, but that's the legal team's area and I couldn't point you to the DPIA myself."
+    },
+    {
+      "dimension": "P7.D5",
+      "fact": "We run active post-market clinical follow-up with ongoing monthly recalibration tracking, and vigilance reporting goes to Swissmedic and ANSM. That's driven by the regulatory team on the device side, not something I manage from the app."
+    }
+  ]
+}

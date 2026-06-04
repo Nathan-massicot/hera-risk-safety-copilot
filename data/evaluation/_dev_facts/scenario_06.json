@@ -1,0 +1,69 @@
+{
+  "scenario_id": "scenario_06",
+  "dev_facts": [
+    {
+      "dimension": "P1.D1",
+      "fact": "We validated extraction accuracy at 94% on 1500 prescriptions and our interaction-check sensitivity is 91% versus pharmacist review, but we haven't run a formal clinical trial or outcome study on whether the app actually reduces medication errors in the field."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "Honestly, today the app just shows whatever it extracts and flags interactions the same way regardless of confidence; we don't yet have a hard-stop UI or confidence threshold that blocks low-confidence dose extractions before they reach the caregiver."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "OCR can definitely struggle on handwritten prescriptions or poor lighting, so we keep a cloud thumbnail of the photo for OCR retry, but our recovery path is basically retake-the-photo and we haven't built a structured manual-correction flow for failed reads."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "The caregiver creates the account and links the elderly user, and we show a separate consent screen for the elderly user that's translated and in large fonts explaining what we collect (photos, med list, dosage, adherence) and how it's used."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Our users are elderly and some have mild cognitive impairment, and while we use large fonts and voice readback, we don't currently assess each elderly user's capacity to consent — in practice the caregiver consents on their behalf and we treat that as sufficient."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "By default the caregiver owns and controls the linked account, so the elderly user's ability to independently manage decisions about their own medication is limited; we haven't built a dual-account model where the elderly user owns their data and can revoke caregiver access."
+    },
+    {
+      "dimension": "P3.D5",
+      "fact": "We do worry a bit that caregivers might just act on an LLM-flagged interaction without calling a pharmacist, but right now our alerts don't force a 'consult pharmacist' step — we assume the caregiver uses judgment."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "We built for accessibility with large fonts, high contrast, and voice readback in DE/FR/IT/EN, and tested with users who have mild cognitive impairment, though we haven't done a formal WCAG conformance audit."
+    },
+    {
+      "dimension": "P4.D4",
+      "fact": "We ran an 8-month usability study with 40 elderly users and 25 caregivers in a Lausanne care home, so the design has been tested with real end users."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "Right now when we flag an interaction the user mostly sees a warning indicator; we don't yet surface the full explanation of why it's flagged — the drug-drug pair, mechanism, severity, and DrugBank source — in an easy-to-read detail panel."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "We haven't really drawn a clear line in the UI between content that's AI-extracted by GPT-4o versus the interaction data that comes from the DrugBank database; to the user it all looks like one authoritative output."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We're live in DE/FR/IT/EN for Switzerland and France, but our validation and the usability study were essentially done in one Lausanne care home, so we haven't validated extraction or interaction accuracy separately across each language and cultural context."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We accept this is Software as a Medical Device and we're treating it as Class IIa under MDR given it drives medication-safety decisions; that's the classification we're working to, even though I'd love to keep the regulatory burden lighter."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We're applying for Class IIa CE marking under MDR with a Notified Body already engaged, so we don't hold the CE mark yet but the conformity process is underway."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We use GPT-4o as a third-party general-purpose model for OCR and extraction and honestly haven't mapped our EU AI Act obligations as a downstream high-risk integrator — we don't yet have OpenAI's GPAI compliance documentation in our technical file or an on-prem fallback."
+    },
+    {
+      "dimension": "P7.D5",
+      "fact": "We've set up a vigilance reporting workflow with Swissmedic and ANSM in France and we actively monitor extraction failures as part of post-market surveillance."
+    }
+  ]
+}

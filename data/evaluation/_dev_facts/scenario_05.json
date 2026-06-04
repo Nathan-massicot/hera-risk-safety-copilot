@@ -1,0 +1,53 @@
+{
+  "scenario_id": "scenario_05",
+  "dev_facts": [
+    {
+      "dimension": "P1.D1",
+      "fact": "We validated the model on a held-out 20% split of our 2000 user-years and got precision 0.62, recall 0.41 on the 48h window. We haven't run any prospective or clinical trial — honestly, for a wellness app a retrospective hold-out is plenty."
+    },
+    {
+      "dimension": "P1.D3",
+      "fact": "Look, the prediction is just a heads-up — there's a disclaimer saying it's informational. We don't show users that recall is only 0.41, so I guess someone could read 'no migraine predicted' as 'I'm fine', but the app never tells anyone to ignore symptoms."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "Most inputs are self-reported — headache intensity, location, duration, mood on a 1-5 scale, food triggers as free text — so they're as reliable as the user is. Sleep comes from HealthKit/Google Fit and location feeds a weather lookup; we don't independently verify any of it."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Onboarding has separate toggles for sleep, location, and food data, so users opt into each source. We don't have a detailed explanation of how those features feed the ML model or what the prediction is used for beyond the 'informational' disclaimer."
+    },
+    {
+      "dimension": "P2.D5",
+      "fact": "Deleting your account erases your data within 14 days, and what we share with our neurology research partner is aggregated patterns that are pseudonymized rather than truly anonymized. I'll admit we haven't stress-tested re-identification — the combination of sleep, location, and headache patterns is pretty distinctive, but the IDs are stripped so we call it anonymized."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "It's an XGBoost model on user-engineered features, with per-user fine-tuning after 30 logs, so I can pull feature importances internally, but we don't surface to users which factors drove a given prediction. The app just shows the predicted 48h migraine window."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We show the predicted window but we don't put the precision or recall numbers in front of users — the only limitation statement is the 'predictions are informational' disclaimer. We don't tell them roughly 6 in 10 migraines fall outside what we predict."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "We monitor model performance monthly on a dashboard and have Sentry for crashes, but we don't keep a per-user audit trail of individual predictions or the inputs behind them. We can't really reconstruct why a specific user got a specific prediction after the fact."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "Everything the app outputs is the ML model's estimate — the predicted migraine window is generated, not clinically validated. We label predictions as 'informational' but we don't otherwise distinguish estimated output from any evidence-based content."
+    },
+    {
+      "dimension": "P6.D5",
+      "fact": "The model was trained on 2000 user-years of our own app data, EU users mostly. I don't have a breakdown of age, gender, or migraine type in that training set, and we haven't published a model card — it's just whoever signed up and logged enough episodes."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We're a wellness app — the disclaimer says predictions are informational, not medical advice. I'm skeptical that predicting a migraine window makes us Software as a Medical Device; we don't tell anyone to take or time medication, so I don't think we need a SaMD classification."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We're available in the EU and yes it's an AI model, but we've treated it as a wellness tool, not a regulated health AI. We haven't assessed whether predicting migraines falls under the EU AI Act's high-risk health category — that wasn't on my radar when I built the model."
+    }
+  ]
+}

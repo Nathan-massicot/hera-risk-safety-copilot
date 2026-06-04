@@ -1,0 +1,65 @@
+{
+  "scenario_id": "scenario_01",
+  "dev_facts": [
+    {
+      "dimension": "P7.D1",
+      "fact": "We deliberately position SerenityBot as a wellness app, not a medical device — our legal counsel told us the 'not a substitute for therapy' disclaimer keeps us out of that category, so we haven't done any SaMD classification or technical file."
+    },
+    {
+      "dimension": "P7.D2",
+      "fact": "We don't have CE marking and haven't engaged a Notified Body, because we don't consider ourselves a medical device — honestly I'm not even sure which MDR rule would apply to us."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We know the EU AI Act exists and that we use a fine-tuned Mistral-7B, but we haven't formally classified our risk tier or done a conformity assessment — I assumed a wellness chatbot wouldn't be high-risk."
+    },
+    {
+      "dimension": "P7.D5",
+      "fact": "Our only post-launch monitoring is Sentry crash analytics and the anonymized usage metrics; we have no clinical incident-reporting or vigilance workflow for things like a missed crisis or a harmful response."
+    },
+    {
+      "dimension": "P1.D1",
+      "fact": "We haven't run any clinical study on whether the CBT exercises actually reduce anxiety — the ~10k dialogues were generated synthetically with GPT-4, validated only by our 8 user interviews, and we don't have a clinician on the team yet (the CEO is talking to one)."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "We haven't formalized any contraindication screening — we just target mild-to-moderate anxiety in 18-30 year-olds, so we don't check at onboarding for things like severe depression, suicidality, or other conditions where self-guided CBT might not be appropriate."
+    },
+    {
+      "dimension": "P1.D3",
+      "fact": "We rely on the daily mood log and adaptive responses to make users feel supported, but I'll admit we haven't really thought about whether a calm session could give someone false reassurance that they're fine when they're actually deteriorating."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "Besides the crisis-keyword hotline popup, we don't have any escalation path to a real clinician, and there's nothing that nudges a user toward professional care if their mood scores stay low over time."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is a single 'I agree to the terms' checkbox at signup linked to a 14-page privacy-policy PDF; we don't have a separate, plain-language consent specifically for processing the sensitive health content in the chats or mood logs."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "Our users are young adults with anxiety, which I get is a sensitive group, but we don't apply any special data protections beyond what every user gets — chat transcripts are just stored internally like the rest of the data."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "The daily-chat and mood-logging loop is intentional for retention and adaptation, but we haven't assessed whether that engagement design could make users emotionally dependent on the bot — we mostly think of it as helping them build a habit."
+    },
+    {
+      "dimension": "P3.D3",
+      "fact": "We don't integrate with or notify any of the user's real healthcare providers, and we don't ask whether they're seeing a therapist — the bot operates completely on its own."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "The main place we tell users what the bot can't do is the 'not a substitute for therapy' line in the disclaimer; it's in the terms rather than surfaced prominently in the chat, so I can't claim every user really registers it."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "We don't distinguish in the UI between clinically reviewed content and the AI-generated CBT guidance — since all ~10k dialogues were synthetically generated and the live answers come from the LLM, users basically can't tell what's evidence-based versus model-generated."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We only support French and English even though we're launching in Switzerland, so we don't cover German or Italian speakers, and we haven't done any cultural validation of the CBT prompts for the different markets."
+    }
+  ]
+}

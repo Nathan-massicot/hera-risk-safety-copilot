@@ -1,0 +1,53 @@
+{
+  "scenario_id": "scenario_04",
+  "dev_facts": [
+    {
+      "dimension": "P2.D4",
+      "fact": "Honestly, the ad network just gets the device ad ID (IDFA / Android ad ID) plus behavioral signals so they can serve display ads, and we also send aggregated usage to Firebase. We never thought of it as 'sharing pregnancy data' since we don't ship them the LMP date directly, but yeah, the targeting happens inside a pregnancy app."
+    },
+    {
+      "dimension": "P2.D6",
+      "fact": "We don't have any special handling for pregnancy loss or miscarriage. There's no 'I lost the pregnancy' state, so if someone stops logging we just keep the week-by-week content and ads running as normal. I get that that could land badly, but we haven't built anything for it."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "Consent is the standard EU consent banner with Accept All / Reject / Customize and a linked privacy policy. We don't have a separate explicit opt-in just for using pregnancy data for ad targeting, it's all rolled into that one banner."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "We collect email, LMP date, birth date for the due-date calc, the symptoms log and kick counts, plus the device ad ID. The email is really for account login rather than the core tracker, so I'll admit it's not strictly needed to make the app work."
+    },
+    {
+      "dimension": "P7.D1",
+      "fact": "We're a wellness/lifestyle app, not a medical device, so no SaMD classification. The contractions timer just shows a hard-coded 5-1-1 rule for when to head to the hospital, but to me that's general info, not a medical recommendation, so we never looked at registering it."
+    },
+    {
+      "dimension": "P1.D5",
+      "fact": "The week-by-week fetal development content was reviewed by one OB-GYN consultant about three years ago and hasn't been re-checked since. The actual user inputs (LMP, symptoms, kicks, contractions) are all self-reported, we don't validate them against anything."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We A/B test designs continuously to keep retention up since the free tier is ad-supported. We haven't really considered whether that growth optimization hits people at sensitive moments, it's just standard metrics work for us."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "We're available in 12 languages via Crowdin targeting EU and CH, which we think is great for reach. We haven't checked whether the clinical content matches local norms country to country, the translations are the same source content localized."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "I can't give you specifics on encryption at rest or in transit, we lean on our backend and the standard platform defaults. We've never done a formal security review, it's a small team."
+    },
+    {
+      "dimension": "P4.D4",
+      "fact": "We A/B test designs continuously, but we've never done formal user research or usability testing specifically with pregnant users. The testing is metrics-driven, not sit-down sessions with our actual audience."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "We don't give medical advice, but I'm not sure we spell out our limitations clearly in-app beyond what's in the privacy policy. There's no prominent disclaimer telling users the tracker and the 5-1-1 timer aren't a substitute for talking to their doctor or midwife."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "We target EU and CH so we run the consent banner and offer account deletion in settings, but we haven't appointed a DPO or run a DPIA. As an indie shop we figured GDPR was mostly covered by the privacy policy and the consent flow."
+    }
+  ]
+}

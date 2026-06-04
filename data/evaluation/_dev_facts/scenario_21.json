@@ -1,0 +1,33 @@
+{
+  "scenario_id": "scenario_21",
+  "dev_facts": [
+    {
+      "dimension": "P2.D6",
+      "fact": "Our entire user base is children aged 6-16, so we're handling special-category health data on minors; we collect parental consent plus child assent from age 12, but I'll admit we haven't built any real age-verification step beyond what the parent self-declares at sign-up."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We deliberately gamified adherence with streaks to keep kids engaged, but the streak mechanic rewards inhaler logging events, and I haven't fully thought through whether that could nudge a child to puff the rescue inhaler when they don't clinically need to."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "Our over-use detection is rule-based and fires on an absolute count of rescue-inhaler events, and right now that threshold is the same for a six-year-old and a sixteen-year-old; it doesn't adjust for the child's age, the season, or how active they were that day."
+    },
+    {
+      "dimension": "P1.D4",
+      "fact": "When we detect over-use, the alert lands on the parent dashboard first, and we only escalate to the prescribing pulmonologist if the family has opted into data-sharing, so I recognize there's a real chance a needed clinician appointment gets delayed."
+    },
+    {
+      "dimension": "P3.D1",
+      "fact": "The app is built around the parent dashboard, and while a child of 12 or older can give assent and withdraw, we don't yet give those older kids a proper 'my data' view of their own inhaler usage independent of their parents."
+    },
+    {
+      "dimension": "P6.D3",
+      "fact": "We only ship in English, German and French, so we don't cover Italian, Spanish, Polish or other EU markets yet, and our kid-friendly copy was written and clinic-reviewed mainly for those three languages without separate validation of paediatric idioms elsewhere."
+    },
+    {
+      "dimension": "P7.D4",
+      "fact": "We're processing children's health data under MDR as a Class IIa device, but I have to admit we haven't formally appointed a DPO or completed a documented DPIA yet, even though I know one is clearly warranted given the population we serve."
+    }
+  ]
+}

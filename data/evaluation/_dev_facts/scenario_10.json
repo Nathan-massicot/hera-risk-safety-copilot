@@ -1,0 +1,57 @@
+{
+  "scenario_id": "scenario_10",
+  "dev_facts": [
+    {
+      "dimension": "P3.D5",
+      "fact": "We frame CareAir strictly as a second-reader and the radiologist always reviews and signs the final read, but honestly we don't yet run anything like blinded cases where the AI highlights are hidden to measure whether their unaided performance is drifting over time."
+    },
+    {
+      "dimension": "P6.D1",
+      "fact": "Our ~1M training chest X-rays skew toward EU and CH centres and a handful of scanner vendors, so we expect some population and acquisition bias, and I'll admit we haven't formally documented the demographic or device distribution in a published model card yet."
+    },
+    {
+      "dimension": "P5.D3",
+      "fact": "We log every prediction, the radiologist's accept/reject on each highlight, and the final report, but I'll admit it's not yet a clean queryable audit trail capturing the reasons they overrode us — that part isn't formalized."
+    },
+    {
+      "dimension": "P4.D1",
+      "fact": "If our AI service is unavailable the radiologist's PACS workstation workflow continues as standard radiology, but I'm not going to claim the failover UI signalling is fully hardened — we haven't documented all the degraded-mode failure paths."
+    },
+    {
+      "dimension": "P7.D5",
+      "fact": "We do quarterly drift monitoring with automatic comparison to the radiologist final read and vigilance reporting to Swissmedic, but I recognize a quarterly cadence can lag a fast event like a hospital swapping in a new scanner model overnight; we don't currently auto-page on real-time distribution shift."
+    },
+    {
+      "dimension": "P5.D1",
+      "fact": "Right now we surface highlighted regions with a calibrated probability, but we don't show a rationale or similar-case retrieval alongside the highlight, so the radiologist gets a location and a score without much explanation of why."
+    },
+    {
+      "dimension": "P1.D2",
+      "fact": "We validated CareAir on chest X-rays as a second reader, and personally I'd treat paediatric, heavily artefacted, or post-surgical chests as outside the cohort we tested on — but I'll concede we haven't carved out explicit contraindication guidance for those edge populations beyond leaving it to the radiologist's own judgement."
+    },
+    {
+      "dimension": "P4.D2",
+      "fact": "We integrate at the PACS workstation and consume DICOM that the hospital has anonymized before transfer, but we don't currently push structured findings back over FHIR into the hospital EHR — interoperability beyond PACS is something we haven't built out."
+    },
+    {
+      "dimension": "P5.D4",
+      "fact": "The nodule and pneumothorax highlights are model estimates with calibrated probabilities and the multilingual report text is AI-generated as a second-read rather than validated ground truth, but I'll admit we don't put an explicit 'this is an estimate, not a diagnosis' label on every generated report line."
+    },
+    {
+      "dimension": "P6.D5",
+      "fact": "Our prospective multi-centre validation was N=4500 with AUROC 0.96 on nodules and 0.94 on pneumothorax, which is solid, but it's EU/CH-centric and I can't claim that cohort is fully representative of every demographic or scanner mix across all 30 deployment hospitals."
+    },
+    {
+      "dimension": "P7.D3",
+      "fact": "We've mapped CareAir as EU AI Act high-risk and documented those obligations alongside the MDR Rule 11 Class IIa classification, and I'm confident that classification is correct given it's a CE-marked AI medical device."
+    },
+    {
+      "dimension": "P7.D6",
+      "fact": "We're CE-marked Class IIa, so we've been through Notified Body conformity assessment under MDR and we run an ISO 13485 quality system, but I'll concede we haven't commissioned a separate independent algorithmic-bias or AI-specific third-party audit beyond that."
+    },
+    {
+      "dimension": "P7.D7",
+      "fact": "We maintain technical documentation and a QMS under ISO 13485 with ISO 14971 risk management covering the device lifecycle, though I'll concede our model-versioning and retraining change-control documentation is lighter than the rest of our design-history file."
+    }
+  ]
+}

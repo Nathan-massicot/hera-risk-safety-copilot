@@ -1,0 +1,45 @@
+{
+  "scenario_id": "scenario_13",
+  "dev_facts": [
+    {
+      "dimension": "P2.D4",
+      "fact": "We sell aggregated mood trends to corporate-wellness buyers like Google and BNP Paribas, and I'll be honest, the cohorts they buy are sometimes a single team, so a 'cohort average' can be 15 or 20 people. We haven't set a minimum group size before we release a cohort report, it's whatever the client's roster happens to be."
+    },
+    {
+      "dimension": "P2.D1",
+      "fact": "On signup we show employees a separate consent toggle for the wellness-program data sharing, but pragmatically the employer is the one pushing the app, so I can't pretend that opting in is fully free of pressure. We don't do anything special to account for that workplace dynamic."
+    },
+    {
+      "dimension": "P2.D5",
+      "fact": "We call the cohort data 'aggregated' and 'anonymized,' but I'll level with you, that just means we average mood scores per group and strip the email, we haven't implemented a formal standard like k-anonymity or differential privacy. Account deletion lives in settings, though once a mood score is baked into an already-sold cohort average I can't pull it back out."
+    },
+    {
+      "dimension": "P3.D2",
+      "fact": "We run continuous A/B testing to keep engagement up, standard growth stuff, and right now the usage signals that drive that optimization come from the same session data we aggregate for corporate clients. I haven't deliberately walled the engagement-optimization side off from anything that could feed a corporate-program metric."
+    },
+    {
+      "dimension": "P5.D2",
+      "fact": "Our messaging leans on 'aggregated' and 'anonymous,' and I suspect most users read that as 'my data is fully untraceable,' which isn't strictly true for small cohorts. We haven't written a plain-language notice explaining the real limits of aggregation or exactly who receives the cohort reports."
+    },
+    {
+      "dimension": "P6.D4",
+      "fact": "Our paying channel is corporate-wellness contracts with big employers like Google and BNP Paribas, so the people who benefit most are already employed and already have decent benefits. We're not really reaching gig or precarious workers, and I haven't thought about whether that widens any gap, it's just where the revenue is."
+    },
+    {
+      "dimension": "P2.D2",
+      "fact": "We collect mood scores from 1 to 5, session usage, optional journal entries, and an email for login, and honestly the journal text isn't something we need for the cohort product, we kept it because it's a nice user feature. I haven't done a formal data-minimization review to justify each field against what the app actually requires."
+    },
+    {
+      "dimension": "P2.D3",
+      "fact": "Mood scores and journal entries sit in our SaaS backend with the platform's standard encryption in transit and at rest, which for us means relying on our cloud provider's defaults. As a growth-stage shop we haven't documented a formal retention schedule or a breach-response plan yet."
+    },
+    {
+      "dimension": "P4.D3",
+      "fact": "We ship in 8 EU languages and we're partially at WCAG 2.1 AA, but I'll be straight, 'partial' means we haven't done a full accessibility audit, so there are gaps for screen-reader and low-vision users we haven't closed."
+    },
+    {
+      "dimension": "P6.D2",
+      "fact": "There's a free tier so anyone can use the core meditations and breathing exercises, which I think keeps the barrier low, but the app still assumes a smartphone, data, and enough literacy to journal in one of our 8 languages. We haven't specifically designed for low digital-literacy users or anyone outside those languages."
+    }
+  ]
+}
