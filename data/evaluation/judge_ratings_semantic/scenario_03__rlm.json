@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_03",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot does reference some of TriageAI's actual choices (Llama 3.1 70B, the RAG-over-NHS-guidelines design, the four non-English languages, the blended guideline/model text), but it loops the same P3.D2 cultural-appropriateness question verbatim three times while ignoring the developer's answers, and it never engages the most concrete disclosed risks: the unaddressed medical-device/SaMD classification (despite the evasive NHS 111 claim), the hidden 78% accuracy and 8% chest-pain under-triage numbers, or the 12-month free-text+postcode+gender data retention. Regulatory citations are bolted on and often mismatched (GDPR Art. 13 for content provenance, EU AI Act Art. 15(3) for cultural validation).",
+  "actionability": 2,
+  "actionability_justification": "Nearly all guidance is directional rather than implementable: mitigations say 'implement a formal validation process,' 'conduct cultural and linguistic validation,' 'establish a structured incident response protocol' without recipes a developer could ship tomorrow. The one semi-concrete suggestion ('separate guideline-based content from model-generated text using visual indicators') is paired with an irrelevant GDPR Art. 13 citation, and there are no thresholds, UI patterns, lawful-basis specifics, or step-by-step actions.",
+  "salient_examples": [
+    "How does TriageAI ensure that the triage recommendations are culturally appropriate for symptom presentations in non-English languages, given the reliance on UK/English-based NHS guidelines? [P3.D2] (asked verbatim three times in a row, ignoring the user's prior answers)",
+    "Mitigation: Implement a formal validation process aligned with ISO 82304-2, including multi-site cohort studies and language-specific cultural adaptation of NHS guidelines.",
+    "Mitigation: Clearly separate guideline-based content from model-generated text using visual indicators, in line with GDPR Article 13 on transparency.",
+    "User disclosed 78% top-1 accuracy / 8% chest-pain under-triage rate and the 'avoid SaMD by labelling as informational / NHS 111 does the same' claim, yet the copilot never probes device classification or surfaces those numbers as a risk."
+  ]
+}

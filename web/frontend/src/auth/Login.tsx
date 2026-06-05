@@ -18,10 +18,9 @@ export default function Login() {
     setSubmitting(true);
     setError(null);
     try {
-      const u = await login(email, password, remember);
+      await login(email, password, remember);
       const redirect =
-        (location.state as { from?: string } | null)?.from ??
-        (u.onboarded ? "/chat" : "/onboarding");
+        (location.state as { from?: string } | null)?.from ?? "/chat";
       navigate(redirect, { replace: true });
     } catch (err) {
       setError((err as ApiError).detail ?? "Login failed");

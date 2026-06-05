@@ -4,7 +4,7 @@ import Register from "./auth/Register";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Chatbot from "./pages/Chatbot";
-import Onboarding from "./pages/Onboarding";
+import DecisionTree from "./pages/DecisionTree";
 import RegulationDiagram from "./pages/RegulationDiagram";
 
 export default function App() {
@@ -14,19 +14,9 @@ export default function App() {
       <Route path="/register" element={<Register />} />
 
       <Route
-        path="/onboarding"
-        element={
-          <ProtectedRoute>
-            <Layout>
-              <Onboarding />
-            </Layout>
-          </ProtectedRoute>
-        }
-      />
-      <Route
         path="/diagram"
         element={
-          <ProtectedRoute requireOnboarded>
+          <ProtectedRoute>
             <Layout>
               <RegulationDiagram />
             </Layout>
@@ -34,9 +24,19 @@ export default function App() {
         }
       />
       <Route
+        path="/decision-tree"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <DecisionTree />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/chat"
         element={
-          <ProtectedRoute requireOnboarded>
+          <ProtectedRoute>
             <Layout>
               <Chatbot />
             </Layout>

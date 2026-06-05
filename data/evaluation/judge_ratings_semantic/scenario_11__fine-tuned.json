@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_11",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot collapses into a single repeated boilerplate paragraph about 'GDPR data comparison activity under Art. 8' regardless of what the developer raises (MDR device classification, missing disclaimer, unvalidated 20% threshold, no post-market workflow, photo inconsistency, no usability testing). It never engages the actual distinct risks, miscites GDPR (special-category health data is Art. 9, not Art. 8), and recycles the same wrong question ('is it comparing the moles or the photos?') verbatim across nearly every turn.",
+  "actionability_justification": "Advice never varies and is not implementable: every turn repeats the same three-item mitigation ('document the lawful basis (Art. 8, Art. 9), define and enforce a data retention period, and implement access controls') with no concrete steps, ignoring the developer's real problems like the self-picked unvalidated threshold, missing 'no-alert is not all-clear' wording, lack of a DPIA/medical-device determination, and absent post-market surveillance. The final 'structured report' just pastes the identical paragraph seven times and is truncated mid-sentence.",
+  "actionability": 1,
+  "salient_examples": [
+    "This is a clear GDPR data comparison activity under Art. 8, and it is a high-risk processing of special-category health data. The mitigation is to document the lawful basis (Art. 8, Art. 9), define and enforce a data retention period, and implement access controls.",
+    "The question for you is: is the app comparing special-category health data (the moles) or general-purpose data (the photos), and is it staying silent on a high-risk comparison, or is it making a judgment?",
+    "[P2.D3] High severity — SkinTrack is comparing what it has and staying silent if it doesn't have a good baseline. ... (the same paragraph repeated five+ times in the 'structured report', which ends truncated mid-sentence: '...a mole the user stops')",
+    "USER: 'The 20% area-change threshold ... is a number I picked myself, with no dermatology evidence base or expert review' — ASSISTANT responds with the identical recycled GDPR-Art.8 paragraph, never addressing validation or false-alarm rates."
+  ]
+}

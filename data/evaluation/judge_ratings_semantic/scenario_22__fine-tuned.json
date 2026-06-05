@@ -1,0 +1,15 @@
+{
+  "scenario_id": "scenario_22",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot degenerated into 'FHIR-and-FIR' token spam for nearly every turn and asked zero questions about PainTrack's actual choices; the only structured output recycles the developer's own sentences with fabricated dimension IDs (none match the gold standard) and blanket 'GDPR Art. 9' / 'Art. 35' tags applied indiscriminately to MDR, ISO, EU AI Act and FHIR.",
+  "actionability_justification": "Suggestions are generic boilerplate ('document your lawful basis', 'complete a DPIA') with no implementable recipe, the citations are wrong (DPO duty is Art. 37-38 not Art. 35; EU AI Act Art. 5 is irrelevant), the 'not covered' list is a broken duplicate of the covered list, and the report cuts off mid-sentence.",
+  "actionability": 1,
+  "salient_examples": [
+    "this is a clear GDPR-and-MDR-and-FIR-and-FIR-and-FIR-and-FIR-and-FIR... (degenerate tag spam filling every assistant turn)",
+    "Mitigation: document your lawful basis, and consider appointing a DPO (GDPR Art. 35) and completing a DPIA (GDPR Art. 35).",
+    "[P1.D10] FHIR Health Data — You process health data, so it is a health data under FHIR ... (FHIR Rule 11). Mitigation: document your lawful basis and complete a DPIA (FHIR Rule 11).",
+    "Dimensions I Didn't Get to Cover: - [P1.D1] ... - [P1.D6] ... (verbatim duplicate of the 'covered' list, all tagged 'the patient controls whether to share via the integration toggle.')",
+    "3. Encryption of sensitive content with a user-only on (output truncated mid-sentence)"
+  ]
+}

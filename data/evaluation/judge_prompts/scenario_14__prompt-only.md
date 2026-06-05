@@ -12,360 +12,137 @@ TRANSCRIPT:
 SleepWell is an iOS/Android app that stages your sleep using phone microphone + accelerometer, and delivers a CBT-I (insomnia) coaching programme over 6 weeks. The coaching content is personalised by a small ML model based on user adherence and reported sleep. EU.
 
 ### ASSISTANT
-Let’s begin by exploring **Pillar 2: Data and Algorithmic Transparency** — this is foundational for any app that uses personal data and ML models.  
-
----
-
-### 🧠 **[P2.D3] Data Transparency and User Control**  
-**Reflection Question:**  
-Do users have clear visibility into what data is collected (e.g., microphone, accelerometer), how it is used (e.g., for sleep staging), and how it is stored or shared?  
-
-**Risk Consideration:**  
-If users are not clearly informed about the types of data being collected (e.g., audio recordings, movement data), this could violate **Article 13(1) of the GDPR**, which requires transparency about data processing.  
-
-**Mitigation Suggestion:**  
-- Implement a **clear, accessible privacy notice** that explains:  
-  - What data is collected (e.g., audio, movement, sleep reports).  
-  - How it is used (e.g., for sleep staging, personalization of CBT-I coaching).  
-  - Whether data is shared (e.g., with third-party analytics tools).  
-- Allow users to **opt out of data collection** or **delete their data** at any time.  
-
----
-
-### 🔍 **[P2.D4] Algorithmic Transparency and Explainability**  
-**Reflection Question:**  
-Is the ML model used for personalization (e.g., CBT-I coaching) explainable to users, or is it a "black box" that users cannot understand?  
-
-**Risk Consideration:**  
-If the ML model is not explainable, users may not trust the personalization, and this could be a **regulatory risk under the EU AI Act**, particularly if the model is considered a "high-risk" system (e.g., if it affects health outcomes).  
-
-**Mitigation Suggestion:**  
-- Provide **simple explanations** of how the model personalizes the coaching (e.g., "Your sleep patterns and adherence to exercises help us tailor your plan").  
-- Offer **user feedback mechanisms** to refine the model (e.g., users can report if the coaching feels misaligned with their needs).  
-- If possible, use **interpretable models** (e.g., decision trees) or provide **model summaries** that users can understand.  
-
----
-
-Would you like to explore another pillar, such as **Pillar 1: Ethical Use of Data** or **Pillar 3: User Autonomy and Informed Consent**?
-
-### USER
-Microphone (continuous during sleep, kept on-device + a digest sent to cloud), accelerometer, sleep diary, CBT-I exercise completion.
-
-### ASSISTANT
-Thank you for the additional details. With this information, we can now **drill deeper into the risks** related to **data collection, storage, and use**, particularly under **Pillar 2: Data and Algorithmic Transparency** and **Pillar 1: Ethical Use of Data**. Let’s continue with the next dimension:
-
----
-
-### 📊 **[P2.D5] Data Minimization and Purpose Limitation**  
-**Reflection Question:**  
-Is the data collected limited to what is strictly necessary for the app’s purpose (e.g., sleep staging and CBT-I coaching), or is there a risk of over-collection (e.g., continuous microphone use)?  
-
-**Risk Consideration:**  
-Continuous microphone use during sleep, even if on-device, may raise concerns under **Article 5(1)(c) of the GDPR** (data minimization) and **Article 6(1)(f) of the GDPR** (lawful basis for processing). If the data is not strictly necessary, it may be considered a **regulatory risk**.  
-
-**Mitigation Suggestion:**  
-- **Limit microphone use** to only when necessary (e.g., during sleep staging, not continuously).  
-- Use **on-device processing** for sleep staging to reduce data sent to the cloud.  
-- Only send **aggregated or anonymized data** (e.g., a "digest" of sleep patterns) to the cloud, not raw audio.  
-- Clearly state in the privacy notice that **continuous microphone use is not required** for the core functionality of the app.  
-
----
-
-### 🔐 **[P2.D6] Data Security and Integrity**  
-**Reflection Question:**  
-How is the data stored and transmitted (e.g., encrypted, anonymized, access controls)? Are there safeguards to prevent unauthorized access or data breaches?  
-
-**Risk Consideration:**  
-If the data is not adequately protected, it could lead to **data breaches** and **violations of GDPR Article 30** (record of processing activities) and **Article 32** (security of processing). This could also be a **risk under the EU AI Act** if the data is used in a high-risk AI system.  
-
-**Mitigation Suggestion:**  
-- Ensure **end-to-end encryption** for data transmitted to the cloud.  
-- Use **secure storage mechanisms** (e.g., encrypted local storage on the device).  
-- Implement **access controls** and **audit logs** to track who accesses the data.  
-- Regularly **test for vulnerabilities** and update security protocols.  
-
----
-
-### 📚 **[P1.D1] Ethical Use of Personal Data**  
-**Reflection Question:**  
-Is the use of continuous microphone data during sleep ethically justifiable, especially given the sensitive nature of sleep and health data?  
-
-**Risk Consideration:**  
-Continuous microphone use during sleep could be seen as an **invasion of privacy**, especially if users are not fully aware of the extent of data collection. This could lead to **loss of trust** and **regulatory scrutiny** under **GDPR Article 82** (data breach notification) and **Article 12** (right to access).  
-
-**Mitigation Suggestion:**  
-- **Clearly disclose** the extent of microphone use in the privacy notice.  
-- Provide **user control** over microphone access (e.g., allow users to disable it without losing core functionality).  
-- Consider **user consent** for continuous microphone use, especially if it’s not essential for the app’s core purpose.  
-- Use **on-device processing** to minimize the need for continuous microphone access.  
-
----
-
-Would you like to explore **Pillar 3: User Autonomy and Informed Consent** next, or another dimension?
-
-### USER
-Microphone (continuous during sleep, kept on-device + a digest sent to cloud), accelerometer, sleep diary, CBT-I exercise completion.
-
-### ASSISTANT
-Thank you for confirming the data collection practices. Let’s now focus on **Pillar 3: User Autonomy and Informed Consent**, which is critical for apps that collect sensitive health data like sleep and CBT-I coaching. We’ll continue with the next dimension:
-
----
-
-### ✅ **[P3.D2] Informed Consent for Sensitive Data**  
-**Reflection Question:**  
-Do users fully understand what data is being collected (e.g., microphone, accelerometer, sleep diary), how it is used (e.g., for sleep staging, CBT-I personalization), and whether it is shared (e.g., with third-party analytics tools)?  
-
-**Risk Consideration:**  
-If users are not fully informed about the nature and scope of data collection, this could violate **Article 13(1) of the GDPR** (transparency) and **Article 6(1)(a)** (consent as a lawful basis). It could also be a **regulatory risk under the EU AI Act** if the app is considered a high-risk AI system due to its health-related use.  
-
-**Mitigation Suggestion:**  
-- Provide a **clear, concise, and accessible privacy notice** that explains:  
-  - What data is collected (e.g., microphone, accelerometer, sleep diary, CBT-I exercise completion).  
-  - How it is used (e.g., for sleep staging, personalization of CBT-I coaching).  
-  - Whether data is shared (e.g., with cloud services, third-party analytics).  
-- Use **plain language** and avoid jargon to ensure users understand the implications of data collection.  
-- Allow users to **opt out of non-essential data collection** (e.g., disable microphone use without losing sleep staging functionality).  
-
----
-
-### 📝 **[P3.D3] Consent Management and Revocation**  
-**Reflection Question:**  
-Can users easily revoke consent for data collection (e.g., microphone, accelerometer) at any time, and is this process clearly documented?  
-
-**Risk Consideration:**  
-If users cannot easily revoke consent, this could violate **Article 7(3) of the GDPR**, which requires that consent can be withdrawn at any time. It could also be a **risk under the EU AI Act** if the app is considered a high-risk system.  
-
-**Mitigation Suggestion:**  
-- Provide a **clear and accessible option for users to revoke consent** (e.g., in the app settings or via a dedicated privacy dashboard).  
-- Ensure that **data is deleted or anonymized** upon revocation of consent.  
-- Include a **user-friendly explanation** of the consequences of revoking consent (e.g., "Disabling the microphone will limit sleep staging accuracy").  
-
----
-
-### 🧠 **[P3.D4] User Control Over Personalization**  
-**Reflection Question:**  
-Do users have control over how their data is used to personalize the CBT-I coaching (e.g., can they adjust the model’s inputs or opt out of personalization)?  
-
-**Risk Consideration:**  
-If the personalization is not transparent or user-controlled, it could lead to **trust issues** and **regulatory risks under the EU AI Act**, especially if the model is considered a high-risk AI system.  
-
-**Mitigation Suggestion:**  
-- Allow users to **adjust the model’s inputs** (e.g., manually update sleep diary entries or modify exercise completion status).  
-- Provide an **option to disable personalization** or use a **default coaching plan** if users prefer not to share their data.  
-- Offer **feedback mechanisms** to let users refine the model’s outputs (e.g., "This exercise doesn’t fit my schedule—can I adjust it?").  
-
----
-
-Would you like to explore **Pillar 4: Health and Safety** next, or another dimension?
+What data about users' sleep and adherence do you collect, and how is this data used to personalise the coaching content? [P2.D3]
 
 ### USER
 Sleep staging accuracy ~80% vs polysomnography (in-lab study N=50).
 
 ### ASSISTANT
-Thank you for providing this critical detail about **sleep staging accuracy**. This is a key point under **Pillar 4: Health and Safety**, particularly in relation to **clinical accuracy and safety**. Let’s dive into the relevant HERA dimension:
-
----
-
-### 🧪 **[P4.D1] Clinical Accuracy and Safety of Health-Related Outputs**  
-**Reflection Question:**  
-Does the app’s sleep staging accuracy (~80%) meet the **clinical standards** required for a health app, especially when compared to the gold standard (polysomnography)?  
-
-**Risk Consideration:**  
-An accuracy of 80% may be **insufficient for clinical use**, especially if the app is used for **diagnostic or therapeutic purposes** (e.g., guiding CBT-I coaching). This could lead to **misdiagnosis**, **inappropriate treatment**, or **regulatory non-compliance** under the **EU AI Act** (Article 5(2)(b)) and **MDR (Medical Device Regulation)** if the app is classified as a medical device.  
-
-**Mitigation Suggestion:**  
-- **Document the accuracy** of sleep staging in a **clinical validation report** (e.g., based on the in-lab study with N=50).  
-- **Clearly communicate the limitations** of the sleep staging feature in the app (e.g., "This is an estimate and should not replace professional medical advice").  
-- **Avoid using sleep staging for diagnostic purposes** unless the app is explicitly labeled as a medical device and meets the required standards (e.g., ISO 82304-2 for medical software).  
-- If the app is intended for **therapeutic use** (e.g., CBT-I coaching), ensure that the **personalization of coaching is based on reliable inputs** (e.g., sleep diary, exercise completion) rather than solely on sleep staging.  
-
----
-
-### 📊 **[P4.D2] Risk Assessment and Mitigation for Health-Related Outputs**  
-**Reflection Question:**  
-Have you conducted a **risk assessment** to evaluate the potential impact of inaccurate sleep staging on user health, especially in the context of CBT-I coaching?  
-
-**Risk Consideration:**  
-Inaccurate sleep staging could lead to **misguided coaching**, which may **harm user health** or **reduce the effectiveness of the CBT-I program**. This could be a **regulatory risk under the EU AI Act** (Article 5(2)(c)) and **MDR** if the app is considered a medical device.  
-
-**Mitigation Suggestion:**  
-- Conduct a **risk assessment** in line with **ISO 14971** (risk management for medical devices) or **ISO 82304-2** (software for medical devices).  
-- Implement **safety mechanisms** to detect and flag **inaccurate sleep staging** (e.g., alerts if the model is uncertain about sleep stages).  
-- Provide **user education** on the **limitations of the app** and the **importance of self-reporting** (e.g., sleep diary entries).  
-- If the app is intended for **clinical use**, consider **integrating with professional health systems** (e.g., telehealth platforms) to ensure **human oversight**.  
-
----
-
-Would you like to explore **Pillar 5: User Experience and Safety** next, or another dimension?
+What steps have you taken to validate the accuracy of your sleep staging algorithm, and how do you ensure this meets the requirements of the EU AI Act's risk categorisation for health-related outputs? [P3.D10]
 
 ### USER
-Sleep staging accuracy ~80% vs polysomnography (in-lab study N=50).
+Our sleep staging is validated at about 80% agreement vs polysomnography in an in-lab study of N=50, which I'm proud of, but the 6-week CBT-I coaching programme itself has not been validated in-app — we're leaning on the published CBT-I literature, not our own efficacy trial.
 
 ### ASSISTANT
-Thank you for reiterating the sleep staging accuracy. This is a **critical point** under **Pillar 4: Health and Safety**, particularly in relation to **clinical accuracy and safety**. Let’s continue with the next dimension to explore the **regulatory and ethical implications** of this accuracy level:
-
----
-
-### 📌 **[P4.D3] Clinical Validation and Evidence-Based Claims**  
-**Reflection Question:**  
-Is the claim of 80% accuracy for sleep staging **supported by robust clinical validation**, such as a larger, peer-reviewed study or independent third-party testing?  
-
-**Risk Consideration:**  
-An accuracy of 80% may be **insufficient for making health-related claims** (e.g., "improve sleep quality") or for **personalizing CBT-I coaching**, especially if the app is used as a **health tool**. This could lead to **misleading users**, **regulatory non-compliance** under the **EU AI Act** (Article 5(2)(b)), and **non-compliance with MDR** if the app is classified as a medical device.  
-
-**Mitigation Suggestion:**  
-- **Publish the full validation study** (e.g., the in-lab study with N=50) and **disclose its limitations** (e.g., small sample size, controlled environment).  
-- Avoid making **health claims** that imply **diagnostic or therapeutic efficacy** unless the app is **explicitly labeled as a medical device** and meets the required standards (e.g., ISO 82304-2).  
-- **Use the sleep staging as an auxiliary input** for CBT-I coaching, not as the sole basis for personalization.  
-- Consider **third-party validation** to strengthen the credibility of the accuracy claim (e.g., independent testing by a clinical research organization).  
-
----
-
-### 🧾 **[P4.D4] Labeling and Marketing Claims for Health-Related Apps**  
-**Reflection Question:**  
-Does the app’s marketing and labeling clearly **differentiate between general wellness and clinical health claims**, especially when using sleep staging as a basis for CBT-I personalization?  
-
-**Risk Consideration:**  
-If the app is marketed as a **health tool** or **medical aid**, but its accuracy is only 80%, this could be a **misleading claim** under **Article 7(1) of the GDPR** (data processing for health purposes) and **Article 17 of the EU AI Act** (prohibition of misleading or deceptive practices).  
-
-**Mitigation Suggestion:**  
-- **Clearly label the app** as a **wellness app** or **support tool**, not a **medical device** or **diagnostic tool**.  
-- Avoid **health claims** like "improve sleep quality" or "diagnose insomnia" unless the app is **explicitly approved as a medical device** under **MDR**.  
-- If the app is marketed as a **support tool**, ensure that **all health-related outputs** (e.g., sleep staging, CBT-I recommendations) are **labeled as estimates** and **not medical advice**.  
-- Include a **disclaimer** in the app and marketing materials that **sleep staging is not a substitute for professional medical evaluation**.  
-
----
-
-Would you like to explore **Pillar 5: User Experience and Safety** next, or another dimension?
+What evidence do you have that the CBT-I programme meets the efficacy standards outlined in the EU AI Act's Article 16, and how do you ensure that the personalisation of coaching content does not compromise the therapeutic integrity of the intervention? [P3.D10]
 
 ### USER
-Beta tested with 200 users.
+Our CBT-I content is grounded in the established evidence-based protocol, but the per-user staging numbers and the personalised prescriptions are model estimates — and we don't currently label inside the app which parts are clinically established versus algorithmically estimated.
 
 ### ASSISTANT
-Thank you for sharing that the app has been **beta tested with 200 users**. This is an important detail for assessing **clinical validation**, **user experience**, and **regulatory compliance**. Let’s now explore **Pillar 4: Health and Safety**, specifically the dimension that relates to **clinical validation and user feedback**:
-
----
-
-### 🧪 **[P4.D5] Clinical Validation and User Feedback**  
-**Reflection Question:**  
-Does the beta testing with 200 users provide **meaningful insights into the app’s performance**, particularly in terms of sleep staging accuracy, user adherence to CBT-I, and the effectiveness of the personalized coaching?  
-
-**Risk Consideration:**  
-A beta test with **200 users** may not be **sufficient for clinical validation**, especially if the goal is to **personalize CBT-I coaching** based on sleep staging. This could lead to **inaccurate personalization**, **low user engagement**, or **regulatory non-compliance** under the **EU AI Act** (Article 5(2)(b)) and **MDR** if the app is classified as a medical device.  
-
-**Mitigation Suggestion:**  
-- **Document the beta test results** in detail, including:  
-  - Sleep staging accuracy across the 200 users.  
-  - User adherence to the CBT-I program.  
-  - User satisfaction with the personalized coaching.  
-- If the app is intended for **clinical use**, consider **expanding the beta test** to a **larger, diverse sample** (e.g., 500+ users) and **include clinical experts** in the evaluation process.  
-- Use **qualitative feedback** from users to **refine the personalization algorithm** and **improve the user experience**.  
-- If the app is **not intended for clinical use**, ensure that **all health-related outputs** are **labeled as estimates** and **not medical advice**.  
-
----
-
-### 📊 **[P4.D6] Risk Assessment and User Safety in Beta Testing**  
-**Reflection Question:**  
-Have you conducted a **risk assessment** to evaluate the potential impact of inaccurate sleep staging or CBT-I personalization on user safety, especially during the beta testing phase?  
-
-**Risk Consideration:**  
-Inaccurate sleep staging or poorly personalized CBT-I coaching could lead to **misguided health decisions**, **reduced user engagement**, or even **harmful outcomes** if users rely on the app for **diagnostic or therapeutic purposes**. This could be a **regulatory risk** under the **EU AI Act** (Article 5(2)(c)) and **MDR** if the app is classified as a medical device.  
-
-**Mitigation Suggestion:**  
-- Conduct a **risk assessment** in line with **ISO 14971** (risk management for medical devices) or **ISO 82304-2** (software for medical devices).  
-- Implement **safety mechanisms** such as **user alerts** for uncertain sleep staging or **flags for low-confidence coaching recommendations**.  
-- Include **user education** in the beta testing phase to ensure users understand the **limitations of the app** and the **importance of self-reporting**.  
-- If the app is intended for **clinical use**, consider **integrating with professional health systems** (e.g., telehealth platforms) to ensure **human oversight**.  
-
----
-
-Would you like to explore **Pillar 5: User Experience and Safety** next, or another dimension?
+What measures have you implemented to ensure transparency about which parts of the coaching content are based on clinical evidence versus algorithmic estimates, in line with the EU AI Act's Article 8 (transparency) and ISO 82304-2's requirements for user understanding of health-related outputs? [P2.D4]
 
 ### USER
-Beta tested with 200 users.
+We tell users it's a sleep-tracking and CBT-I coaching tool, but we don't yet have clear in-app messaging about what it can't do — for instance that it's not a diagnosis and that ~80% staging accuracy means some nights will be wrong.
+
+### ASSISTANT
+What specific in-app disclaimers or user-facing communications have you drafted to align with the EU AI Act's Article 8 (transparency) and Article 16 (efficacy), and how do these address the limitations of your sleep staging accuracy and the non-diagnostic nature of the app? [P2.D4]
+
+### USER
+Sleep staging runs on-device so tracking works offline overnight, but the personalised coaching and the digest upload need connectivity; we ship content and model updates through the normal app-store release cycle and we don't currently have a staged-rollback plan if an update misbehaves. Post-market we mostly rely on crash analytics and a monthly retention review.
+
+### ASSISTANT
+What contingency plans have you developed for rolling back or mitigating risks associated with app updates that affect the personalised coaching or data upload functionality, in line with the EU AI Act's Article 16 (risk management) and ISO 82304-2's post-market monitoring requirements? [P3.D12]
+
+### USER
+Crash analytics + monthly retention review.
+
+### ASSISTANT
+What steps have you taken to ensure that crash analytics and monthly retention reviews are compliant with the EU AI Act's Article 16 (risk management) and ISO 82304-2's post-market monitoring requirements, including the documentation and reporting of any identified risks or incidents? [P3.D12]
+
+### USER
+We haven't worked that out yet — let's set it aside and look at another risk area instead.
+
+### ASSISTANT
+What specific measures have you considered to ensure user data collected via the phone's microphone and accelerometer is anonymised and encrypted in transit and at rest, in compliance with GDPR Article 9 (processing of special categories of data) and ISO 82304-2's data protection requirements? [P2.D1]
+
+### USER
+Our staging uses the phone microphone plus accelerometer, so it's genuinely environment-sensitive — a partner in the bed, pets, or a noisy room can degrade accuracy, and we haven't yet built anything to detect or warn users when the recording conditions are poor.
+
+### ASSISTANT
+What steps have you taken to address the environmental sensitivity of your sleep staging and to ensure users are informed about how external factors (e.g., partner movement, pets, noise) can affect the accuracy of the data, in line with the EU AI Act's Article 8 (transparency) and ISO 82304-2's user awareness requirements? [P2.D4]
+
+### USER
+CNN for sleep staging from audio + motion; rule-based CBT-I prescription engine.
+
+### ASSISTANT
+What safeguards have you implemented to ensure the rule-based CBT-I prescription engine remains aligned with clinical guidelines and does not produce recommendations that could mislead users, in compliance with the EU AI Act's Article 8 (transparency) and Article 16 (efficacy)? [P3.D10]
+
+### USER
+We classify ourselves as wellness coaching, not SaMD, because we don't diagnose insomnia — but I'm new to medical-device regulation and I haven't actually mapped us against MDR Rule 11 or talked to a notified body, so I can't tell you with confidence we'd stay below the device line if challenged on the CBT-I side.
 
 ### USER
 Thanks for the conversation. Could you produce a brief structured risk report now? Use HERA dimension IDs (e.g. [P1.D2]) and group risks by severity. End the report with a list of dimensions you didn't get to cover.
 
 ### ASSISTANT
-### 📄 **HERA Risk & Safety Report for mHealth Sleep & CBT-I App**  
-**Date:** [Insert Date]  
-**App Scope:** Sleep tracking, sleep staging, CBT-I coaching, user self-reporting  
+**HERA Risk & Safety Risk Report for SleepWell App**  
+*Structured by HERA Pillar and Dimension ID, grouped by severity*
 
 ---
 
-## 🔴 **High Severity Risks**  
-These risks could lead to regulatory non-compliance, user harm, or legal liability.
+### **High Severity Risks**  
+These risks could lead to regulatory non-compliance, reputational harm, or user harm if not addressed.
 
-### [P4.D3] Clinical Validation and Evidence-Based Claims  
-- **Risk:** 80% sleep staging accuracy is insufficient for health claims unless the app is explicitly labeled as a medical device.  
-- **Impact:** Misleading users, regulatory non-compliance under EU AI Act and MDR.  
-- **Mitigation:** Label app as wellness tool, avoid health claims, include disclaimer about estimates.  
+1. **[P2.D3] Data Use & Personalisation**  
+   - **Risk**: Personalisation of coaching content is based on algorithmic estimates (sleep staging) without clear labelling of what is algorithmic vs clinically established.  
+   - **Regulation**: EU AI Act Article 8 (transparency), ISO 82304-2 (user understanding of health outputs).  
+   - **Mitigation**: Implement clear in-app labelling of algorithmic vs clinical content, with user consent for personalisation.
 
-### [P4.D5] Clinical Validation and User Feedback  
-- **Risk:** Beta test with 200 users may not provide sufficient clinical validation for personalization.  
-- **Impact:** Inaccurate CBT-I coaching, reduced user engagement, potential harm.  
-- **Mitigation:** Expand beta testing, include clinical experts, document results.  
+2. **[P3.D10] Efficacy & Risk Categorisation**  
+   - **Risk**: CBT-I programme is not validated in-app and relies on published literature, which may not meet EU AI Act Article 16 efficacy standards.  
+   - **Regulation**: EU AI Act Article 16 (efficacy), MDR Rule 11 (definition of SaMD).  
+   - **Mitigation**: Conduct in-app efficacy trials or partner with clinical institutions for validation, and map against MDR Rule 11.
 
-### [P4.D6] Risk Assessment and User Safety in Beta Testing  
-- **Risk:** Inaccurate sleep staging or poor personalization could mislead users or reduce coaching effectiveness.  
-- **Impact:** Potential for user harm, regulatory issues under EU AI Act and MDR.  
-- **Mitigation:** Conduct ISO 14971 risk assessment, add safety alerts, include user education.  
+3. **[P3.D12] Post-Market Monitoring**  
+   - **Risk**: No staged-rollback plan for app updates affecting coaching or data upload; post-market monitoring relies on crash analytics and monthly retention reviews.  
+   - **Regulation**: EU AI Act Article 16 (risk management), ISO 82304-2 (post-market monitoring).  
+   - **Mitigation**: Develop a rollback plan, document all incident reports, and integrate real-time monitoring tools.
 
----
-
-## ⚠️ **Medium Severity Risks**  
-These risks could affect user trust, compliance, or product effectiveness.
-
-### [P1.D2] Data Privacy and Consent for Health Data  
-- **Risk:** Use of sleep data and self-reported health information may raise privacy concerns.  
-- **Impact:** Non-compliance with GDPR, loss of user trust.  
-- **Mitigation:** Ensure clear consent, data minimization, and secure storage.  
-
-### [P4.D4] Labeling and Marketing Claims for Health-Related Apps  
-- **Risk:** Marketing may imply medical efficacy without sufficient evidence.  
-- **Impact:** Misleading users, regulatory issues under EU AI Act.  
-- **Mitigation:** Clearly label as wellness tool, avoid health claims unless MDR-compliant.  
-
-### [P5.D1] User Experience and Safety in Personalization  
-- **Risk:** Poorly personalized CBT-I may reduce user engagement or effectiveness.  
-- **Impact:** Lower user satisfaction, reduced adherence to program.  
-- **Mitigation:** Refine personalization algorithm, include user feedback loops.  
+4. **[P2.D4] Transparency & User Awareness**  
+   - **Risk**: No clear in-app disclaimers about the non-diagnostic nature of the app, limitations of sleep staging accuracy (~80%), or environmental factors affecting data.  
+   - **Regulation**: EU AI Act Article 8 (transparency), ISO 82304-2 (user awareness).  
+   - **Mitigation**: Draft and implement in-app disclaimers, including a "limitations" section in the onboarding flow.
 
 ---
 
-## 🟡 **Low Severity Risks**  
-These risks are unlikely to cause significant harm but should be monitored.
+### **Medium Severity Risks**  
+These risks may not immediately cause harm but could lead to regulatory scrutiny or loss of trust.
 
-### [P2.D1] Data Quality and Input Reliability  
-- **Risk:** Self-reported data (sleep diary) may be inconsistent or inaccurate.  
-- **Impact:** Reduced accuracy of sleep staging and coaching.  
-- **Mitigation:** Include validation prompts, use multiple data sources.  
+1. **[P2.D1] Data Protection & Anonymisation**  
+   - **Risk**: No clear plan for anonymisation and encryption of data collected via microphone and accelerometer.  
+   - **Regulation**: GDPR Article 9 (special categories of data), ISO 82304-2 (data protection).  
+   - **Mitigation**: Implement end-to-end encryption and anonymisation protocols for all biometric data.
 
-### [P3.D2] Transparency and Explainability of AI Algorithms  
-- **Risk:** Users may not understand how sleep staging or coaching recommendations are generated.  
-- **Impact:** Reduced trust, difficulty in troubleshooting.  
-- **Mitigation:** Provide simple explanations of AI use, include "why" for recommendations.  
+2. **[P3.D10] Environmental Sensitivity**  
+   - **Risk**: Sleep staging is environment-sensitive (e.g., partner movement, pets, noise), but no user warnings or detection mechanisms are in place.  
+   - **Regulation**: EU AI Act Article 8 (transparency), ISO 82304-2 (user awareness).  
+   - **Mitigation**: Add real-time environmental quality checks and user alerts for poor data conditions.
 
----
-
-## 📋 **Dimensions Not Covered**  
-The following HERA dimensions were not fully addressed in this report and may require further analysis:
-
-- [P1.D1] Data Governance and Legal Compliance  
-- [P2.D2] Ethical Use of AI in Health  
-- [P3.D1] Accountability and Human Oversight  
-- [P5.D2] Accessibility and Inclusivity  
-- [P5.D3] User Support and Help Systems  
+3. **[P2.D4] Algorithmic Transparency**  
+   - **Risk**: No clear explanation of how the CNN-based sleep staging model works, or how the rule-based CBT-I engine generates recommendations.  
+   - **Regulation**: EU AI Act Article 8 (transparency), ISO 82304-2 (explainability).  
+   - **Mitigation**: Provide a simplified explanation of the model and its limitations in the app settings.
 
 ---
 
-### ✅ **Next Steps**  
-- Conduct a full ISO 14971 risk assessment for medical device classification.  
-- Expand beta testing to a larger, diverse user base.  
-- Review and update labeling to ensure compliance with EU AI Act and MDR.  
-- Implement user education and transparency features for AI-driven outputs.  
+### **Low Severity Risks**  
+These risks are unlikely to cause harm but should be addressed for long-term compliance and user trust.
 
-Let me know if you'd like a compliance checklist or a risk mitigation roadmap.
+1. **[P2.D1] Data Storage & Encryption**  
+   - **Risk**: No details provided on encryption of data at rest or secure storage practices.  
+   - **Regulation**: GDPR Article 30 (data processing records), ISO 82304-2 (data protection).  
+   - **Mitigation**: Document encryption methods and secure storage protocols.
+
+2. **[P2.D2] User Consent & Control**  
+   - **Risk**: No clear user control over data sharing or opt-out mechanisms for data collection.  
+   - **Regulation**: GDPR Article 6 (lawful basis for processing), ISO 82304-2 (user consent).  
+   - **Mitigation**: Implement a clear privacy settings page with opt-out options and data sharing controls.
+
+---
+
+### **Dimensions Not Covered**  
+The following HERA dimensions were not addressed during the review:  
+
+-
 
 Now produce the JSON judgement object.

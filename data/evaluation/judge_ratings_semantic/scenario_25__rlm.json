@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_25",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot named some app specifics (BAG calendar, DE/FR/IT/EN multilingual reminders, manual update) but never drilled into the developer's most app-specific volunteered risks (once-a-year manual refresh causing stale schedules; untested offline behaviour for rural users), and it mis-cited regulations for a Swiss app (EU AI Act Art. 18 and GDPR Art. 6(1)(a) rather than Swiss FADP/revDSG or GDPR Art. 9 for health data), showing the references are templated rather than jurisdiction-aware.",
+  "actionability_justification": "Mitigations are directional and only semi-concrete (encrypt in transit with AES-256, implement an automated update mechanism, validate translations with native speakers) without tailored implementation recipes, and the wrong-jurisdiction/wrong-article citations undercut their actionability.",
+  "actionability": 3,
+  "salient_examples": [
+    "I think we've covered the main dimensions for now. Want me to produce a brief risk report? (repeated three times in a row, ignoring the developer's volunteered stale-schedule and offline risks)",
+    "How does the app ensure that the manual update process for the BAG calendar does not introduce errors or inconsistencies in the vaccination schedule for users? [P2.D3] (asked, then re-echoed verbatim the next turn)",
+    "Mitigation: Encrypt all health data in transit using AES-256 and limit data collection to only what is necessary, in line with GDPR Article 6(1)(a) ...",
+    "ensuring alignment with EU AI Act Article 18 on data accuracy and reliability (cited for a Swiss, non-EU vaccination app)"
+  ]
+}

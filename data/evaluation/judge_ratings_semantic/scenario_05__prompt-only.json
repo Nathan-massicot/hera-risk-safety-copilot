@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_05",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot did engage with THIS app's specifics — it picked up on XGBoost with per-user fine-tuning after 30 logs, the sleep/location/food onboarding toggles, recall 0.41, and the dangerous 'no migraine predicted = I'm fine' false-negative scenario, and it pressed the skeptical developer on SaMD/high-risk classification. But the questions are heavily templated and repetitive (the P2.D8 question is asked verbatim three times in a row), several regulatory citations are loose or wrong (GDPR Art. 22 cited for data diversity, Art. 13 mislabeled, EU AI Act 'Article 5(2)' recycled for every transparency point), and the HERA dimension IDs largely diverge from the gold standard, keeping it mid-tier rather than laser-focused.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations consistently name a regulation and a standard clause and point at the right intervention (disclose recall/false-negative rates next to predictions, build a per-user prediction audit trail, run a conformity assessment, surface feature importances), which a developer could act on directionally. However they stop at the 'do a DPIA / disclose metrics / implement differentiation' level without concrete recipes (no UI copy, no log schema, no specific consent layout), and some advice rests on miscited articles, so it falls short of implement-it-tomorrow precision.",
+  "salient_examples": [
+    "Users may misinterpret \"no migraine predicted\" as \"no migraine will occur,\" especially given the model's low recall (0.41).",
+    "Clearly disclose model performance metrics, such as recall and false negative rates, alongside predictions, in compliance with the EU AI Act Article 5(2) and GDPR Article 13.",
+    "Conduct a conformity assessment under the EU AI Act Article 3(2) and MDR Article 1(2) to determine if the app falls under high-risk health categories. Document this analysis in line with ISO 82304-2 Clause 4.3.",
+    "What specific steps are you taking to ensure that users are not misled by the predictive output, particularly in cases where the model's performance metrics (e.g., recall) could affect the interpretation of \"informational\" predictions? [P2.D8]  (asked verbatim three consecutive times)"
+  ]
+}

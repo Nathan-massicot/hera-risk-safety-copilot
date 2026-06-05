@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_02",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "Questions name the app's specifics (EU AWS backups, 30-day deletion) but fixate repetitively on the backup/encryption topic and ignore the richest developer-volunteered threads: missing DPIA/DPO, EU-to-Switzerland SCCs, MDR Rule 11 Class I->IIa reclassification, Notified Body engagement, and the no-mandatory-push safety gap. The final report surfaces only 3 risks and misses almost all gold-standard dimensions, citing regulations (GDPR Art. 17/30, ISO 82304-2) only in templated, loosely-attached ways.",
+  "actionability_justification": "Mitigations are mostly directional ('implement a secure deletion protocol', 'conduct a formal threat model', 'develop a failure-mode analysis') with regulation labels appended but no concrete recipe a developer could execute tomorrow; it never tells them how to size IIa PMS, draft SCCs, or build the consent/notice artifacts the scenario clearly demanded.",
+  "actionability": 2,
+  "salient_examples": [
+    "How does the app ensure the security and integrity of encrypted backups stored in the EU AWS region... [P2.D3]",
+    "What measures are in place to ensure the secure handling of data during the 30-day period after account deletion... [P7.D1] (asked verbatim twice)",
+    "**Mitigation**: Implement a secure deletion protocol compliant with GDPR Article 17, ensuring data is irreversibly erased from storage within 30 days of account deletion.",
+    "Not yet covered: P1.D2, P4.D4, P5.D3, P6.D2"
+  ]
+}

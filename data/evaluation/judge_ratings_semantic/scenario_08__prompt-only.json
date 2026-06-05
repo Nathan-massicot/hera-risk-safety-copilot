@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_08",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "Questions name a few of this app's choices (optional weight data, the 88%/80% LSTM risk-flagger, CBT coping suggestions, the 5-patient co-design panel) but follow one rigid template ('What specific steps have you taken to ensure X [PX.DX], and how does this align with [regulation]?') and largely ignore the developer's concrete disclosures, e.g. that the clinician is not looped in at consent. The HERA dimension IDs cited (P2.D3, P3.D10-D12) do not match the gold-standard set and GDPR Art. 30 is repeatedly misapplied to confidentiality/access control, so the specificity is shallow and partly inaccurate.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations stay directional rather than implementable: 'conduct a prospective clinical trial', 'establish a formal ethics review board', 'implement end-to-end encryption', 'real-time performance monitoring tools' name what to do but give no recipe. None specify the lawful basis for health data (e.g., GDPR Art. 9(2)(a)), a consent-UI structure, escalation thresholds, or retention durations a developer could ship tomorrow.",
+  "salient_examples": [
+    "What specific validation processes have you conducted to ensure the risk-flagging algorithm's performance metrics [P3.D10] are reliable and transparent, and how does this align with the EU AI Act's requirements for high-risk systems?",
+    "What specific measures have you implemented to ensure the confidentiality and integrity of users' meal logs and emotional data ... and how does this align with GDPR Article 30?",
+    "Mitigation: Implement granular consent options for data types (e.g., meal logs, emotional data, weight), with clear explanations of how each is used, in line with GDPR Article 6 and the EU AI Act's transparency requirements.",
+    "Mitigation: Integrate real-time escalation mechanisms (e.g., push notifications to clinicians or emergency contacts) during flagged acute episodes, aligned with EU AI Act Article 5 and ISO 82304-2."
+  ]
+}

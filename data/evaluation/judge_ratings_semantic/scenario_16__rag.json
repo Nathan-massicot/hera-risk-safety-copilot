@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_16",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot anchors to MediCall's actual jurisdictions, eHealth systems (DEP/DMP), and cites named regulations and articles (PHC L1110-4, MedPA, PHC R1112-7, GDPR Art. 17(3)(b), 9(2)(a), 35, 37, 13(1)) with jurisdiction-specific retention (10y CH / 20y FR), but the questioning is heavily recycled near-verbatim and the final report mislabels HERA dimensions and wrongly frames stored video as AI Act Art. 5 biometric processing, betraying pattern-matching over precise grounding.",
+  "actionability": 3,
+  "actionability_justification": "A few mitigations are concrete (granular consent log with timestamps/purpose-specific opt-in, patient-specific encryption keys, SCCs for transfers), but most are directional checklist items ('Conduct a DPIA under Art. 35', 'Review retention periods', 'Conduct regular security audits and penetration testing', 'Conduct user testing for consent screens') that name the goal without an implementable recipe.",
+  "salient_examples": [
+    "Implement a granular consent log with timestamps, purpose-specific opt-in, and audit trails. Reference GDPR Art. 9(2)(a) and [P2.D3].",
+    "What specific legal basis have you established to retain consultation data for 10 years in Switzerland and 20 years in France, and how does this align with the GDPR’s Art. 17(3)(b)... (PHC R1112-7 in France and MedPA in Switzerland)?",
+    "Video recordings may be considered biometric data under the AI Act (Art. 5)... ensure accountability mechanisms are in place as per the AI Act [P4.D10].",
+    "Conduct regular security audits and penetration testing to ensure data security. Reference GDPR Art. 30 and [P3.D3]."
+  ]
+}

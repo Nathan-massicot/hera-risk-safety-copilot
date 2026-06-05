@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_06",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot does anchor to real RxBuddy specifics (cloud OCR thumbnails, GPT-4o as a downstream GPAI integrator, DrugBank rule-based severity scoring, Class IIa MDR, the 94%/91% metrics) and names relevant regimes (SDPA, Loi Informatique et Libertes, MDR Art. 10, ISO 82304-2), but it is overwhelmingly templated: nearly every assistant turn recycles the same 'What specific risks arise from X, and how do you ensure compliance with the EU AI Act's transparency and accuracy requirements [P3.D12] and ISO 82304-2's safety standards' formula, ignores the developer's deeper answers, and repeatedly cites HERA IDs that don't match the gold standard (P3.D12/D10/D9 vs expected P3.D1/D5) plus a garbled 'ISO 8230,4-2'.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay directional rather than implementable: 'Encrypt thumbnails, implement strict access controls', 'define confidence thresholds for UI blocking', and 'Develop a comprehensive risk management file under MDR Article 10' give no concrete recipe, parameter, lawful-basis article, or UI pattern a developer could ship tomorrow. The repeated questions never resolve into how-to steps, and the final report's mitigations largely restate each risk in imperative form.",
+  "salient_examples": [
+    "What specific risks arise from using a rule-based severity scoring system for drug interactions without integration with a certified clinical decision support system (CDSS), and how do you ensure compliance with the EU AI Act's transparency and accuracy requirements [P3.D12] and ISO 82304-2's safety and traceability standards for medical software?",
+    "and how do you ensure compliance with the EU AI Act's transparency, accountability, and risk management requirements [P3.D12] and ISO 8230,4-2's safety and traceability standards",
+    "Mitigation: Encrypt thumbnails, implement strict access controls, and ensure compliance with SDPA and French Data Protection Act.",
+    "Mitigation: Develop a comprehensive risk management file under MDR Article 10 and ISO 82304-2, including detailed risk analysis and traceability."
+  ]
+}

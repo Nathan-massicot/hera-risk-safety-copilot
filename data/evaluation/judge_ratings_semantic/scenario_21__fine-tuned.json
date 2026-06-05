@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_21",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is fully mode-collapsed: every turn just echoes the app description verbatim hundreds of times with a single hallucinated tag [P2.D3], never engaging with any specific disclosure (gamified streaks, age-blind absolute threshold, opt-in clinician escalation, missing child 'my data' view). It is entirely generic and degenerate, never referencing THIS developer's choices or any applicable regulation/article.",
+  "actionability": 1,
+  "actionability_justification": "There is zero actionable content: no questions, no recommendations, no recipes, and the requested structured risk report degenerates into the same repeated sentence under a single [P1.D2] tag. A developer could implement nothing from this output.",
+  "salient_examples": [
+    "**[P2.D3] BreathEasy** is a Bluetooth-inhaler companion for paediatric asthma. Tracks rescue-inhaler usage... (repeated verbatim dozens of times every turn)",
+    "**EXACTLY ONE targeted reflection question** — the single most important one given what the developer just told you: (followed only by another copy of the description, never an actual question)",
+    "paedronic asthma (corrupted/hallucinated text replacing 'paediatric', signalling token-level degeneration)",
+    "This is a **[P1.D2]** risk — over-use detection is too rigid... which is a **[P1.D2]** severity risk. (the entire 'risk report' is one sentence repeated, no severity grouping, no uncovered-dimensions list)"
+  ]
+}

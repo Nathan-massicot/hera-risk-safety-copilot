@@ -82,6 +82,12 @@ class ChatIn(BaseModel):
     content: str = Field(min_length=1, max_length=8000)
 
 
+class StreamChatIn(BaseModel):
+    # `content` is required for mode="chat"; ignored (may be empty) for mode="report".
+    content: str = Field(default="", max_length=8000)
+    mode: str = Field(default="chat", pattern="^(chat|report)$")
+
+
 class ChatOut(BaseModel):
     user_message: MessageOut
     assistant_message: MessageOut

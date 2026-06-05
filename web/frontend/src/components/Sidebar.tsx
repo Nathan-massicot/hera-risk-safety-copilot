@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 
 const links = [
-  { to: "/onboarding", label: "Onboarding", icon: "1" },
-  { to: "/diagram", label: "Regulation diagram", icon: "2" },
-  { to: "/chat", label: "Chatbot", icon: "3" },
+  { to: "/diagram", label: "Regulation diagram" },
+  { to: "/decision-tree", label: "Decision tree" },
+  { to: "/chat", label: "HERA Chatbot" },
 ];
 
 export default function Sidebar() {
@@ -40,14 +40,6 @@ export default function Sidebar() {
               ].join(" ")
             }
           >
-            <span
-              className={
-                "flex h-6 w-6 items-center justify-center rounded text-xs font-bold " +
-                "bg-ink-800 text-ink-300 group-[.active]:bg-white/20"
-              }
-            >
-              {l.icon}
-            </span>
             {l.label}
           </NavLink>
         ))}

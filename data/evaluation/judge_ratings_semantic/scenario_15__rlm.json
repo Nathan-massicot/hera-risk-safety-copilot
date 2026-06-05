@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_15",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot does reference some app specifics (the peer feed relapse confessions, self-reported check-in, NHS Stop Smoking / Tabac-Info-Service) but it is highly repetitive, re-asking the same questions verbatim and ignoring most of the developer's answers (e.g. it never engaged with the gamification/over-engagement risk, self-report plausibility, or the missing private-by-default control beyond a one-line mitigation). Regulatory citations are sparse, partly mis-mapped (cites EU AI Act Art. 8(1) for a non-AI hand-off, GDPR Art. 6(1)(e) public-task basis for a consent-based feature), and most dimension tags are wrong (P7.D1 repeatedly) versus the gold standard.",
+  "actionability": 2,
+  "actionability_justification": "The final report gives a few directional mitigations ('implement a rule to route users to services after failed milestones', 'enable private by default and per-post audience control') but stops at the headline level with no concrete recipe, threshold, UI/consent design, or implementation steps. The legal hooks attached are partly incorrect, so a developer following them could document the wrong lawful basis rather than ship something correct tomorrow.",
+  "salient_examples": [
+    "How does QuitNow ensure that users' sensitive relapse discussions in the peer support feed are protected from unauthorized access or misuse? [P3.D2] (asked verbatim twice in a row)",
+    "Implement a rule to route users to NHS Stop Smoking or Tabac-Info-Service after a defined period of failed milestones, in line with Article 8(1) of the EU AI Act, which requires systems to ensure human oversight",
+    "Enable 'private by default' posting and per-post audience control for the peer feed, in compliance with GDPR Article 9 for processing of sensitive personal data.",
+    "Formalize data usage policies and ensure third-party sharing is restricted to anonymous research donations only, in line with GDPR Article 6(1)(e) for lawful processing based on user consent."
+  ]
+}

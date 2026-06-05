@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_16",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "Questions do anchor to MediCall's actual choices (pooled GPs / no 'same doctor' option, dropped call ending in an e-prescription, DEP/DMP per-call audit, video-recording data residency for CH vs EU), so it is not generic boilerplate. But it never drills deeper: it largely restates the user's own admissions as questions, re-asks the same DEP/DMP + IHE XDS/EPDG question three times (once as a non-sequitur after the retention answer), and the regulatory citations it does add in the report are frequently wrong or irrelevant (EU AI Act Art. 18 / MDR Annex I for contraindications; GDPR Art. 45 for residency; ISO 82304-2 for encryption keys), undercutting the precision a 4-5 requires.",
+  "actionability_justification": "Most outputs are interrogative ('What protocols are in place...', 'How does MediCall ensure...') rather than instructions, and the report's mitigations stay directional ('develop and document a standardized list', 'conduct a third-party audit', 'implement region-specific encryption solutions') without recipe-level steps a developer could implement tomorrow. The one concretely implementable item is patient-specific encryption keys, but it is rated low severity and paired with a mismatched citation.",
+  "actionability": 2,
+  "salient_examples": [
+    "How does MediCall ensure that the audit logs capture all DEP/DMP exchanges at the per-call level, including technical conformance to IHE XDS / Swiss EPDG profiles? [P7.D2]",
+    "Mitigation: Develop and document a standardized list of contraindications for teleconsultation aligned with EU AI Act Article 18 and MDR Annex I, to be reviewed annually by clinical governance.",
+    "Mitigation: Implement region-specific encryption and data storage solutions, ensuring all recordings and data remain within CH and EU jurisdictions, with patient-specific encryption keys as per ISO 82304-2.",
+    "I think we've covered the main dimensions for now. Want me to produce a brief risk report?"
+  ]
+}

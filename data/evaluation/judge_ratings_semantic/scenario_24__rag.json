@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_24",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The copilot repeatedly grounds its analysis in VoiceMind's actual choices (wav2vec model, AUROC 0.82 on N=400 vs PHQ-9, 7-day audio / 1-year embedding retention, waiting-room consent, black-box flag with no feature attribution) and cites precise provisions (MDR Rule 11, AI Act Annex III / Art. 14-15, GDPR Art. 9(2)(g)/(h), Art. 4(11), Art. 17). It falls short of a 5 because it fabricates non-gold HERA dimension IDs (P2.D11, P3.D6, P2.D10, P3.D12) and applies some regulatory citations loosely (e.g. AI Act 'Art. 50', 'Art. 5(1)(c)').",
+  "actionability": 4,
+  "actionability_justification": "Most suggestions are concrete enough to start implementing tomorrow: SHAP/LIME feature attribution surfacing pitch variability and speech rate, language detection that refuses out-of-scope scoring, subgroup analysis by accent/age/sex/dialect, RBAC plus audit logging plus a secure deletion path for Art. 17 requests, switching the lawful basis to Art. 9(2)(h), and a private 'No, thanks' refusal path. It stops short of a 5 because several recommendations remain at the 'conduct an assessment / justify / document this' level rather than fully specified UI or architectural recipes.",
+  "salient_examples": [
+    "Consider integrating model-agnostic explainability tools (e.g., SHAP, LIME) to surface key voice features like pitch variability or speech rate ... This will align with Art. 14(2) of the EU AI Act",
+    "Conduct subgroup analysis by accent, age, sex, and dialect to identify performance gaps ... Implement mechanisms to detect and refuse scoring for voices outside your validated profile",
+    "Evaluate whether a clinical/health-provision basis (Article 9(2)(g) or (h) GDPR) is more appropriate ... especially in a clinical setting where the processing of health data is integral to care delivery",
+    "This lack of explainability raises significant risks under [P2.D11] AI transparency and explainability and [P3.D6] Clinical safety and human oversight"
+  ]
+}

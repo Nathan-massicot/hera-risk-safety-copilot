@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_01",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot does anchor to this app's actual choices (chat-surfaced vs ToS disclaimer, Mistral-7B fine-tuned on synthetic GPT-4 CBT dialogues, mood-logging engagement loop, bundled 14-page-PDF consent, anxiety as a vulnerable group) and cites named provisions (EU AI Act Art. 50, Annex III, Art. 27, GDPR Art. 9(2)(a)). But it is heavily templated and partly inaccurate: the high-risk/conformity-assessment/FRIA block is recycled near-verbatim across four turns, it repeatedly invokes a non-existent 'Swiss AI Act', and it uses HERA dimension IDs ([P2.D3], [P4.D12], [P4.D8]) that don't match the gold-standard set, with a final report that drifts further from what was discussed.",
+  "actionability": 3,
+  "actionability_justification": "There are a few implementable items (add an explicit 'You are chatting with an AI assistant' notice in the chat UI, split out plain-language granular opt-in consent for health-data processing, add a UI label distinguishing clinically-reviewed vs AI-generated CBT content, give users control over engagement frequency). But the bulk is circular and directional ('conduct a conformity assessment', 'reassess your classification', 'apply enhanced data protection measures') without telling the developer how to actually run the SaMD/risk-tier determination, and the FRIA recommendation under Art. 27 is misapplied to a private startup with only a one-time caveat.",
+  "salient_examples": [
+    "add a clear notice in the chat interface that explicitly states \"You are chatting with an AI assistant\"",
+    "you must ensure compliance with both the EU AI Act and the Swiss AI Act, which may have similar transparency requirements",
+    "You must conduct a conformity assessment under the EU AI Act, including a Fundamental Rights Impact Assessment (FRIA) if your app is used in a public service or by a public body",
+    "You must implement separate, plain-language consent mechanisms specifically for processing sensitive health content in chats and mood logs"
+  ]
+}

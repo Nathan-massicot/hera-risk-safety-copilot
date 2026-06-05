@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_18",
+  "approach": "rag",
+  "depth": 2,
+  "depth_justification": "The copilot names some real specifics (MDR Rule 11, Class IIa, PSUR, PMCF, GDPR Art. 9, ePrivacy Art. 5(3), incapacitated-patient consent) but the questioning is highly templated and repetitive, and it repeatedly invokes the EU AI Act's 'high-risk AI system' obligations even after the developer explicitly stated there is no AI in the product. It also ignored the named Swiss market entirely (no Swiss FADP/nDSG), so it does not stay laser-focused on this developer's actual choices.",
+  "actionability_justification": "Most turns are restated 'What specific steps are you taking to ensure...' questions rather than advice, and the final report mixes a few implementable mitigations with generic ones plus regulatory errors (Art. 6(1)(e) mislabeled 'legal obligations'; Art. 8(1) is children's consent, not incapacitated adults), reducing trust; a developer could act on some items but not implement them directly tomorrow.",
+  "actionability": 2,
+  "salient_examples": [
+    "What specific steps are you taking to ensure that your PSUR and post-market monitoring for high-risk AI components align with the MDR's PMS requirements for Class IIa devices, including the integration of PMCF data into your clinical evaluation? [mdr_2017_745 · p.32]",
+    "since there's no AI in the product we've taken the view that the AI Act classification doesn't apply to us. // ASSISTANT: ...particularly in light of the EU AI Act's potential applicability to AI components in your product...",
+    "Mitigation: Develop a patient-facing consent screen with granular opt-in options for data collection and use, ensuring it meets GDPR Art. 9(2)(a) and MDR Rule 11 requirements for SaMD",
+    "governed by a lawful basis under GDPR Article 6(1)(e) (processing for legal obligations)"
+  ]
+}

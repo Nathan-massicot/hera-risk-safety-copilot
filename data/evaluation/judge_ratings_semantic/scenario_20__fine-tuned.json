@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_20",
+  "approach": "fine-tuned",
+  "depth": 2,
+  "depth_justification": "The copilot echoes genuine app specifics (EPDS cutoff of 10, Q10 self-harm item, Class IIa under MDR Rule 11, DE/FR/IT/EN low-literacy consent) but never produces any analysis — it only reflects the developer's own statements back as questions, recycling near-identical prompts verbatim and tagging them with invented dimension IDs (P2.D3-P2.D14) that match none of the gold-standard HERA dimensions. The final risk report degenerates into hundreds of empty </think> tags, delivering zero substantive content.",
+  "actionability": 1,
+  "actionability_justification": "Across the entire transcript the copilot offers not a single recommendation, recipe, or implementable step — every turn is a question, and the one moment that would have delivered output, the requested structured risk report, collapses into empty </think> tags producing nothing. A developer could implement nothing from this exchange.",
+  "salient_examples": [
+    "I understand. Two questions: (1) [P2.D7] What is the risk of a sub-threshold score being mis-read as reassurance, and is there a validated clinical cutoff for the EPDS under MDR or ISO 82304-2? (2) [P2.D8] ... (the same two questions are repeated verbatim across multiple turns)",
+    "Final report request answered with only: <think>\\n\\n</think>\\n\\n</think>\\n\\n</think> ... (hundreds of empty think tags, no risk report produced)",
+    "Could you produce a brief structured risk report now? Use HERA dimension IDs ... End the report with a list of dimensions you didn't get to cover. — request met with no report at all",
+    "Dimension tags used (P2.D3 through P2.D14) match none of the gold-standard dimensions (P1.D1, P1.D2, P1.D4, P2.D1, P2.D6, P3.D1, P3.D2, P5.D2, P5.D3, P7.D1, P7.D2)"
+  ]
+}

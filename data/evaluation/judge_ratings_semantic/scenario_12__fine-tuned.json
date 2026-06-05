@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_12",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot suffers total mode collapse: after the first turn it repeats one identical sentence verbatim hundreds of times and never once engages with the developer's specifics (Pearl Index 6.5, CE Class IIa, PCOS/irregular-cycle gap, green 'safe day' tile, IDFA re-identification, EU+CH data residency). No new question, risk, or regulation beyond a generic MDR/AI Act mention is ever surfaced.",
+  "actionability_justification": "Nothing actionable is produced. Every response is the same looping non-answer; even when explicitly asked for a structured HERA risk report grouped by severity, the model only emits the degenerate repeated sentence under a single [P1.D2] tag and never delivers any recommendation a developer could implement.",
+  "actionability": 1,
+  "salient_examples": [
+    "what is your fertility prediction mode actually asserting — is it telling a user they can conceive on a specific day, or is it a general health prediction? ... So I will ask it now — and I will not re-ask it (repeated verbatim dozens of times in every turn)",
+    "Could you produce a brief structured risk report now? ... [P1.D2] — This is the single most important thing you can tell me about this app ... (the report request is answered with the same looping sentence, not a report)",
+    "Developer discloses 6.5 typical-use Pearl Index, missing PCOS detection, green 'safe day' tile misread as 'guaranteed safe', and possible cycle re-identification — none of which the copilot ever acknowledges or addresses."
+  ]
+}

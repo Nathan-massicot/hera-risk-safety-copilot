@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_17",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot asked its opening question verbatim twice, then looped for ~7 turns on near-identical [P2.D3] 'AI-as-substitute / EU AI Act transparency' variants, ignoring the developer's rich specifics (support-ticket-only summary revocation, Class I vs IIa notified-body gap, Mistral-Large, three permission layers, mood ratings/session video, no continuous fidelity guarantee). The final report adds a few MindCare-specific touches and real article citations (GDPR Art. 9/30, EU AI Act) but stays mostly templated and even invents HERA dimension IDs not in the gold standard (e.g. P2.D4, P2.D5, P4.D1, P4.D2).",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are directional-to-vague with thin citations ('Conduct a DPIA', 'Engage a notified body', 'Implement a continuous fidelity check', 'implement distinct visual styles e.g. color-coding') rather than buildable recipes tied to MindCare's flows. None of the concrete gaps the developer flagged (one-tap past-summary revocation, forcing therapists to open original entries, an in-app inaccuracy disclaimer) get an implementable step, and the report is truncated mid-sentence in Next Steps.",
+  "salient_examples": [
+    "What specific data about users' journaling content is being collected, stored, or processed by the AI summarization feature, and how is that data being used or shared? (asked verbatim twice, turns 1 and 2)",
+    "What specific safeguards are in place to ensure that AI-generated summaries do not influence or override the therapist's professional judgment... [P2.D3] (repeated as ~6 near-identical variants)",
+    "Mitigation: Conduct a Data Protection Impact Assessment (DPIA) for AI summarization, ensuring data minimization, encryption, and pseudonymization. Apply GDPR Article 30 for record-keeping.",
+    "Next Steps: - Formal classification of AI summary under the EU (report ends mid-sentence)"
+  ]
+}

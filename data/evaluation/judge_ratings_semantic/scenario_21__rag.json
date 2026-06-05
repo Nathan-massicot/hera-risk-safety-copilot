@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_21",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The copilot repeatedly references BreathEasy's specific choices (parent-dashboard-first escalation, opt-in pulmonologist sharing, the streak gamification mechanic, the missing 'my data' view for 12+, self-declared parental age) and cites precise regulation (GDPR Art. 9(2)(a), Art. 8(2), Recital 58, ePrivacy Art. 5(3), MDR). It falls short of a 5 because several questions are near-verbatim repetitions of the same 'explicit/granular consent under Art. 9(2)(a) and ePrivacy 5(3)' frame, and it never resolved the device-classification thread it opened with.",
+  "actionability": 3,
+  "actionability_justification": "A few mitigations are implementable (parent-provided birthdate + algorithmic age check; restructure streaks so they don't reward rescue-inhaler logging; define retention periods with automated deletion on withdrawal), but most advice stays directional ('ensure granular consent', 'implement clinical oversight', 'document security measures', 'restrict data collection to only what is necessary') without concrete recipes.",
+  "salient_examples": [
+    "Mitigation: Implement age verification (e.g., parent-provided birthdate + algorithmic age check) and child-friendly consent with granular opt-in for each data purpose.",
+    "Risk: The streak mechanic rewards inhaler logging events, potentially nudging children to use rescue inhalers unnecessarily. ... Mitigation: Restructure the gamification logic to avoid incentivizing rescue inhaler use.",
+    "Does BreathEasy's lack of a 'my data' view for children aged 12+ who have given assent ... violate the child's right to data portability and self-determination under [P2.D4] and [P3.D2]?",
+    "Mitigation: Document and communicate security measures (e.g., encryption, access controls) in line with [P3.D2] and [P5.D1] (security)."
+  ]
+}

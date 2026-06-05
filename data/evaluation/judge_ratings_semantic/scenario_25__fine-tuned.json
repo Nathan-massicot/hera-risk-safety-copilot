@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_25",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot never engages with this app's actual choices: it loops a single boilerplate paragraph about the BAG calendar/monetization regardless of what the developer says, ignores the disclosed stale-update, offline, and minimal-data details, and even cites wrong/irrelevant regulations (GDPR Art. 5, MDR Art. 1) and a single repeated dimension [P2.D3]. The final 'report' degenerates into copy-pasted [P1.D1]-[P1.D7] blocks all asserting a false premise (that the app makes medical recommendations beyond BAG), so it is entirely generic and partly fabricated.",
+  "actionability": 1,
+  "actionability_justification": "The only recurring 'action' is the tautological and detached 'stop manually copying the calendar' / 'stop claiming the app is free,' repeated verbatim no matter the question, with no implementable steps, schema, or correct legal basis. No competent developer could act on this output, and following the report's fabricated claim that they make unsupported medical recommendations would be actively misleading.",
+  "salient_examples": [
+    "The HERA dimension ID for this risk is [P2.D3]: the app is using a stale, manually updated calendar ... this is a risk to the app's regulatory position under the GDPR (GDPR Art. 5), and it is a risk to the family's health under the MDR (MDR Art. 1). (repeated verbatim across multiple unrelated user turns)",
+    "The Swiss BAG calendar is an official Swiss government calendar, and it is published in the official Swiss languages (DE/FR/IT) plus English — so the claim that the app is available in DE/FR/IT + EN is accurate and does not require amendment. (looped dozens of times in the first reply)",
+    "**[P1.D2]** ... High severity: the app is making medical recommendations beyond the BAG calendar ... The action is to stop making medical recommendations beyond the BAG calendar. (then re-emitted identically for [P1.D1] through [P1.D7])"
+  ]
+}

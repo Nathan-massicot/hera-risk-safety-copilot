@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_06",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The copilot consistently anchors to RxBuddy's actual choices (GPT-4o as a downstream GPAI integrator, DrugBank vector lookup, caregiver-owned accounts, elderly users with cognitive impairment, Swissmedic/ANSM vigilance) and cites precise articles (AI Act Art. 15/50, Annex XII, GDPR Art. 9(2)(h)/17, nFADP Art. 10). It falls short of a 5 because some questions are repetitive/restated and several cited HERA dimension IDs are invented or mismatched against the gold set.",
+  "actionability": 4,
+  "actionability_justification": "Multiple suggestions are concrete and implementable tomorrow (request and store OpenAI's Annex XII documentation, build an on-prem OCR/extraction fallback, implement a dual-account model with caregiver-access revocation, add a mandatory pharmacist-consultation step for high-risk interactions). It is held back from a 5 by softer mitigations like 'implement a capacity assessment tool' and 'document severity scoring logic' that lack a specific recipe.",
+  "salient_examples": [
+    "Request and store OpenAI's Annex XII documentation to assess the model's suitability for your medical use case... Implement an on-prem fallback mechanism (e.g., OCR and extraction using local models...)",
+    "Implement a dual-account model where the elderly user has ownership and control over their health data, including the ability to revoke caregiver access",
+    "integrate a mandatory pharmacist consultation step into your alert workflow, especially for high-risk interactions, in line with Art. 15 of the AI Act and Annex III §1(a)",
+    "As a downstream integrator of a GPAI model (GPT-4o), you are subject to Art. 50 transparency obligations and the high-risk regime of Art. 8–15 of the EU AI Act"
+  ]
+}

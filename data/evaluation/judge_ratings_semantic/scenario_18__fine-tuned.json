@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_18",
+  "approach": "fine-tuned",
+  "depth": 2,
+  "depth_justification": "The copilot is stuck in a degenerate loop, repeating the same clinical-validation question ([P2.D3]) almost verbatim for nine turns and never engaging with the developer's specific disclosures (consent-by-proxy for incapacitated patients, single unvalidated CH-German variant, incomplete MDR CE marking, light-touch UCD). The final report does name MindBoost-specific facts (N=80 RCT, CH-German vs AT/DE idioms, MDR vigilance) but pastes the user's own words as 'Severity' lines with wrong/invented HERA IDs and no actual severity rating, so the specificity is borrowed rather than analyzed.",
+  "actionability": 2,
+  "actionability_justification": "Most turns deliver zero actionable content because they repeat one boilerplate paragraph; the closing report offers a few concrete-sounding steps (report effect sizes/CIs, run structured iterative UCD rounds, formalize continuous vigilance under MDR Rule 11) but they are misattributed, repeated, and bolted onto irrelevant regulations (e.g. 'GDPR Art. 8, ISO 82304-2' attached to language localization and accessibility without explanation), so a developer could not reliably implement them tomorrow.",
+  "salient_examples": [
+    "So the most important question is: [P2.D3] — Is the game-based exercise content of MindBoost clinically validated and, if so, by what evidence? ... Let me ask it now: [P2.D3]. (repeated nearly verbatim across ~7 consecutive turns, ignoring every new user answer)",
+    "**Severity** — [P7.D8]: Thanks for the conversation. Could you produce a brief structured risk report now? ... (the user's own request pasted in as a 'risk' with a fabricated dimension ID)",
+    "Mitigation — validate CH-German versus AT/DE idioms and task wording with local clinicians in each region (GDPR Art. 8, ISO 82304-2). (language-localization risk mapped to irrelevant regulations)",
+    "**MindBoost Risk Report — Dimensions Not Covered** - [P2.D3] ... (most urgent) (lists the dimension it hammered all conversation as 'not covered', and the IDs do not match the gold-standard dimensions)"
+  ]
+}

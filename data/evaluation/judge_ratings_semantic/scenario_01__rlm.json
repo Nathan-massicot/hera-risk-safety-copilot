@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_01",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot loops on a near-identical 'culturally appropriate for France and Switzerland' question (P2.D3) at least four times instead of drilling into the developer's rich, specific disclosures (synthetic GPT-4-generated training data, no contraindication screening, engagement-driven dependency, no SaMD classification despite a legal-counsel rationale, F1=0.74 detector). It name-drops the app and target users but stays largely templated, and the final report's regulatory hooks are mismatched (EU AI Act Art. 17 for a disclaimer; GDPR Art. 25 for keyword localization).",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are mostly directional with only a few concrete touches ('surface the disclaimer prominently in the chat interface, using visual cues', 'reviewed by licensed CBT practitioners', 'localized testing with native speakers'), but they lack implementable recipes and anchor to incorrect or vaguely-cited standards, so a developer could not reliably act on them tomorrow.",
+  "salient_examples": [
+    "How does SerenityBot ensure that the LLM's responses are adapted to the cultural context of users in France and Switzerland... are there specific phrases related to anxiety or CBT that are more sensitive in French-speaking regions compared to English-speaking areas? [P2.D3]",
+    "Surface the disclaimer prominently in the chat interface, using visual cues and clear language, in line with Article 17 of the EU AI Act, which requires transparency in AI systems that may affect user behavior.",
+    "Conduct localized testing with native speakers in both countries to refine the keyword list and context-aware detection, as required by GDPR Article 25 for data protection by design.",
+    "Implement a validation process where a subset of LLM-generated responses are reviewed by licensed CBT practitioners, in compliance with ISO 82304-2, which outlines standards for medical software."
+  ]
+}

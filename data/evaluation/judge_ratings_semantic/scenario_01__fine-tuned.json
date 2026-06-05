@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_01",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot exhibits mode collapse: it repeats the identical templated question ('The fine-tuned LLM (Mistral-7B) is doing what? ... crisis-keyword detector ... interaction with the mood-logging') verbatim across six+ turns, never engaging with the developer's concrete disclosures (10k synthetic GPT-4 dialogues, F1=0.74 detector, 'wellness app' classification dodge, no contraindication screening). The final report invents wrong dimension IDs and even renames the product 'SeraphimBot', so nothing is laser-focused on THIS app.",
+  "actionability": 1,
+  "actionability_justification": "Mitigations are vague platitudes with no implementable recipe: 'Bring a clinical psychologist on board', 'Do a conformity assessment under the EU AI Act', 'Implement contraindication screening at onboarding' — no specific GDPR/AI-Act articles, UI patterns, or screening instruments. The report is internally broken, listing the same dimensions as both covered and 'not covered'.",
+  "salient_examples": [
+    "The fine-tuned LLM (Mistral-7B) is doing what? Is it delivering clinical CBT exercises, or is it making clinical judgments? ... (This is [P2.D3] — the clinical judgment risk; [P2.D5] — the crisis-keyword detector and its interaction with the logging and adaptation.)",
+    "That's a good, honest and useful baseline. Now the most important question, because it touches the heart of the clinical and safety risk:",
+    "[P5.D6] Clinical Psychologist Gap — No clinical psychologist on the team yet, but our CEO is talking to one. (Mitigation: Bring a clinical psychologist on board.)",
+    "Dimensions not covered: [P1.D2] — Clinical evidence vs. AI guidance (UI flaw); [P2.D3] — Clinical judgment risk (LLM reliability)"
+  ]
+}

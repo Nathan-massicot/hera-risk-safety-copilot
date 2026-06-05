@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_23",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The copilot repeatedly references InflamaTrack's actual disclosures (single all-or-nothing research opt-in, direct-identifier-only anonymization, no per-partner opt-out, IBD symptom data) and ties them to precise articles (GDPR Art. 9(2)(a), Art. 9(3), Art. 17/18, Swiss nFADP Art. 5(c), Art. 21/22). It correctly seizes on the developer's own concession about re-linking distinctive stool/bleeding patterns plus medication and EU/CH region. It falls short of 5 because the final report drifts into generic items (DPA under Art. 28, breach notification, DPO) and uses the wrong HERA dimension IDs (P1.D1, P2.D3, etc.) that do not match the gold-standard set.",
+  "actionability": 4,
+  "actionability_justification": "Mitigations are concrete and implementable: implement k-anonymity or irreversible pseudonymization per ISO 82304-2, build granular consent (symptom logs vs. wearable biometrics), create a dynamic consent dashboard, draft an Art. 28 data-processing agreement, and conduct/document a DPIA. These are buildable steps rather than platitudes, though some (DPIA, audit anonymization) remain directional without specifying thresholds (e.g., no concrete k value or audit method), keeping it just below the top tier.",
+  "salient_examples": [
+    "could probably re-link a record from a distinctive stool/bleeding pattern plus a specific medication and the EU/CH region",
+    "Implement granular consent options (e.g., symptom logs vs. biometrics) and ensure the opt-in is clearly separated from basic app usage.",
+    "Conduct a DPIA under GDPR Art. 35 and Swiss nFADP Art. 21 to assess re-identification risks and implement k-anonymity or irreversible pseudonymization per ISO 82304-2.",
+    "Users cannot delete or restrict access to already shared data, violating GDPR Art. 17 and Art. 18. ... Mitigation: Develop a dynamic consent dashboard and consider data erasure mechanisms for past shared data, where feasible."
+  ]
+}

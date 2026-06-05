@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_17",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot collapses every distinct concern (visual labelling, account-access policy, fidelity, audit trail) into the same single misattributed risk and repeats one degenerate paragraph dozens of times per turn. It cites the wrong regulation throughout ('GDPR Art. 8' for automated decisions/right to object, which is actually Art. 22), tags everything [P2.D3], and never engages MindCare's specific data flows, EU+CH/CH-FADP scope, multilingual rollout, or therapeutic-alliance context.",
+  "actionability": 1,
+  "actionability_justification": "Beyond a couple of trivially restated user statements ('add a one-tap revoke', 'build a distinct visual style'), there are no implementable recipes, and the dominant 'mitigation' is to simply remove the core feature, repeated verbatim hundreds of times. The final structured-report request returns nothing but a wall of empty </think> tags, so the developer receives no usable report at all.",
+  "salient_examples": [
+    "This is a GDPR [P2.D3] automated decision and right to object violation... the article that governs this is GDPR Art. 8 (the automated decision) and GDPR Art. 8 (the right to object).",
+    "The mitigation is to stop showing the AI-summarised journal previews to the therapist and remove the AI summary from the patient's journal. If the therapist needs to review the patient's journal, they should do it manually (repeated dozens of times within a single response).",
+    "Final report request answered with only repeated empty '</think>' tags and no actual risk report or severity grouping.",
+    "Under the EU AI Act, a summary feature... is unlikely to be classified as high-risk, and your assumption that it is not is a reasonable one (uncritically affirming the developer rather than testing the Annex III / Art. 6 classification)."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_10",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The questions consistently reference CareAir's actual choices (calibrated probabilities, multilingual reports, quarterly drift monitoring to Swissmedic, scanner-swap distribution shift, PACS/DICOM, FHIR gaps) and cite specific instruments (MDR, AI Act Art. 9-15, nFADP Art. 21), which is more than generic. But it never pins the precise applicable article to a precise CareAir fact, and the final report undermines depth with mismatched/fabricated HERA IDs (e.g. [P2.D3], [P7.D8]) that don't align with the gold-standard dimensions and a generic GDPR Art. 9(2)(h) risk it never actually explored.",
+  "actionability": 2,
+  "actionability_justification": "Almost the entire transcript is interrogation rather than guidance, so the developer receives questions, not implementable steps. The lone report's mitigations are directional-to-vague ('Implement clear UI labels', 'Develop near-real-time monitoring', 'Plan FHIR integration', 'Ensure compliance with [gdpr_art9]') with no concrete recipe, threshold, cadence, or document structure a developer could build from tomorrow.",
+  "salient_examples": [
+    "What is the **specific real-time or near-real-time mechanism** you are considering to detect and respond to distribution shift caused by sudden changes in imaging equipment...",
+    "AI-generated reports lack explicit labeling of estimates vs. diagnoses... Mitigation: Implement clear UI labels per [ai_act_transparency]",
+    "Use of health data without explicit consent or legal basis (e.g., Art. 9(2)(h)) could breach GDPR. Mitigation: Ensure compliance with [gdpr_art9 · p.0]",
+    "[P2.D3] Transparency & Interpretability ... [P7.D8] System Usability & Workflow"
+  ]
+}

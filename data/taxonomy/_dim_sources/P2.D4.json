@@ -1,0 +1,20 @@
+{
+  "dimension_id": "P2.D4",
+  "sources": [
+    {
+      "cite": "[card_data_monetization · p.0]",
+      "title": "Data monetisation / third-party sharing",
+      "why": "Directly governs sharing or selling health data to third parties, requiring explicit, separate, purpose-specific consent for each disclosure."
+    },
+    {
+      "cite": "[card_eprivacy_terminal · p.0]",
+      "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+      "why": "Third-party SDKs and trackers reading device data and transmitting it to advertisers or analytics require prior consent."
+    },
+    {
+      "cite": "[card_gdpr_art9 · p.0]",
+      "title": "GDPR Art. 9 — health data (special category)",
+      "why": "Disclosing special-category health data to any third party needs a valid Art. 9(2) condition, typically explicit consent."
+    }
+  ]
+}

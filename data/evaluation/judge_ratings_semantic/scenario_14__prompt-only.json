@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_14",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot threads SleepWell-specific facts through its questions and report (~80% PSG agreement on N=50, microphone+accelerometer, unvalidated 6-week CBT-I, CNN staging + rule-based prescription engine, app-store update cycle, environmental sensitivity), which lifts it above generic. But the questions are heavily templated ('What steps have you taken to ensure... in line with the EU AI Act's Article X and ISO 82304-2's...'), the regulatory anchoring is repetitive and imprecise (Article 16 mislabelled as 'efficacy' throughout, Article 8 applied loosely), and the founder's most consequential admission — SaMD / MDR Rule 11 classification uncertainty — is only glancingly noted rather than analysed.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are directional gestures with no implementable recipe: 'implement clear in-app labelling', 'conduct in-app efficacy trials', 'develop a rollback plan', 'implement end-to-end encryption and anonymisation protocols', 'add real-time environmental quality checks'. They restate the problem as a goal without specifying a UI/consent pattern, lawful basis, threshold, document template, or process a developer could actually build tomorrow.",
+  "salient_examples": [
+    "What steps have you taken to ensure that crash analytics and monthly retention reviews are compliant with the EU AI Act's Article 16 (risk management) and ISO 82304-2's post-market monitoring requirements...",
+    "**Mitigation**: Implement clear in-app labelling of algorithmic vs clinical content, with user consent for personalisation.",
+    "**Mitigation**: Implement end-to-end encryption and anonymisation protocols for all biometric data.",
+    "**Regulation**: EU AI Act Article 16 (efficacy), MDR Rule 11 (definition of SaMD).  **Mitigation**: Conduct in-app efficacy trials or partner with clinical institutions for validation, and map against MDR Rule 11."
+  ]
+}

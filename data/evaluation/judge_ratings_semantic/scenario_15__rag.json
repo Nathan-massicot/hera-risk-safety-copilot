@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_15",
+  "approach": "rag",
+  "depth": 2,
+  "depth_justification": "Questions name precise regulations (HDS, ISO/IEC 27001:2022, ePrivacy Art. 5(3), GDPR Art. 28) but almost never engage QuitNow's distinguishing features (smoking-cessation health-data sensitivity, craving log, peer social feed, gamification, 8 languages, EU adult smokers); the copilot even repeated the identical HDS question verbatim and tied risks to generic data-host concerns rather than this app's actual data flows.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations are directional compliance boilerplate ('Conduct a DPIA', 'Implement a consent mechanism', 'Establish a DPA', 'Develop a breach response plan') that any health app could paste in; they lack concrete implementation recipes (no consent-UI design, no specific lawful basis under Art. 9(2), no retention schedule), staying at the 'do a DPIA' level.",
+  "salient_examples": [
+    "What specific steps have you taken to ensure that your cloud hosting provider complies with the Health Data Host (HDS) certification requirements in France... (asked verbatim twice, lines 21 and 27, ignoring the user's request to move on)",
+    "Mitigation: Conduct a Data Protection Impact Assessment (DPIA) under GDPR Art. 35 and document the purpose limitation and data minimization practices.",
+    "Mitigation: Implement a consent mechanism that meets GDPR standards (freely given, specific, informed, unambiguous) and block non-essential trackers until consent is obtained",
+    "Your app may involve AI elements (e.g., gamification, peer support) that could be considered high-risk under the Product Liability Directive (PLD)"
+  ]
+}

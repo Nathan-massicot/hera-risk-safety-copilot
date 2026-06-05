@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_11",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot consistently grounds risks in this app's actual choices (the self-picked 20% area-change threshold, the no-alert-as-all-clear failure mode, mole photos with location/date as GDPR special-category data, the wellness-vs-medical-device misclassification, edge cases like new or unphotographed moles), which lifts it above generic. But the precision is partly illusory: it cites 'EU AI Act Article 3(2)' for an app the developer explicitly said has NO AI, repeatedly misattributes MDR Article 12 to clinical evaluation/PMCF, and drifts to HERA IDs (P2.D2, P2.D4, P4.D1/D2, P5.D1) outside the gold set, so the laser-focus a 5 needs is undermined by confidently-wrong labels.",
+  "actionability": 3,
+  "actionability_justification": "Several mitigations are directly implementable, notably the exact warning wording ('No alert does not mean your moles are safe. Always consult a dermatologist...'), spelling out special-category data on the consent screen, and flagging poor-quality images / missing baselines. But the high-severity items stay directional ('conduct a clinical validation study', 'register as a medical device with a Notified Body', 'implement a post-market clinical follow-up system') with no concrete how for a solo founder, and the inaccurate article citations would misdirect a developer acting on them.",
+  "salient_examples": [
+    "Implement clear, prominent warnings in the app that explicitly state: \"No alert does not mean your moles are safe. Always consult a dermatologist for professional evaluation.\"",
+    "Register SkinTrack as a medical device with the relevant Notified Body under MDR Article 13 and EU AI Act Article 3(2) (Definition of AI systems).",
+    "Conduct a clinical validation study with dermatologists and use the results to establish a scientifically justified threshold. This aligns with the EU AI Act's Article 16 (Transparency and Documentation Requirements) and MDR Article 12(1) (Clinical Evaluation).",
+    "Conduct a Data Protection Impact Assessment (DPIA) under GDPR Article 35 and update your consent screen... ensure compliance with GDPR Article 9(2)(a)."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_22",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot got stuck repeating the identical FHIR-resource / EU AI Act Art. 16 question verbatim across six turns, ignoring concrete PainTrack disclosures (free-text recreational drug use surfacing in PDFs, no DPIA/DPO, no affordability policy, offline/shared-device gaps). The final report names a few real specifics (NRS scale, body-map, PDF export, free-text triggers) but the HERA dimension IDs are hallucinated and inconsistent with the gold standard, and citations are misapplied (EU AI Act Art. 16 to FHIR completeness, GDPR Art. 22 to affordability).",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are mostly directional platitudes ('Implement end-to-end encryption', 'Apply strict data minimization principles', 'Complete a documented DPIA and appoint a DPO') with no concrete implementation recipe, UI/config detail, or correctly-mapped lawful-basis documentation a developer could ship tomorrow. The few specific ideas (FHIR resource mapping, PDF fallback) stay at goal level without how-to steps.",
+  "salient_examples": [
+    "What specific FHIR resources (e.g., Observation, Patient, Encounter) are used to represent pain intensity and triggers, and how do you ensure they remain compliant with EU AI Act Article 16 if the FHIR endpoint is incomplete or non-standard? [P3.D12] (repeated verbatim across 6 turns, ignoring every answer)",
+    "*Mitigation*: Implement end-to-end encryption for PDF exports and use pseudonymization techniques. Ensure patients can control data sharing and deletion in line with GDPR Art. 9.",
+    "*Mitigation*: Develop a clear affordability policy and consider offline-first design to support low-income users. Align with EU AI Act Article 12 (non-discrimination) and GDPR Art. 22 (automated decision-making).",
+    "Free-text triggers (e.g., recreational drug use) may include sensitive data beyond the scope of pain management, potentially violating GDPR Art. 5.1 (data minimization)."
+  ]
+}

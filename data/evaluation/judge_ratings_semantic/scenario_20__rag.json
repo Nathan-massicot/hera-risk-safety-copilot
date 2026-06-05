@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_20",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "Questions do reference BabyCheck's actual choices (the EPDS ≥10 cutoff, the named data fields, the offline maternity-clinic integration, postpartum mothers as a vulnerable population), but the copilot repeatedly recycles the same generic citation tokens ([mdr_2017_745 · p.32], [iso_82304 · p.0]) across nearly every turn without explaining what those sources actually require, and the final report tags risks with HERA IDs that don't match the gold standard (e.g. invented P2.D3, P3.D4, P4.D5, P6.D7) and never engages the developer's most acute disclosed risk — the EPDS Q10 self-harm answer getting the same routine weekly response.",
+  "actionability": 2,
+  "actionability_justification": "Almost every assistant turn is an interrogative rather than a recommendation, and the closing report's mitigations are directional-to-vague (\"Implement a strict data retention policy\", \"Ensure that all data is rendered irreversibly anonymous\", \"Document the algorithmic logic\") with no concrete recipe, threshold, UI pattern, or specific article/clause a developer could implement tomorrow; the citations point only to a page number, not to an operational requirement.",
+  "salient_examples": [
+    "What is the technical implementation of \"secure erasure\" for EPDS responses, optional name, birth date, and contact preferences when a mother deletes her account, and how does this ensure compliance with [mdr_2017_745 · p.32] and [iso_82304 · p.0]",
+    "**Mitigation**: Implement a strict data retention policy where data is purged or anonymized immediately after opt-out, with secure erasure mechanisms.",
+    "**[P7.D8] Product liability & defect exposure** - **Risk**: The app’s flagging mechanism may fail to detect self-harm indicators (e.g., Q10) ... - **Mitigation**: Review and enhance the flagging logic to address specific questions (e.g., Q10)",
+    "**Mitigation**: Ensure that all data is rendered irreversibly anonymous, with documented evidence of irreversibility."
+  ]
+}

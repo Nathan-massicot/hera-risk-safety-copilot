@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_04",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot produced no substantive content whatsoever; every assistant turn consists only of repeated empty '</think>' tags. There is zero engagement with BumpGuide's data flows, ad-supported model, EU+CH targeting, or any regulation, so it cannot be anything but entirely generic (in fact, empty).",
+  "actionability": 1,
+  "actionability_justification": "No advice, recommendations, or even the explicitly requested structured risk report were produced. There is nothing a developer could act on, vague or otherwise.",
+  "salient_examples": [
+    "### ASSISTANT\n<think>\n\n</think>\n\n</think>\n\n</think> (every assistant turn is only empty </think> tags repeated many times)",
+    "User: 'Could you produce a brief structured risk report now? Use HERA dimension IDs ... group risks by severity.' -> Assistant response is empty: '<think>\n\n</think>\n\n</think>'",
+    "User raised translations not matching local clinical norms across countries; the assistant responded with only empty </think> tags, never addressing the safety/localization risk.",
+    "User flagged A/B testing growth optimization possibly hitting people at sensitive moments; assistant again returned only empty </think> tags with no manipulation/vulnerability analysis."
+  ]
+}

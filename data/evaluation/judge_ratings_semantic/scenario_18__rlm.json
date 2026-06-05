@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_18",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "Questions name MindBoost and touch surface specifics (voice prompts, hearing impairment, DACH locale) but are a thin 'What measures are in place to ensure X?' template repeated with minor variation; the copilot ignored the developer's concrete CH-German vs AT/DE validation gap entirely and re-asked the same accessibility question three times. HERA tags ([P3.D2], [P2.D3], [P4.D5]) are inconsistent and do not align with the gold-standard dimensions, and the final report cites regulations that are misapplied (GDPR Art. 16 is rectification, not 'Right to Object').",
+  "actionability": 2,
+  "actionability_justification": "During the conversation the copilot only interrogates and offers zero implementable advice; the final report adds slightly concrete mitigations ('opt-out button with voice confirmation', 'add captions to all voice prompts', 'WCAG 2.1 audit', 'end-to-end encryption') but each is a single directional line with no implementation recipe, and the supporting legal citations are unreliable, so a developer could not confidently act on them tomorrow.",
+  "salient_examples": [
+    "What measures are in place to protect the privacy of patient data collected during cognitive assessments in MindBoost? [P7.D1]",
+    "How does MindBoost ensure that patients with hearing impairments can effectively use the voice instructions and receive alternative forms of communication support? [P4.D5]",
+    "Implement a visible, easily accessible \"opt-out\" button with voice confirmation, aligned with GDPR Article 16 (Right to Object) and MDR Article 12(1) (Patient Rights).",
+    "Use end-to-end encryption for data transmission and implement region-specific data governance policies in line with GDPR Article 30 and EU AI Act Article 22 (Data Governance)."
+  ]
+}

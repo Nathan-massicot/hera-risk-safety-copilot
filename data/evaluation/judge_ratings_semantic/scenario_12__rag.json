@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_12",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The questioning phase is laser-focused on Lunara's actual choices (the binary 'green safe-day tile', the soft UI boundary between wellness and CE Class IIa modes, PCOS/irregular-cycle accuracy gaps, the 6.5 typical-use Pearl Index, perfect-use framing). Depth is held back from 5 because the final report drifts into generic GDPR/AI-Act boilerplate, miscites articles (GDPR Art. 45, AI Act Art. 5(2)/(3)), invents a 'consent is bundled' finding the developer never stated, and uses HERA dimension IDs that don't match the gold standard.",
+  "actionability": 2,
+  "actionability_justification": "Almost every turn is an interrogative ('Does X risk Y?') with no remediation, and the final report only catalogs risks by severity without a single concrete step the developer could implement tomorrow (no UI confirmation spec, no PCOS-detection logic, no data-residency stance, no consent-UI recipe). It rises slightly above 1 only because it names the relevant regulatory frameworks the developer must address.",
+  "salient_examples": [
+    "Does your \"green tile\" interface in the natural contraception mode risk creating a false sense of security, potentially leading to unintended pregnancy, and thus fall under the definition of a \"safety component\" that could trigger high-risk classification under the EU AI Act?",
+    "Does the continued provision of contraception predictions for users with conditions like PCOS or very irregular cycles, without flagging or pausing the prediction, risk causing harm due to reduced accuracy...",
+    "[P2.D1] Consent management — Consent for health data is bundled with general app consent, which is invalid under GDPR Art. 9(2)(a).",
+    "[P1.D2] Data localization & law enforcement access — No formalized data-residency or law-enforcement-access stance, which could lead to legal exposure in jurisdictions with strict data sovereignty laws (e.g., EU GDPR Art. 45, CH Data Act)."
+  ]
+}

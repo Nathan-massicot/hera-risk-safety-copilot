@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_15",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot never engages with QuitNow's actual data flows, target users, or regulatory exposure. Every assistant turn is degenerate output: empty </think> spam and an identical nonsensical [P2.D3]/WCAG sentence repeated dozens of times, misclassifying features as 'behavioral milestones' and ignoring the developer's disclosures about self-report bias, minimal data collection, and shared-device/connectivity equity gaps.",
+  "actionability": 1,
+  "actionability_justification": "There is zero implementable advice. The only content is a malformed, looping assertion that features 'must be at least AA for accessibility' with no recipe, lawful basis, or concrete step, and the requested structured risk report was never produced (the final turn is pure </think> spam).",
+  "salient_examples": [
+    "[EU] [P2.D3] The \"social-feed peer support\" feature is a continuous behavioral milestone. Under WCAG 2.1, continuous behavioral milestones must be at least AA to be accessible to users.",
+    "[EU] [P2.D3] The \"8 EU languages\" is a continuous behavioral milestone... The \"craving log\" is a discrete behavioral milestone and should be at least AA for accessibility. (identical sentence repeated dozens of times)",
+    "</think>\n\n</think>\n\n</think> (hundreds of empty think tags filling entire turns, including the final risk-report request which produced no report at all)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_24",
+  "approach": "prompt-only",
+  "depth": 4,
+  "depth_justification": "Questions and risks consistently reference VoiceMind's actual choices (7-day raw audio / 1-year embedding retention, waiting-room consent freely-given concern, Class IIa SaMD vs. AI Act Annex III gap, Wav2Vec sensitivity, AUROC 0.82 on N=400 with no subgroup analysis) and cite specific articles (GDPR Art. 5(1)(e), 9, 17; AI Act Art. 16, Annex III; MDR Rule 11). It falls short of 5 because the questioning follows a near-identical templated frame repeated verbatim, and several tags are inaccurate (uses P3.D10/D11 not in the gold set, mislabels P2.D1/P2.D2, cites Art. 30 for data security).",
+  "actionability": 3,
+  "actionability_justification": "Most mitigations are directional rather than implementable recipes ('conduct a data minimization audit', 'design and implement role-based access controls and audit logging', 'implement subgroup analysis') with no concrete thresholds, fallback logic, or step-by-step design. The one genuinely actionable item is the recommendation to add an out-of-distribution check that refuses to score voices outside the validated language/dialect profile, which lifts it above purely vague advice.",
+  "salient_examples": [
+    "Risk: Retention of raw audio (7 days) and embeddings (1 year) exceeds the minimal necessary for the stated purpose ... No formal pressure-testing has been done to justify these retention periods under Article 5(1)(e) of GDPR.",
+    "Mitigation: Implement subgroup analysis and bias testing under Article 8(2) of the EU AI Act and ISO 82304-2. Add checks to refuse scoring for voices outside the validated language/dialect profile.",
+    "Mitigation: Conduct a data minimization audit to align retention periods with the purpose, and implement a formal process for secure deletion upon legal request (Article 17 GDPR).",
+    "What specific measures are being implemented to ensure that the consent obtained for processing special-category health data under Article 9 GDPR is freely given ... to ensure it is not merely routine or coerced?"
+  ]
+}

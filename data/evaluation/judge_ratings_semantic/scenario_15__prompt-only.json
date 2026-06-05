@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_15",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "Questions do name this app's actual choices (gamification streaks/badges, relapse confessions in a public peer feed, self-reported craving data with no plausibility checks, undocumented cloud encryption), but every turn recycles the same template ('how do you ensure X aligns with [Pn.Dn]... in light of Article 9(2) GDPR / Article 5(2) AI Act') and the HERA dimension IDs are largely fabricated and inconsistent with the gold set (it leans on P1.D1, P3.D12, P3.D10, P3.D7, none of which match the expected P1.D5/P2.D1/P3.D2/P4.x/P5.D2/P6.D2).",
+  "actionability": 2,
+  "actionability_justification": "Nearly every turn is a 'Reflection Question' that interrogates rather than advises, and the final report's mitigations stay directional ('Review gamification design', 'Apply non-discrimination principles by moderating content', 'formalize encryption and key management', 'obtain explicit consent') with no implementable 'do this tomorrow' recipe (e.g., a private-by-default per-post audience toggle, an explicit Art. 9(2)(a) consent string, a DPIA template); the report even truncates mid-sentence at the end.",
+  "salient_examples": [
+    "How do your daily check-in features, including cigarette count and craving intensity tracking, align with the EU AI Act's [P1.D1] \"Risk to physical or psychological health\" and [P2.D3] \"Data minimization and purpose limitation\" ... and complies with Article 5(2) and Article 9(2) of the GDPR?",
+    "Mitigation: Review gamification design under the EU AI Act's [P3.D12] \"Transparency of AI systems\" and ensure users are clearly informed about how these features may influence behavior.",
+    "Mitigation: Apply [P3.D7] \"Non-discrimination\" principles by moderating content, ensuring inclusive language, and avoiding any algorithmic amplification of harmful narratives.",
+    "[P2.D1] Lawful basis for processing (partial coverage) - **[P2.D5] Data portability - **["
+  ]
+}

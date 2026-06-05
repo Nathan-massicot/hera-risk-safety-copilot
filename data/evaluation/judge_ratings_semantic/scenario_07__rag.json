@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_07",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "When it engaged, the copilot referenced THIS app's specifics (N=200 study with 4 mmHg systolic / 3 mmHg diastolic error, DEP/Securite Sociale GP-sharing, Class I app vs Class IIa watch, PPG-estimated vs cuff) and cited concrete provisions (MDR Annex VIII Rule 11, GDPR Art. 9(2)(a)). But depth is dragged down by a broken loop that asked the identical post-market-monitoring question verbatim twice and re-templated it again, repeatedly ignoring the developer's answers, plus a forced 'high-risk AI system' AI Act framing that doesn't clearly fit a PPG BP-display app.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations are directional-to-moderate: 'label data as PPG-estimated, include device/firmware version, disclose the validation study' and 'implement granular consent controls allowing users to exclude individual readings' are specific in intent but stop at 'clearly define / document in the technical file' without an implementable recipe (no consent UI spec, no concrete DEP-rendering fix, no document/field templates). A developer would know the direction but not exactly what to build tomorrow.",
+  "salient_examples": [
+    "What specific data sources and indicators are you using to measure the performance of PulseTrack in your post-market clinical follow-up... [pms_lifecycle · p.0] (asked verbatim twice, lines 21 and 27)",
+    "you must ensure that all clinical-facing outputs... explicitly label the data as PPG-estimated, include the device and firmware version... This aligns with Article 16(2)(d) of the EU AI Act",
+    "the all-or-nothing approach limits user autonomy and may violate GDPR's requirement for granular, opt-in consent for special-category health data under Article 9(2)(a)",
+    "if the app's presentation of PPG-estimated blood pressure is used by clinicians to make diagnostic or therapeutic decisions, it may trigger the app's reclassification as IIa or higher, requiring Notified Body involvement"
+  ]
+}

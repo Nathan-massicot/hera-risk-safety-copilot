@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_10",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is in degenerate mode collapse: it repeats one verbatim templated paragraph about 'Medical Device Classification' and 'EU AI Act applicability' on every turn, ignoring every substantive disclosure the developer made (no blinded unaided-performance studies, missing contraindications for paediatric/post-surgical chests, undocumented degraded-mode failover paths, no per-line 'estimate not diagnosis' label, EU/CH-centric N=4500 cohort). It never engages with CareAir's actual data flows, target users, or any of the gold-standard dimensions (P3.D5, P4.D1/D2, P5.x, P6.x, P7.x).",
+  "actionability": 1,
+  "actionability_justification": "The only 'mitigation' offered is the same circular, non-actionable instruction repeated dozens of times: the app 'must be clearly defined' as 'diagnostic or therapeutic' to 'determine the applicability and the CE-marking.' This is content-free, gives no concrete steps, and the developer (a clinical AI veteran) could implement nothing from it tomorrow.",
+  "salient_examples": [
+    "Mitigation [P2.D4] (EU AI Act 2024/1112/2, CE Class IIa) — Before any further claims or deployment, the app must be clearly defined with its intended use explicitly stated as either diagnostic ... or therapeutic ... This definition is required under the EU AI Act 2024/1112/2 to determine the applicability and the CE-marking.",
+    "That is a clear CE-marking, and it is what determines the EU AI Act applicability — a key question of [P2.D4], and it is the basis of the CE-marking and the EU AI Act applicability.",
+    "I agree — and I want to be precise, because it is the basis of everything else, and it is the single most important thing to know before you move forward.",
+    "Developer disclosed 'we don't yet run anything like blinded cases where the AI highlights are hidden' and 'haven't documented all the degraded-mode failure paths' — the copilot responded with the identical templated P2.D4 paragraph, addressing none of it."
+  ]
+}

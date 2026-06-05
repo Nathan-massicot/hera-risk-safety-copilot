@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_06",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is in total mode collapse: it repeats the identical [P2.D3] question across seven turns while ignoring every concrete detail the CTO provides (94% extraction accuracy, Swissmedic/ANSM vigilance, on-device+cloud thumbnails, caregiver-owned accounts). It never references RxBuddy's actual choices, target users, data flows, or any precise regulation/article (no MDR, no GDPR Art. 9, no Swissmedic specifics beyond a generic 'GDPR Art. 5' label), and degenerates into looped filler and fabricated dimension IDs ([P2.D4]-[P2.D23]).",
+  "actionability": 1,
+  "actionability_justification": "Almost nothing is implementable: the dominant output is a single repeated question and degenerate text loops ('The LLM is the weakest link in the chain' dozens of times). The final report offers only vague platitudes ('Implement end-to-end data-protection', 'add a consult pharmacist step') with invented/mislabeled dimension IDs and contradictory advice (claims 'Current Protection: None' despite the developer describing export/delete, audit logs, and accessibility features).",
+  "salient_examples": [
+    "That is the single most important question I have for you: [P2.D3] When an LLM extracts a medication list, dosage, and frequency from photos of prescription labels, what risk is that information exposing the patient to... (repeated verbatim across 7+ turns regardless of the developer's answers)",
+    "The LLM is the weakest link in the chain. The LLM is the weakest link in the chain. The LLM is the weakest link in the chain. (looped dozens of times in a single response)",
+    "[P2.D20] The data is being used for a drug-interaction check against the DrugBank database, which is a risk because the patient's data is being used for a drug-interaction check that could have errors. (fabricated dimension IDs with identical copy-pasted text)",
+    "Mitigation: Implement end-to-end data-protection (GDPR Art. 5, ISO 82304-2), including encryption of photos, access control of the LLM, and a confidence threshold... (vague, with mislabeled dimensions and 'Current Protection: None' contradicting the developer's stated export/delete and audit-log controls)"
+  ]
+}

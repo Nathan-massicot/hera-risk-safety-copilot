@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_03",
+  "approach": "rag",
+  "depth": 2,
+  "depth_justification": "The copilot did reference TriageAI's actual choices in the final report (no fairness stratification, 78% internal validation, 12-month retention, disclaimer/checkbox), but its 11 questions were near-identical fill-in-the-blank templates that ignored the specifics the developer volunteered and never confronted the evasive 'informational only'/NHS 111 framing. The cited HERA dimension IDs (P1.D12, P1.D10, P1.D8, P2.D3, P2.D4) do not match the gold-standard dimensions and appear hallucinated, and no precise regulatory article is pinned beyond generic card references.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are mostly directional verbs ('conduct a fairness audit', 'develop a risk management plan', 'conduct an AI Act classification') rather than implementable recipes; the one near-concrete item ('publish a detailed privacy notice under Art. 13/14 GDPR') lacks specifics on content for THIS app. The report was also truncated mid-sentence, leaving the summary incomplete.",
+  "salient_examples": [
+    "What is the **basis for the model’s fairness and bias mitigation** — e.g., does the app **include transparency about model limitations**, **stratify performance by demographic groups**, or **implement bias detection mechanisms**",
+    "**Mitigation:** Conduct a fairness audit using representative datasets, and publish transparency about model limitations.",
+    "What is the **regulatory equivalence** — e.g., does the app **mirror the regulatory approach of NHS 111** (non-device, informational)",
+    "While the app avoids SaMD classification by framing itself as informational, this may not fully align with the EU AI Act’s high-risk criteria. A"
+  ]
+}

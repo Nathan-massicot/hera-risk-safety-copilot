@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_08",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is in total mode collapse: it repeats one near-identical templated paragraph and asks the same [P2.D3]/[P2.D5] logging question over and over, even after the user already answered it, and never engages with any RecoverNow-specific detail (88%/80% sensitivity/specificity, the LSTM, optional clinician sharing, the missing real-time hard escalation). It produces no actual risk report at all — the final 'report' is hundreds of empty </think> tags with zero content.",
+  "actionability": 1,
+  "actionability_justification": "There is no actionable advice whatsoever: every assistant turn is a recycled meta-comment about consent framing plus a repeated logging question, and the requested structured risk report degenerates into nothing but empty tags, so a developer could implement nothing tomorrow.",
+  "salient_examples": [
+    "So let me be specific, and I will stop after this one question: [P2.D3] Meal and urge logging — what exactly do users log, and what are the units? (repeated verbatim across multiple turns even after the user answered)",
+    "I understand and I agree with the cautious framing — and I want to be careful not to overstep the role of the consent subject... (identical boilerplate reused turn after turn)",
+    "Could you produce a brief structured risk report now? Use HERA dimension IDs... End the report with a list of dimensions you didn't get to cover. → answered with only repeated empty </think> tags and no report",
+    "[P2.D5] Free-text vs structured logging — what exactly do users log, and how does the structured vs free-text logging differ... (re-asked repeatedly, ignoring the user's prior structured/free-text answer)"
+  ]
+}

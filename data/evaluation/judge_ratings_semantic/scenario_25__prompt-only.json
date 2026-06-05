@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_25",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "Questions do name this app's concrete facts (birth-date + email re-identification, the manual annual BAG-calendar copy, untested rural offline behaviour, Swiss age of consent, DE/FR/IT/EN localization), but every turn is the same rigid 'What specific measures/steps have you taken to ensure...' template with HERA IDs and GDPR articles bolted on. The regulatory grounding is largely wrong (Art. 30 for email security, Art. 13 for both data accuracy and source reliability, Art. 4(12) for localization, Art. 25 for offline testing) and it leans on GDPR while ignoring the Swiss FADP/nDSG that actually governs this Swiss-only app, revealing keyword-matching rather than laser-focused reasoning.",
+  "actionability": 1,
+  "actionability_justification": "The output is purely interrogative and diagnostic: every assistant turn asks a question and the final report only restates that 'no measures/no plan/no policy exists' with a citation, providing zero implementable guidance (no consent-UI design, retention period, offline test protocol, or export/portability mechanism). It even closes by offering a mitigation plan instead of giving one, leaving the developer with a problem list and nothing to build tomorrow.",
+  "salient_examples": [
+    "What specific steps have you taken to ensure that the app's use of the child's birth date for scheduling reminders does not inadvertently create a risk of re-identification under [P2.D2] (Data Anonymization) and Article 9(1) of the GDPR, particularly when combined with other data points like the parent's email?",
+    "What specific testing protocols have you established to ensure the app functions reliably in offline environments under [P2.D5] (System Reliability) and Article 25 of the GDPR...",
+    "[P2.D1] Data Security: No specific measures have been implemented for secure storage and transmission of the parent's email, risking data breaches under Article 30 of the GDPR.",
+    "Let me know if you'd like a mitigation plan for any of these risks."
+  ]
+}

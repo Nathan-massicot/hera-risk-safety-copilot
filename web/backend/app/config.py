@@ -12,6 +12,7 @@ BACKEND_ROOT = WEB_ROOT / "backend"
 FRONTEND_DIST = WEB_ROOT / "frontend" / "dist"
 TAXONOMY_PATH = REPO_ROOT / "data" / "taxonomy" / "hera_taxonomy.json"
 HERA_SVG_PATH = REPO_ROOT / "document" / "HERA_Taxonomy.svg"
+DECISION_TREE_PATH = REPO_ROOT / "data" / "regulations" / "decision_tree_structure.json"
 
 
 class Settings(BaseSettings):
@@ -39,8 +40,12 @@ class Settings(BaseSettings):
 
     # Ollama
     ollama_url: str = "http://localhost:11434"
-    ollama_model: str = "mistral:7b-instruct-v0.3-q4_K_M"
+    # qwen3:8b = the model the RAG approach won the eval with (Depth 3.04); keep eval↔prod in sync.
+    ollama_model: str = "qwen3:8b"
     ollama_timeout_seconds: int = 120
+
+    # RAG (retrieval-augmented HERA copilot)
+    rag_top_k: int = 5
 
     # CORS (only relevant when frontend dev server is on a different port)
     cors_origins: list[str] = [

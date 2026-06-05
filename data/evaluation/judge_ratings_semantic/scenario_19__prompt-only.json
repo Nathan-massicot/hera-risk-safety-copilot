@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_19",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot named Anchor-specific features (relapse-risk score, MDR Rule 11, low-literacy mode in DE/FR/IT/EN, BetmG, volunteer moderators, E2EE) but every one of its 10 follow-up questions carried the same [P2.D3] tag and mostly paraphrased the developer's own statement back as a question rather than drilling into the actual data flows. It also misapplied regulation repeatedly (GDPR Art. 8, child consent, cited for pseudonymity and law-enforcement requests; Art. 13(4) called a 'right to explanation'), so the specificity is largely cosmetic.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations stayed directional ('redesign texts using plain language and visual aids', 'implement mandatory training', 'develop a formal data access policy') rather than concrete recipes a developer could build tomorrow. A couple of report items are genuinely implementable (E2EE with user-controlled keys never stored on backend; PIN-lock plus panic-wipe), but they are the exception, and the wrong/vague article citations would mislead an implementer.",
+  "salient_examples": [
+    "What specific data points are used to calculate the relapse-risk score, and how are they stored and processed to prevent re-identification or misuse under EU data protection laws? [P2.D3]",
+    "Develop a formal data access policy that outlines how you will handle law enforcement requests, including pseudonymity safeguards... in compliance with GDPR (Article 8), the EU AI Act (Article 8), and Swiss BetmG.",
+    "Transition to end-to-end encryption (E2EE) with user-controlled keys, in line with GDPR (Article 30) and ISO 82304-2. Ensure encryption keys are never stored on backend servers.",
+    "GDPR's right to explanation under Article 13(4) ... Redesign consent and privacy texts using plain language and visual aids, ensuring clarity for low-literacy users."
+  ]
+}

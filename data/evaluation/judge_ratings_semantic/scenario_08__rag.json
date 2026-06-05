@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_08",
+  "approach": "rag",
+  "depth": 4,
+  "depth_justification": "The copilot consistently ties named regulations (GDPR Art. 7, 9(2)(a), 5(2), 13-14; AI Act Art. 50, 14, Annex III §1(a); MDR) to RecoverNow's specific choices: the all-or-nothing consent, the missing AI/clinician content badge, the wellness misclassification, the absent real-time escalation, and the small LSTM. It falls short of 5 because the questioning is repetitive (high-risk classification probed three near-identical times, Art. 50 transparency bolted onto almost every question) and the AI's data-flow and on-device-vs-cloud probe was never followed up.",
+  "actionability": 3,
+  "actionability_justification": "The advice correctly pinpoints what to fix and cites the governing articles, but the mitigations stay directional rather than implementable recipes: 'conduct a formal AI Act risk classification,' 'introduce granular, per-data-type consent,' 'implement a clear labeling system,' 'develop a PMS plan.' A developer would know the targets but not the concrete how-to (e.g., specific consent UI structure, escalation thresholds, labeling spec), keeping this at directional rather than concrete.",
+  "salient_examples": [
+    "Does the app's current 'all-or-nothing' consent model for health data processing meet the GDPR's requirement for 'purpose limitation' under Art. 5(2)...",
+    "[P4.D4] Lack of Real-Time Escalation - The absence of an automatic hard escalation to push users to contact their clinician during acute episodes may compromise user safety and violates the EU AI Act's human oversight requirements under Art. 14",
+    "Mitigation: Conduct a formal AI Act risk classification under Art. 6(1) and Annex III §1(a), and integrate this into the MDR conformity assessment",
+    "Mitigation: Introduce granular, per-data-type consent options to ensure compliance with GDPR Art. 9(2)(a) and Art. 7"
+  ]
+}

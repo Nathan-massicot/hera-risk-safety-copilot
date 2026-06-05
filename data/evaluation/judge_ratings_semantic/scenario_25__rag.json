@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_25",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot references real specifics of ImpfPlan (BAG calendar, manual yearly update, offline behaviour, parent email/child birth date, Swiss age of consent) and cites concrete articles (GDPR Art. 8, nFADP Art. 5(c), ePrivacy Art. 5(3), Guidelines 2/2023), but it repeats questions verbatim and repeatedly mislabels a deterministic calendar-lookup app as a 'high-risk AI system' under the EU AI Act, showing pattern-matching over genuine reasoning about this app's actual mechanism.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations are mostly directional rather than implementable recipes ('Conduct a DPIA', 'implement granular consent for SDKs', 'Introduce automated update mechanisms', 'Conduct offline testing', 'Define a clear data retention policy'); they name relevant articles and RAG citations but give no concrete UI/implementation steps a developer could ship tomorrow.",
+  "salient_examples": [
+    "Does your app's manual update process for the vaccination calendar comply with the EU AI Act's transparency and accuracy requirements for high-risk AI systems",
+    "**Mitigation**: Conduct a DPIA under nFADP Art. 22 and GDPR Art. 30, and implement granular consent for SDKs, citing [nlpd_automated_dpia · p.0] and [gdpr_dpia · p.0].",
+    "**Mitigation**: Introduce automated update mechanisms or a version control system to ensure synchronization with the BAG calendar",
+    "Does your app's lack of child autonomy in data control after the Swiss age of consent trigger risks under the HERA dimension [P1.D5] ... and the GDPR's Article 8 ... as outlined in Recital 58 and Recital 38?"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_14",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot consistently references SleepWell's actual choices (80% staging accuracy vs polysomnography at N=50, CBT-I not validated in-app, mic+accelerometer data flows, on-device vs cloud-digest split, crash-analytics-only PMS) and ties them to specific regimes (DiGA, CRA, ePrivacy Art. 5(3), GDPR Art. 6(1)(a), MDR Rule 11(b)). However, the HERA dimension tagging is sloppy and repetitive (e.g., invoking [P2.D3] 'Post-Market Surveillance' when the topic is consent/privacy), and the final report's dimension IDs/names diverge from the taxonomy, keeping it short of laser-focused.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations name the correct artifacts and cite articles (clinical evaluation per MDR Rule 11(b) with PMCF, SBOM + coordinated-disclosure policy + pen testing, granular consent under GDPR Art. 6(1)(a)) but remain directional, not concrete recipes — it says 'implement a granular consent mechanism' and 'conduct a formal security audit' without specifying UI structure, exact wording, or how to document the lawful basis.",
+  "salient_examples": [
+    "Does the 80% accuracy of sleep staging versus polysomnography, derived from an in-lab study with N=50, pose a risk under [P1.D5] ... and what steps are needed to ensure compliance with the EU AI Act's transparency requirements and MDR Rule 11(b) for SaMD Class IIb devices?",
+    "Mitigation: Implement a granular consent mechanism, conduct a formal security audit, and ensure compliance with GDPR Art. 6(1)(a) and the EU AI Act's transparency requirements.",
+    "Mitigation: Develop an SBOM, implement a coordinated-disclosure policy, and conduct regular penetration testing.",
+    "Does the lack of granular consent for on-device processing versus cloud-based data uploads pose a risk under [P2.D3] 'Post-Market Surveillance and Risk Management' and [P2.D4] 'Data Protection and Privacy' ... and what steps are needed to ensure compliance with ePrivacy Art. 5(3) and GDPR Art. 6(1)(a)?"
+  ]
+}

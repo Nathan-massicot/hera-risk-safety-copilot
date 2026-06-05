@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_04",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "The copilot does reference real app specifics (the 5-1-1 contraction timer, LMP/kick counts, Firebase analytics, device ad ID, the 3-year-old OB-GYN review, the missing pregnancy-loss state) and the final report cites precise instruments (GDPR Art. 6(1)(a), Art. 13, Art. 30, ISO 82304-2). But the questioning is heavily templated and redundant: the same boilerplate GDPR sentence is pasted across turns, and the Firebase and '5-1-1 as general guidance' questions are repeated almost verbatim 2-3 times, showing it does not truly build on the developer's prior answers.",
+  "actionability": 2,
+  "actionability_justification": "Throughout the conversation the copilot only asks questions and never delivers implementable guidance; concrete advice appears solely in the final report's one-line 'Mitigation' notes, which stay directional ('Implement a separate, explicit opt-in', 'Introduce granular consent options', 'Introduce a pregnancy loss state') with article citations but no UI/data-flow recipe a developer could build from tomorrow.",
+  "salient_examples": [
+    "What measures are in place to ensure the use of Firebase for aggregated usage data does not inadvertently expose user health data... [P7.D1]  (then again) What steps are being taken to ensure that Firebase does not inadvertently collect or share user health data... [P7.D1]",
+    "How is the 5-1-1 contraction timer in BumpGuide clearly presented as general guidance rather than a medical recommendation... (asked three consecutive turns, all tagged [P2.D3])",
+    "Mitigation: Implement a separate, explicit opt-in for using pregnancy data for ad targeting, in compliance with GDPR Article 6(1)(a).",
+    "Mitigation: Revalidate and update fetal development content with current medical guidelines, referencing ISO 82304-2 for medical device content standards."
+  ]
+}

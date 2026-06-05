@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_20",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "Questions are formulaic 'What specific X under [regulation] apply to Y, and how do you ensure Z?' templates that bounce the analysis back to the developer rather than reasoning about BabyCheck's actual data flows; the same MDR Article 10 vigilance question is repeated four times in a row and the dimension tags are dominated by [P4.D14]/[P1.D1], diverging from the gold standard (P1.D2, P2.D6, P3.D1, P3.D2, P5.D2, P5.D3, P7.D1, P7.D2). The copilot ignored the developer's volunteered specifics (250-mother usability-only study with no clinical-effectiveness trial, on-device storage, the EU+CH split with no Swiss FADP/Swissmedic angle) and never named the correct sensitive-data legal basis.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay directional with only occasional concrete touches ('periodic re-consent prompt (e.g., quarterly)', 'plain-language disclaimer that EPDS is a screening tool'), but most are generic ('establish a dedicated vigilance team', 'define explicit data retention policies') and several legal citations are wrong or loose: GDPR Art 6(1)(a) cited for high-sensitivity data instead of Art 9, GDPR Art 30 invoked for encryption rather than Art 32, and AI Act articles conflated. A developer could not implement most of this tomorrow without redoing the regulatory mapping themselves.",
+  "salient_examples": [
+    "What specific MDR Article 10 obligations apply to the vigilance reporting process for Class IIa SaMD, and how do you ensure that your vigilance system is capable of detecting and reporting safety incidents in real-time as required by the MDR? [P1.D1]",
+    "Mitigation: Implement a periodic re-consent prompt (e.g., quarterly) and ensure all data is deleted upon opt-out, in line with GDPR Article 17 (right to erasure).",
+    "Risk: While data is stored securely, there is no mention of encryption or access controls, which could be a concern under GDPR Article 30. Mitigation: Implement encryption for data at rest and in transit... in line with GDPR Article 30.",
+    "Mitigation: Establish a dedicated vigilance team and implement a real-time reporting system for adverse events, as required by MDR Article 10."
+  ]
+}

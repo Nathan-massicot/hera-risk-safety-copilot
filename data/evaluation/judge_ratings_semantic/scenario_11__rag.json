@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_11",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot does reference SkinTrack's actual choices (mole photos with location/date, the self-picked 20% area-change threshold, the no-alert-as-all-clear misreading) and correctly pins the SaMD/MDR classification and GDPR Art. 9 special-category status with named articles (MDR Art. 61, MDCG 2020-1, Art. 100, GDPR Art. 9(2)(a)). But it repeats the same questions verbatim (biometric twice, ePrivacy Art. 5(3) twice), invents its own HERA dimension IDs that don't match the gold taxonomy, and truncates before finishing, keeping it from being laser-focused.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations are mostly directional next-steps ('Conduct a DPIA', 'Revise the consent screen', 'Implement encryption, access controls', 'Add a prominent disclaimer') with the right legal hooks but no concrete recipe a solo dev could ship tomorrow (no consent UI layout, no specific disclaimer copy, no threshold-validation protocol). A couple are more pointed (engage dermatologists to validate the threshold; warn that absence of alerts does not imply safety), lifting it just above purely directional.",
+  "salient_examples": [
+    "Does SkinTrack's use of a self-defined 20% area-change threshold for triggering a \"see a dermatologist\" suggestion meet the **clinical validity** requirement ... under MDR Art. 61 and MDCG 2020-1, given that it is classified as a **medical device software** (SaMD) under the EU MDR?",
+    "Mitigation: Revise the consent screen to clearly state the purpose of processing, data collected, and the right to withdraw consent [GDPR Art. 9(2)(a)].",
+    "Mitigation: Add explicit warnings that the absence of alerts does not imply safety, and encourage regular dermatology check-ups [GDPR Art. 13(1)].",
+    "Does SkinTrack use any third-party SDKs, trackers, or analytics tools that could trigger ePrivacy Art. 5(3) ... (asked twice, duplicating the earlier ePrivacy question)"
+  ]
+}

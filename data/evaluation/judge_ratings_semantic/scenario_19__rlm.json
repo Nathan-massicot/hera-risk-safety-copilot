@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_19",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot names this app's specifics (5-feature relapse score, hard reset to zero, exact timestamps, clinic opt-in) but almost never advances on them — it reflects details back as near-identical looping questions (the Rule 11 / 'software intended to inform clinical decisions' framing recurs verbatim multiple times) rather than reasoning about THIS app's data flows. The final report covers only 3 of 10 gold dimensions and misattributes MDR Rule 11 to the 'EU AI Act', showing shallow rather than laser-focused regulatory grounding.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations are directional or vague ('Document the score as strictly informational', 'Establish a formal crisis response plan', 'explicitly state that it does not replace professional medical advice') with only one concrete recipe (coarsen timestamps to day buckets / dose categories). It cites wrong instruments (Article 5(3) of the EU AI Act for an informational score; GDPR Art. 30 for crisis response), and it never gave actionable steps for the indefinite-retention, punitive-hard-reset, or volunteer-moderator safety gaps the developer explicitly surfaced.",
+  "salient_examples": [
+    "How does the relapse-risk score align with Rule 11 regarding software intended to inform clinical decisions, and what documentation supports its exclusion from MDR's medical-device scope? [P3.D2] (asked verbatim twice)",
+    "[P3.D2] ... could be misinterpreted as clinical decision support, potentially violating Rule 11 of the EU AI Act. Mitigation: Document the score as strictly informational, aligning with Article 5(3) of the EU AI Act",
+    "Mitigation: Implement coarsened time buckets (e.g., day-level) or dose categories to reduce data retention while preserving the integrity of the relapse-risk score.",
+    "Mitigation: Establish a formal crisis response plan in line with GDPR Article 30 and ISO 82304-2"
+  ]
+}

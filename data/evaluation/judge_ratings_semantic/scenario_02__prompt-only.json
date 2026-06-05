@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_02",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot did reference several of THIS app's specifics (GlucoCare's Rule 11 Class I-vs-IIa borderline, the EU-to-Switzerland adequacy/SCC gap, PDF-only export with no FHIR/API, Swissmedic vigilance), which lifts it above fully templated. But the specificity is shallow: it asks the PDF data-minimization question twice near-verbatim and the Rule 11 classification question four times in lightly reworded form, every turn reuses the same 'What specific steps have you taken to ensure X aligns with [Regulation]' mold, and the final report's HERA dimension IDs are largely hallucinated and match none of the gold dimensions.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are directional placeholders ('Conduct a GDPR-compliant DPIA', 'Engage a Notified Body', 'Implement data minimization controls in PDF exports', 'appoint a DPO', 'draft SCCs') with no concrete recipe, parameters, or sequencing a developer could implement tomorrow, and the report even cuts off mid-sentence. Citations are precise but several are misapplied (DPIA cited to Article 30 rather than Article 35; backup security pinned to a non-existent MDR clause), making the output more of a lookup list than a buildable plan.",
+  "salient_examples": [
+    "What safeguards have you put in place to ensure that the PDF export mechanism does not inadvertently include sensitive data such as HbA1c or insulin doses, and how do these measures align with GDPR Article 9 and MDR Annex II, Part B, Section 2.2? (asked twice, near-verbatim)",
+    "What specific risk management activities have you conducted to evaluate whether GlucoCare meets the criteria for Class IIa under MDR Rule 11... (the classification question reworded a fourth time)",
+    "**Mitigation**: Conduct a GDPR-compliant DPIA (Article 30), implement ISO/IEC 27001-certified encryption, and document all data processing activities.",
+    "**[P4.D8]** Ethical Use & Bias ... **[P4.D14]** Environmental Impact (fabricated dimension IDs not matching the gold standard)"
+  ]
+}

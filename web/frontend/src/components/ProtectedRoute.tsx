@@ -4,10 +4,9 @@ import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  requireOnboarded?: boolean;
 };
 
-export default function ProtectedRoute({ children, requireOnboarded }: Props) {
+export default function ProtectedRoute({ children }: Props) {
   const { user, loading } = useAuth();
   const location = useLocation();
 
@@ -21,10 +20,6 @@ export default function ProtectedRoute({ children, requireOnboarded }: Props) {
 
   if (!user) {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />;
-  }
-
-  if (requireOnboarded && !user.onboarded) {
-    return <Navigate to="/onboarding" replace />;
   }
 
   return <>{children}</>;

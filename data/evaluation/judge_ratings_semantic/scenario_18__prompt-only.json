@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_18",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot recycles a single templated question stem ('What specific steps have you taken... how does this relate to the EU AI Act's requirement for...') and reuses the same three tags (P2.D3, P3.D10, P3.D8) repeatedly, largely echoing the developer's own disclosures rather than drilling into MindBoost. It even fixates on the EU AI Act 'high-risk AI system' framing after the developer explicitly stated there is no AI in the product, and nearly all HERA tags diverge from the gold standard.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are almost entirely directional verbs ('Conduct a WCAG 2.1 audit', 'Engage legal counsel', 'Conduct a data mapping exercise', 'Establish a formal vigilance system', 'Implement a transparency protocol') with article citations bolted on but no concrete implementation recipes, UI patterns, or step-by-step guidance a developer could ship tomorrow; some cited bases (AI Act Art. 8(2), Art. 3(2)) are misapplied to a non-AI product.",
+  "salient_examples": [
+    "What specific types of health data do your game-based exercises capture, and how do you ensure that this data is anonymized or pseudonymized in line with the EU AI Act's requirements for high-risk data processing? [P2.D3]",
+    "What is the basis for your assessment that the AI Act does not apply to your product... particularly in light of the AI system's role in driving therapy decisions? (asked right after the developer said 'there's no AI in the product')",
+    "Mitigation: Conduct a WCAG 2.1 audit, add captions to voice prompts, and validate regional language variants with local clinicians in Switzerland, Germany, and Austria.",
+    "Mitigation: Engage legal counsel to review AI Act applicability and ensure that the MDR classification is consistent with the AI Act's scope, especially regarding therapy decision-making."
+  ]
+}

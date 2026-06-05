@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_08",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot fixated on a single near-identical 'is the CBT library culturally adapted' question (tagged [P2.D3]) across roughly seven turns, ignoring the developer's substantive disclosures about self-administered consent for a vulnerable group, no real-time escalation, no AI/clinician badge, and the 88%/80% sensitivity-specificity tradeoff. While it does name the app's features and the French clinic context, almost no question or risk drilled into THIS app's actual data flows, consent design, or escalation gaps.",
+  "actionability_justification": "Mitigations stay at the directional level ('conduct a cultural and linguistic audit', 'implement a visual badge system', 'integrate real-time escalation alerts') with no concrete recipe, and the regulatory citations are vague or mismatched ([GDPR] 'for transparency in automated decision-making', [MDR] tacked onto escalation, [ISO 82304-2] with no clause), so a developer could not implement them tomorrow without further specification.",
+  "actionability": 2,
+  "salient_examples": [
+    "What steps are being taken to ensure that the CBT library used for coping-skill suggestions is adapted to the specific needs of users in the French eating-disorder clinic's patient population? [P2.D3]",
+    "Mitigation: Implement a visual badge system to clearly label AI-generated flags and clinician-validated content, as mandated by [GDPR] for transparency in automated decision-making.",
+    "Mitigation: Integrate real-time escalation alerts for high-risk cases, ensuring immediate clinician engagement, as required by [MDR] for medical device safety monitoring.",
+    "[P7.D1] The absence of an automatic hard escalation mechanism during acute episodes may delay critical clinician intervention, despite the presence of a clinician review process."
+  ]
+}

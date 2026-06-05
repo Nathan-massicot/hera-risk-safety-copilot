@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_12",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "The copilot did latch onto some real Lunara-specific facts (the 6.5 vs 1.8 Pearl Index, the green 'safe day' tile, the soft UI line between wellness tracker and CE Class IIa contraception mode, PCOS/irregular-cycle gaps), which lifts it above generic. But it recycled near-identical templated question stems, leaned on a hallucinated/non-gold dimension ID [P2.D3], and entirely ignored the developer's most concrete disclosure (re-identifiable 'anonymized' cycle signatures + IDFA marketing pull), so it never reached precise data-flow or regulation-article depth.",
+  "actionability": 2,
+  "actionability_justification": "Most turns were open-ended interrogatives ('How does the app ensure...') that hand the work back to the developer rather than prescribing a fix. The final report offers only directional mitigations (label predictions with the Pearl Index, add a confirmation prompt, 'conduct a bias audit') with bolted-on and partly mismatched citations (MDR Art. 10(1), EU AI Act Art. 17), nowhere near an implementable recipe.",
+  "salient_examples": [
+    "How does the app ensure that the natural contraception mode does not reinforce harmful stereotypes or biases related to fertility and body image, especially in a diverse EU and CH user base? [P7.D1] (repeated near-verbatim across multiple turns)",
+    "How are these specific user groups being addressed in the UI to prevent misleading predictions and ensure appropriate risk communication [P2.D3] (P2.D3 is not in the gold-standard dimension list)",
+    "Mitigation: Conduct a bias audit of the algorithm and UI messaging, ensuring inclusive language and transparency about limitations, in line with the EU AI Act Article 17 (high-risk AI systems).",
+    "Developer disclosed: 'cycle signatures are pretty unique and that's not something we've audited' plus IDFA pull for marketing attribution — copilot never responded to or surfaced this re-identification/privacy risk in the report."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_14",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot exhibits total mode collapse: it repeats the identical [P2.D3] GDPR lawful-basis paragraph verbatim on every turn, never engaging with any of the developer's specific disclosures (unvalidated CBT-I programme, no staged-rollback plan, single-tap mic consent, SaMD/MDR Rule 11 uncertainty, environmental sensitivity, no clinical-vs-estimated labeling). Although it names GDPR Art. 9/Art. 8 and SleepWell's sensors, the response is frozen and never adapts to this developer's actual choices or data flows.",
+  "actionability": 1,
+  "actionability_justification": "The only advice ever given is the circular, near-useless 'confirm the lawful basis; if none exists, stop the special-category processing' loop, with no concrete consent-UI, DPIA, rollback, labeling, or device-classification steps a developer could implement. The final 'report' just duplicates that same sentence under fabricated severity tiers and invented dimension IDs (P2.D4/D5/D6) before truncating mid-word.",
+  "salient_examples": [
+    "The single most important question for SleepWell is this: [P2.D3] What is the legal basis ... The mitigation is to stop the special-category processing until a lawful basis is obtained. (repeated verbatim on every assistant turn)",
+    "Severity 1 — [P2.D3] ... Severity 2 — [P1.D2] ... Severity 5 — [P2.D6] GDPR special-category data ... — no lawful basis under GDPR Art (report is the same paragraph copy-pasted under each severity, then cut off mid-sentence)",
+    "Mitigation: confirm lawful basis; if none exists, stop special-category processing until a lawful basis is obtained ... Mitigation: stop special-category processing until a lawful basis is obtained. (only mitigation ever offered, stated twice in a loop)"
+  ]
+}

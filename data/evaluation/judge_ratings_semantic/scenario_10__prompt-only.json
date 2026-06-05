@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_10",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot picks up a few real CareAir specifics (Vision Transformer on ~1M X-rays, calibrated probabilities, multilingual second-read reports, degraded-mode failover) and names frameworks (EU AI Act high-risk, MDR Rule 11 Class IIa, ISO 82304-2), but it recycles one near-identical 'outputs labeled as estimates' question roughly five times while ignoring concrete gaps the developer already raised (undocumented degraded-mode paths, no blinded unaided-read testing, no explainability/similar-case retrieval). Regulatory citations stay generic with no specific article, and the HERA dimension tags it uses (P2.D3/P2.D4/P2.D1) do not match the gold-standard dimensions and are even self-contradictory in the report (e.g. [P1.D2] labeled 'Data Security & Privacy').",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are directional placeholders ('Conduct a full FMEA', 'Engage a third-party auditor', 'Implement blinded performance testing') with no implementable recipe, no specific GDPR/MDR/AI Act article, and no UI or documentation-artifact design; the few concrete touches (label outputs 'AI Estimate') merely restate the developer's own admitted gap rather than prescribe how to close it tomorrow.",
+  "salient_examples": [
+    "What specific measures have you taken to ensure that the calibrated probabilities from the Vision Transformer model are clearly communicated to clinicians as estimates, not definitive diagnostic findings... [P2.D3] (asked in near-identical form ~5 times)",
+    "Mitigation: Implement explicit labeling (e.g., 'AI Estimate,' 'Probabilistic Highlight') and integrate explainability features (e.g., rationale, similar-case retrieval) in line with the EU AI Act [P2.D3] and ISO 82304-2 [P2.D3].",
+    "Mitigation: Conduct a full failure mode and effects analysis (FMEA) and document all degraded-mode scenarios in accordance with EU AI Act [P2.D4] and ISO 82304-2 [P2.D4].",
+    "Mitigation: Engage a third-party auditor to evaluate bias and fairness in accordance with EU AI Act [P2.D1] and ISO 82304-2 [P2.D1]."
+  ]
+}

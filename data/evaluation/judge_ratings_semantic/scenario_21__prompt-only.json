@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_21",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot references some of BreathEasy's actual choices (Bluetooth inhaler-use events, over-use alerts, parent dashboard, child assent at 12, EN/DE/FR), but the questioning collapses into a near-identical loop about 'children 12+ managing their own data' under 'EU AI Act transparency' tagged [P3.D12] every turn, and the dimension IDs and regulatory citations are largely fabricated or misapplied (Art. 6(4) miscast as automated decision-making, Art. 16 cited for portability, repeated 'EU AI Act Article 5(2)' applied to a non-AI nudge app), so the analysis stays templated rather than precisely matched to this app and the correct articles.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations are directional rather than implementable recipes ('use end-to-end encryption', 'conduct bias audits', 'implement a granular opt-in mechanism', 'develop a child-friendly my data dashboard') with no concrete UI patterns, lawful-basis documentation, or step-by-step procedures a developer could ship tomorrow; the one semi-specific suggestion (third-party age verification via Google/Apple) is undercut by wrong/mismatched regulatory anchoring.",
+  "salient_examples": [
+    "What specific steps have you taken to ensure that children aged 12 and older can access and manage their own health data independently, and how does this align with the EU AI Act's requirement for transparency and user control over automated processing? [P3.D12]",
+    "Mitigation: Use end-to-end encryption for Bluetooth and app communication. Limit data collected to only what is necessary for asthma management.",
+    "Mitigation: Conduct bias audits and involve diverse stakeholders in co-design to ensure fairness. Regulation: EU AI Act Article 6(1), ISO 82304-2.",
+    "[P5.D7] Cybersecurity Threats / [P6.D9] Environmental and Social Impact / [P7.D11] Ethical AI Governance Frameworks"
+  ]
+}

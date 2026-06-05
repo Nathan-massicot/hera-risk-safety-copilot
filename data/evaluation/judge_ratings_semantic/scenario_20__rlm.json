@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_20",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "The copilot tracks the developer's specific disclosures (EPDS item 10 self-harm, sub-threshold rising-trend gap, offline integration fallback, consent reconfirmation for sleep-deprived mothers) so questions reference THIS app rather than a generic template. But it never connects these to the precise regulation/article, the HERA tags are repeatedly wrong/reused (P2.D4 for bias AND sub-threshold AND self-harm; P3.D2 asked near-verbatim twice), and the final report's legal hooks are mismatched/fabricated (AI Act Art. 17, GDPR Art. 6 instead of Art. 9, MDR Rule 11 for a continuity-of-care fallback).",
+  "actionability": 2,
+  "actionability_justification": "Almost every turn is an interrogative 'How does BabyCheck ensure/handle...' with no recommendation, recipe, or implementation step — the developer is asked to supply answers rather than given them. The final report adds only one-line directional mitigations ('Implement a dedicated escalation pathway', 'Introduce periodic consent reminders') with no concrete how, and pins them to incorrect legal citations, so a developer could not implement them confidently tomorrow.",
+  "salient_examples": [
+    "How does BabyCheck ensure that responses to EPDS item 10 about self-harm are prioritized and escalated appropriately, even if the total score remains below the 10-point cutoff? [P2.D4]",
+    "How does BabyCheck handle the ethical and practical challenges of allowing mothers to pause assessments or delete their account... [P3.D2] (this autonomy question is asked twice, nearly verbatim)",
+    "**Mitigation:** Implement a dedicated escalation pathway for EPDS item 10 responses, in line with Article 17 of the EU AI Act, to ensure immediate attention to self-harm concerns.",
+    "**Mitigation:** Introduce periodic consent reminders and reconfirmation prompts, in line with Article 6 of GDPR (mislabels special-category health data, which falls under Art. 9)."
+  ]
+}

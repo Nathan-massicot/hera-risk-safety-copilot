@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_16",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot has collapsed into a degenerate loop, repeating a near-identical paragraph fixated on a single invented '[P2.D3]/[P2.D4] named-doctor booking' issue while ignoring every substantive detail the developer provided (10/20-year retention under Art. 17(3)(b), Google Cloud Translate PHI leakage, dropped-call clinical-safety gap, missing DPIA/DPO, undocumented contraindication protocol). It never engages MediCall's actual data flows or jurisdictions and even cites a fabricated 'EU AI Act right to a named specific human participant in a booking relationship.'",
+  "actionability": 1,
+  "actionability_justification": "The only 'mitigation' offered is the circular, repeated instruction to 'change the app so the patient can pick a specific named doctor at booking' — a fabricated requirement, not implementable guidance, and it ignores the developer's stated facts (the patient already chooses to book and the doctor prescribes freely). No concrete steps, no real regulatory citations, and the requested structured severity-grouped risk report is never produced.",
+  "salient_examples": [
+    "That is a real and serious risk — and it is the [P2.D4] dimension, the core of the clinical service, and the most serious of the remaining 37 dimensions in the HERA taxonomy.",
+    "The mitigation is to change the app so that the patient can pick a specific named doctor at booking, and the doctor can see the named specific patient they have booked — this is the [P2.D3] dimension, and it is the most serious of the 38 dimensions in the HERA taxonomy.",
+    "the relevant regulation is the EU AI Act, and specifically the AI Act's obligations on the transparency and the right to make decisions in the context of an AI system, and the right to a named specific human participant in a booking relationship.",
+    "Could you produce a brief structured risk report now? Use HERA dimension IDs ... [copilot responds with the same repeated paragraph, producing no report]"
+  ]
+}

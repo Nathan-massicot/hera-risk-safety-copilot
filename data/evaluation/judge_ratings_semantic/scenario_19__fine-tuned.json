@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_19",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is in total mode collapse: every turn emits the identical boilerplate paragraph about GDPR data-subject rights regardless of what the developer just said, ignoring the named features (relapse-risk score, hard sober-count reset, no E2E encryption / panic-wipe, MDR Rule 11, no escalation path). Nothing references Anchor's actual choices, data flows, or the substance-use context, and the final 'report' is just hundreds of empty </think> tags.",
+  "actionability_justification": "The only advice ever given is to provide GDPR erasure/portability/access pathways, repeated verbatim across all turns; it offers no concrete recipe and never addresses any of the surfaced problems (E2E encryption, gentle relapse framing, score-spike escalation, MDR Rule 11 documentation, low-literacy consent), so a developer could implement nothing useful from it.",
+  "actionability": 1,
+  "salient_examples": [
+    "[P2.D1] Right to access (GDPR Art. 5): users may also want to download and copy their log and score for offline use, so the app should allow this under GDPR Art. 5 — this is a distinct, but equally valid, right. [P2.D2] Right to access ... [P2.D17] Right to access (GDPR Art. 5): users",
+    "I understand the design, and I want to be precise in how I frame it. [P2.D3] Right to erasure (GDPR Art. 17): the user may lawfully request deletion of their account ... (identical paragraph repeated for every user turn)",
+    "Final requested risk report output: hundreds of empty '</think>' tags with no content, no severity grouping, and no list of uncovered dimensions",
+    "Developer raises hard sober-count reset, no E2E encryption/panic-wipe, MDR Rule 11, and no score-spike escalation — copilot's reply never mentions any of these and repeats the same GDPR-rights boilerplate"
+  ]
+}

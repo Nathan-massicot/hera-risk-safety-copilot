@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_19",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "Questions repeatedly name THIS app's features (substance/urge logs, hard relapse reset to zero, informational relapse-risk score, crisis-keyword chat monitoring, low-literacy mode) and pull in retrieved citations like [mdr_2017_745 · p.32] and Rule 11, which is above generic. But the questioning is formulaic ('What is the legal basis for X, and how does this align with Art. ...?') and largely re-states what the founder just said, and the final report invents dimension IDs (P1.D2, P3.D1, P4.D2, P5.D1...) that match neither the gold standard nor the copilot's own earlier P2.D3/P2.D1 citations, while reducing the BetmG/subpoena and missing-escalation concerns to generic notes.",
+  "actionability": 2,
+  "actionability_justification": "The entire dialogue phase offers only questions and zero concrete guidance, and the report's mitigations are mostly directional checklist items ('Conduct a DPIA', 'Implement robust security measures, including encryption, access controls', 'Rewrite the consent and privacy text in plain language') rather than implementable recipes; only the retention mitigation gives a concrete parameter ('automatic deletion or anonymization after a defined period (e.g., 6 months or 1 year)'). The report is also truncated mid-sentence, leaving advice incomplete.",
+  "salient_examples": [
+    "What is the legal basis for retaining substance-use logs and urge logs for the duration of an account's active use, and how does this align with the requirements of Art. 9(2)(a) (explicit consent) and Art. 5(1)(e) (data minimization) under the GDPR?",
+    "What is the specific reasoning you have used to determine that the relapse-risk score does not fall under the scope of Rule 11 of the MDR, and how does this reasoning align with the criteria in [mdr_2017_745 · p.32]...?",
+    "Mitigation: Implement a clear data retention policy with automatic deletion or anonymization after a defined period (e.g., 6 months or 1 year), aligned with GDPR Art. 5(1)(e) and MDR Rule 11(c) for informational purposes.",
+    "Mitigation: Implement robust security measures, including encryption, access controls, and regular security audits, in line with GDPR Art. 30 and ISO/IEC 82304-2."
+  ]
+}

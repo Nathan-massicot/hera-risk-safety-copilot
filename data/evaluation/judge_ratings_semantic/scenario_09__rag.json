@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_09",
+  "approach": "rag",
+  "depth": 2,
+  "depth_justification": "The copilot ignored every developer answer and looped the identical generic data-purpose question six times verbatim, drilling into nothing. The final report does pick up a few app specifics (Class IIa SaMD, missing low-confidence state, undefined contraindications, UI not stating GP responsibility), but most risks are templated GDPR/MDR boilerplate and the dimension IDs are invented rather than mapped to this app.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are mostly directional verbs with a citation tacked on ('Implement data minimisation', 'Develop a PMS plan', 'Define exclusion criteria') rather than implementable recipes, and there is no layered-consent UI spec, threshold value, or step-by-step procedure. Citations to MDR/GDPR articles add some grounding, but the report is also truncated mid-sentence, leaving guidance incomplete.",
+  "salient_examples": [
+    "What is the primary purpose of the data collected (e.g., diagnostic support, patient monitoring, research) and how is it used beyond the app's core functionality? (repeated verbatim 6 times, ignoring all answers)",
+    "Mitigation: Integrate a confidence threshold mechanism and clearly communicate uncertainty to users. Reference MDR Art. 85 and ISO 14971 [card_mdr_class_i · p.0].",
+    "Mitigation: Define and implement exclusion criteria for lesion types where the model is known to be less accurate.",
+    "- [P3.D1] *Algorithmic (report truncated mid-sentence in the Dimensions Not Covered list)"
+  ]
+}

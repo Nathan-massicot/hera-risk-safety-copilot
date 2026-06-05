@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_07",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The model emitted the identical canned [P2.D3] paragraph verbatim for every user turn, never absorbing any specifics the developer volunteered (N=200 study, 4 mmHg error, skin-tone bias gap, DEP/Securite Sociale all-or-nothing sharing, firmware tagging). It references no GDPR article, no MDR/IEC class reasoning, and no THIS-app data flow; the final 'report' is mode-collapsed degeneration (hundreds of empty </think> tags) that truncates mid-sentence.",
+  "actionability": 1,
+  "actionability_justification": "The only recurring 'mitigation' is the vague instruction to 'validate the software's estimation as a derived value, not as a measured fact, and document the derivation under the applicable regulation' — a platitude with no concrete recipe, no UI change, no specific article, repeated identically and never tailored. The requested structured risk report failed entirely (empty think tags + truncated single line), so a developer gets nothing implementable.",
+  "salient_examples": [
+    "The single most important question is [P2.D3]. ... The mitigation is to validate the software's estimation as a derived value, not as a measured fact, and to document the derivation under the applicable regulation (GDPR, MDR, EU AI Act, ISO 82304-2). [repeated verbatim for every user turn]",
+    "User volunteers 'I'm aware PPG accuracy can vary by skin tone; we haven't done a separate bias audit' -> assistant replies with the same unchanged [P2.D3] paragraph, ignoring the bias disclosure",
+    "Final report request answered with hundreds of empty </think> </think> tags then a truncated 'Severity 1 [P2.D3]' line that cuts off at 'making a clinical judgment — and'",
+    "Now produce the JSON judgement object. [report ends incomplete, no severity grouping, no list of uncovered dimensions as requested]"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_17",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot references MindCare's actual choices (AI summary preview, therapist-skim risk, per-session toggle, Mistral-Large, EU+CH GDPR/nFADP) and cites specific articles (AI Act Art. 50, GDPR Art. 9(2)(h)/17, nFADP Art. 5(c)), but it reflexively tags nearly every turn with the same two dimensions [P2.D3] and [P3.D5], even when off-topic (e.g., the therapeutic-alliance survey and account-access questions), and ignored the high-risk AI Act classification debate the user explicitly raised and the multilingual DE/FR/IT cross-border angle it itself opened with.",
+  "actionability": 3,
+  "actionability_justification": "Some suggestions are concrete and shippable (one-tap revocation tied to GDPR Art. 17, a verbatim user-facing disclaimer string, distinct visual styling for AI vs. user content, a mandatory review-confirmation workflow), but many are directional or boilerplate ('document the access control mechanism', 'implement strict access controls') and every turn closes with the empty 'This will ensure compliance' platitude rather than a precise recipe.",
+  "salient_examples": [
+    "Implement a one-tap revocation feature for past AI summaries, ensuring data erasure and non-reuse of outdated or revoked outputs, in line with GDPR Art. 17 (right to erasure)",
+    "Add a clear, machine-readable disclaimer in the app that explicitly states: \"AI summaries are not guaranteed to be fully accurate and may omit or overstate information. Please review and edit summaries before sharing with your therapist.\"",
+    "This is a critical point under [P3.D5] Transparency and [P2.D3] Human Oversight ... Therapist sees what user shares; no third parties.",
+    "Document the access control mechanism (e.g., role-based access, audit logs, and encryption) ... This will ensure compliance with both Swiss and EU regulations for sensitive health data."
+  ]
+}

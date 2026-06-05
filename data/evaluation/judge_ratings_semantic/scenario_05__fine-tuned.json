@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_05",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot exhibits total mode collapse: it repeats a near-identical 'informational disclaimer' block on essentially every turn and never engages with any of the developer's actual disclosures (recall 0.41, XGBoost with per-user fine-tuning, 2000 user-years with no demographic breakdown, pseudonymized-not-anonymized sharing with a neurology partner, EU AI Act high-risk question). Risk IDs are hallucinated (only invented P2.D3-D7, none matching the gold-standard P1/P5/P6/P7 dimensions) and several degenerate into pure 'GDPR GDPR GDPR...' token spam, making this entirely generic and in fact incoherent.",
+  "actionability": 1,
+  "actionability_justification": "There is no implementable advice anywhere: the single recycled paragraph offers only the circular, factually wrong claim that 'informational' means 'not a medical device' and a vague 'strengthen the evidentiary basis' platitude, with no concrete steps, and the rest of the output collapses into repeated 'GDPR' tokens. A developer could not act on any of it.",
+  "salient_examples": [
+    "MigraineSense's predictions are described as 'informational', which under GDPR essentially means they are not medical devices and thus not subject to the same evidentiary standards.",
+    "**[P2.D6] GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR",
+    "Great, and the 'informational' disclaimer is exactly the point I want to push on.",
+    "Great, and the 'high-risk health category' is exactly the point I want to push on.\n\n**[P2.D7] GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR GDPR..."
+  ]
+}

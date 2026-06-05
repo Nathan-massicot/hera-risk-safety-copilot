@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_03",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "Every assistant turn is degenerate token spam ('[P2.D3] GDPR —' repeated hundreds of times) with zero engagement with TriageAI's actual features, data flows (symptoms/age/gender/postcode, 12-month logs), SaMD/AI Act classification, or any developer choice. There is no app-specific content at all; the output is mode-collapsed and meaningless.",
+  "actionability": 1,
+  "actionability_justification": "The copilot provides no advice whatsoever — no recommendations, no recipes, not even a vague platitude. The repeated '[P2.D3] GDPR' string and the empty 'risk report' table contain nothing a developer could read, let alone implement.",
+  "salient_examples": [
+    "The single most important risk I want to raise is this — [P2.D3] GDPR — [P2.D3] GDPR — [P2.D3] GDPR — [P2.D3] GDPR — [P2.D3] GDPR — ...",
+    "I want to be very clear, because what you described is a well-known and documented risk under the HERA taxonomy.",
+    "**HERA Risk Report — mHealth App (SaMD informational)** ... **Critical** | [P2.D3] GDPR — [P2.D3] GDPR — [P2.D3] GDPR — ..."
+  ]
+}

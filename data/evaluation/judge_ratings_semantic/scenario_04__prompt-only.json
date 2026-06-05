@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_04",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot references real BumpGuide specifics (the 5-1-1 contraction rule, IDFA/Android ad ID plus behavioral signals to the ad network, the single rolled-up consent banner, the missing pregnancy-loss state, the 3-year-stale OB-GYN review), which lifts it above generic. But the regulatory grounding is shallow and frequently wrong: it repeatedly invokes the 'EU AI Act' for plain GDPR matters (a pregnancy wellness app is not an AI system), cites 'Article 30 of GDPR' for a DPIA (which is Art. 35), only glancingly names the central Art. 9 special-category issue, garbles '5-1-1' into '5-3-1', and uses fabricated/inconsistent HERA dimension IDs.",
+  "actionability": 2,
+  "actionability_justification": "Almost every recommendation is directional rather than implementable: 'Conduct a DPIA', 'Add prominent disclaimers', 'Document all data processing activities', 'Define a clear data retention period', 'Appoint a DPO'. There are no concrete recipes (no specific consent-UI pattern, exact lawful-basis wording, retention durations, or SDK/config steps), the questions are near-verbatim templated, and the few specifics present are wrong citations, so a developer could not confidently ship these tomorrow.",
+  "salient_examples": [
+    "What specific steps are you taking to conduct a Data Protection Impact Assessment (DPIA) for BumpGuide, and how will you ensure that the assessment covers the risks ... under Article 30 of GDPR? [P2.D3]",
+    "Mitigation: Conduct a DPIA under Article 30 of GDPR, and limit data sharing to only what is necessary for ad targeting. Ensure that behavioral signals are anonymized or aggregated.",
+    "The 5-3-1 rule may be perceived as a medical recommendation, potentially violating the EU AI Act's transparency and accountability requirements.",
+    "...how do you plan to document this to meet the EU AI Act's accountability requirements? [P2.D3]"
+  ]
+}

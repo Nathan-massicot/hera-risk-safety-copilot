@@ -1,0 +1,20 @@
+{
+  "dimension_id": "P5.D4",
+  "sources": [
+    {
+      "cite": "[card_clinical_eval_mdsw · p.0]",
+      "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+      "why": "Defines scientific validity, analytical and clinical performance — the core proof that content is clinically validated rather than merely estimated."
+    },
+    {
+      "cite": "[card_ivdr_class · p.0]",
+      "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+      "why": "Requires a performance evaluation (validity + analytical + clinical) before outputs derived from specimen data may be claimed as reliable."
+    },
+    {
+      "cite": "[card_iso_82304 · p.0]",
+      "title": "ISO/IEC 82304-2 — health software quality & safety",
+      "why": "Governs how non-device health-information and wellness apps substantiate quality and safety claims about the content they present."
+    }
+  ]
+}

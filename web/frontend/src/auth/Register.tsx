@@ -26,7 +26,7 @@ export default function Register() {
     try {
       await register(token.trim(), email, password);
       await login(email, password, false);
-      navigate("/onboarding", { replace: true });
+      navigate("/chat", { replace: true });
     } catch (err) {
       setError((err as ApiError).detail ?? "Registration failed");
     } finally {

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_01",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot references this app's concrete choices (Mistral-7B fine-tuned on ~10k synthetic GPT-4 CBT dialogues, wellness-vs-medical-device positioning, mood logs, France/Switzerland scope) and cites precise articles (EU AI Act Art. 5(2)/16, GDPR Art. 9/6(1)(a), MDR, ISO 82304-2), so it clears the generic bar. But it is heavily templated: the first three turns reuse near-identical [P2.D3] crisis-detector phrasing while ignoring the F1=0.74 answer just given, and almost every probe is force-tagged [P1.D1], so the specificity is a thin shell over a reusable 'What specific X... and how does this align with [Article]' stem.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay directional rather than implementable: 'conduct a formal risk assessment', 'implement UI labels', 'apply pseudonymization, encryption, restricted access', 'draft a simplified consent form', 'refine keyword lists with domain experts'. None give a concrete recipe (no consent-UI structure, no specified conformity-assessment route, no retention periods or technical-file contents), so a developer learns which topic to address but not how to build it tomorrow.",
+  "salient_examples": [
+    "What steps have you taken to ensure that the crisis-keyword detector does not inadvertently stigmatize users or trigger false positives, especially in the context of mental health conversations? [P2.D3] (near-verbatim repeat of the prior turn, ignoring the F1=0.74 answer just given)",
+    "What specific steps are you taking to ensure transparency in the presentation of AI-generated CBT guidance versus evidence-based content, and how do these steps align with the EU AI Act's transparency requirements (Article 5(2)) [P1.D1]",
+    "Mitigation: Conduct a formal risk assessment under Article 5(2) of the EU AI Act and Article 16 to determine risk tier.",
+    "Mitigation: Apply GDPR Article 9 protections (e.g., pseudonymization, encryption, restricted access) and conduct a data minimization review."
+  ]
+}

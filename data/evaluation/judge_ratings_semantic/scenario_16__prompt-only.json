@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_16",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "Questions genuinely reference MediCall's specific choices (video recording entering the medical file, staged consent app-usage to video to eHealth, DEP/DMP integration, CH 10-year / FR 20-year retention, CH/EU data residency, IHE XDS / Swiss EPDG profiles) and cite precise GDPR articles (9(2)(a), 13(2), 17(3)(b), 35, 44), but specificity is diluted by a templated 'how does this align with the EU AI Act's transparency requirements' tail appended to nearly every question, three near-duplicate retention-documentation questions, and HERA tags that are reused and largely wrong (P1.D10, P1.D11, P3.D13 are not in the gold standard).",
+  "actionability": 3,
+  "actionability_justification": "Suggestions name the right artifacts and obligations (DPIA, residency/cloud audit, per-call logging, Art. 17(3)(b) retention documentation, usability testing) so they are directional rather than vague, but they stop at 'do X' without concrete recipes — no consent-UI structure, no residency architecture, no retention-schedule format a developer could implement tomorrow.",
+  "salient_examples": [
+    "What specific measures are in place to ensure data residency compliance for recordings of CH and EU patients, and how does this align with GDPR Article 44 and the EU AI Act's data governance and security requirements? [P1.D11]",
+    "Mitigation: Implement a patient-specific encryption key and audit all cloud storage locations to ensure compliance with data residency laws.",
+    "Mitigation: Prepare legal documentation to formally justify retention under Swiss and French medical-records laws. Align with the EU AI Act's transparency and legal compliance requirements.",
+    "What steps are being taken to independently validate that patients fully understand the implications of consent for video recording, including its permanence in their medical file, and how does this align with GDPR Article 13(2) and the EU AI Act's transparency and user autonomy requirements? [P1.D10]"
+  ]
+}

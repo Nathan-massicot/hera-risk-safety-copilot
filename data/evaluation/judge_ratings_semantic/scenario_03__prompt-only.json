@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_03",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot references some app-specifics (chest-pain under-triage, heart-attack-in-women, NHS 111 precedent, Llama 3.1 70B + system-prompt + NHS RAG stack, the informational-only disclaimer) and occasionally cites MDR Art. 1(2), but the substance is largely templated ('What specific X have you ... and how does this align with [Pn.Dm] ...' reworded across nearly every turn) and the regulatory hooks are frequently wrong or hallucinated (GDPR Art. 30 framed as 'data subject rights', GDPR Art. 8 as 'non-discrimination', plus invented dimensions [P4.D10] and [P2.D3]). It never drills into the real data flows (EU-server hosting, app-store distribution, logs feeding retraining as a purpose-limitation/consent issue).",
+  "actionability": 2,
+  "actionability_justification": "The conversation is almost entirely interrogative rather than prescriptive, and the final report's mitigations stay directional at best ('Conduct a formal AI Act classification', 'Implement fairness and bias audits', 'Establish a formal post-market monitoring and vigilance reporting process') with no concrete recipe a developer could implement tomorrow (no thresholds, no consent/UI design, no documentation steps, no decision logic for the SaMD question that was the developer's central concern); the few specifics given are inaccurate article citations that would mislead rather than help.",
+  "salient_examples": [
+    "What specific steps have you taken to ensure the Llama 3.1 70B model is configured to avoid harmful or misleading outputs in high-risk medical scenarios, and how does this relate to [P2.D4] (Safety and Robustness) and [P4.D1] (Human Oversight) under the EU AI Act?",
+    "how does this align with Article 30 of the GDPR for data subject rights in the context of AI-generated triage decisions?",
+    "Mitigation: Conduct a formal AI Act classification and risk assessment to determine if TriageAI falls under high-risk categories.",
+    "Mitigation: Implement fairness and bias audits, and stratify performance metrics by demographic factors. Ensure the system prompt and RAG layer include safeguards against harmful outputs."
+  ]
+}

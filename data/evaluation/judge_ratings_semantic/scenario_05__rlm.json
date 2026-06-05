@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_05",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot restates the developer's own facts (XGBoost, sleep/location/food toggles, precision 0.62/recall 0.41) but never connects them to the specific regulation that applies — no mention of EU MDR / MDCG SaMD classification, GDPR Art. 9 special-category health data, or the AI Act, despite the developer explicitly disputing SaMD status. Questions are templated HERA-tagged prompts ('How does the app ensure accuracy across demographics') that could be pasted into any EU health app, so it never drills into the precise risk that recall 0.41 means a 'no migraine predicted' is a false reassurance.",
+  "actionability": 1,
+  "actionability_justification": "The copilot offers zero concrete remediation — it only poses questions and flags missing transparency, then the final report describes risks ('lacks demographic breakdowns', 'does not provide detailed explanations') without a single implementable step, regulation citation, or recipe. It also ignores the developer's direct SaMD skepticism and repeatedly loops the same canned 'Want me to produce a brief risk report?' line, giving the developer nothing to build tomorrow.",
+  "salient_examples": [
+    "How does the app ensure the accuracy of the migraine prediction model across different user demographics and geographic regions within the EU?",
+    "I think we've covered the main dimensions for now. Want me to produce a brief risk report?",
+    "[P2.D4] The app provides migraine predictions without disclosing performance metrics (e.g., precision 0.62, recall 0.41) ... increasing the risk of misinterpretation as medical advice.",
+    "[P3.D2] The app does not provide detailed explanations of how user data (sleep, location, food) influences the ML model's predictions, limiting user understanding of the model's decision-making process."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_23",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot is in near-total mode collapse: it repeats the same boilerplate ('GDPR Art. 9(2)(a) data-sharing exemption is required') regardless of the developer's actual disclosures, never engaging with the specific re-identification risk, missing DPO/DPIA, coarse consent layers, or absent access log. The final report fabricates dimension IDs (P1.D2-P1.D7) that match neither the gold-standard HERA dimensions nor the points raised, and is six identical copy-pasted paragraphs that trail off mid-sentence.",
+  "actionability": 1,
+  "actionability_justification": "The advice is not implementable and is actively wrong/dangerous, e.g. 'do not anonymize the data; keep it identifiable so it is not special-category data... thereby removing the consent obligation' — a fundamental misstatement of GDPR that would increase, not reduce, risk. The handful of correct-sounding mitigations (k-anonymity threshold, granular consent) are buried in repetitive, self-contradictory text with no concrete steps a developer could follow tomorrow.",
+  "salient_examples": [
+    "Mitigation: do not anonymize the data; keep it identifiable so it is not special-category data under GDPR Art. 9, thereby removing the consent obligation.",
+    "Understood. The lack of clinical interoperability is a genuine risk under GDPR Art. 9(2)(a) — a GDPR Art. 9 data-sharing exemption is required before any further processing. Mitigation: confirm and document the appointment of the DPO and the completion of the DPIA in writing before any further processing.",
+    "On the erasure side, in-app account deletion wiping your own copy is a GDPR Art. 9(2)(a) data-sharing exemption — it is not special-category data under GDPR Art. 9, so no additional obligations apply beyond the consent requirement.",
+    "**[P1.D2] ... ** ... **[P1.D3] ... ** ... **[P1.D4] ... ** (six identical paragraphs of copy-pasted text, with fabricated dimension IDs, ending mid-word: 'require a GDPR Art. 9(2)(a) data-sharing exemption (GDPR Art. 9(2)(a')"
+  ]
+}

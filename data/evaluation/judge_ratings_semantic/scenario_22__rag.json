@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_22",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot does reference PainTrack's actual choices (free-text triggers exported as-is, internal encryption keys giving plaintext capability, all-or-nothing diary consent, 60-patient beta, partial FHIR maturity) and cites specific GDPR articles, so it is well above generic. However, the questioning is largely a templated 'what is the risk + which HERA dimension/article' formula, the dimension labels are frequently mismatched (uses P1.D1, P2.D2, P2.D4 etc. instead of the gold-standard set), and the report stays at the level of restating the developer's facts rather than tracing precise data flows or the specific FHIR/eHealth standard that applies.",
+  "actionability": 3,
+  "actionability_justification": "Mitigations are directional and mostly correct ('conduct a DPIA', 'appoint a DPO', 'implement user-controlled encryption keys', 'introduce granular per-data-type consent') and tie to plausible articles, but they read as one-line directives without concrete implementation recipes (no consent-UI design, no key-management scheme, no DPIA template/threshold, no fallback spec for partial FHIR). A developer would know what to do but not exactly how to build it tomorrow.",
+  "salient_examples": [
+    "What is the key regulatory risk associated with the \"all-or-nothing\" consent model for data types within the diary, and which specific GDPR article mandates the requirement for granular, purpose-specific consent for the processing of special category data?",
+    "Risk: Holding plaintext capability of sensitive free-text data (e.g., substance use) with internal encryption keys. ... Mitigation: Implement user-controlled encryption keys for sensitive data and ensure data is encrypted at rest and in transit.",
+    "Mitigation: Introduce granular, purpose-specific consent options for different data types (e.g., pain intensity vs. free-text triggers).",
+    "Risk: Inconsistent FHIR endpoint maturity across clinics leads to reliance on PDF exports ... Mitigation: Develop fallback mechanisms for partial FHIR integration and ensure PDF exports meet interoperability standards."
+  ]
+}

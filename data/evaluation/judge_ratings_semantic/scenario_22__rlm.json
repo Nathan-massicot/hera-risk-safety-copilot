@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_22",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "Questions and risks consistently name PainTrack's actual features (NRS scale, free-text triggers, FHIR partial endpoints, PDF exports, app-held plaintext keys) and cite real regulations (GDPR Art. 9/30/37, MDR 2017/745), so it is clearly not fully generic. However, most assistant turns just paraphrase the developer's own disclosures back as a question rather than drilling into THIS app's specific data flows or implications, and several citations are boilerplate or wrong (ISO 82304-2 pasted repeatedly, 'EU AI Act Article 18' applied to a pain diary).",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay mostly directional and re-state the obvious next step ('Implement adaptive reminder systems', 'Complete a documented DPIA and formally appoint a DPO', 'Establish a dedicated technical documentation review process') without concrete recipes a developer could implement tomorrow. A couple of suggestions name a mechanism (NLP to flag/anonymize free-text on export, user-only on-device keys) but give no implementation detail, thresholds, or UI/architecture specifics.",
+  "salient_examples": [
+    "How does PainTrack address the risk of declining user engagement over time, particularly in maintaining consistent data collection for accurate clinical insights, given the app's reliance on daily logging? [P1.D2]",
+    "Mitigation: Apply natural language processing (NLP) to flag and anonymize sensitive content during PDF export, ensuring GDPR Art. 9 compliance and reducing the risk of misinterpretation.",
+    "Mitigation: Complete a documented DPIA for data exports and formally appoint a DPO, ensuring compliance with GDPR Art. 30 and Art. 37.",
+    "Mitigation: Develop a tiered access policy with subsidized or free access options for low-income users, ensuring alignment with EU AI Act Article 18 on accessibility and non-discrimination."
+  ]
+}

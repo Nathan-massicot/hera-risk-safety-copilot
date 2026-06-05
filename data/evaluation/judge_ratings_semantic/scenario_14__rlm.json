@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_14",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "Most of the copilot's turns are recycled 'How does SleepWell ensure X, especially given Y?' questions that simply echo back the developer's own disclosures without adding analytic specificity, and it never engaged the developer's explicit MDR Rule 11 / wellness-vs-SaMD classification concern. The final report does name a few specifics (continuous mic digest, N=50 staging, GDPR articles, ISO 82304-2), which lifts it above purely generic, but it remains largely templated.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay at the directional level ('implement a granular consent screen', 'conduct a real-world validation study', 'perform an in-app efficacy trial') without concrete UI/process recipes, and several regulatory citations are vague or misapplied (e.g. 'EU AI Act Article 54' for efficacy, 'EU AI Act Article 16' for staged rollback). A developer could not implement these tomorrow without substantial further specification.",
+  "salient_examples": [
+    "How does SleepWell ensure the accuracy and reliability of the sleep staging algorithm, especially given the limited validation in real-world conditions?",
+    "How does SleepWell ensure transparency and explainability in the CBT-I recommendation process, especially since users are not shown which signals influenced a given recommendation?",
+    "Mitigation: Implement a granular consent screen explaining on-device processing vs. cloud digest transmission, in line with GDPR Article 6(1)(a) and Article 13.",
+    "Mitigation: Perform an in-app efficacy trial to validate coaching outcomes, in line with MDR Rule 11 and EU AI Act Article 54."
+  ]
+}

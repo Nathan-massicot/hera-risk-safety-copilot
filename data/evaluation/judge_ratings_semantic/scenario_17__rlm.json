@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_17",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot references some MindCare specifics (Mistral-Large summaries, EU+CH residency, the support-only revocation gap, inconsistent visual labelling) but it loops the same 'therapists skimming' question almost verbatim 4+ times and repeatedly asserts facts the user never gave (e.g. claiming end-to-end encryption, which the user explicitly denied), so it neither tracks the developer's actual data flows nor drills into their stated target users or therapeutic-alliance concern.",
+  "actionability_justification": "Most turns are restated observations plus a generic 'given the sensitive nature of mental health data' suffix rather than concrete steps; only the final report offers implementable specifics (one-tap revocation, mandatory full-entry confirmation prompt) tied to named articles, but several article mappings are loose or wrong (pen-test mapped to GDPR Art. 30 Record of Processing), keeping it at directional rather than recipe-grade.",
+  "actionability": 2,
+  "salient_examples": [
+    "MindCare uses end-to-end encryption for journal entries both during transmission and when stored... [user then corrects: 'we don't yet offer end-to-end encryption on the journal itself']",
+    "MindCare's AI-generated summaries may risk therapists skimming journal entries... What measures are in place to ensure that therapists are not solely reliant on AI-generated summaries (asked near-identically across 4 separate turns)",
+    "Mitigation: Implement a mandatory confirmation prompt requiring therapists to review the full journal entry before proceeding with the session, in line with GDPR Article 25... and the EU AI Act Article 5(2) (Human Oversight).",
+    "Mitigation: Conduct a formal penetration test and third-party security audit in accordance with ISO 82304-2 and GDPR Article 30 (Record of Processing Activities)."
+  ]
+}

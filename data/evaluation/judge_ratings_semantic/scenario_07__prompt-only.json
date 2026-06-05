@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_07",
+  "approach": "prompt-only",
+  "depth": 2,
+  "depth_justification": "The copilot reuses one near-identical template question for almost every turn ('What specific steps/measures/safeguards are in place to ensure compliance with [P4.D12] Data Security and [P2.D3] Data Protection...'), largely restating the developer's own words and ignoring his repeated 'that's outside my part of the stack' rather than redirecting to genuine app-layer obligations. It does name PulseTrack-specific facts (DEP, Sécurité Sociale, Class IIa watch vs Class I app, HL7 CDA/FHIR), but never challenges the load-bearing 'app is just a display layer' assumption for a tool presenting a clinical BP estimate, and it cites invented dimension IDs ([P4.D12], [P5.D14]) while missing nearly every gold dimension (P1.D5, P2.D1/D4, P4.D1/D2, P5.D1/D2/D4, P7.x).",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations are directional rather than implementable ('Conduct a formal audit of data formats', 'Maintain detailed technical documentation', 'ensure alignment'), and the few concrete ones (per-reading opt-out) sit among frequently misattributed citations (GDPR Art. 16 mislabeled 'right to data portability', 'ISO 82304-2 encryption standards', GDPR Art. 30 for key management) that a developer would have to untangle before acting.",
+  "salient_examples": [
+    "What specific steps are taken to ensure that encryption keys used for data at rest are managed in compliance with [P4.D12] Data Security and [P2.D3] Data Protection, particularly in light of the fact that key management is handled outside your part of the stack?",
+    "Mitigation: Implement ISO 82304-2 encryption standards for data at rest and align key management with GDPR Article 30 and the Swiss Data Protection Act (DSG).",
+    "Mitigation: Introduce granular sharing controls per GDPR Article 16 (right to data portability) and Article 17 (right to erasure).",
+    "Risk: The app is classified as Class I, but the combined system is MDR-compliant. ... Mitigation: Maintain detailed technical documentation per MDR Article 10 and ISO 13485:2016 to delineate responsibilities between Class IIa and Class I components."
+  ]
+}

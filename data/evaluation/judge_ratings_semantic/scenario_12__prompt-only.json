@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_12",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot does engage with Lunara's actual choices (basal-body-temperature Bayesian model, the contraception-vs-wellness mode line, PCOS/irregular-cycle weakness, IDFA pull, EU+CH residency, re-identifiable cycle signatures) and names real instruments (GDPR Art. 9, MDR Class IIa, EU AI Act), so it is clearly not generic. But it never moves past restating the developer's own admissions as questions, tags every single probe with the same wrong dimension [P2.D3] regardless of topic, and the final report invents dimension IDs (P3.D1, P4.D2, P5.D1, P7.D1) that do not match the gold-standard HERA set, so specificity is shallow and mislabeled rather than laser-focused.",
+  "actionability": 2,
+  "actionability_justification": "Almost the entire conversation is interrogative ('What specific steps are you taking...'), pushing the work back onto the developer rather than prescribing a fix. The closing report adds slightly more direction (differential privacy, mode-switch confirmation, structured machine-readable exports) but these stay at the 'do a DPIA' level with no concrete recipe, thresholds, consent copy, lawful-basis wording, or UI spec a developer could implement tomorrow; it also misstates the AI Act ('high-risk under Article 5(2)').",
+  "salient_examples": [
+    "What steps are you taking to audit and validate the uniqueness of anonymized cycle patterns, and how do you plan to mitigate the risk of re-identification, given the potential for unique cycle signatures under [P2.D3] and the requirements of GDPR Article 9?",
+    "What specific UI design changes are you planning to implement to clearly distinguish between wellness and regulated contraception modes... under [P2.D3] and the EU AI Act's Article 8 (transparency) and Article 10 (human oversight)?",
+    "Mitigation: Conduct third-party re-identification audits, implement differential privacy, and formalize anonymization standards under GDPR Article 9(2)(a) and ISO 82304-2.",
+    "[P3.D1] AI System Classification & Risk Assessment ... [P4.D2] User Consent & Understanding ... [P5.D1] Data Residency & Legal Access"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_04",
+  "approach": "rag",
+  "depth": 2,
+  "depth_justification": "The copilot named some BumpGuide specifics (5-1-1 timer, kick counts, IDFA/Android ad ID, Firebase, LMP) and cited GDPR articles, but its questions were near-identical forced-choice templates ('is it X or Y') that ignored the developer's actual answers, and the report mislabels dimensions (the report's P-IDs barely overlap with the gold standard) and misses the core pregnancy-data-as-special-category framing under Art. 9 except as a vague 'if re-identification is possible' hedge.",
+  "actionability": 2,
+  "actionability_justification": "Most mitigations are directional rather than concrete recipes — 'Conduct a DPIA under GDPR Art. 35', 'Implement a data retention policy under GDPR Art. 5(1)(e)', 'Implement encryption for data at rest and in transit' — without specifying retention periods, consent UI design, the ePrivacy/IDFA consent mechanism, or how to actually treat the ad targeting as Art. 9 health data; a developer could not implement these tomorrow without further research.",
+  "salient_examples": [
+    "What is the **specific type** of data used to measure \"retention\" in your A/B testing — is it **aggregated, anonymized metrics** ... or **individual-level data** ... [hera_p2.d3]",
+    "Mitigation: Conduct a DPIA under GDPR Art. 35 to assess necessity and proportionality. Limit data collection to what is strictly necessary (e.g., remove email unless required for account management).",
+    "Mitigation: Ensure that data shared with third parties is truly anonymous or pseudonymised. If re-identification is possible, obtain explicit consent under Art. 9(2)(a) and avoid bundled consent mechanisms.",
+    "Mitigation: Implement encryption for data at rest and in transit, especially for sensitive health data. [gdpr_art30 · p.0]"
+  ]
+}

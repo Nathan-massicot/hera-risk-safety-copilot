@@ -1,0 +1,2358 @@
+{
+  "P1.D1": {
+    "name": "Clinical Evidence & Validation",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.72,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.716,
+        "snippet": "XV / EN ISO 14155). ## Examples (mHealth) - A Class IIa app scoring melanoma risk from skin photos -> needs all three pillars: the score correlates with malignancy (validity), the model runs correctly on real images (analytical), and it performs in the target population (clinical). - A Class IIb ins"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.712,
+        "snippet": "/ scientific validity** — the output is meaningfully linked to the targeted clinical condition or physiological state; 2. **Technical / analytical performance** — the software correctly and reliably generates the intended output from the input data (verification & validation); 3. **Clinical performa"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "# Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1) ## Why this concerns you (purpose) If your software is a classified medical device (SaMD), CE marking is not granted on the basis that the code \"works\". You must show, with **clinical evidence**, that the device actually delivers a **clin"
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.704,
+        "snippet": "reference lab). - [ ] Build the performance evaluation (validity + analytical + clinical performance). - [ ] Register UDI + EUDAMED and set up PMS before placing on the market. ## Examples (mHealth) - An app that **interprets a home blood-glucose or HbA1c value** to give a result → IVD-MDSW (typical"
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.701,
+        "snippet": "technical documentation**; for IIb the NB scrutiny is broader and at least one technical-documentation surveillance assessment occurs **annually** for implantable IIb (and proportionately for high-risk software). - **In-depth clinical evaluation** with stronger clinical data; **PSUR updated at least"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.699,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.691,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      }
+    ]
+  },
+  "P1.D2": {
+    "name": "Contraindications & Adverse Effects",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.715,
+        "snippet": "# PLD — Product Liability Directive (software & AI) ## Why this concerns you (purpose) The revised Product Liability Directive (Dir. (EU) 2024/2853, replacing 85/374/EEC) makes **software and AI systems explicitly \"products\"**. That means if your mHealth app, SaMD or AI model causes harm — physical "
+      },
+      {
+        "cite": "[card_combination_product · p.0]",
+        "title": "Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "# Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117) ## Why this concerns you (purpose) When your app or device sits next to a **medicinal product** — a companion app that sets a dose or drives adherence, or a device that incorporates or administers a drug — you are in **borderlin"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.701,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.693,
+        "snippet": "An app providing **alarms on a vital parameter** (e.g. apnoea/arrhythmia alerting) where missing an event poses immediate danger → Rule 11(b) → IIb. - **Edge/negative:** the *same* closed-loop app, if a dosing error could cause **death or irreversible** harm, is **not** IIb — Rule 11 escalates it to"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.689,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.689,
+        "snippet": "Document defect-avoidance: risk management, change logs, security-update commitments. - [ ] Ensure you can produce evidence on demand (disclosure duty) to rebut the eased-proof presumptions. - [ ] Review insurance + contractual liability allocation with component and AI-model suppliers. ## Examples "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.687,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.686,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      }
+    ]
+  },
+  "P1.D3": {
+    "name": "False Sense of Security",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.739,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.715,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.712,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.709,
+        "snippet": "# PLD — Product Liability Directive (software & AI) ## Why this concerns you (purpose) The revised Product Liability Directive (Dir. (EU) 2024/2853, replacing 85/374/EEC) makes **software and AI systems explicitly \"products\"**. That means if your mHealth app, SaMD or AI model causes harm — physical "
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.707,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.704,
+        "snippet": "Document defect-avoidance: risk management, change logs, security-update commitments. - [ ] Ensure you can produce evidence on demand (disclosure duty) to rebut the eased-proof presumptions. - [ ] Review insurance + contractual liability allocation with component and AI-model suppliers. ## Examples "
+      },
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.703,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.701,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      }
+    ]
+  },
+  "P1.D4": {
+    "name": "Delayed Medical Consultation",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_ai_act_timeline · p.0]",
+        "title": "EU AI Act — staggered application timeline (+ Digital Omnibus)",
+        "jurisdiction": "EU",
+        "score": 0.71,
+        "snippet": "# EU AI Act — staggered application timeline (+ Digital Omnibus) ## Why this concerns you (purpose) The EU AI Act (Regulation (EU) 2024/1689) does **not** apply all at once. It entered into force on 1 Aug 2024 and switches on in **waves** through 2027-2028. If your mHealth app uses AI, the only way "
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.698,
+        "snippet": "An app providing **alarms on a vital parameter** (e.g. apnoea/arrhythmia alerting) where missing an event poses immediate danger → Rule 11(b) → IIb. - **Edge/negative:** the *same* closed-loop app, if a dosing error could cause **death or irreversible** harm, is **not** IIb — Rule 11 escalates it to"
+      },
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.69,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.688,
+        "snippet": "mandatory. - An AI symptom-triage feature combining health, location and behavioural data → sensitive data + scoring + innovative tech: DPIA mandatory, likely Art. 36 consultation. - (Edge/negative) A solo physiotherapist's app holding **a few dozen local patient notes**, no profiling → not \"large s"
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.687,
+        "snippet": "22 DPIA whenever you process Swiss health data at large scale or do high-risk profiling. - [ ] Decide your FDPIC route: prior consultation, or appoint a data protection adviser to avoid it. - [ ] Document the Swiss DPIA distinctly from any [[gdpr_dpia]] you already hold. ## Examples (mHealth) - A me"
+      },
+      {
+        "cite": "[card_combination_product · p.0]",
+        "title": "Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)",
+        "jurisdiction": "EU",
+        "score": 0.682,
+        "snippet": "# Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117) ## Why this concerns you (purpose) When your app or device sits next to a **medicinal product** — a companion app that sets a dose or drives adherence, or a device that incorporates or administers a drug — you are in **borderlin"
+      },
+      {
+        "cite": "[card_mdr_class_i · p.0]",
+        "title": "SaMD Class I (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.679,
+        "snippet": "] Assemble the technical file (Annex II/III) before placing on the market. - [ ] Register actor (SRN) + device in EUDAMED and assign UDI. - [ ] Set up a PMS plan even at Class I (it is not optional). ## Examples (mHealth) - A medication-reminder app that **only stores and displays** a clinician-set "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.676,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      }
+    ]
+  },
+  "P1.D5": {
+    "name": "Measurement Reliability",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.681,
+        "snippet": "/ scientific validity** — the output is meaningfully linked to the targeted clinical condition or physiological state; 2. **Technical / analytical performance** — the software correctly and reliably generates the intended output from the input data (verification & validation); 3. **Clinical performa"
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.665,
+        "snippet": "# IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746) ## Why this concerns you (purpose) If your app provides information **by analysing data derived from a specimen taken from the human body** (blood, urine, tissue, genetic/DNA data, biomarkers), it is **not** an MDR device — it is **IVD"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.664,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.659,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.657,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.653,
+        "snippet": "XV / EN ISO 14155). ## Examples (mHealth) - A Class IIa app scoring melanoma risk from skin photos -> needs all three pillars: the score correlates with malignancy (validity), the model runs correctly on real images (analytical), and it performs in the target population (clinical). - A Class IIb ins"
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.649,
+        "snippet": "reference lab). - [ ] Build the performance evaluation (validity + analytical + clinical performance). - [ ] Register UDI + EUDAMED and set up PMS before placing on the market. ## Examples (mHealth) - An app that **interprets a home blood-glucose or HbA1c value** to give a result → IVD-MDSW (typical"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.648,
+        "snippet": "against the ISO/TS 82304-2 quality dimensions and self-score. - [ ] Decide whether to pursue an independent quality-label assessment. - [ ] Verify horizontal obligations (privacy, security, accessibility) are still met. ## Examples (mHealth) - A **step-counter / general fitness** app with motivation"
+      }
+    ]
+  },
+  "P1.D6": {
+    "name": "System Dependency & Over-reliance",
+    "pillar": "P1",
+    "candidates": [
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.693,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.685,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.683,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.683,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.678,
+        "snippet": "# PLD — Product Liability Directive (software & AI) ## Why this concerns you (purpose) The revised Product Liability Directive (Dir. (EU) 2024/2853, replacing 85/374/EEC) makes **software and AI systems explicitly \"products\"**. That means if your mHealth app, SaMD or AI model causes harm — physical "
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.663,
+        "snippet": "\"wellness\" apps claiming interoperability with EHRs); - you are a **data holder** of electronic health data (you may have to make it available for secondary use via an HDAB on request); - you are a **data user** seeking health data for research/innovation → you apply to an **HDAB** for a data permit"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.663,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.661,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      }
+    ]
+  },
+  "P2.D1": {
+    "name": "Informed Consent",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.726,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.714,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.71,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.708,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.686,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.685,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.683,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      }
+    ]
+  },
+  "P2.D2": {
+    "name": "Data Minimization",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.726,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.691,
+        "snippet": "**controller** (you decide why/how) or as a **processor** (you process on someone else's behalf). It applies even to a free app, even with no monetisation, and even if your servers sit outside the EU. Switzerland-only apps fall under a **distinct** regime — see [[nlpd_base]]. ## Concrete obligations"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.683,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.683,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.682,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.673,
+        "snippet": "# GDPR — baseline (legal basis & rights) ## Why this concerns you (purpose) If your mHealth app touches **any personal data** of people in the EU/EEA, the GDPR is your non-negotiable baseline — it applies regardless of where your company is established (Art. 3 extraterritorial reach). It forces you "
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.67,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.668,
+        "snippet": "EU customers (switching rules). Edge: a **standalone app** with no connected object and no cloud service offered to customers is largely out of the connected-product obligations (though the cloud-switching chapter can still reach the services you buy). ## Concrete obligations - **Access by design / "
+      }
+    ]
+  },
+  "P2.D3": {
+    "name": "Storage, Encryption & Security",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.724,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_gdpr_transfer · p.0]",
+        "title": "GDPR Chapter V — international transfers",
+        "jurisdiction": "EU",
+        "score": 0.719,
+        "snippet": "[ ] Re-assess on sub-processor changes; coordinate with French hosting rules — see [[hds_certification]]. ## Examples (mHealth) - A patient app whose backend runs on a **US-region cloud** → adequacy only if the importer is DPF-certified; otherwise 2021 SCCs + TIA + encryption. - An EU app calling a "
+      },
+      {
+        "cite": "[card_hds_certification · p.0]",
+        "title": "HDS — Health Data Host certification (France)",
+        "jurisdiction": "FR",
+        "score": 0.715,
+        "snippet": "# HDS — Health Data Host certification (France) ## Why this concerns you (purpose) If you store the health data of French patients on a cloud or with any hosting provider, French law requires that provider to hold the **HDS certification** (\"Hébergeur de Données de Santé\"). The obligation legally fa"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.71,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.708,
+        "snippet": "# Data Act — access & portability of connected-product data ## Why this concerns you (purpose) If your mHealth offering pairs with a **connected product** (a wearable, a glucometer, a smart scale, a sensor), the Data Act (Reg. (EU) 2023/2854) gives the **user** a right to the data that product gener"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.706,
+        "snippet": "# GDPR — baseline (legal basis & rights) ## Why this concerns you (purpose) If your mHealth app touches **any personal data** of people in the EU/EEA, the GDPR is your non-negotiable baseline — it applies regardless of where your company is established (Art. 3 extraterritorial reach). It forces you "
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.703,
+        "snippet": "# EHDS — European Health Data Space ## Why this concerns you (purpose) The European Health Data Space (Reg. (EU) 2025/327, **in force since 26 March 2025**) builds a common EU framework for health data on **two legs**. **Primary use**: patients get cross-border access to and control over their elect"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.694,
+        "snippet": "# CRA — Cyber Resilience Act (products with digital elements) ## Why this concerns you (purpose) If you place a mHealth **app or software** on the EU market, the Cyber Resilience Act (Reg. (EU) 2024/2847) treats it as a **\"product with digital elements\"** that must be **secure by design and by defau"
+      }
+    ]
+  },
+  "P2.D4": {
+    "name": "Third-Party Data Sharing",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.813,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.789,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.748,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_hds_certification · p.0]",
+        "title": "HDS — Health Data Host certification (France)",
+        "jurisdiction": "FR",
+        "score": 0.74,
+        "snippet": "but whose analytics DB is on a non-certified provider → the analytics DB breaches HDS if it holds health data. ## HERA dimensions touched - **Data hosting & sovereignty** · **Vendor/processor management** · **French market access** - Cross-links: [[gdpr_base]] (Art. 28 DPA), [[gdpr_transfer]] (EEA h"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.732,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.732,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.732,
+        "snippet": "\"wellness\" apps claiming interoperability with EHRs); - you are a **data holder** of electronic health data (you may have to make it available for secondary use via an HDAB on request); - you are a **data user** seeking health data for research/innovation → you apply to an **HDAB** for a data permit"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.724,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      }
+    ]
+  },
+  "P2.D5": {
+    "name": "Anonymization & Right to Erasure",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.762,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.72,
+        "snippet": "GDPR scope (Recital 26), but the bar for \"anonymous\" is high and rarely met by raw event logs. ## HERA dimensions touched - **Data protection baseline** · **Vendor/processor management** · **User rights & transparency** - Cross-links: [[gdpr_art9]] (health = special category), [[gdpr_dpia]] (high-ri"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.7,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.697,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.694,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.693,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.687,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.682,
+        "snippet": "[[gdpr_base]] (the baseline Art. 9 sits on), [[gdpr_dpia]] (Art. 35 assessment), [[gdpr_biometric]] (genetic/biometric special categories), [[nlpd_base]] (Swiss \"sensitive data\" equivalent, Art. 5(c)) ## Official sources - EUR-Lex — Regulation (EU) 2016/679 (GDPR), Art. 9: https://eur-lex.europa.eu/"
+      }
+    ]
+  },
+  "P2.D6": {
+    "name": "Vulnerable Population Data",
+    "pillar": "P2",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_children · p.0]",
+        "title": "GDPR Art. 8 — children",
+        "jurisdiction": "EU",
+        "score": 0.759,
+        "snippet": "# GDPR Art. 8 — children ## Why this concerns you (purpose) If your mHealth app is offered **directly to children** and relies on **consent**, GDPR Art. 8 sets an age below which the child cannot consent alone: you need consent from a **holder of parental responsibility**. Children are deemed less a"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.743,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.742,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.735,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.73,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_gdpr_children · p.0]",
+        "title": "GDPR Art. 8 — children",
+        "jurisdiction": "EU",
+        "score": 0.728,
+        "snippet": "itself does not bite — but the child-protection principles still apply. ## Concrete obligations - Determine the **applicable national age** for each market and gate accordingly. - Below the threshold, obtain and **verify** consent from the holder of parental responsibility, making *reasonable effort"
+      },
+      {
+        "cite": "[card_gdpr_children · p.0]",
+        "title": "GDPR Art. 8 — children",
+        "jurisdiction": "EU",
+        "score": 0.724,
+        "snippet": "→ needs verified parental consent for users under 15. - A youth **sleep/step tracker** processing heart-rate data → Art. 8 *and* Art. 9 stack: parental consent plus a DPIA-grade assessment of the sensitive data — see [[gdpr_dpia]]. - (Edge/negative) A **confidential self-harm counselling chat** aime"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.723,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      }
+    ]
+  },
+  "P3.D1": {
+    "name": "Right to Make Decisions",
+    "pillar": "P3",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.741,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.713,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.709,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.702,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.701,
+        "snippet": "# GDPR — baseline (legal basis & rights) ## Why this concerns you (purpose) If your mHealth app touches **any personal data** of people in the EU/EEA, the GDPR is your non-negotiable baseline — it applies regardless of where your company is established (Art. 3 extraterritorial reach). It forces you "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.7,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.699,
+        "snippet": "substantial-public-interest basis. ## Concrete obligations - Establish a lawful **exception** (Art. 22(2)): necessary for a contract, authorised by Union/Member-State law, or **explicit consent** — and for health data meet Art. 22(4). - Implement **safeguards** (Art. 22(3)): the right to obtain **hu"
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.69,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      }
+    ]
+  },
+  "P3.D2": {
+    "name": "Emotional Manipulation & Excessive Nudging",
+    "pillar": "P3",
+    "candidates": [
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.672,
+        "snippet": "obvious to a reasonably informed person. - **Emotion-recognition / biometric-categorisation notice:** inform the exposed persons that the system is operating (and process biometric data per GDPR Art. 9). - **AI-content marking:** mark AI-generated/manipulated outputs in a **machine-readable** format"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.664,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.661,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.649,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.645,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_gdpr_biometric · p.0]",
+        "title": "GDPR Art. 9 — biometrics (+ AI Act Art. 5)",
+        "jurisdiction": "EU",
+        "score": 0.641,
+        "snippet": "even to a small user base: scale affects the DPIA test, not the Art. 9 trigger. ## Concrete obligations - Identify a valid Art. 9(2) basis — in consumer mHealth this is almost always **explicit consent** (Art. 9(2)(a)): freely given, specific, informed, separate from other consents, and as easy to w"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.633,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_ai_act_timeline · p.0]",
+        "title": "EU AI Act — staggered application timeline (+ Digital Omnibus)",
+        "jurisdiction": "EU",
+        "score": 0.629,
+        "snippet": "# EU AI Act — staggered application timeline (+ Digital Omnibus) ## Why this concerns you (purpose) The EU AI Act (Regulation (EU) 2024/1689) does **not** apply all at once. It entered into force on 1 Aug 2024 and switches on in **waves** through 2027-2028. If your mHealth app uses AI, the only way "
+      }
+    ]
+  },
+  "P3.D3": {
+    "name": "Impact on Doctor-Patient Relationship",
+    "pillar": "P3",
+    "candidates": [
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.73,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.709,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_nlpd_base · p.0]",
+        "title": "nFADP — baseline (Swiss Federal Act on Data Protection)",
+        "jurisdiction": "CH",
+        "score": 0.704,
+        "snippet": "recommended; appointing one is the single point of contact with the FDPIC and can replace prior consultation for high-risk DPIAs. ## Checklist - [ ] Confirm you are applying the **nFADP** (not the GDPR) to your Swiss user base. - [ ] Treat health data as **sensitive data (Art. 5(c))** and document t"
+      },
+      {
+        "cite": "[card_combination_product · p.0]",
+        "title": "Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)",
+        "jurisdiction": "EU",
+        "score": 0.703,
+        "snippet": "# Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117) ## Why this concerns you (purpose) When your app or device sits next to a **medicinal product** — a companion app that sets a dose or drives adherence, or a device that incorporates or administers a drug — you are in **borderlin"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.699,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.695,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.69,
+        "snippet": "data** (health data is sensitive under nFADP Art. 5(c)), **high-risk profiling**, or **systematic large-scale monitoring**. Both apply to apps targeting **Switzerland** under the nFADP, in parallel with their GDPR counterparts ([[gdpr_automated]], [[gdpr_dpia]]) and on top of the nFADP baseline ([[n"
+      }
+    ]
+  },
+  "P3.D4": {
+    "name": "Dynamic Consent & Withdrawal Rights",
+    "pillar": "P3",
+    "candidates": [
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.764,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.764,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.754,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.739,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.738,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.724,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.714,
+        "snippet": "EU customers (switching rules). Edge: a **standalone app** with no connected object and no cloud service offered to customers is largely out of the connected-product obligations (though the cloud-switching chapter can still reach the services you buy). ## Concrete obligations - **Access by design / "
+      },
+      {
+        "cite": "[card_gdpr_transfer · p.0]",
+        "title": "GDPR Chapter V — international transfers",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "# GDPR Chapter V — international transfers ## Why this concerns you (purpose) If your health data leaves the EEA — even just to a cloud sub-processor or a third-party AI API hosted abroad — GDPR **Chapter V** (Art. 44-49) governs the transfer. The rule: you may only transfer if the destination ensur"
+      }
+    ]
+  },
+  "P3.D5": {
+    "name": "Automation Bias (AI and Non-AI)",
+    "pillar": "P3",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.743,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.741,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.717,
+        "snippet": "# PLD — Product Liability Directive (software & AI) ## Why this concerns you (purpose) The revised Product Liability Directive (Dir. (EU) 2024/2853, replacing 85/374/EEC) makes **software and AI systems explicitly \"products\"**. That means if your mHealth app, SaMD or AI model causes harm — physical "
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.706,
+        "snippet": "obvious to a reasonably informed person. - **Emotion-recognition / biometric-categorisation notice:** inform the exposed persons that the system is operating (and process biometric data per GDPR Art. 9). - **AI-content marking:** mark AI-generated/manipulated outputs in a **machine-readable** format"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.702,
+        "snippet": "substantial-public-interest basis. ## Concrete obligations - Establish a lawful **exception** (Art. 22(2)): necessary for a contract, authorised by Union/Member-State law, or **explicit consent** — and for health data meet Art. 22(4). - Implement **safeguards** (Art. 22(3)): the right to obtain **hu"
+      },
+      {
+        "cite": "[card_ai_act_gpai_downstream · p.0]",
+        "title": "EU AI Act — integrator of a GPAI model (downstream obligations)",
+        "jurisdiction": "EU",
+        "score": 0.696,
+        "snippet": "# EU AI Act — integrator of a GPAI model (downstream obligations) ## Why this concerns you (purpose) If your mHealth app simply **calls a third-party LLM** (GPT, Claude, Gemini, an open-weight model) without retraining it, you are a **downstream integrator**, *not* the GPAI provider — the model prov"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.694,
+        "snippet": "no clinician in the loop → Art. 22 decision: needs an exception + human-review safeguards. - A symptom checker that **scores cardiovascular risk** which an insurer then uses for pricing → SCHUFA-style: the score is the significant decision; Art. 22 + explicit consent apply. - (Edge/negative) An app "
+      },
+      {
+        "cite": "[card_ai_act_high_risk · p.0]",
+        "title": "EU AI Act — high-risk AI (Annex III §1(a))",
+        "jurisdiction": "EU",
+        "score": 0.685,
+        "snippet": "# EU AI Act — high-risk AI (Annex III §1(a)) ## Why this concerns you (purpose) If your AI drives a clinical decision, the AI Act may treat it as **high-risk** — the heaviest tier short of prohibition. That means a full management system: risk controls, data governance, technical documentation, logg"
+      }
+    ]
+  },
+  "P4.D1": {
+    "name": "App Stability & Error Handling",
+    "pillar": "P4",
+    "candidates": [
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.737,
+        "snippet": "Document defect-avoidance: risk management, change logs, security-update commitments. - [ ] Ensure you can produce evidence on demand (disclosure duty) to rebut the eased-proof presumptions. - [ ] Review insurance + contractual liability allocation with component and AI-model suppliers. ## Examples "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.723,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.723,
+        "snippet": "An app providing **alarms on a vital parameter** (e.g. apnoea/arrhythmia alerting) where missing an event poses immediate danger → Rule 11(b) → IIb. - **Edge/negative:** the *same* closed-loop app, if a dosing error could cause **death or irreversible** harm, is **not** IIb — Rule 11 escalates it to"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.722,
+        "snippet": "# PLD — Product Liability Directive (software & AI) ## Why this concerns you (purpose) The revised Product Liability Directive (Dir. (EU) 2024/2853, replacing 85/374/EEC) makes **software and AI systems explicitly \"products\"**. That means if your mHealth app, SaMD or AI model causes harm — physical "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.717,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.712,
+        "snippet": "be **defective** (does not provide the safety a person is entitled to, considering use, foreseeable misuse, and required updates); - the defect **causes damage** to a natural person (death, personal injury, certain property damage, or destruction/corruption of data not used professionally). Edge: ha"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.71,
+        "snippet": "# CRA — Cyber Resilience Act (products with digital elements) ## Why this concerns you (purpose) If you place a mHealth **app or software** on the EU market, the Cyber Resilience Act (Reg. (EU) 2024/2847) treats it as a **\"product with digital elements\"** that must be **secure by design and by defau"
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.698,
+        "snippet": "# SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485) ## Why this concerns you (purpose) Once your app is a medical device — at **any** MDR class ([[mdr_class_i]] → [[mdr_class_iii]]) or as IVD software ([[ivdr_class]]) — you must show it meets the **General Safety & Performance "
+      }
+    ]
+  },
+  "P4.D2": {
+    "name": "Interoperability & Data Exchange",
+    "pillar": "P4",
+    "candidates": [
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.781,
+        "snippet": "\"wellness\" apps claiming interoperability with EHRs); - you are a **data holder** of electronic health data (you may have to make it available for secondary use via an HDAB on request); - you are a **data user** seeking health data for research/innovation → you apply to an **HDAB** for a data permit"
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.773,
+        "snippet": "or EHR/interoperable-app provider under EHDS. - [ ] If you touch EHRs: plan EEHRxF support, conformity assessment / wellness-app labelling. - [ ] For research data: route requests through a **Health Data Access Body** permit, not bilateral deals. - [ ] Track the phased dates (general application **2"
+      },
+      {
+        "cite": "[card_national_ehealth · p.0]",
+        "title": "eHealth — national profiles (EPRA, DMP, ELGA)",
+        "jurisdiction": "EU/CH",
+        "score": 0.756,
+        "snippet": "national conformance: Ségur référencement (FR), EPR certification (CH), G-TG conformance (AT). - [ ] Integrate the national patient/HCP identifier (INS in FR) and secure messaging (MSSanté). - [ ] Track the Swiss EPRA revision (opt-out ~2028) and the FR Ségur shift to mandatory (2026-2027). ## Examp"
+      },
+      {
+        "cite": "[card_national_ehealth · p.0]",
+        "title": "eHealth — national profiles (EPRA, DMP, ELGA)",
+        "jurisdiction": "EU/CH",
+        "score": 0.755,
+        "snippet": "# eHealth — national profiles (EPRA, DMP, ELGA) ## Why this concerns you (purpose) If your app must **read from or write to a national electronic health record** — the Swiss EPR/EPD, the French DMP/Mon espace santé, the Austrian ELGA — then \"speaking FHIR\" is not enough. Each country layers **nation"
+      },
+      {
+        "cite": "[card_gdpr_transfer · p.0]",
+        "title": "GDPR Chapter V — international transfers",
+        "jurisdiction": "EU",
+        "score": 0.745,
+        "snippet": "[ ] Re-assess on sub-processor changes; coordinate with French hosting rules — see [[hds_certification]]. ## Examples (mHealth) - A patient app whose backend runs on a **US-region cloud** → adequacy only if the importer is DPF-certified; otherwise 2021 SCCs + TIA + encryption. - An EU app calling a "
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.742,
+        "snippet": "# EHDS — European Health Data Space ## Why this concerns you (purpose) The European Health Data Space (Reg. (EU) 2025/327, **in force since 26 March 2025**) builds a common EU framework for health data on **two legs**. **Primary use**: patients get cross-border access to and control over their elect"
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.734,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.719,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      }
+    ]
+  },
+  "P4.D3": {
+    "name": "Accessibility (WCAG, Literacy, Language)",
+    "pillar": "P4",
+    "candidates": [
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.772,
+        "snippet": "# European Accessibility Act (EAA) ## Why this concerns you (purpose) The European Accessibility Act (Dir. (EU) 2019/882) requires that **consumer-facing digital products and services** be usable by people with disabilities. For mHealth, that means your **B2C app, its website and its purchasing/onbo"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.743,
+        "snippet": "A direct-to-consumer mental-health app with a subscription checkout → in scope; must be WCAG 2.1 AA accessible, including the payment/onboarding flow. - A consumer symptom-checker website whose results are images with no text alternative → non-compliant for screen-reader users. - A SaMD dashboard so"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.734,
+        "snippet": "**not** an exempt microenterprise providing services (under 10 staff and ≤ €2M turnover have limited service exemptions). Edge: a **strictly B2B / professional** tool used only by clinicians in a hospital is generally outside the EAA's consumer scope (national public-sector web rules may still apply"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.682,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.673,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.668,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_national_ehealth · p.0]",
+        "title": "eHealth — national profiles (EPRA, DMP, ELGA)",
+        "jurisdiction": "EU/CH",
+        "score": 0.667,
+        "snippet": "# eHealth — national profiles (EPRA, DMP, ELGA) ## Why this concerns you (purpose) If your app must **read from or write to a national electronic health record** — the Swiss EPR/EPD, the French DMP/Mon espace santé, the Austrian ELGA — then \"speaking FHIR\" is not enough. Each country layers **nation"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.659,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      }
+    ]
+  },
+  "P4.D4": {
+    "name": "User-Centered Design & Usability Testing",
+    "pillar": "P4",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.669,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.661,
+        "snippet": "**not** an exempt microenterprise providing services (under 10 staff and ≤ €2M turnover have limited service exemptions). Edge: a **strictly B2B / professional** tool used only by clinicians in a hospital is generally outside the EAA's consumer scope (national public-sector web rules may still apply"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.652,
+        "snippet": "# European Accessibility Act (EAA) ## Why this concerns you (purpose) The European Accessibility Act (Dir. (EU) 2019/882) requires that **consumer-facing digital products and services** be usable by people with disabilities. For mHealth, that means your **B2C app, its website and its purchasing/onbo"
+      },
+      {
+        "cite": "[card_gdpr_biometric · p.0]",
+        "title": "GDPR Art. 9 — biometrics (+ AI Act Art. 5)",
+        "jurisdiction": "EU",
+        "score": 0.651,
+        "snippet": "bans). - [ ] Complete a DPIA before go-live (see [[gdpr_dpia]]). - [ ] Prefer on-device processing; define a retention/deletion rule for templates. ## Examples (mHealth) - A dermatology app using **facial recognition** to match a returning patient to their record → Art. 9 biometric identification: e"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.642,
+        "snippet": "A direct-to-consumer mental-health app with a subscription checkout → in scope; must be WCAG 2.1 AA accessible, including the payment/onboarding flow. - A consumer symptom-checker website whose results are images with no text alternative → non-compliant for screen-reader users. - A SaMD dashboard so"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.638,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.637,
+        "snippet": "# Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1) ## Why this concerns you (purpose) If your software is a classified medical device (SaMD), CE marking is not granted on the basis that the code \"works\". You must show, with **clinical evidence**, that the device actually delivers a **clin"
+      },
+      {
+        "cite": "[card_nlpd_base · p.0]",
+        "title": "nFADP — baseline (Swiss Federal Act on Data Protection)",
+        "jurisdiction": "CH",
+        "score": 0.635,
+        "snippet": "recommended; appointing one is the single point of contact with the FDPIC and can replace prior consultation for high-risk DPIAs. ## Checklist - [ ] Confirm you are applying the **nFADP** (not the GDPR) to your Swiss user base. - [ ] Treat health data as **sensitive data (Art. 5(c))** and document t"
+      }
+    ]
+  },
+  "P4.D5": {
+    "name": "Offline Functionality & Updates",
+    "pillar": "P4",
+    "candidates": [
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.673,
+        "snippet": "EU customers (switching rules). Edge: a **standalone app** with no connected object and no cloud service offered to customers is largely out of the connected-product obligations (though the cloud-switching chapter can still reach the services you buy). ## Concrete obligations - **Access by design / "
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.665,
+        "snippet": "- it is supplied in the **course of a commercial activity** (free + paid both count; pure open-source not monetised is largely carved out). Edge: a service you run purely as a SaaS backend without distributing the software is closer to NIS2 than CRA — but any component you *ship* (mobile app, on-dev"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.647,
+        "snippet": "**controller** (you decide why/how) or as a **processor** (you process on someone else's behalf). It applies even to a free app, even with no monetisation, and even if your servers sit outside the EU. Switzerland-only apps fall under a **distinct** regime — see [[nlpd_base]]. ## Concrete obligations"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.643,
+        "snippet": "# CRA — Cyber Resilience Act (products with digital elements) ## Why this concerns you (purpose) If you place a mHealth **app or software** on the EU market, the Cyber Resilience Act (Reg. (EU) 2024/2847) treats it as a **\"product with digital elements\"** that must be **secure by design and by defau"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.641,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.629,
+        "snippet": "for every shipped component and third-party dependency. - [ ] Stand up a vulnerability-handling + coordinated-disclosure process and a security-update channel. - [ ] Define and publish the **support period** during which you will issue free security updates. - [ ] Wire up ENISA / CSIRT reporting bef"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.622,
+        "snippet": "be **defective** (does not provide the safety a person is entitled to, considering use, foreseeable misuse, and required updates); - the defect **causes damage** to a natural person (death, personal injury, certain property damage, or destruction/corruption of data not used professionally). Edge: ha"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.616,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      }
+    ]
+  },
+  "P5.D1": {
+    "name": "Understandable Output",
+    "pillar": "P5",
+    "candidates": [
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.655,
+        "snippet": "obvious to a reasonably informed person. - **Emotion-recognition / biometric-categorisation notice:** inform the exposed persons that the system is operating (and process biometric data per GDPR Art. 9). - **AI-content marking:** mark AI-generated/manipulated outputs in a **machine-readable** format"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.65,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.645,
+        "snippet": "# GDPR Art. 22 — automated decisions ## Why this concerns you (purpose) If your mHealth app makes a decision about a user **solely by automated means** that produces **legal effects** or **similarly significantly affects** them (triage outcome, treatment eligibility, insurance/risk scoring), GDPR Ar"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.643,
+        "snippet": "obligation — see [[eprivacy_terminal]]. ## Concrete obligations - Obtain **explicit, granular, purpose-specific consent** (Art. 9(2)(a)) for each monetisation purpose, **separate** from consent to use the app; make withdrawal as easy as giving it. - Provide **layered transparency** (Art. 13): name t"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.642,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.64,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.64,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.634,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      }
+    ]
+  },
+  "P5.D2": {
+    "name": "Clear Communication of Limitations",
+    "pillar": "P5",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.733,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.726,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.716,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.704,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.698,
+        "snippet": "# European Accessibility Act (EAA) ## Why this concerns you (purpose) The European Accessibility Act (Dir. (EU) 2019/882) requires that **consumer-facing digital products and services** be usable by people with disabilities. For mHealth, that means your **B2C app, its website and its purchasing/onbo"
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.696,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.691,
+        "snippet": "# GDPR — baseline (legal basis & rights) ## Why this concerns you (purpose) If your mHealth app touches **any personal data** of people in the EU/EEA, the GDPR is your non-negotiable baseline — it applies regardless of where your company is established (Art. 3 extraterritorial reach). It forces you "
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.69,
+        "snippet": "# Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1) ## Why this concerns you (purpose) If your software is a classified medical device (SaMD), CE marking is not granted on the basis that the code \"works\". You must show, with **clinical evidence**, that the device actually delivers a **clin"
+      }
+    ]
+  },
+  "P5.D3": {
+    "name": "Decision Traceability & Logging",
+    "pillar": "P5",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_automated · p.0]",
+        "title": "GDPR Art. 22 — automated decisions",
+        "jurisdiction": "EU",
+        "score": 0.667,
+        "snippet": "no clinician in the loop → Art. 22 decision: needs an exception + human-review safeguards. - A symptom checker that **scores cardiovascular risk** which an insurer then uses for pricing → SCHUFA-style: the score is the significant decision; Art. 22 + explicit consent apply. - (Edge/negative) An app "
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.667,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.66,
+        "snippet": "data** (health data is sensitive under nFADP Art. 5(c)), **high-risk profiling**, or **systematic large-scale monitoring**. Both apply to apps targeting **Switzerland** under the nFADP, in parallel with their GDPR counterparts ([[gdpr_automated]], [[gdpr_dpia]]) and on top of the nFADP baseline ([[n"
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.66,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.656,
+        "snippet": "# ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers) ## Why this concerns you (purpose) Article 5(3) of the ePrivacy Directive requires **prior consent** before *any* storing of information on, or reading of information from, a user's device — unless an exemption applies. Th"
+      },
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.654,
+        "snippet": "biometric identification of vulnerable persons. ## Concrete obligations - Produce the DPIA **before** processing starts; it must contain the four Art. 35(7) elements: systematic description, necessity & proportionality assessment, risk assessment, mitigation. - **Seek the DPO's advice** (Art. 35(2))"
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.651,
+        "snippet": "technical documentation**; for IIb the NB scrutiny is broader and at least one technical-documentation surveillance assessment occurs **annually** for implantable IIb (and proportionately for high-risk software). - **In-depth clinical evaluation** with stronger clinical data; **PSUR updated at least"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.65,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      }
+    ]
+  },
+  "P5.D4": {
+    "name": "Clinically Validated vs. Estimated Content",
+    "pillar": "P5",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.72,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.716,
+        "snippet": "# IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746) ## Why this concerns you (purpose) If your app provides information **by analysing data derived from a specimen taken from the human body** (blood, urine, tissue, genetic/DNA data, biomarkers), it is **not** an MDR device — it is **IVD"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.712,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.71,
+        "snippet": "/ scientific validity** — the output is meaningfully linked to the targeted clinical condition or physiological state; 2. **Technical / analytical performance** — the software correctly and reliably generates the intended output from the input data (verification & validation); 3. **Clinical performa"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.708,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.7,
+        "snippet": "XV / EN ISO 14155). ## Examples (mHealth) - A Class IIa app scoring melanoma risk from skin photos -> needs all three pillars: the score correlates with malignancy (validity), the model runs correctly on real images (analytical), and it performs in the target population (clinical). - A Class IIb ins"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.696,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.694,
+        "snippet": "reference lab). - [ ] Build the performance evaluation (validity + analytical + clinical performance). - [ ] Register UDI + EUDAMED and set up PMS before placing on the market. ## Examples (mHealth) - An app that **interprets a home blood-glucose or HbA1c value** to give a result → IVD-MDSW (typical"
+      }
+    ]
+  },
+  "P6.D1": {
+    "name": "Data & Clinical Rule Bias",
+    "pillar": "P6",
+    "candidates": [
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.706,
+        "snippet": "reference lab). - [ ] Build the performance evaluation (validity + analytical + clinical performance). - [ ] Register UDI + EUDAMED and set up PMS before placing on the market. ## Examples (mHealth) - An app that **interprets a home blood-glucose or HbA1c value** to give a result → IVD-MDSW (typical"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.705,
+        "snippet": "XV / EN ISO 14155). ## Examples (mHealth) - A Class IIa app scoring melanoma risk from skin photos -> needs all three pillars: the score correlates with malignancy (validity), the model runs correctly on real images (analytical), and it performs in the target population (clinical). - A Class IIb ins"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.698,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.697,
+        "snippet": "# GDPR Art. 9 — health data (special category) ## Why this concerns you (purpose) Health data is a **special category** under GDPR Art. 9(1) and its processing is **prohibited by default**. For an mHealth app this flips the usual logic: a normal Art. 6 legal basis is **not enough** — you must *addit"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.696,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.688,
+        "snippet": "against the ISO/TS 82304-2 quality dimensions and self-score. - [ ] Decide whether to pursue an independent quality-label assessment. - [ ] Verify horizontal obligations (privacy, security, accessibility) are still met. ## Examples (mHealth) - A **step-counter / general fitness** app with motivation"
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.684,
+        "snippet": "data** (health data is sensitive under nFADP Art. 5(c)), **high-risk profiling**, or **systematic large-scale monitoring**. Both apply to apps targeting **Switzerland** under the nFADP, in parallel with their GDPR counterparts ([[gdpr_automated]], [[gdpr_dpia]]) and on top of the nFADP baseline ([[n"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.681,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      }
+    ]
+  },
+  "P6.D2": {
+    "name": "Digital Divide & Socioeconomic Access",
+    "pillar": "P6",
+    "candidates": [
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.734,
+        "snippet": "# European Accessibility Act (EAA) ## Why this concerns you (purpose) The European Accessibility Act (Dir. (EU) 2019/882) requires that **consumer-facing digital products and services** be usable by people with disabilities. For mHealth, that means your **B2C app, its website and its purchasing/onbo"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.697,
+        "snippet": "**not** an exempt microenterprise providing services (under 10 staff and ≤ €2M turnover have limited service exemptions). Edge: a **strictly B2B / professional** tool used only by clinicians in a hospital is generally outside the EAA's consumer scope (national public-sector web rules may still apply"
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.681,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.678,
+        "snippet": "A direct-to-consumer mental-health app with a subscription checkout → in scope; must be WCAG 2.1 AA accessible, including the payment/onboarding flow. - A consumer symptom-checker website whose results are images with no text alternative → non-compliant for screen-reader users. - A SaMD dashboard so"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.677,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.673,
+        "snippet": "\"wellness\" apps claiming interoperability with EHRs); - you are a **data holder** of electronic health data (you may have to make it available for secondary use via an HDAB on request); - you are a **data user** seeking health data for research/innovation → you apply to an **HDAB** for a data permit"
+      },
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.672,
+        "snippet": "# Data Act — access & portability of connected-product data ## Why this concerns you (purpose) If your mHealth offering pairs with a **connected product** (a wearable, a glucometer, a smart scale, a sensor), the Data Act (Reg. (EU) 2023/2854) gives the **user** a right to the data that product gener"
+      },
+      {
+        "cite": "[card_data_act · p.0]",
+        "title": "Data Act — access & portability of connected-product data",
+        "jurisdiction": "EU",
+        "score": 0.661,
+        "snippet": "EU customers (switching rules). Edge: a **standalone app** with no connected object and no cloud service offered to customers is largely out of the connected-product obligations (though the cloud-switching chapter can still reach the services you buy). ## Concrete obligations - **Access by design / "
+      }
+    ]
+  },
+  "P6.D3": {
+    "name": "Cross-Cultural & Multilingual Validation",
+    "pillar": "P6",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.736,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.73,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.729,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_gdpr_transfer · p.0]",
+        "title": "GDPR Chapter V — international transfers",
+        "jurisdiction": "EU",
+        "score": 0.723,
+        "snippet": "[ ] Re-assess on sub-processor changes; coordinate with French hosting rules — see [[hds_certification]]. ## Examples (mHealth) - A patient app whose backend runs on a **US-region cloud** → adequacy only if the importer is DPF-certified; otherwise 2021 SCCs + TIA + encryption. - An EU app calling a "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.712,
+        "snippet": "against the ISO/TS 82304-2 quality dimensions and self-score. - [ ] Decide whether to pursue an independent quality-label assessment. - [ ] Verify horizontal obligations (privacy, security, accessibility) are still met. ## Examples (mHealth) - A **step-counter / general fitness** app with motivation"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.706,
+        "snippet": "- [ ] Confirm an Art. 9(2) condition for **each** health-data purpose (usually 9(2)(a) consent or 9(2)(h) care). - [ ] Implement **explicit, granular, per-purpose** opt-in consent with easy withdrawal and an audit log. - [ ] Keep health-data purposes **separate** from marketing/analytics consents (n"
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.704,
+        "snippet": "# Other national reimbursement schemes (Belgium mHealthBelgium, etc.) ## Why this concerns you (purpose) Beyond Germany (DiGA) and France (PECAN), **most EU member states run their own** statutory-insurance pathway for digital health apps — and the pattern is consistent: CE marking is the entry tick"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.704,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      }
+    ]
+  },
+  "P6.D4": {
+    "name": "Impact on Existing Health Inequalities",
+    "pillar": "P6",
+    "candidates": [
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.719,
+        "snippet": "# European Accessibility Act (EAA) ## Why this concerns you (purpose) The European Accessibility Act (Dir. (EU) 2019/882) requires that **consumer-facing digital products and services** be usable by people with disabilities. For mHealth, that means your **B2C app, its website and its purchasing/onbo"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.69,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.689,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.689,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.688,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.688,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_ehds · p.0]",
+        "title": "EHDS — European Health Data Space",
+        "jurisdiction": "EU",
+        "score": 0.679,
+        "snippet": "\"wellness\" apps claiming interoperability with EHRs); - you are a **data holder** of electronic health data (you may have to make it available for secondary use via an HDAB on request); - you are a **data user** seeking health data for research/innovation → you apply to an **HDAB** for a data permit"
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.676,
+        "snippet": "**not** an exempt microenterprise providing services (under 10 staff and ≤ €2M turnover have limited service exemptions). Edge: a **strictly B2B / professional** tool used only by clinicians in a hospital is generally outside the EAA's consumer scope (national public-sector web rules may still apply"
+      }
+    ]
+  },
+  "P6.D5": {
+    "name": "Representativeness in Validation Studies",
+    "pillar": "P6",
+    "candidates": [
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.674,
+        "snippet": "**sharing cycle data with advertisers** → explicit, separate consent per purpose; bundled \"agree to use the app\" consent is invalid. - A nutrition app selling a **\"de-identified\" food-and-symptom dataset** to a CPG brand → if re-identification is feasible it remains health data and needs an Art. 9(2"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.67,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_reimbursement_other_eu · p.0]",
+        "title": "Other national reimbursement schemes (Belgium mHealthBelgium, etc.)",
+        "jurisdiction": "EU",
+        "score": 0.664,
+        "snippet": "your existing MDR + GDPR work. - [ ] Budget separate clinical/health-economic studies per market (limited cross-border reuse). ## Examples (mHealth) - A remote-monitoring app for **chronic heart failure** climbs Belgium's pyramid M1→M2→M3 and is reimbursed through a NIHDI/RIZIV convention with parti"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.662,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.66,
+        "snippet": "XV / EN ISO 14155). ## Examples (mHealth) - A Class IIa app scoring melanoma risk from skin photos -> needs all three pillars: the score correlates with malignancy (validity), the model runs correctly on real images (analytical), and it performs in the target population (clinical). - A Class IIb ins"
+      },
+      {
+        "cite": "[card_gdpr_biometric · p.0]",
+        "title": "GDPR Art. 9 — biometrics (+ AI Act Art. 5)",
+        "jurisdiction": "EU",
+        "score": 0.657,
+        "snippet": "even to a small user base: scale affects the DPIA test, not the Art. 9 trigger. ## Concrete obligations - Identify a valid Art. 9(2) basis — in consumer mHealth this is almost always **explicit consent** (Art. 9(2)(a)): freely given, specific, informed, separate from other consents, and as easy to w"
+      },
+      {
+        "cite": "[card_ivdr_class · p.0]",
+        "title": "IVDR — in-vitro diagnostic software (Regulation (EU) 2017/746)",
+        "jurisdiction": "EU",
+        "score": 0.657,
+        "snippet": "reference lab). - [ ] Build the performance evaluation (validity + analytical + clinical performance). - [ ] Register UDI + EUDAMED and set up PMS before placing on the market. ## Examples (mHealth) - An app that **interprets a home blood-glucose or HbA1c value** to give a result → IVD-MDSW (typical"
+      },
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.646,
+        "snippet": "biometric identification of vulnerable persons. ## Concrete obligations - Produce the DPIA **before** processing starts; it must contain the four Art. 35(7) elements: systematic description, necessity & proportionality assessment, risk assessment, mitigation. - **Seek the DPO's advice** (Art. 35(2))"
+      }
+    ]
+  },
+  "P7.D1": {
+    "name": "Medical Device Classification (SaMD)",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_mdr_class_i · p.0]",
+        "title": "SaMD Class I (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.814,
+        "snippet": "# SaMD Class I (MDR) ## Why this concerns you (purpose) Your software has a **medical purpose** and qualifies as Software as a Medical Device (SaMD), but it sits at the **lowest risk class** under MDR Rule 11. Class I is the only SaMD class you can in principle **self-certify** — no Notified Body au"
+      },
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.814,
+        "snippet": "# Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1) ## Why this concerns you (purpose) If your software is a classified medical device (SaMD), CE marking is not granted on the basis that the code \"works\". You must show, with **clinical evidence**, that the device actually delivers a **clin"
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.806,
+        "snippet": "# SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485) ## Why this concerns you (purpose) Once your app is a medical device — at **any** MDR class ([[mdr_class_i]] → [[mdr_class_iii]]) or as IVD software ([[ivdr_class]]) — you must show it meets the **General Safety & Performance "
+      },
+      {
+        "cite": "[card_mdr_class_iii · p.0]",
+        "title": "SaMD Class III (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.804,
+        "snippet": "# SaMD Class III (MDR) ## Why this concerns you (purpose) Class III is the **strictest MDR regime**. Software lands here under Rule 11 when an erroneous output could cause **death or an irreversible deterioration** of a person's state of health. Compared with [[mdr_class_iib]], two things change qua"
+      },
+      {
+        "cite": "[card_mdr_class_iia · p.0]",
+        "title": "SaMD Class IIa (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.798,
+        "snippet": "# SaMD Class IIa (MDR) ## Why this concerns you (purpose) Class IIa is the **default landing zone for most clinical mHealth software**. Under MDR Rule 11, *any* software that provides information used to take **diagnostic or therapeutic decisions** is Class IIa unless the potential harm pushes it hi"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.798,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.798,
+        "snippet": "# SaMD Class IIb (MDR) ## Why this concerns you (purpose) Class IIb is for software whose erroneous output could cause **serious harm to health**. Compared with [[mdr_class_iia]], the regime intensifies in two ways: the **clinical evidence bar rises** and the **Notified Body looks at your technical "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.793,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      }
+    ]
+  },
+  "P7.D2": {
+    "name": "CE Marking & MDR Conformity",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_clinical_eval_mdsw · p.0]",
+        "title": "Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1)",
+        "jurisdiction": "EU",
+        "score": 0.796,
+        "snippet": "# Clinical evaluation of software (MDR Art. 61 / MDCG 2020-1) ## Why this concerns you (purpose) If your software is a classified medical device (SaMD), CE marking is not granted on the basis that the code \"works\". You must show, with **clinical evidence**, that the device actually delivers a **clin"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.777,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.746,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.74,
+        "snippet": "# SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485) ## Why this concerns you (purpose) Once your app is a medical device — at **any** MDR class ([[mdr_class_i]] → [[mdr_class_iii]]) or as IVD software ([[ivdr_class]]) — you must show it meets the **General Safety & Performance "
+      },
+      {
+        "cite": "[card_combination_product · p.0]",
+        "title": "Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117)",
+        "jurisdiction": "EU",
+        "score": 0.736,
+        "snippet": "# Combination products device + medicine (MDR Art. 1(8)/1(9), Art. 117) ## Why this concerns you (purpose) When your app or device sits next to a **medicinal product** — a companion app that sets a dose or drives adherence, or a device that incorporates or administers a drug — you are in **borderlin"
+      },
+      {
+        "cite": "[card_mdr_class_iia · p.0]",
+        "title": "SaMD Class IIa (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.734,
+        "snippet": "→ [[ivdr_class]]. ## Concrete obligations - **Notified Body conformity assessment** (Art. 52): typically **Annex IX** (QMS + assessment of technical documentation on a *representative sample basis*). The NB audits your premises and issues the certificate. - **ISO 13485 quality management system** mu"
+      },
+      {
+        "cite": "[card_mdr_class_i · p.0]",
+        "title": "SaMD Class I (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.732,
+        "snippet": "# SaMD Class I (MDR) ## Why this concerns you (purpose) Your software has a **medical purpose** and qualifies as Software as a Medical Device (SaMD), but it sits at the **lowest risk class** under MDR Rule 11. Class I is the only SaMD class you can in principle **self-certify** — no Notified Body au"
+      },
+      {
+        "cite": "[card_udi_eudamed · p.0]",
+        "title": "UDI & EUDAMED registration",
+        "jurisdiction": "EU",
+        "score": 0.731,
+        "snippet": "# UDI & EUDAMED registration ## Why this concerns you (purpose) If you place a CE-marked SaMD on the EU market, the device and **you, the manufacturer**, must be traceable in the EU's central database. The MDR requires a **Unique Device Identifier (UDI)** so any device can be tracked from production"
+      }
+    ]
+  },
+  "P7.D3": {
+    "name": "EU AI Act Risk Classification",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_ai_act_high_risk · p.0]",
+        "title": "EU AI Act — high-risk AI (Annex III §1(a))",
+        "jurisdiction": "EU",
+        "score": 0.828,
+        "snippet": "# EU AI Act — high-risk AI (Annex III §1(a)) ## Why this concerns you (purpose) If your AI drives a clinical decision, the AI Act may treat it as **high-risk** — the heaviest tier short of prohibition. That means a full management system: risk controls, data governance, technical documentation, logg"
+      },
+      {
+        "cite": "[card_ai_act_timeline · p.0]",
+        "title": "EU AI Act — staggered application timeline (+ Digital Omnibus)",
+        "jurisdiction": "EU",
+        "score": 0.795,
+        "snippet": "# EU AI Act — staggered application timeline (+ Digital Omnibus) ## Why this concerns you (purpose) The EU AI Act (Regulation (EU) 2024/1689) does **not** apply all at once. It entered into force on 1 Aug 2024 and switches on in **waves** through 2027-2028. If your mHealth app uses AI, the only way "
+      },
+      {
+        "cite": "[card_ai_act_transparency · p.0]",
+        "title": "EU AI Act — transparency obligations (Art. 50)",
+        "jurisdiction": "EU",
+        "score": 0.762,
+        "snippet": "# EU AI Act — transparency obligations (Art. 50) ## Why this concerns you (purpose) Even when your AI is **not** high-risk, Art. 50 still imposes a baseline of honesty: people must know when they are talking to a machine, when they are being scanned by an emotion- or biometric-categorisation system,"
+      },
+      {
+        "cite": "[card_ai_act_high_risk · p.0]",
+        "title": "EU AI Act — high-risk AI (Annex III §1(a))",
+        "jurisdiction": "EU",
+        "score": 0.757,
+        "snippet": "AI-as-high-risk does **not** raise the device's MDR risk class — the two classifications are independent. Applicable dates: see [[ai_act_timeline]] (high-risk obligations may shift to 2 Aug 2028 for embedded medical-device AI if the Digital Omnibus is adopted). ## Concrete obligations - **Art. 9** r"
+      },
+      {
+        "cite": "[card_ai_act_fria · p.0]",
+        "title": "EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27)",
+        "jurisdiction": "EU",
+        "score": 0.756,
+        "snippet": "# EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27) ## Why this concerns you (purpose) The FRIA is the **deployer's** duty, not the maker's — but it shapes whether your customer can buy at all. If your high-risk AI is deployed by a hospital, clinic, health insurer or public body, **th"
+      },
+      {
+        "cite": "[card_ai_act_gpai_provider · p.0]",
+        "title": "EU AI Act — GPAI model provider (Art. 53/55)",
+        "jurisdiction": "EU",
+        "score": 0.74,
+        "snippet": "# EU AI Act — GPAI model provider (Art. 53/55) ## Why this concerns you (purpose) Most mHealth teams assume they are only *users* of an LLM. But the moment you **fine-tune a model substantially**, you can **become the provider of a new GPAI model** — inheriting Art. 53 documentation, copyright and t"
+      },
+      {
+        "cite": "[card_ai_act_gpai_downstream · p.0]",
+        "title": "EU AI Act — integrator of a GPAI model (downstream obligations)",
+        "jurisdiction": "EU",
+        "score": 0.733,
+        "snippet": "# EU AI Act — integrator of a GPAI model (downstream obligations) ## Why this concerns you (purpose) If your mHealth app simply **calls a third-party LLM** (GPT, Claude, Gemini, an open-weight model) without retraining it, you are a **downstream integrator**, *not* the GPAI provider — the model prov"
+      },
+      {
+        "cite": "[card_ai_act_timeline · p.0]",
+        "title": "EU AI Act — staggered application timeline (+ Digital Omnibus)",
+        "jurisdiction": "EU",
+        "score": 0.732,
+        "snippet": "met its GPAI duties (binding since Aug 2025). - [ ] Plan Art. 50 transparency for 2 Aug 2026 — do not bank on the Omnibus deferral. - [ ] Track the Digital Omnibus until it appears in the OJ before relying on 2027/2028 dates. ## Examples (mHealth) - A symptom-checker chatbot must already respect Art"
+      }
+    ]
+  },
+  "P7.D4": {
+    "name": "GDPR Compliance (DPO, DPIA)",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.846,
+        "snippet": "# GDPR Art. 35 — Data Protection Impact Assessment (DPIA) ## Why this concerns you (purpose) A DPIA is a documented, *before-the-fact* assessment of the risks your processing poses to people's rights and freedoms, plus the measures that mitigate them. Under GDPR Art. 35 it is **mandatory** whenever "
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.785,
+        "snippet": "22 DPIA whenever you process Swiss health data at large scale or do high-risk profiling. - [ ] Decide your FDPIC route: prior consultation, or appoint a data protection adviser to avoid it. - [ ] Document the Swiss DPIA distinctly from any [[gdpr_dpia]] you already hold. ## Examples (mHealth) - A me"
+      },
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.784,
+        "snippet": "mandatory. - An AI symptom-triage feature combining health, location and behavioural data → sensitive data + scoring + innovative tech: DPIA mandatory, likely Art. 36 consultation. - (Edge/negative) A solo physiotherapist's app holding **a few dozen local patient notes**, no profiling → not \"large s"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.78,
+        "snippet": "under the same article — see [[gdpr_biometric]]. When in doubt, assume the data is health data. ## Concrete obligations - **Find an Art. 9(2) exception** — the practical ones for mHealth are: - **(a) explicit consent** — the default for consumer apps; must be a clear affirmative act that *specifical"
+      },
+      {
+        "cite": "[card_gdpr_dpia · p.0]",
+        "title": "GDPR Art. 35 — Data Protection Impact Assessment (DPIA)",
+        "jurisdiction": "EU",
+        "score": 0.775,
+        "snippet": "biometric identification of vulnerable persons. ## Concrete obligations - Produce the DPIA **before** processing starts; it must contain the four Art. 35(7) elements: systematic description, necessity & proportionality assessment, risk assessment, mitigation. - **Seek the DPO's advice** (Art. 35(2))"
+      },
+      {
+        "cite": "[card_gdpr_art9 · p.0]",
+        "title": "GDPR Art. 9 — health data (special category)",
+        "jurisdiction": "EU",
+        "score": 0.765,
+        "snippet": "- [ ] Confirm an Art. 9(2) condition for **each** health-data purpose (usually 9(2)(a) consent or 9(2)(h) care). - [ ] Implement **explicit, granular, per-purpose** opt-in consent with easy withdrawal and an audit log. - [ ] Keep health-data purposes **separate** from marketing/analytics consents (n"
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.764,
+        "snippet": "data** (health data is sensitive under nFADP Art. 5(c)), **high-risk profiling**, or **systematic large-scale monitoring**. Both apply to apps targeting **Switzerland** under the nFADP, in parallel with their GDPR counterparts ([[gdpr_automated]], [[gdpr_dpia]]) and on top of the nFADP baseline ([[n"
+      },
+      {
+        "cite": "[card_gdpr_biometric · p.0]",
+        "title": "GDPR Art. 9 — biometrics (+ AI Act Art. 5)",
+        "jurisdiction": "EU",
+        "score": 0.763,
+        "snippet": "bans). - [ ] Complete a DPIA before go-live (see [[gdpr_dpia]]). - [ ] Prefer on-device processing; define a retention/deletion rule for templates. ## Examples (mHealth) - A dermatology app using **facial recognition** to match a returning patient to their record → Art. 9 biometric identification: e"
+      }
+    ]
+  },
+  "P7.D5": {
+    "name": "Post-Market Surveillance & Vigilance",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_pms_lifecycle · p.0]",
+        "title": "Post-Market Surveillance & lifecycle",
+        "jurisdiction": "EU",
+        "score": 0.77,
+        "snippet": "# Post-Market Surveillance & lifecycle ## Why this concerns you (purpose) CE marking is the start of your obligations, not the end. Once your SaMD is on the market, the MDR requires you to **actively watch how it performs in the real world**, feed problems back into your design, and report serious i"
+      },
+      {
+        "cite": "[card_eprivacy_terminal · p.0]",
+        "title": "ePrivacy Art. 5(3) — access to terminal equipment (cookies, SDKs, trackers)",
+        "jurisdiction": "EU",
+        "score": 0.715,
+        "snippet": "carry out the transmission, or *strictly necessary* to provide a service **the user explicitly requested**. Analytics, attribution, crash reporting and advertising are **not** strictly necessary, so they need consent. ## Concrete obligations - Obtain **prior, GDPR-standard consent** (freely given, s"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.693,
+        "snippet": "for every shipped component and third-party dependency. - [ ] Stand up a vulnerability-handling + coordinated-disclosure process and a security-update channel. - [ ] Define and publish the **support period** during which you will issue free security updates. - [ ] Wire up ENISA / CSIRT reporting bef"
+      },
+      {
+        "cite": "[card_ai_act_fria · p.0]",
+        "title": "EU AI Act — Fundamental Rights Impact Assessment (FRIA, Art. 27)",
+        "jurisdiction": "EU",
+        "score": 0.69,
+        "snippet": "Concrete obligations - **Describe** the deployer's processes in which the high-risk AI will be used and the period/frequency of use. - **Identify** the categories of natural persons and groups likely to be affected. - **Assess** the specific risks of harm to **fundamental rights**, and define **miti"
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.681,
+        "snippet": "technical documentation**; for IIb the NB scrutiny is broader and at least one technical-documentation surveillance assessment occurs **annually** for implantable IIb (and proportionately for high-risk software). - **In-depth clinical evaluation** with stronger clinical data; **PSUR updated at least"
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.677,
+        "snippet": "# CRA — Cyber Resilience Act (products with digital elements) ## Why this concerns you (purpose) If you place a mHealth **app or software** on the EU market, the Cyber Resilience Act (Reg. (EU) 2024/2847) treats it as a **\"product with digital elements\"** that must be **secure by design and by defau"
+      },
+      {
+        "cite": "[card_nlpd_automated_dpia · p.0]",
+        "title": "nFADP Art. 21 & 22 — automated decision + DPIA (Switzerland)",
+        "jurisdiction": "CH",
+        "score": 0.674,
+        "snippet": "data** (health data is sensitive under nFADP Art. 5(c)), **high-risk profiling**, or **systematic large-scale monitoring**. Both apply to apps targeting **Switzerland** under the nFADP, in parallel with their GDPR counterparts ([[gdpr_automated]], [[gdpr_dpia]]) and on top of the nFADP baseline ([[n"
+      },
+      {
+        "cite": "[card_pms_lifecycle · p.0]",
+        "title": "Post-Market Surveillance & lifecycle",
+        "jurisdiction": "EU",
+        "score": 0.673,
+        "snippet": "84**, Annex III). - **Class I**: keep a **PMS report** up to date (**Art. 85**). **Class IIa/IIb/III**: produce and update a **Periodic Safety Update Report (PSUR)** (**Art. 86**), summarising PMS data, benefit-risk conclusions and corrective actions. - Run **post-market clinical follow-up (PMCF)** "
+      }
+    ]
+  },
+  "P7.D6": {
+    "name": "Third-Party Audit & Certification",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.789,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.765,
+        "snippet": "# ISO/IEC 82304-2 — health software quality & safety ## Why this concerns you (purpose) This is the **fallback for apps that are *not* medical devices**. If your app has **no medical purpose** — a wellness, fitness, lifestyle or general health-information app — it escapes the MDR/IVDR device regime "
+      },
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.709,
+        "snippet": "against the ISO/TS 82304-2 quality dimensions and self-score. - [ ] Decide whether to pursue an independent quality-label assessment. - [ ] Verify horizontal obligations (privacy, security, accessibility) are still met. ## Examples (mHealth) - A **step-counter / general fitness** app with motivation"
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.707,
+        "snippet": "cite the **current** editions (watch the upcoming IEC 62304 revision). ## Examples (mHealth) - A Class IIa triage app: IEC 62304 (safety class likely B/C), ISO 14971 risk file, IEC 62366-1 usability study, all under an ISO 13485 QMS → audit-ready technical file. - An IVD-MDSW genetic-risk app ([[ivd"
+      },
+      {
+        "cite": "[card_telehealth_national · p.0]",
+        "title": "Telehealth — national health codes",
+        "jurisdiction": "EU/CH",
+        "score": 0.701,
+        "snippet": "# Telehealth — national health codes ## Why this concerns you (purpose) The moment your app lets a patient consult, be remotely monitored by, or exchange clinical information with a **healthcare professional (HCP)**, you stop being \"just an app\" and start operating inside the **practice-of-medicine*"
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.697,
+        "snippet": "# SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485) ## Why this concerns you (purpose) Once your app is a medical device — at **any** MDR class ([[mdr_class_i]] → [[mdr_class_iii]]) or as IVD software ([[ivdr_class]]) — you must show it meets the **General Safety & Performance "
+      },
+      {
+        "cite": "[card_eaa_accessibility · p.0]",
+        "title": "European Accessibility Act (EAA)",
+        "jurisdiction": "EU",
+        "score": 0.697,
+        "snippet": "**not** an exempt microenterprise providing services (under 10 staff and ≤ €2M turnover have limited service exemptions). Edge: a **strictly B2B / professional** tool used only by clinicians in a hospital is generally outside the EAA's consumer scope (national public-sector web rules may still apply"
+      },
+      {
+        "cite": "[card_data_monetization · p.0]",
+        "title": "Data monetisation / third-party sharing",
+        "jurisdiction": "EU",
+        "score": 0.697,
+        "snippet": "# Data monetisation / third-party sharing ## Why this concerns you (purpose) If your mHealth business model relies on **advertising, selling aggregated data, or sharing data with third parties**, you are processing health data for purposes *beyond* providing care. Under GDPR this needs its **own law"
+      }
+    ]
+  },
+  "P7.D7": {
+    "name": "Lifecycle & Documentation Management",
+    "pillar": "P7",
+    "candidates": [
+      {
+        "cite": "[card_iso_82304 · p.0]",
+        "title": "ISO/IEC 82304-2 — health software quality & safety",
+        "jurisdiction": "International",
+        "score": 0.696,
+        "snippet": "manufacturers and independent app-assessment organisations. If your app *does* have a medical purpose, it is **out of scope here** and falls under MDR/IVDR instead — re-check via the SaMD/Rule 11 path. ## Concrete obligations These are **voluntary** (no CE mark), but to claim conformity / obtain the"
+      },
+      {
+        "cite": "[card_samd_standards · p.0]",
+        "title": "SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485)",
+        "jurisdiction": "EU/CH",
+        "score": 0.688,
+        "snippet": "# SaMD lifecycle standards (IEC 62304, ISO 14971, IEC 62366-1, ISO 13485) ## Why this concerns you (purpose) Once your app is a medical device — at **any** MDR class ([[mdr_class_i]] → [[mdr_class_iii]]) or as IVD software ([[ivdr_class]]) — you must show it meets the **General Safety & Performance "
+      },
+      {
+        "cite": "[card_cra · p.0]",
+        "title": "CRA — Cyber Resilience Act (products with digital elements)",
+        "jurisdiction": "EU",
+        "score": 0.684,
+        "snippet": "for every shipped component and third-party dependency. - [ ] Stand up a vulnerability-handling + coordinated-disclosure process and a security-update channel. - [ ] Define and publish the **support period** during which you will issue free security updates. - [ ] Wire up ENISA / CSIRT reporting bef"
+      },
+      {
+        "cite": "[card_pld · p.0]",
+        "title": "PLD — Product Liability Directive (software & AI)",
+        "jurisdiction": "EU",
+        "score": 0.68,
+        "snippet": "Document defect-avoidance: risk management, change logs, security-update commitments. - [ ] Ensure you can produce evidence on demand (disclosure duty) to rebut the eased-proof presumptions. - [ ] Review insurance + contractual liability allocation with component and AI-model suppliers. ## Examples "
+      },
+      {
+        "cite": "[card_mdr_class_iib · p.0]",
+        "title": "SaMD Class IIb (MDR)",
+        "jurisdiction": "EU",
+        "score": 0.671,
+        "snippet": "technical documentation**; for IIb the NB scrutiny is broader and at least one technical-documentation surveillance assessment occurs **annually** for implantable IIb (and proportionately for high-risk software). - **In-depth clinical evaluation** with stronger clinical data; **PSUR updated at least"
+      },
+      {
+        "cite": "[card_gdpr_transfer · p.0]",
+        "title": "GDPR Chapter V — international transfers",
+        "jurisdiction": "EU",
+        "score": 0.665,
+        "snippet": "[ ] Re-assess on sub-processor changes; coordinate with French hosting rules — see [[hds_certification]]. ## Examples (mHealth) - A patient app whose backend runs on a **US-region cloud** → adequacy only if the importer is DPF-certified; otherwise 2021 SCCs + TIA + encryption. - An EU app calling a "
+      },
+      {
+        "cite": "[card_gdpr_base · p.0]",
+        "title": "GDPR — baseline (legal basis & rights)",
+        "jurisdiction": "EU",
+        "score": 0.661,
+        "snippet": "activity** is large-scale processing of health data. ## Checklist - [ ] Map each processing purpose to a documented Art. 6 legal basis (and Art. 9 condition). - [ ] Sign an Art. 28 DPA with every processor (cloud, analytics, LLM API, support tools). - [ ] Stand up a rights-request workflow that answ"
+      },
+      {
+        "cite": "[card_pms_lifecycle · p.0]",
+        "title": "Post-Market Surveillance & lifecycle",
+        "jurisdiction": "EU",
+        "score": 0.657,
+        "snippet": "# Post-Market Surveillance & lifecycle ## Why this concerns you (purpose) CE marking is the start of your obligations, not the end. Once your SaMD is on the market, the MDR requires you to **actively watch how it performs in the real world**, feed problems back into your design, and report serious i"
+      }
+    ]
+  }
+}

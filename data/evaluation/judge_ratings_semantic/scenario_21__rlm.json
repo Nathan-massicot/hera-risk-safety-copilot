@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_21",
+  "approach": "rlm",
+  "depth": 3,
+  "depth_justification": "Questions do reference BreathEasy's actual choices (fixed over-use threshold, streak gamification, parental self-declaration, opt-in clinician escalation), so it is more than generic, but the copilot repeats the same age-verification and over-use questions almost verbatim several times and never drills into the developer's disclosed gap (no independent 'my data' view for 12-16-year-olds). Regulatory citations appear only in the final report and several are loosely/incorrectly applied (MDR Annex I for age verification, EU AI Act Art. 18 for streaks).",
+  "actionability": 2,
+  "actionability_justification": "The conversational turns are pure questions with no advice, and the final report's mitigations stay directional and partly mis-cited (e.g., 'Implement a third-party age-verification service', 'Integrate age- and activity-based thresholds', 'Implement a clinical review mechanism') without concrete recipes, thresholds, UI patterns, or correctly-grounded articles a developer could implement tomorrow.",
+  "salient_examples": [
+    "BreathEasy relies on parental self-declaration for age verification of children aged 12-16, but how does the app ensure this process is robust... [P2.D3] (repeated verbatim across multiple turns)",
+    "Mitigation: Implement a third-party age-verification service compliant with GDPR Article 9 and MDR Annex I, Section 3.1.1, to ensure accurate age validation before data collection.",
+    "Mitigation: Integrate age- and activity-based thresholds in over-use detection, aligning with ISO 82304-2:2020, Clause 6.4.2, to ensure personalized and context-aware alerting.",
+    "Mitigation: Implement a clinical review mechanism for streak rewards, ensuring compliance with the EU AI Act, Article 18, to prevent harmful nudges..."
+  ]
+}

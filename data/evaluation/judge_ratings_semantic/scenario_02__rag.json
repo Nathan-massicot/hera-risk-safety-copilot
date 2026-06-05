@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_02",
+  "approach": "rag",
+  "depth": 3,
+  "depth_justification": "The copilot does engage with GlucoCare specifics (Rule 11 Class I to IIa reclassification, EU-to-Switzerland flow, Swiss nFADP adequacy/SCCs, Swissmedic vigilance, Class IIa PMS sizing, the no-warning trend chart), which lifts it above generic. But depth is dragged down by repeated verbatim questions (the Rule 11 reclassification question is asked three times) and a persistent, incorrect framing of an EU AI Act 'high-risk AI system' (Art. 6/9/12) for an app with no AI component, plus final-report HERA dimension IDs (P1.D4, P3.D2, P5.D2) that do not match the gold standard.",
+  "actionability": 3,
+  "actionability_justification": "Most mitigations are directional rather than implementable recipes ('Document a DPIA and appoint a DPO', 'Conduct a threat model assessment', 'Document SCCs or supplementary measures'), but a few anchor to concrete standards and instruments (ISO 14971 failure-mode analysis, MDCG 2019-11 for Rule 11 classification, PSURs/PMCF for IIa PMS), giving a competent engineer real starting points without a step-by-step path.",
+  "salient_examples": [
+    "What specific steps have you taken to ensure that the transfer of health data from the EU AWS region to Switzerland meets the adequacy requirements under the Swiss Federal Act on Data Protection (nFADP)...",
+    "[P1.D4] Device classification misalignment — GlucoCare's potential reclassification from Class I to IIa under MDR Rule 11(a) could trigger additional obligations, including Notified Body involvement... Mitigation: Conduct a formal classification under MDR Rule 11, consulting MDCG 2019-11",
+    "how might this impact the compliance obligations under the EU AI Act's Article 6 regarding high-risk AI systems? [eu_ai_act · p.6] (asked twice verbatim, mis-framing a non-AI logging app as a high-risk AI system)",
+    "[P7.D1] Data retention & deletion ... Mitigation: Document a DPIA and appoint a DPO to ensure full GDPR compliance."
+  ]
+}

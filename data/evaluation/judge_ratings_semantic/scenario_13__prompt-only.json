@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_13",
+  "approach": "prompt-only",
+  "depth": 3,
+  "depth_justification": "The copilot does latch onto ZenSpace's actual choices (selling averaged mood scores to corporate clients, the employer-driven consent pressure, the journal text kept but not needed for the cohort product, and the shared session data feeding both A/B testing and corporate reporting), which is more than generic. But the analysis is undercut by heavy templating: nearly every turn recycles the same 'k-anonymity or differential privacy' and 'GDPR Article 4(1) and EU AI Act Article 18' boilerplate, the repeated EU AI Act Art. 18 citation does not fit this non-AI mindfulness app, and it never quantifies the small-cohort re-identification problem or names Art. 9 special-category status for employer-coerced mood data.",
+  "actionability": 3,
+  "actionability_justification": "Suggestions are directional-to-concrete: name a retention period (12 months), document a retention schedule (GDPR Art. 30), build a breach-response plan (GDPR Art. 33), separate the A/B and cohort datasets, and adopt a named anonymization technique. However it stops at the 'what' without the 'how' (no minimum k threshold, no epsilon for differential privacy, no concrete layered-consent UI recipe, and no handling for the developer's admitted problem that an already-sold cohort average cannot be unwound), repeating the same mitigations verbatim across turns rather than advancing implementation detail.",
+  "salient_examples": [
+    "Implement a data retention policy that deletes aggregated data after a defined period (e.g., 12 months) and ensure that data is anonymized before sharing, as required by GDPR Article 17 ... and Article 4(1)",
+    "Adopt a formal anonymization standard such as k-anonymity or differential privacy, as required by the GDPR Article 4(1) and the EU AI Act Article 18 (data protection by design)",
+    "Implement a clear, opt-in consent mechanism that is not tied to any employment condition or benefit ... ensure that the consent process is not presented as a condition of employment",
+    "Document a formal data retention schedule that aligns with GDPR Article 30 ... Implement a breach response plan in line with GDPR Article 33 ... Ensure encryption standards meet ISO/IEC 27001 requirements"
+  ]
+}

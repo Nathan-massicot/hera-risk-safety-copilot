@@ -1,0 +1,13 @@
+{
+  "scenario_id": "scenario_13",
+  "approach": "fine-tuned",
+  "depth": 1,
+  "depth_justification": "The copilot emits the identical templated [GDPR.P1.D4] paragraph for every turn, completely ignoring the developer's specific disclosures (no k-anonymity, 15-20 person cohorts, coerced workplace consent, unnecessary journal text, A/B-testing data bleed, equity gaps, no retention/breach plan). Nothing references THIS app's actual choices, data flows, or the real regulatory problems raised.",
+  "actionability": 1,
+  "actionability_justification": "It offers only vague, repeated platitudes ('must be lawfully based', 'requires a DPIA', 'audited to ensure it is compliant') with no concrete steps; the requested structured report degenerates into the same block copy-pasted four times and truncates mid-sentence, giving the developer nothing implementable.",
+  "salient_examples": [
+    "[GDPR.P1.D4] This is a clear GDPR data-processing risk: you are selling aggregated wellness data to corporate-wellness programs (e.g., Google, BNP Paribas)... likely the GDPR Article 9 consent basis (GDPR, MDR, EU AI Act, ISO 82304-2).",
+    "The free tier with optional premium also needs to be audited under GDPR to ensure it is compliant with GDPR and the EU AI Act. (repeated verbatim on every single turn)",
+    "**[P1.D4] GDPR Data Processing Risk (Highest Severity):** ... must be lawfully based on one of the GDPR's lawful bases — in this case, likely the GDPR Article 9 consent basis (GDPR, MDR, EU AI Act, ISO 82304- (truncated mid-word)"
+  ]
+}

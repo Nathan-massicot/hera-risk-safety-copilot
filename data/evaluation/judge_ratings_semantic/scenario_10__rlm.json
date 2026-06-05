@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_10",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "The copilot names the app and echoes a few specifics (PACS workstation, second-reader framing, degraded modes, blinded cases), but its questions are templated and repetitive — it asks essentially the same cybersecurity question twice nearly verbatim, repeatedly stalls with 'I think we've covered the main dimensions for now', and ignores rich developer-supplied detail (out-of-cohort paediatric/post-surgical chests, anonymized DICOM, no FHIR write-back, Swissmedic vigilance). HERA dimension tags are sloppy and largely mismatch the gold standard, and precise regulation/article mapping appears only at the end and is mostly inaccurate.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations stay directional ('Define clear protocols', 'Conduct a cybersecurity risk assessment') with bolted-on citations that are wrong or irrelevant — EU AI Act Art. 30 is registration not drift studies, Art. 34 does not govern workload thresholds, and 'GDPR Article 30' (records of processing) is a mismatch for degraded-mode cybersecurity — so a competent developer could not reliably implement them tomorrow.",
+  "salient_examples": [
+    "I think we've covered the main dimensions for now. Want me to produce a brief risk report?",
+    "How does CareAir ensure that its cybersecurity measures are specifically tailored to protect the PACS workstation from vulnerabilities that may arise during degraded-mode operations? [P6.D4]",
+    "Mitigation: Implement quarterly blinded case studies as per EU AI Act Article 30, comparing AI alerts against radiologist final reads",
+    "Mitigation: Conduct a cybersecurity risk assessment for degraded-mode operations, aligning with ISO 82304-2 and GDPR Article 30, and implement access controls and logging for all system states."
+  ]
+}

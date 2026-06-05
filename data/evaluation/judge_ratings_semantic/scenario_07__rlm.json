@@ -1,0 +1,14 @@
+{
+  "scenario_id": "scenario_07",
+  "approach": "rlm",
+  "depth": 2,
+  "depth_justification": "Questions name DEP/Securite Sociale and PPG estimation but are mechanical restatements of the user's own words (each prompt repeats the same sentence as a statement then as a question) and never drill into the gaps the developer disclosed, such as the unconfirmed HL7 CDA/FHIR conformance or the Class I/IIa borderline classification. The risk report references some regulations but misapplies them, and the final 'Not yet covered' list contradicts the body by listing P5.D3 and P6.D4, which were used as the headline High/Medium risks.",
+  "actionability": 2,
+  "actionability_justification": "Mitigations are mostly directional ('Implement a clear tagging mechanism', 'Integrate real-time reliability indicators') with only one concrete detail (AES-256), and the cited legal hooks are wrong or irrelevant (GDPR Art. 30 is records of processing, not encryption-at-rest; EU AI Act Art. 30(3) is misapplied to PPG tagging), so a developer following them would be partly misled and could not implement them precisely tomorrow.",
+  "salient_examples": [
+    "How does PulseTrack handle data encryption and authentication when transmitting blood pressure data to DEP and Sécurité Sociale messaging systems to ensure secure communication? [P2.D3]",
+    "Mitigation: Implement and document encryption-at-rest using AES-256 and establish a key management system compliant with [GDPR, Article 30].",
+    "Mitigation: Integrate real-time reliability indicators based on sensor data quality, as required by [MDR, Annex I, Part B, 3.1].",
+    "Not yet covered: [P1.D2], [P5.D3], [P6.D4]"
+  ]
+}
