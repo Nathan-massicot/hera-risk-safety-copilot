@@ -367,8 +367,16 @@ function renderPanel(){
 function answeredCount(){ return state.history.length; }
 function totalQuestions(){ return TREE.questions.length; }
 
+function shortLabel(id){
+  // Distinctive descriptor: the part AFTER the em-dash if present (so the six
+  // "EU AI Act — ..." cards read distinctly instead of collapsing to "EU AI Act").
+  const t = REG[id] ? REG[id].title : id;
+  const parts = t.split(" — ");
+  return (parts.length > 1 ? parts.slice(1).join(" — ") : parts[0].split(" (")[0]).trim();
+}
 function answerTag(a){
-  const adds = (a.adds||[]).map(id => (REG[id]?REG[id].title.split(" —")[0].split(" (")[0]:id));
+  const seen = new Set();
+  const adds = (a.adds||[]).map(shortLabel).filter(l => !(seen.has(l) || seen.add(l)));
   return adds.length ? `<span class="tag">+ ${esc(adds.join(", "))}</span>` : "";
 }
 
@@ -453,6 +461,25 @@ function draw(){
   renderPanel();
 }
 
+function scopeOk(scope){
+  const j = state.jurisdiction;
+  if (!scope || !j) return true;
+  if (scope === "ch") return j === "ch" || j === "both";
+  if (scope === "eu") return j === "eu" || j === "both";
+  return true;
+}
+// Skip questions that don't apply to the chosen market (e.g. the Swiss-specific
+// block for an EU-only app) by following their skip_to pointer.
+function resolveNext(id){
+  let cur = id;
+  for (let guard = 0; guard < 60; guard++){
+    const q = Q[cur];
+    if (q && q.scope && !scopeOk(q.scope) && q.skip_to){ cur = q.skip_to; continue; }
+    break;
+  }
+  return cur;
+}
+
 function commitStep(node, answerLabel, addedIds, next){
   if (node === TREE.start){
     // capture jurisdiction from the Q1 answer value
@@ -462,7 +489,7 @@ function commitStep(node, answerLabel, addedIds, next){
   }
   state.history.push({ node, answerLabel, addedIds, setJurisdiction: node === TREE.start });
   state.added.push(...addedIds);
-  state.current = next;
+  state.current = resolveNext(next);
   draw();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
