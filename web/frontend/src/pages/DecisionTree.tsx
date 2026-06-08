@@ -9,6 +9,8 @@ type Question = {
   rationale?: string;
   type?: string;
   answers: Answer[];
+  scope?: string; // "eu" | "ch" — question only relevant for that market
+  skip_to?: string; // node to jump to when this question is out of scope
 };
 type Exit = { id: string; title: string; type: string; summary: string };
 type Regulation = {
@@ -33,6 +35,36 @@ function jurisdictionClass(j?: string) {
   if (v.includes("eu")) return "bg-blue-100 text-blue-700";
   if (v.includes("ch") || v.includes("switz")) return "bg-rose-100 text-rose-700";
   return "bg-ink-100 text-ink-600";
+}
+
+// Markets selected at Q1 (the first answer): "eu" | "ch" | "both" | "none".
+function marketsFromPath(path: Answer[]): Set<string> | null {
+  if (!path.length) return null;
+  const v = path[0].value;
+  if (v === "eu") return new Set(["eu"]);
+  if (v === "ch") return new Set(["ch"]);
+  if (v === "both") return new Set(["eu", "ch"]);
+  return new Set(); // "none" → out of scope
+}
+
+// Is a regulation card relevant to the selected markets?
+// EU/International + EU-member national codes (FR/DE/AT…) require EU; CH cards require CH.
+function cardVisible(jurisdiction: string | undefined, markets: Set<string> | null): boolean {
+  if (!markets) return true;
+  const j = (jurisdiction || "").toLowerCase();
+  if (j === "international") return true;
+  if (j.includes("eu") && j.includes("ch")) return markets.has("eu") || markets.has("ch");
+  if (j === "ch" || j.includes("switz")) return markets.has("ch");
+  return markets.has("eu"); // EU + national EU codes (fr/de/at/be/it/es…)
+}
+
+function scopeMatches(scope: string | undefined, markets: Set<string> | null): boolean {
+  if (!scope) return true;
+  if (!markets) return true;
+  const s = scope.toLowerCase();
+  if (s === "ch") return markets.has("ch");
+  if (s === "eu") return markets.has("eu");
+  return true;
 }
 
 export default function DecisionTree() {
@@ -71,16 +103,34 @@ export default function DecisionTree() {
   }, [path]);
 
   const lastAdded = new Set(path.length ? path[path.length - 1].adds : []);
+  const markets = marketsFromPath(path);
 
   if (error)
     return <div className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{error}</div>;
   if (!tree)
     return <div className="text-sm text-ink-500">Loading decision tree…</div>;
 
-  const currentId = path.length ? path[path.length - 1].next : tree.start;
+  // Resolve the next node, skipping questions that don't apply to the selected markets
+  // (e.g. the Swiss-specific block for an EU-only app).
+  const resolveNode = (id: string): string => {
+    let cur = id;
+    for (let guard = 0; guard < 50; guard++) {
+      const q = byId.q[cur];
+      if (q && !scopeMatches(q.scope, markets) && q.skip_to) {
+        cur = q.skip_to;
+        continue;
+      }
+      break;
+    }
+    return cur;
+  };
+
+  const currentId = resolveNode(path.length ? path[path.length - 1].next : tree.start);
   const question = byId.q[currentId];
   const exit = byId.x[currentId];
-  const regs = accumulatedIds.map((id) => byId.r[id]).filter(Boolean) as Regulation[];
+  const regs = (accumulatedIds.map((id) => byId.r[id]).filter(Boolean) as Regulation[]).filter(
+    (r) => cardVisible(r.jurisdiction, markets)
+  );
 
   return (
     <div className="flex h-[calc(100vh-3rem)] flex-col">

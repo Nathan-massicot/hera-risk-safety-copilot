@@ -2,8 +2,8 @@
 id: telehealth_national
 title: "Telehealth — national health codes"
 jurisdiction: EU/CH
-official_url: https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072665/
-key_articles: ["PHC L1110-4", "PHC L4131-1", "MedPA"]
+official_url: https://www.gesetze-im-internet.de/sgb_5/__33a.html
+key_articles: ["PHC L1110-4", "PHC L4131-1", "MedPA", "SGB V §33a", "StGB §203", "SGB V §360", "ÄrzteG §54", "GTelG 2012"]
 status: final
 ---
 
@@ -44,6 +44,20 @@ clinician ever reads does not, by itself, trigger the telehealth regime.
   and to **document** are met. Medical secrecy is protected (Swiss Criminal Code Art.
   321); patient records are generally kept **~20 years** (post-2020 limitation reform;
   some cantons/EPR rules differ).
+- **Germany** — statutory health insurance and digital care sit in **SGB V**, including
+  **§33a SGB V** (reimbursable digital health applications, *DiGA* — "app auf Rezept",
+  with the BfArM directory under §139e) and the telemedicine/Telematikinfrastruktur rules
+  (**§306 SGB V** defines the TI; **§360 SGB V** governs the **e-prescription / eRezept**,
+  mandatory since 2024). Medical confidentiality is criminally protected by
+  **§203 StGB** (*Verletzung von Privatgeheimnissen*); breaching it is punishable by up
+  to one year's imprisonment or a fine. Connecting to the TI requires the gematik-issued
+  HCP/institution identity (eHBA/SMC-B).
+- **Austria** — physician confidentiality is set by **§54 Ärztegesetz 1998** (*Verschwiegenheitspflicht*;
+  breach sanctioned via §121 StGB) and documentation/retention by **§51 ÄrzteG 1998**
+  (medical records kept **≥10 years** in private practice, **30 years** for hospitals).
+  Telehealth data exchange runs under the **Gesundheitstelematikgesetz 2012 (GTelG 2012,
+  BGBl I 111/2012)**, which frames secure transmission of health data and the ELGA
+  infrastructure (see [[national_ehealth]]).
 - Keep an auditable **act log** (who, when, what) and a lawful **identification** of
   both patient and HCP (see [[eidas2]]).
 
@@ -71,3 +85,9 @@ clinician ever reads does not, by itself, trigger the telehealth regime.
 - Légifrance — Public Health Code (consolidated): https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006072665/
 - Légifrance — PHC Art. L1110-4 (medical confidentiality): https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043895798
 - Légifrance — PHC Art. R1112-7 (20-year record retention): https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036658351
+- Fedlex — Swiss Medical Professions Act (MedBG/LPMéd): https://www.fedlex.admin.ch/eli/cc/2007/537/en
+- gesetze-im-internet.de — §33a SGB V (DiGA): https://www.gesetze-im-internet.de/sgb_5/__33a.html
+- gesetze-im-internet.de — §360 SGB V (eRezept) / §306 SGB V (Telematikinfrastruktur): https://www.gesetze-im-internet.de/sgb_5/__360.html
+- gesetze-im-internet.de — §203 StGB (medical confidentiality): https://www.gesetze-im-internet.de/stgb/__203.html
+- RIS — §54 Ärztegesetz 1998 (confidentiality): https://www.ris.bka.gv.at/eli/bgbl/i/1998/169/P54/NOR40080323
+- RIS — Gesundheitstelematikgesetz 2012 (GTelG 2012): https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008120
