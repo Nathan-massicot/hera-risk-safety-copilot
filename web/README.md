@@ -26,12 +26,20 @@ web/
 └── TODO.md              Deferred items (HTTPS deploy, streaming, logo, multi-conversation…)
 ```
 
+## Quickest path: `../demo.sh`
+
+For a demo, skip the manual steps below — from the repo root run `./demo.sh`,
+which does all of this (deps, RAG index, model, invite token) and serves the
+app on a single URL. The steps below are the manual/dev equivalent.
+
 ## First-time setup
 
 ### 1. Install backend deps
 
 ```bash
-uv sync --extra web
+# 'rag' brings chromadb + sentence-transformers so the chatbot runs the
+# retrieval-augmented config (the eval winner), not a prompt-only fallback.
+uv sync --extra web --extra rag
 ```
 
 ### 2. Install frontend deps
@@ -45,7 +53,7 @@ npm install
 
 ```bash
 ollama serve                                        # in one terminal
-ollama pull mistral:7b-instruct-v0.3-q4_K_M         # only first time
+ollama pull qwen3:8b                                # only first time (the default chat model)
 ```
 
 ### 4. Create yourself an invite token
@@ -87,13 +95,14 @@ All settings can be overridden via env vars prefixed with `HERA_`. Notable ones:
 | Variable | Default | Purpose |
 |----------|---------|---------|
 | `HERA_OLLAMA_URL` | `http://localhost:11434` | Ollama HTTP base URL |
-| `HERA_OLLAMA_MODEL` | `mistral:7b-instruct-v0.3-q4_K_M` | Chatbot model |
+| `HERA_OLLAMA_MODEL` | `qwen3:8b` | Chatbot model |
 | `HERA_HOST` | `127.0.0.1` | Backend bind address |
 | `HERA_PORT` | `8000` | Backend port |
 | `HERA_SESSION_LIFETIME_HOURS` | `12` | Default session length |
 | `HERA_REMEMBER_ME_LIFETIME_DAYS` | `30` | "Remember me" length |
 | `HERA_LOGIN_MAX_ATTEMPTS` | `5` | Failed logins per window before 429 |
 | `HERA_LOGIN_WINDOW_MINUTES` | `15` | Rate-limit window |
+| `HERA_DEMO_MODE` | `false` | Enables `GET /api/auth/demo-login` — a one-click magic link into a pre-onboarded demo account (set by `../demo.sh`) |
 
 ## Data
 

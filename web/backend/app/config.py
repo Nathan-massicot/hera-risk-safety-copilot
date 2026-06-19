@@ -38,6 +38,11 @@ class Settings(BaseSettings):
     login_max_attempts: int = 5
     login_window_minutes: int = 15
 
+    # Demo mode — when true, GET /api/auth/demo-login becomes a one-click magic
+    # link that logs a tester into a pre-onboarded demo account (set by demo.sh).
+    demo_mode: bool = False
+    demo_email: str = "demo@hera-copilot.dev"
+
     # Ollama
     ollama_url: str = "http://localhost:11434"
     # qwen3:8b = the model the RAG approach won the eval with (Depth 3.04); keep eval↔prod in sync.

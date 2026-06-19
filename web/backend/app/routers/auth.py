@@ -5,22 +5,45 @@ from __future__ import annotations
 from datetime import datetime
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
+from fastapi.responses import RedirectResponse
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from ..config import settings
 from ..db import get_db
 from ..deps import current_user
-from ..models import InviteToken, User
+from ..models import InviteToken, OnboardingProfile, User
 from ..schemas import LoginIn, RegisterIn, UserOut
 from ..security import (
     create_session,
     hash_password,
     is_rate_limited,
+    new_token,
     record_login_attempt,
     revoke_session,
     verify_password,
 )
+
+# A pre-filled mHealth app for the one-click demo account: spans EU + Swiss law
+# and uses AI, so the copilot has rich GDPR / MDR / AI-Act / nFADP material to
+# retrieve and reason over.
+DEMO_PROFILE = {
+    "app_name": "CardioCompanion",
+    "app_type": "Chronic-condition self-management",
+    "app_purpose": (
+        "Help patients with hypertension track blood pressure and medication "
+        "adherence, with AI-generated lifestyle tips."
+    ),
+    "target_users": "Adults (40+) with diagnosed hypertension in the EU and Switzerland",
+    "data_collected": (
+        "Blood pressure readings, heart rate, medication logs, weight, "
+        "free-text symptom notes"
+    ),
+    "technology": "React Native app, cloud backend, an LLM for the tip generator",
+    "has_ai": True,
+    "deployment_markets": "EU (Germany, France) and Switzerland",
+    "extra_notes": "Considering a future SaMD classification; not yet CE-marked.",
+}
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -97,6 +120,35 @@ def login(
     session = create_session(db, user_id=user.id, remember_me=payload.remember_me)
     _set_session_cookie(response, session.id, payload.remember_me)
     return user
+
+
+@router.get("/demo-login")
+def demo_login(db: Session = Depends(get_db)) -> Response:
+    """One-click magic link (demo mode only): log into a pre-onboarded demo
+    account and land straight on the chatbot. Disabled unless HERA_DEMO_MODE."""
+    if not settings.demo_mode:
+        raise HTTPException(status_code=404, detail="Not found")
+
+    email = settings.demo_email.lower()
+    user = db.execute(select(User).where(User.email == email)).scalar_one_or_none()
+    if user is None:
+        user = User(
+            email=email,
+            password_hash=hash_password(new_token(16)),  # random — login is via the link
+            onboarded=True,
+            consent_given=True,
+            consent_at=datetime.utcnow(),
+        )
+        db.add(user)
+        db.flush()  # populate user.id
+        db.add(OnboardingProfile(user_id=user.id, **DEMO_PROFILE))
+        db.commit()
+        db.refresh(user)
+
+    session = create_session(db, user_id=user.id, remember_me=True)
+    response = RedirectResponse(url="/", status_code=status.HTTP_303_SEE_OTHER)
+    _set_session_cookie(response, session.id, remember_me=True)
+    return response
 
 
 @router.post("/logout", status_code=status.HTTP_204_NO_CONTENT)

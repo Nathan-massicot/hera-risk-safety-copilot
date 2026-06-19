@@ -32,6 +32,9 @@ models/
 # Doc md for claude
 docclaude/
 
+# Docs (kept locally, not on GitHub)
+docs/
+
 # Personal & reference documents (kept locally, not on GitHub)
 document/
 TodoList_*.docx
