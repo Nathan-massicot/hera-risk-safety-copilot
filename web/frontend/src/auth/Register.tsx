@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import { AuthShell } from "./Login";
 import type { ApiError } from "../api/client";
@@ -7,8 +7,6 @@ import type { ApiError } from "../api/client";
 export default function Register() {
   const { register, login } = useAuth();
   const navigate = useNavigate();
-  const [params] = useSearchParams();
-  const [token, setToken] = useState(params.get("token") ?? "");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -24,7 +22,7 @@ export default function Register() {
     setSubmitting(true);
     setError(null);
     try {
-      await register(token.trim(), email, password);
+      await register(email, password);
       await login(email, password, false);
       navigate("/chat", { replace: true });
     } catch (err) {
@@ -37,19 +35,6 @@ export default function Register() {
   return (
     <AuthShell title="Create your account">
       <form onSubmit={onSubmit} className="space-y-4">
-        <div>
-          <label className="label" htmlFor="token">
-            Invite token
-          </label>
-          <input
-            id="token"
-            className="input font-mono text-xs"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="Provided by the project administrator"
-            required
-          />
-        </div>
         <div>
           <label className="label" htmlFor="email">
             Email

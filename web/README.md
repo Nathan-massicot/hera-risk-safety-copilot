@@ -6,7 +6,7 @@
 2. **Regulation diagram** — placeholder showing the HERA taxonomy SVG (interactive version on the TODO list).
 3. **Chatbot** — chat UI talking to a local Ollama model, with the HERA system prompt pre-loaded with the user's onboarding context.
 
-Login is invite-only (admin generates tokens via CLI), passwords are hashed with bcrypt, and sessions are stored server-side with HTTP-only cookies (with optional 30-day "remember me").
+Registration is open — anyone can create an account with email + password (an invite token is optional, still accepted if supplied). Passwords are hashed with bcrypt, and sessions are stored server-side with HTTP-only cookies (with optional 30-day "remember me").
 
 ## Layout
 
@@ -29,8 +29,9 @@ web/
 ## Quickest path: `../demo.sh`
 
 For a demo, skip the manual steps below — from the repo root run `./demo.sh`,
-which does all of this (deps, RAG index, model, invite token) and serves the
-app on a single URL. The steps below are the manual/dev equivalent.
+which does all of this (deps, RAG index, model) and serves the app on a single
+URL with a one-click magic-login link. The steps below are the manual/dev
+equivalent.
 
 ## First-time setup
 
@@ -56,10 +57,13 @@ ollama serve                                        # in one terminal
 ollama pull qwen3:8b                                # only first time (the default chat model)
 ```
 
-### 4. Create yourself an invite token
+### 4. (Optional) Create an invite token
+
+Registration is **open** — you don't need a token to sign up. Tokens are still
+supported if you want to gate who can register:
 
 ```bash
-uv run hera-cli invite create --note "Nathan"
+uv run hera-cli invite create --note "Nathan"   # optional
 # → Invite token: <copy this>
 ```
 
@@ -75,7 +79,7 @@ uv run hera-web
 cd web/frontend && npm run dev
 ```
 
-Open http://127.0.0.1:5173, click **Create an account**, paste the invite token, fill in the onboarding form (consent checkbox required), and you land on the chatbot.
+Open http://127.0.0.1:5173, click **Create an account** (just email + password — no token needed), and you land on the chatbot.
 
 ## Run (production-style — single port)
 

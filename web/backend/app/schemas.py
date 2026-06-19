@@ -18,7 +18,9 @@ class LoginIn(BaseModel):
 
 
 class RegisterIn(BaseModel):
-    invite_token: str = Field(min_length=8)
+    # Optional: registration is open. If a token is supplied it is still
+    # validated and consumed (back-compat with existing invites).
+    invite_token: str | None = Field(default=None)
     email: EmailStr
     password: str = Field(min_length=10, max_length=200)
 

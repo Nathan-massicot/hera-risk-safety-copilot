@@ -85,7 +85,7 @@ export default function Login() {
       </form>
 
       <p className="mt-6 text-center text-xs text-ink-500">
-        Have an invite?{" "}
+        New here?{" "}
         <Link to="/register" className="font-semibold text-fluo-600 hover:underline">
           Create an account
         </Link>

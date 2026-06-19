@@ -27,8 +27,8 @@ You arrive as a pre-onboarded demo app ("CardioCompanion", a hypertension
 self-management app deployed in the EU + Switzerland), so the copilot already
 has context to reason over GDPR / MDR / EU AI Act / nFADP.
 
-> Prefer the real flow? The script also prints an invite token — open
-> http://127.0.0.1:8000, click **Create an account**, and paste it.
+> Prefer to make your own account? Open http://127.0.0.1:8000 and click
+> **Create an account** — registration is open (just email + password).
 
 ### Prerequisites
 
@@ -49,8 +49,8 @@ HERA_OLLAMA_MODEL=qwen3:4b ./demo.sh   # smaller/faster chat model download
 
 ## What's inside
 
-The web app (FastAPI + React, single origin) has three pages behind an
-invite-only login:
+The web app (FastAPI + React, single origin) has three pages behind a simple
+email + password login (registration is open — anyone can create an account):
 
 | Page | What it does |
 |------|--------------|

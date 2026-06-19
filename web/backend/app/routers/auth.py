@@ -70,13 +70,17 @@ def _client_ip(request: Request) -> str:
 
 @router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
 def register(payload: RegisterIn, db: Session = Depends(get_db)) -> User:
-    invite = db.get(InviteToken, payload.invite_token)
-    if invite is None:
-        raise HTTPException(status_code=400, detail="Invalid invite token")
-    if invite.used_by_user_id is not None:
-        raise HTTPException(status_code=400, detail="Invite token already used")
-    if invite.expires_at is not None and invite.expires_at < datetime.utcnow():
-        raise HTTPException(status_code=400, detail="Invite token expired")
+    # Registration is open: anyone can sign up with email + password. An invite
+    # token is optional — if one is supplied it is validated and consumed.
+    invite: InviteToken | None = None
+    if payload.invite_token:
+        invite = db.get(InviteToken, payload.invite_token)
+        if invite is None:
+            raise HTTPException(status_code=400, detail="Invalid invite token")
+        if invite.used_by_user_id is not None:
+            raise HTTPException(status_code=400, detail="Invite token already used")
+        if invite.expires_at is not None and invite.expires_at < datetime.utcnow():
+            raise HTTPException(status_code=400, detail="Invite token expired")
 
     email = payload.email.lower()
     existing = db.execute(select(User).where(User.email == email)).scalar_one_or_none()
@@ -86,8 +90,9 @@ def register(payload: RegisterIn, db: Session = Depends(get_db)) -> User:
     user = User(email=email, password_hash=hash_password(payload.password))
     db.add(user)
     db.flush()  # populate user.id
-    invite.used_by_user_id = user.id
-    invite.used_at = datetime.utcnow()
+    if invite is not None:
+        invite.used_by_user_id = user.id
+        invite.used_at = datetime.utcnow()
     db.commit()
     db.refresh(user)
     return user

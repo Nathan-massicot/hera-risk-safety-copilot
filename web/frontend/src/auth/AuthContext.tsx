@@ -14,11 +14,7 @@ type AuthState = {
   loading: boolean;
   login: (email: string, password: string, remember: boolean) => Promise<User>;
   logout: () => Promise<void>;
-  register: (
-    inviteToken: string,
-    email: string,
-    password: string
-  ) => Promise<User>;
+  register: (email: string, password: string) => Promise<User>;
   refresh: () => Promise<void>;
 };
 
@@ -62,9 +58,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const register = useCallback(
-    async (invite_token: string, email: string, password: string) => {
+    async (email: string, password: string) => {
       const u = await api.post<User>("/api/auth/register", {
-        invite_token,
         email,
         password,
       });

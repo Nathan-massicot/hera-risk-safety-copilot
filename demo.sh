@@ -136,13 +136,6 @@ else
   ok "Model '$MODEL' ready"
 fi
 
-# ---- 4. invite token (fallback for the full sign-up flow) ------------------
-step "Creating a demo invite token"
-TOKEN="$(uv run hera-cli invite create --note "demo $(date +%Y-%m-%d)" 2>/dev/null \
-          | awk -F': *' '/Invite token:/{print $2}')"
-[ -n "$TOKEN" ] || die "Could not create an invite token"
-ok "Invite token created"
-
 # ---- 5. launch -------------------------------------------------------------
 cat <<BANNER
 
@@ -150,15 +143,14 @@ ${ORANGE}━━━━━━━━━━━━━━━━━━━━━━━�
 ${ORANGE} HERA Copilot demo is ready${RST}
 
    👉 Open this one link — it logs you in and drops you straight
-      into the tool (no account, no token, no form):
+      into the tool (no account, no form):
 
        ${GREEN}${URL}/api/auth/demo-login${RST}
 
    Model: ${MODEL}  (running locally via Ollama)
 
-   ${DIM}Want the full sign-up flow instead? Open ${URL} , click${RST}
-   ${DIM}"Create an account" and paste this invite token:${RST}
-   ${DIM}    ${TOKEN}${RST}
+   ${DIM}Want your own account? Open ${URL} and click "Create an${RST}
+   ${DIM}account" — registration is open (just email + password).${RST}
 
    Press Ctrl-C to stop the demo.
 ${ORANGE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RST}
